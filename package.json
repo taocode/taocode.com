@@ -22,7 +22,7 @@
   },
   "type": "module",
   "engines": {
-    "node": ">= 12.17.0"
+    "node": ">= 14.0.0"
   },
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^5.15.3",
