@@ -1,6 +1,6 @@
 [build]
 environment = { NODE_ENV = "production", NODE_VERSION = "14.15.3" }
-command = "npm install && npm run build"
+command = "npm run build"
 
 [[headers]]
   for = "/*"
