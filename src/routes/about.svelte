@@ -50,9 +50,7 @@
     <li>does 16-8 intermittent fasting pretty much every day 🍏</li>
     <li>
       keeps a growing
-      <a href="/blog/the-beer-bucket-list-for-the-aspiring-connoisseur"
-        >list of over ~100 beers</a
-      >
+      list of over ~100 beers
       that he drank 🍺
     </li>
     <li>did a smoothie cleanse for 10 days 🥤</li>
