@@ -9,6 +9,7 @@
     faReddit,
   } from '@fortawesome/free-brands-svg-icons';
   import { faRss } from '@fortawesome/free-solid-svg-icons';
+  // import { faRss } from 'svelte-awesome/icons';
   import ExternalLink from './ExternalLink.svelte';
 </script>
 
