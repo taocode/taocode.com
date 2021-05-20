@@ -16,7 +16,7 @@
     "test": "jest",
     "test:watch": "yarn test --watch",
     "build": "run-s build:css build:prod",
-    "build:css": "cross-env NODE_ENV=production && postcss src/global.pcss -o static/global.css",
+    "build:css": "NODE_ENV=production postcss src/global.pcss -o static/global.css",
     "build:prod": "svelte-kit build",
     "build:preview": "svelte-kit preview"
   },
