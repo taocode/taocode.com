@@ -8,7 +8,7 @@
     faDev,
     faReddit,
   } from '@fortawesome/free-brands-svg-icons';
-  import { faRss } from '@fortawesome/free-solid-svg-icons';
+  import { faRssSquare } from '@fortawesome/free-solid-svg-icons';
   // import { faRss } from 'svelte-awesome/icons';
   import ExternalLink from './ExternalLink.svelte';
 </script>
@@ -46,7 +46,7 @@
       ariaLabel="Read the RSS feed"
       customClass="inline-flex text-green-900 hover:text-green-700"
     >
-      <Icon data="{faRss}" class="m-3" scale="{2}" />
+      <Icon data="{faRssSquare}" class="m-3" scale="{2}" />
     </ExternalLink>
   </div>
 </div>
