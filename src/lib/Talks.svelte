@@ -3,7 +3,6 @@
   import {
     faAngular,
     faJsSquare,
-    faNpm,
   } from '@fortawesome/free-brands-svg-icons';
   import ExternalLink from './ExternalLink.svelte';
   import { dateIsBefore } from '../utils';
@@ -43,17 +42,6 @@
         'https://slides.com/chimpcmder/how-to-boost-your-web-development-efficiency',
       organizer: 'Angular Vienna',
       organizerLink: 'https://www.meetup.com/de-DE/Angular-Vienna/',
-      location: 'Vienna, Austria',
-    },
-    {
-      title: `Betcha didn't know that?!`,
-      date: '',
-      logo: faNpm,
-      logoColor: 'text-red-700',
-      videoLink: '',
-      slidesLink: 'https://slides.com/chimpcmder/betcha-didn-t-know-that',
-      organizer: 'Vienna.js',
-      organizerLink: 'https://www.meetup.com/de-DE/viennajs/',
       location: 'Vienna, Austria',
     },
     {
