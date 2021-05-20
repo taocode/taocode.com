@@ -12,7 +12,7 @@ The main focus of the website is to provide value to visitors, largely other cod
 
 👤 **Mark Jones <mark@taocode.com>**
 
-This site is based on some fine work by 👤 **[Markus Hatvan](https://markushatvan.com)**. Thanks for sharing, Marckus!
+This site is based on some fine work by 👤 **[Markus Hatvan](https://markushatvan.com)**. Thanks for sharing, Markus!
 
 - [Website](https://taocode.com/)
 - [GitHub](https://github.com/taocode)

@@ -1,0 +1,377 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Lato Regular'), local('Lato-Regular'),
+    url('./fonts/lato-v17-latin-regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local('Lato Bold'), local('Lato-Bold'),
+    url('./fonts/lato-v17-latin-700.woff2') format('woff2');
+}
+
+/* rubik-regular - latin */
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''),
+    url('./fonts/rubik-v12-latin/rubik-v12-latin-regular.woff2') format('woff2'),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url('./fonts/rubik-v12-latin/rubik-v12-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* rubik-700 - latin */
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 700;
+  src: local(''),
+    url('./fonts/rubik-v12-latin/rubik-v12-latin-700.woff2') format('woff2'),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url('./fonts/rubik-v12-latin/rubik-v12-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* rubik-italic - latin */
+@font-face {
+  font-family: 'Rubik';
+  font-style: italic;
+  font-weight: 400;
+  src: local(''),
+    url('./fonts/rubik-v12-latin/rubik-v12-latin-italic.woff2') format('woff2'),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url('./fonts/rubik-v12-latin/rubik-v12-latin-italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* rubik-700italic - latin */
+@font-face {
+  font-family: 'Rubik';
+  font-style: italic;
+  font-weight: 700;
+  src: local(''),
+    url('./fonts/rubik-v12-latin/rubik-v12-latin-700italic.woff2')
+      format('woff2'),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url('./fonts/rubik-v12-latin/rubik-v12-latin-700italic.woff')
+      format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* spectral-regular - latin */
+@font-face {
+  font-family: 'Spectral';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''),
+    url('./fonts/spectral-v7-latin/spectral-v7-latin-regular.woff2')
+      format('woff2'),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url('./fonts/spectral-v7-latin/spectral-v7-latin-regular.woff')
+      format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* spectral-italic - latin */
+@font-face {
+  font-family: 'Spectral';
+  font-style: italic;
+  font-weight: 400;
+  src: local(''),
+    url('./fonts/spectral-v7-latin/spectral-v7-latin-italic.woff2')
+      format('woff2'),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url('./fonts/spectral-v7-latin/spectral-v7-latin-italic.woff')
+      format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* spectral-700 - latin */
+@font-face {
+  font-family: 'Spectral';
+  font-style: normal;
+  font-weight: 700;
+  src: local(''),
+    url('./fonts/spectral-v7-latin/spectral-v7-latin-700.woff2') format('woff2'),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url('./fonts/spectral-v7-latin/spectral-v7-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* spectral-700italic - latin */
+@font-face {
+  font-family: 'Spectral';
+  font-style: italic;
+  font-weight: 700;
+  src: local(''),
+    url('./fonts/spectral-v7-latin/spectral-v7-latin-700italic.woff2')
+      format('woff2'),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url('./fonts/spectral-v7-latin/spectral-v7-latin-700italic.woff')
+      format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+body {
+  font-family: 'Spectral', sans-serif;
+  padding-top: 56px;
+  @apply relative leading-relaxed text-lg;
+}
+
+h1, h2, h3, h4, h5, h6,
+.prose h1, .prose h2, .prose h3, .prose h4, .prose h5, .prose h6  {
+  font-family: 'Rubik', sans-serif;
+}
+
+.mh a {
+  @apply text-green-700;
+}
+
+.mh a:hover {
+  @apply underline text-green-800;
+}
+
+.mh h1 {
+  @apply text-3xl mb-3 mt-6 font-bold;
+}
+
+.mh h2 {
+  @apply text-2xl mb-3 mt-6 font-bold;
+}
+
+.mh h3,
+.mh h4,
+.mh h5,
+.mh h6 {
+  @apply text-xl mb-3 mt-6 font-semibold;
+}
+
+.mh p {
+  @apply mb-4 text-gray-800;
+}
+
+.mh .blog code p {
+  @apply mb-0;
+  color: inherit;
+}
+
+.mh pre > p {
+  @apply m-0;
+}
+
+.mh ol {
+  @apply list-decimal text-gray-800 mb-4 ml-8;
+}
+
+.mh ul {
+  @apply list-disc text-gray-800 mb-4 ml-8;
+}
+
+.mh ul ul {
+  @apply mb-4 ml-8 text-gray-800 list-circle;
+}
+
+.mh blockquote {
+  @apply p-2 bg-gray-100 mb-4 border-l-4 border-gray-400 italic;
+}
+
+.mh blockquote > p {
+  @apply mb-0;
+}
+
+.mh pre[class*='language-'] {
+  margin: 16px 0 32px 0 !important;
+}
+
+.mh td,
+.mh th {
+  @apply mx-2 my-1 border border-gray-400;
+}
+
+.mh tr:nth-child(odd) {
+  @apply bg-gray-100;
+}
+
+.mh table {
+  @apply mb-6;
+}
+
+.mh hr {
+  display: block;
+  unicode-bidi: isolate;
+  margin-block-start: 0.5em;
+  margin-block-end: 0.5em;
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+  overflow: hidden;
+  border-style: inset;
+  border-width: 1px;
+}
+
+.mh figcaption {
+  @apply text-gray-600 text-sm;
+}
+
+.mh p > code:not([class*='language-']),
+.mh h3 > code,
+.mh li > code,
+.mh figcaption > code {
+  word-break: break-word;
+  background-color: rgba(240, 240, 240, 0.5);
+  padding: 0.1em 0.2em;
+  border-radius: 2px;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+.mh .anchor-link {
+  @apply no-underline text-opacity-25;
+}
+
+.mh .anchor-link:hover {
+  @apply no-underline;
+}
+
+.nav-link {
+  @apply block text-green-500 mt-4 mr-4 transition duration-200 font-display;
+}
+
+.nav-link:hover {
+  @apply text-green-200;
+}
+
+.footer-link {
+  @apply block text-green-200 mt-4 mr-4;
+}
+
+.footer-link:hover {
+  @apply text-white;
+}
+
+.mh .link-inherit,
+.mh .link-inherit:hover {
+  color: inherit !important;
+}
+
+.mh .mh-container {
+  @apply px-3 py-12 mx-auto;
+}
+
+.mh .btn-primary {
+  @apply inline-block px-5 py-3 text-sm font-semibold text-black bg-green-500 font-display;
+}
+
+.mh .btn-primary:hover {
+  @apply bg-green-400 text-black no-underline;
+}
+
+.mh .card {
+  @apply relative bg-white border rounded shadow-xl w-full;
+}
+
+.mh .topic-box {
+  @apply text-center border-b-4 border-green-700;
+}
+
+.mh .info-tag {
+  @apply inline-flex items-center bg-gray-200 rounded py-1 my-1 text-sm font-semibold font-display mr-2 px-3;
+}
+
+.mh .alert-gray {
+  @apply p-4 text-gray-700 bg-gray-200 border-l-4 border-gray-500;
+}
+
+.mh .alert-success {
+  @apply p-4 text-green-800 bg-green-100 border-l-4 border-green-500;
+}
+
+.applause-gradient {
+  position: relative;
+  z-index: 10;
+  overflow: hidden;
+}
+.applause-gradient::after {
+  content: '';
+  z-index: -1;
+  position: absolute;
+  width: calc(130vw + 130vh);
+  height: calc(130vw + 130vh);
+  
+  top: -50%;
+  /* margin-top: -50%; */
+  bottom: -50%;
+  left: calc(-52vw + -52vh);
+  right: calc(-52vw + -52vh);
+
+  background-color: rgba(35, 82, 25, 0.9);
+  background-image: radial-gradient(
+      rgba(70, 165, 50, 0.99) 0%,
+      /* rgba(70, 165, 50, 0.9) 33%, */
+      rgba(35, 82, 25, 0.66) 20%,
+      /* rgba(35, 82, 25, 0.8) 66%, */
+      rgba(35, 82, 25, 0.9) 50%
+    ),
+    repeating-conic-gradient(
+      #235219 0 3deg,
+      #46a532 5.5deg 10.5deg,
+      #235219 13deg 17deg
+    );
+}
+.blog-applause::after {
+  /* left: -33vw; */
+  top: -75%;
+  left: calc(-42vw + -42vh);
+}
+@screen sm {
+  .applause-gradient::after {
+    top: -100vh;
+  }
+}
+@screen md {
+  .applause-gradient::after {
+    top: -100vw;
+  }
+  .blog-applause::after {
+    left: calc(-25vw + -25vh);
+  }
+}
+@screen lg {
+  .applause-gradient::after {
+    top: -90vw;
+  }
+}
+@screen xl {
+  .applause-gradient::after {
+    top: -80vw;
+  }
+}
+
+
+@-webkit-keyframes rotating /* Safari and Chrome */ {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotating {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.rotating,
+.rotating-after::after {
+  animation: rotating 45s linear infinite;
+}
+
+/* @tailwindcss/typography overwrites */
+.prose-lg img,
+.lg\:prose-xl img {
+  margin: 0 !important;
+}
+
+.prose-lg ul > li,
+.lg\:prose-xl ul > li {
+  padding-left: 0 !important;
+}

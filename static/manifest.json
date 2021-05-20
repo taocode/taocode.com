@@ -1,0 +1,16 @@
+{
+	"background_color": "#ffffff",
+	"theme_color": "#333333",
+	"name": "taocode.com",
+	"short_name": "taocode.com",
+	"display": "minimal-ui",
+	"start_url": "/",
+	"icons": [
+		{
+			"src": "taocode-favicon.svg",
+			"sizes": "192x192",
+			"type": "image/svg",
+			"purpose": "any maskable"
+		}
+	]
+}
