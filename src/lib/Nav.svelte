@@ -19,7 +19,7 @@
     <div class="flex">
       <a
         sveltekit:prefetch
-        href="."
+        href="/"
         class="mt-0 text-xl font-semibold tracking-tight nav-link text-green-500 md:inline-block"
       >
         <TaocodeLogo class="h-8"/>

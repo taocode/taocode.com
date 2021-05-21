@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
+/* @font-face {
   font-family: 'Lato';
   font-style: normal;
   font-weight: 400;
@@ -18,14 +18,15 @@
   font-display: swap;
   src: local('Lato Bold'), local('Lato-Bold'),
     url('./fonts/lato-v17-latin-700.woff2') format('woff2');
-}
+} */
 
 /* rubik-regular - latin */
 @font-face {
   font-family: 'Rubik';
   font-style: normal;
   font-weight: 400;
-  src: local(''),
+  font-display: swap;
+  src: local('Rubik'),
     url('./fonts/rubik-v12-latin/rubik-v12-latin-regular.woff2') format('woff2'),
     /* Chrome 26+, Opera 23+, Firefox 39+ */
       url('./fonts/rubik-v12-latin/rubik-v12-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
@@ -35,7 +36,8 @@
   font-family: 'Rubik';
   font-style: normal;
   font-weight: 700;
-  src: local(''),
+  font-display: swap;
+  src: local('Rubik'),
     url('./fonts/rubik-v12-latin/rubik-v12-latin-700.woff2') format('woff2'),
     /* Chrome 26+, Opera 23+, Firefox 39+ */
       url('./fonts/rubik-v12-latin/rubik-v12-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
@@ -45,7 +47,8 @@
   font-family: 'Rubik';
   font-style: italic;
   font-weight: 400;
-  src: local(''),
+  font-display: swap;
+  src: local('Rubic'),
     url('./fonts/rubik-v12-latin/rubik-v12-latin-italic.woff2') format('woff2'),
     /* Chrome 26+, Opera 23+, Firefox 39+ */
       url('./fonts/rubik-v12-latin/rubik-v12-latin-italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
@@ -55,7 +58,8 @@
   font-family: 'Rubik';
   font-style: italic;
   font-weight: 700;
-  src: local(''),
+  font-display: swap;
+  src: local('Rubik'),
     url('./fonts/rubik-v12-latin/rubik-v12-latin-700italic.woff2')
       format('woff2'),
     /* Chrome 26+, Opera 23+, Firefox 39+ */
@@ -68,6 +72,7 @@
   font-family: 'Spectral';
   font-style: normal;
   font-weight: 400;
+  font-display: swap;
   src: local(''),
     url('./fonts/spectral-v7-latin/spectral-v7-latin-regular.woff2')
       format('woff2'),
@@ -80,6 +85,7 @@
   font-family: 'Spectral';
   font-style: italic;
   font-weight: 400;
+  font-display: swap;
   src: local(''),
     url('./fonts/spectral-v7-latin/spectral-v7-latin-italic.woff2')
       format('woff2'),
@@ -92,6 +98,7 @@
   font-family: 'Spectral';
   font-style: normal;
   font-weight: 700;
+  font-display: swap;
   src: local(''),
     url('./fonts/spectral-v7-latin/spectral-v7-latin-700.woff2') format('woff2'),
     /* Chrome 26+, Opera 23+, Firefox 39+ */
@@ -102,6 +109,7 @@
   font-family: 'Spectral';
   font-style: italic;
   font-weight: 700;
+  font-display: swap;
   src: local(''),
     url('./fonts/spectral-v7-latin/spectral-v7-latin-700italic.woff2')
       format('woff2'),
@@ -251,7 +259,7 @@ h1, h2, h3, h4, h5, h6,
 }
 
 .mh .mh-container {
-  @apply px-3 py-12 mx-auto;
+  @apply px-6 py-10 mx-auto;
 }
 
 .mh .btn-primary {
@@ -294,7 +302,7 @@ h1, h2, h3, h4, h5, h6,
   width: calc(130vw + 130vh);
   height: calc(130vw + 130vh);
   
-  top: -50%;
+  top: -50vh;
   /* margin-top: -50%; */
   bottom: -50%;
   left: calc(-52vw + -52vh);
@@ -326,7 +334,7 @@ h1, h2, h3, h4, h5, h6,
 }
 @screen md {
   .applause-gradient::after {
-    top: -100vw;
+    /* top: -100vw; */
   }
   .blog-applause::after {
     left: calc(-25vw + -25vh);

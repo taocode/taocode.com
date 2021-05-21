@@ -5,7 +5,7 @@
 <section class="applause-gradient home-applause rotating-after">
   <div class="container mh-container">
     <div
-      class="bg-white bg-opacity-75 flex flex-col-reverse flex-wrap items-center justify-between px-12 py-8 rounded-lg shadow-xl md:flex-row"
+      class="bg-white bg-opacity-75 flex flex-col-reverse flex-wrap items-center justify-between px-8 py-8 rounded-lg shadow-xl md:flex-row"
     >
       <div class="w-full md:w-2/3 md:pr-10">
         <h1>The Art of Code - Web Productions</h1>
