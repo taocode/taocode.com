@@ -10,7 +10,6 @@ author: Mark Jones
 tags:
   - Svelte
   - Vite
-  - CMS
   - blog
   - WindiCSS
 ---
@@ -22,7 +21,7 @@ Additionally, the site required a PHP script to handle the Hire Me form submissi
 
 Using svelte made it easier to do even more, like show a wait animation while awaiting the response from the Hire Me form. Before using svelte that was just another complexity to manage, one too many.
 
-I estimate that my code shrunk to nearly 1/10th its prior "Vanilla JS" size when rewritten in Svelte. It's not just less lines of code, it's easier to read and understand what's going on. Hence why [Svelte is Cool](/posts/svelte-is-cool).
+I estimate that my code shrunk to nearly 1/10th its prior "Vanilla JS" size when rewritten in Svelte. It's not just less lines of code, it's easier to read and understand what's going on. Hence why [Svelte is Cool](/blog/svelte-is-nice-piece-of-app).
 
 ## Enter Cloud Functions
 

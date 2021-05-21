@@ -1,12 +1,16 @@
 ---
 title: New Website!
-slug: new-website
+slug: new-site
 category: Programming
 creationDate: '2021-01-10'
 excerpt: The new TAOcode site launched.
 lead: Built with Svelte, Svite, Routify, Windicss, and MDSVEX
 layout: blog
 author: Mark Jones
+tags:
+  - Svelte
+  - Vite
+  - TailwindCSS
 ---
 
 I've worked on websites since Before Google (BGE). There have been so many advancements since those PERL scripts running through the `/cgi-bin/` folder in the mid-90s. I've loved the static site since before it has become the trend. It's is a direction that I like for many projects because it makes hosting faster, cheaper and more secure.

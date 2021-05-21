@@ -1,5 +1,5 @@
 <script>
-  import Image from '../../static/mark-jones-headshot.jpg';
+  import Image from '../../static/headshot-tongues-out-with-b.jpg';
 </script>
 
 <section class="applause-gradient home-applause rotating-after">

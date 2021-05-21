@@ -1,5 +1,5 @@
 <script>
-  import Image from '../../static/mark-jones-headshot.jpg';
+  import Image from '../../static/headshot-tongues-out-with-b.jpg';
   import ExternalLink from './ExternalLink.svelte';
 </script>
 
@@ -17,7 +17,7 @@
   </div>
   <h2 class="text-center">Mark Jones</h2>
   <p>
-    Full Stack Web Developer, Voice Over artist, hoppy beer
+    Full stack web developer, voice actor, artist, hoppy beer
     and happy pet lover.
   </p>
 </div>

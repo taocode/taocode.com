@@ -13,7 +13,7 @@
 <section class="container mb-16 text-center bg-gray-200 border-t-4 border-green-700 mh-container">
   <div id="mc_embed_signup">
     <form
-      action="https://markushatvan.us10.list-manage.com/subscribe/post?u=5cb357866d79280c8f4a5642a&amp;id=498b94dcd1"
+      action="https://taocode.us6.list-manage.com/subscribe/post?u=43229d3d4d5354a0a9b5629fb&amp;id=32bdc2ddb0"
       method="post"
       id="mc-embedded-subscribe-form"
       name="mc-embedded-subscribe-form"
@@ -38,7 +38,7 @@
         <div class="mailchimp-style" aria-hidden="true">
           <input
             type="text"
-            name="b_5cb357866d79280c8f4a5642a_498b94dcd1"
+            name="b_43229d3d4d5354a0a9b5629fb_32bdc2ddb0"
             tabindex="{-1}"
             value=""
           />

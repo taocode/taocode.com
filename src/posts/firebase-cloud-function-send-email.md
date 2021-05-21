@@ -1,6 +1,6 @@
 ---
 title: Cloud Function to Send Email
-slug: cloud-function-send-email
+slug: firebase-cloud-function-send-email
 # description: 
 # created: 2020-10-10
 creationDate: '2021-03-23'
@@ -17,7 +17,7 @@ tags:
   - Cloud Function
   - Learning
 ---
-The Hire Me form on [MarkJonesVoice](/portfolio/markjonesvoice) needed to be handled by *something.* Before, it was a PHP script, adapted from a the [Hugo Zen Theme's contact.php](https://github.com/frjo/hugo-theme-zen/blob/master/php/contact.php.example) and running on Google Compute Engine instance.
+The Hire Me form on [MarkJonesVoice](/blog/markjonesvoice) needed to be handled by *something.* Before, it was a PHP script, adapted from a the [Hugo Zen Theme's contact.php](https://github.com/frjo/hugo-theme-zen/blob/master/php/contact.php.example) and running on Google Compute Engine instance.
 
 The PHP solution seems anachronistic and requires a server just be available online, sitting there. Also, the resulting PHP code was not exactly pretty and wasn't flexible enough to send ad-hoc fields; they needed to be named in the script explicitly. The code could've accommodated that but requiring a server sitting there waiting for the occassional email just seemed wasteful.
 

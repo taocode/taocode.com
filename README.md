@@ -14,10 +14,15 @@ The main focus of the website is to provide value to visitors, largely other cod
 
 This site is based on some fine work by 👤 **[Markus Hatvan](https://markushatvan.com)**. Thanks for sharing, Markus!
 
+
 - [Website](https://taocode.com/)
 - [GitHub](https://github.com/taocode)
 - [LinkedIn](https://www.linkedin.com/in/taocode/)
 - [Reddit](https://www.reddit.com/user/taocode)
+
+## 🖍️ Changes
+
+Alterations made where I departed from [Markus Hatvan's](https://github.com/mhatvan/markushatvan.com).
 
 ## 🤝 Contributing
 
