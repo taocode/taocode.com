@@ -1,5 +1,5 @@
 [build]
-environment = { NODE_ENV = "production" }
+environment = { NODE_ENV = "production", NODE_VERSION = "16.1.0" }
 command = "npm install && npm run build:css && npm run build:prod"
 publish = "build/"
 

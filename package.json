@@ -6,6 +6,7 @@
   "private": true,
   "license": "MIT",
   "scripts": {
+    "clean": "rm -rf .svelte && rm -rf build",
     "dev": "run-p dev:css dev:svelte-kit",
     "dev:css": "cross-env NODE_ENV=development && postcss src/global.pcss -o static/global.css -w",
     "dev:svelte-kit": "svelte-kit dev",
