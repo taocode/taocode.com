@@ -2,6 +2,7 @@
   import { onMount } from 'svelte';
   import cookies from 'js-cookie';
   import ExternalLink from './ExternalLink.svelte';
+  import PrivacyPolicyLink from './PrivacyPolicyLink.svelte';
   import Splitbee from './Splitbee.svelte';
 
   // We don't want the cookie notice to flash on every page reload, therefore hidden by default
@@ -36,14 +37,12 @@
 
 {#if showCookieNotice}
   <div
-    class="fixed bottom-0 w-full p-3 text-sm text-center text-white bg-gray-800"
+    class="fixed z-10 bottom-0 w-full p-3 text-sm text-center text-white bg-gray-800"
   >
     <p class="mb-3">
       Our website uses cookies to analyze how the site is used and to ensure
       your experience is consistent between visits.
-      <a sveltekit:prefetch href="/privacy-policy" class="mx-2 underline"
-        >Privacy Policy</a
-      >
+      <PrivacyPolicyLink />
       <ExternalLink
         href="https://www.cookiesandyou.com/"
         customClass="underline"

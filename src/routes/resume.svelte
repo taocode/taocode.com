@@ -3,7 +3,7 @@
 </script>
 
 <svelte:head>
-  <title>Resume | Markus Hatvan</title>
+  <title>Resume | Mark Jones</title>
   <meta name="description" content="My up-to-date resume, hire me!" />
 </svelte:head>
 

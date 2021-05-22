@@ -37,7 +37,7 @@
 </script>
 
 <svelte:head>
-  <title>{readableSlug} | Markus Hatvan</title>
+  <title>{readableSlug} | Mark Jones</title>
 
   <meta name="description" content="Posts tagged with {readableSlug}." />
 </svelte:head>

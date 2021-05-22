@@ -1,4 +1,5 @@
 <script>
+  import PrivacyPolicyLink from '$lib/PrivacyPolicyLink.svelte';
   import { onMount } from 'svelte';
   import SEO from '$lib/SEO.svelte';
 
@@ -17,11 +18,11 @@
 </svelte:head>
 
 <SEO />
-<span>
-  <!-- todo: get my own id? -->
-  <a
-    href="https://www.iubenda.com/privacy-policy/30856945"
-    class="iubenda-white no-brand iubenda-embed iub-legal-only iub-body-embed"
-    title="Privacy Policy">Privacy Policy</a
-  >
-</span>
+<div class="mh-container container py-12 text-center">
+  <h1>Privacy Policy</h1>
+  <p>
+  Click the button for taocode.com's privacy policy:
+  </p><p>
+  <PrivacyPolicyLink />
+  </p>
+</div>

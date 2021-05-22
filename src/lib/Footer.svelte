@@ -74,7 +74,7 @@
     <nav class="w-full mt-6 sm:w-2/3">
       <ExternalLink
         href="mailto:mark@taocode.com"
-        ariaLabel="Write me a mail"
+        ariaLabel="Write an email to me"
         customClass="inline-flex mt-4 lg:mt-0 hover:text-white"
       >
         <Icon data="{faEnvelope}" class="mr-3" scale="{1.5}" />
