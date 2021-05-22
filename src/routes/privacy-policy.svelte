@@ -11,7 +11,7 @@
 </script>
 
 <svelte:head>
-  <title>Privacy Policy | Markus Hatvan</title>
+  <title>Privacy Policy | Mark Jones</title>
 
   <meta name="description" content="Privacy policy for taocode.com" />
 </svelte:head>
@@ -20,7 +20,7 @@
 <span>
   <!-- todo: get my own id? -->
   <a
-    href="https://www.iubenda.com/privacy-policy/82646403"
+    href="https://www.iubenda.com/privacy-policy/30856945"
     class="iubenda-white no-brand iubenda-embed iub-legal-only iub-body-embed"
     title="Privacy Policy">Privacy Policy</a
   >

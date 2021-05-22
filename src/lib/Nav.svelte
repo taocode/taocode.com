@@ -1,6 +1,6 @@
 <script lang="ts">
   import Icon from 'svelte-awesome/components/Icon.svelte';
-  // import { faBars } from '@fortawesome/free-solid-svg-icons';
+  import { faBars } from '@fortawesome/free-solid-svg-icons';
   import { bars } from 'svelte-awesome/icons';
   import ClickOutside from 'svelte-click-outside';
   import TaocodeLogo from '$lib/taocode-logo.svelte';
@@ -32,7 +32,7 @@
           aria-label="Hamburger menu"
           on:click="{toggleHamburgerMenu}"
         >
-          <Icon data="{bars}" />
+          <Icon data="{faBars}" />
         </button>
       </ClickOutside>
     </div>

@@ -1,5 +1,14 @@
+<div class="w-1/2 mx-auto
+text-center
+sm:w-full sm:text-left">
+<div class="bg-green-950 bg-opacity-40 pl-3 pt-2 rounded 
+ sm:mr-3
+md:mr-10 
+lg:mr-24">
 <p>Lighthouse Score</p>
-<div class="mt-3 speedlify-score-wrapper">
+<div class="mt-3 speedlify-score-wrapper justify-center
+sm:justify-start
+">
   <span class="speedlify-score" title="Performance">100</span>
   <span class="speedlify-score" title="Accessibility">100</span>
   <span class="speedlify-score" title="Best practices">100</span>
@@ -8,11 +17,13 @@
 
 <p class="mt-3">https://taocode.com</p>
 
+</div>
+</div>
+
 <style>
   .speedlify-score-wrapper {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
   }
 
   .speedlify-score-wrapper > :first-child {

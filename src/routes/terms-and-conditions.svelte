@@ -24,7 +24,7 @@
 <span>
   <!-- todo: terms and conditions with iubenda? maybe -->
   <a
-    href="https://www.iubenda.com/terms-and-conditions/82646403"
+    href="https://www.iubenda.com/terms-and-conditions/30856945"
     class="iubenda-white no-brand iubenda-embed iub-body-embed"
     title="Terms and Conditions">Terms and Conditions</a
   >

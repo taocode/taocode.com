@@ -4,7 +4,7 @@
 </script>
 
 <svelte:head>
-  <title>Services | Markus Hatvan</title>
+  <title>Services | Mark Jones</title>
   <meta
     name="description"
     content="I create next-level web solutions customized for your needs."
@@ -17,14 +17,13 @@
   <h1>Services that I offer</h1>
 
   <p>
-    I support committed website owners, companies, startups and individuals just
-    like you to improve page performance and save time and stress on the long
-    run. I work fast and efficient according to best practices in my area of
-    expertise. I also contribute to open source projects on a regular basis and
-    therefore can get started and accustomed to new projects quickly. I
+    I support website owners, companies, startups and individuals just
+    like you to improve page performance, accessibility and save time and stress on the long
+    run. I work efficiently to bring together the best experience.
+    
+I get accustomed to new projects quickly and
     understand that finding the perfect candidate for your project is not easy,
-    but when working with me, you can be sure that I will always make sure to
-    treat your project as if it would be my own!
+    but with me, you can be sure that I will always treat your project as if it would be my own!
   </p>
 
   <h2>I create next-level web solutions customized for your needs.</h2>
@@ -67,14 +66,8 @@
       <div class="px-6 py-4 card">
         <h2>
           <!-- <Icon data="{faClipboardList}" class="mr-3" scale="{2}" /> -->
-          Continue development on an existing product
+          Continue an existing product
         </h2>
-
-        <p>
-          In need of a developer to get a different view on things? Are there
-          many features or bug fixes that need to be implemented? Is there a
-          looming deadline that you have to meet?
-        </p>
 
         <p>
           You can hire me to implement new features for your product and improve
@@ -111,88 +104,20 @@
       <div class="px-6 py-4 card">
         <h2>
           <!-- <Icon data="{faPenFancy}" class="mr-3" scale="{2}" /> -->
-          Technical writing
+          Accessibility Review
         </h2>
 
         <p>
-          I love writing technical articles and help out new developers. Some of
-          my articles have been published on platforms like freeCodeCamp, Hacker
-          Noon, Medium or codeburst.
-        </p>
-
-        <p>
-          Here is a small subselection of published articles to give you a feel
-          for my writing style:
+          Accessibility is always a primary consideration for my projects.
+          It's important for anyone who would like their project to be viable 
+          within the education sector and for those that would like to include
+          the broadest possible audience.
         </p>
         <ul>
-          <li>
-            <ExternalLink
-              href="https://www.freecodecamp.org/news/why-you-should-start-contributing-to-open-source-software-right-now/"
-            >
-              Why You Should Start Contributing to Open Source Software Right
-              Now
-            </ExternalLink>
-          </li>
-          <li>
-            <ExternalLink
-              href="https://hackernoon.com/why-i-chose-sapperjs-for-my-website-and-what-ive-learned-about-the-framework-so-far-rd473ypc"
-            >
-              Why I Chose SapperJS For My Website, and What I've Learned About
-              the Framework So Far
-            </ExternalLink>
-          </li>
-          <li>
-            <ExternalLink
-              href="https://medium.com/better-programming/10-reasons-why-i-recommend-svelte-to-every-new-web-developer-8e0e2030b413"
-            >
-              10 Reasons Why I Recommend Svelte to Every New Web Developer
-            </ExternalLink>
-          </li>
-          <li>
-            <ExternalLink
-              href="https://medium.com/better-programming/8-common-web-development-mistakes-87800f80d8e"
-            >
-              8 Common Web Development Mistakes and How to Avoid Them
-            </ExternalLink>
-          </li>
+          <li>Keyboard-only access</li>
+          <li>ARIA labels</li>
+          <li>Proper document structure and skip-link</li>
         </ul>
-      </div>
-    </div>
-
-    <div class="flex w-full p-2 lg:w-1/2">
-      <div class="px-6 py-4 card">
-        <h2>
-          <!-- <Icon data="{faComments}" class="mr-3" scale="{2}" /> -->
-          Public speaking
-        </h2>
-        <p>
-          It is always a pleasure for me to share knowledge and present
-          interesting topics to an audience at a meetup or conference.
-        </p>
-        <p>
-          Whatever the topic, pitch it to me and we will find a way to showcase
-          it in the ideal way.
-        </p>
-      </div>
-    </div>
-    <div class="flex w-full p-2 lg:w-1/2">
-      <div class="px-6 py-4 card">
-        <h2>
-          <!-- <Icon data="{faHandshake}" class="mr-3" scale="{2}" /> -->
-          Coaching/Consulting
-        </h2>
-
-        <p>
-          Do you have a hard time understanding a certain software development
-          concept? Do you experience running into a lot of bugs with your code?
-          Is there an issue with the collaboration of team members in your
-          company?
-        </p>
-        <p>
-          I can help you to incorporate best practices and code quality tools
-          into your or your teams workflow, learn you a certain JavaScript
-          framework or detect the productivity bottlenecks.
-        </p>
       </div>
     </div>
   </div>

@@ -1,10 +1,11 @@
 <script>
   import ExternalLink from '$lib/ExternalLink.svelte';
+  import PrivacyPolicyLink from '$lib/PrivacyPolicyLink.svelte';
   import SEO from '$lib/SEO.svelte';
 </script>
 
 <svelte:head>
-  <title>Imprint | Markus Hatvan</title>
+  <title>Imprint | Mark Jones</title>
 
   <meta
     name="description"
@@ -24,15 +25,13 @@
   </p>
 
   <p>
-    Markus Hatvan e.U.
+    Mark Jones
     <br />
-    Markus Hatvan
+    Montgomery St,
     <br />
-    St.-Veit-Gasse 20/4
+    Winston-Salem, NC
     <br />
-    1130 Vienna
-    <br />
-    Austria
+    USA
   </p>
 
   <p>
@@ -40,21 +39,6 @@
     IT services
     <br />
 
-    <b>Tax identification number:</b>
-    ATU76197125
-    <br />
-
-    <b>Register number:</b>
-    9110029413963
-    <br />
-
-    <b>Commercial Register Court:</b>
-    Handelsgericht Wien
-    <br />
-
-    <b>Company headquarters:</b>
-    St.-Veit-Gasse 20/4, 1130 Vienna, Austria
-    <br />
   </p>
 
   <p>
@@ -69,52 +53,6 @@
     <b>Website:</b>
     <a href="/">taocode.com</a>
     <br />
-  </p>
-
-  <!-- <p>
-    <b>Member of:</b>
-    Wirtschaftskammer Wien, Fachgruppe UBIT
-    <br />
-
-    <b>Occupational law:</b>
-    Industrial Code:
-    <ExternalLink href="www.ris.bka.gv.at">www.ris.bka.gv.at</ExternalLink>
-    <br />
-  </p>
-
-  <p>
-    <b>Supervisory authority/trade authority:</b> District office, 1110 Vienna,
-    Austria
-    <br />
-
-    <b>Job title:</b>
-    Web developer
-    <br />
-
-    <b>Awarding State:</b>
-    Austria
-  </p> -->
-
-  <h2>EU Dispute Resolution</h2>
-  <p>
-    According to the Ordinance on Online Dispute Resolution in Consumer Matters
-    (ODR Ordinance) we would like to inform you about the Online Dispute
-    Resolution Platform (OS Platform).
-  </p>
-
-  <p>
-    Consumers have the possibility to submit complaints to the Online Dispute
-    Resolution Platform of the European Commission at
-    <ExternalLink href="http://ec.europa.eu/odr?tid=221137263">
-      http://ec.europa.eu/odr?tid=221137263
-    </ExternalLink>. You will find the necessary contact details above in our
-    imprint.
-  </p>
-
-  <p>
-    However, we would like to point out that we are not willing or obliged to
-    participate in dispute resolution proceedings before a consumer arbitration
-    board.
   </p>
 
   <h2>Liability for the contents of this website</h2>
@@ -157,7 +95,7 @@
     companies:
   </p>
   <ul>
-    <li>Markus Hatvan</li>
+    <li>Mark Jones</li>
     <li>
       <ExternalLink href="https://unsplash.com">
         https://unsplash.com
@@ -165,18 +103,10 @@
     </li>
   </ul>
 
-  <p>
-    Source: Created with the
-    <ExternalLink href="https://www.firmenwebseiten.at/impressum-generator/">
-      imprint generator
-    </ExternalLink>
-    of firmenwebseiten.at
-  </p>
-
   <h2>Privacy policy</h2>
   <p>
     Information on data protection can be found on our
-    <a sveltekit:prefetch href="/privacy-policy">Privacy Policy</a>
+    <PrivacyPolicyLink />
     page.
   </p>
 </div>

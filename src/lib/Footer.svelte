@@ -8,23 +8,26 @@
     faDev,
     faReddit,
   } from '@fortawesome/free-brands-svg-icons';
-  import { faEnvelope, faRssSquare } from '@fortawesome/free-solid-svg-icons';
+  import { faEnvelope, faRss } from '@fortawesome/free-solid-svg-icons';
   // import { faRss } from 'svelte-awesome/icons';
   import ExternalLink from './ExternalLink.svelte';
   import SpeedlifyFooter from './SpeedlifyFooter.svelte';
+  import PrivacyPolicyLink from './PrivacyPolicyLink.svelte';
+  import TermsConditionsLink from './TermsConditionsLink.svelte';
 </script>
 
 <footer class="text-green-200 border-t-4 border-green-700 applause-gradient">
   <div
-    class="container flex flex-wrap items-baseline justify-between px-3 py-5 mx-auto"
+    class="container flex flex-wrap items-top justify-between px-3 py-5 mx-auto"
   >
     <div class="w-full mb-6 sm:mb-0 sm:w-1/3">
       <SpeedlifyFooter />
     </div>
 
+    <div class="w-full mb-6 sm:mb-0 sm:w-1/3">
     <nav
       aria-label="Left footer navigation"
-      class="w-full mb-6 sm:mb-0 sm:w-1/3"
+      class="bg-green-900 bg-opacity-40 py-1 px-3 rounded mr-3"
     >
       <a sveltekit:prefetch href="/about" class="footer-link"> About </a>
       <a sveltekit:prefetch href="/blog" class="footer-link"> Blog </a>
@@ -52,21 +55,21 @@
         </a>
       </div>
     </nav>
+    </div>
+    <div class="w-full mb-6 sm:mb-0 sm:w-1/3">
     <nav
       aria-label="Right footer navigation"
-      class="w-full mb-6 sm:mb-0 sm:w-1/3"
+      class="bg-green-900 bg-opacity-40 py-1 px-3 rounded"
     >
       <a sveltekit:prefetch href="/services" class="footer-link"> Services </a>
       <a sveltekit:prefetch href="/contact" class="footer-link"> Contact </a>
-      <a sveltekit:prefetch href="/resume" class="footer-link"> Resume </a>
-      <a sveltekit:prefetch href="/imprint" class="footer-link"> Imprint </a>
-      <a sveltekit:prefetch href="/privacy-policy" class="footer-link">
-        Privacy policy
-      </a>
-      <a sveltekit:prefetch href="/terms-and-conditions" class="footer-link">
-        Terms and conditions
-      </a>
+      <!-- <a sveltekit:prefetch href="/resume" class="footer-link"> Resume </a> -->
+      <!-- <a sveltekit:prefetch href="/imprint" class="footer-link"> Imprint </a> -->
+      
+      <PrivacyPolicyLink />
+
     </nav>
+    </div>
 
     <nav class="w-full mt-6 sm:w-2/3">
       <ExternalLink
@@ -107,7 +110,7 @@
         ariaLabel="Read the RSS feed"
         customClass="inline-flex mt-4 lg:mt-0 hover:text-white"
       >
-        <Icon data="{faRssSquare}" class="mr-3" scale="{1.5}" />
+        <Icon data="{faRss}" class="mr-3" scale="{1.5}" />
       </ExternalLink>
     </nav>
 
