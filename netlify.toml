@@ -1,6 +1,6 @@
 [build]
 environment = { NODE_ENV = "production", NODE_VERSION = "16.1.0" }
-command = "npm install && npm run build:css && npm run build:prod"
+command = "npm run build"
 publish = "build/"
 
 [[headers]]
