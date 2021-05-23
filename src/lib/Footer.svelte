@@ -27,7 +27,7 @@
     <div class="w-full mb-6 sm:mb-0 sm:w-1/3">
     <nav
       aria-label="Left footer navigation"
-      class="bg-green-900 bg-opacity-40 py-1 px-3 rounded mr-3"
+      class="bg-green-900 bg-opacity-40 py-1 px-3 rounded sm:mr-3"
     >
       <a sveltekit:prefetch href="/about" class="footer-link"> About </a>
       <a sveltekit:prefetch href="/blog" class="footer-link"> Blog </a>

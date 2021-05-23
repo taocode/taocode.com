@@ -1,4 +1,4 @@
-<div class="w-1/2 mx-auto
+<div class="w-3/4 mx-auto
 text-center
 sm:w-full sm:text-left">
 <div class="bg-green-950 bg-opacity-40 pl-3 pt-2 rounded 

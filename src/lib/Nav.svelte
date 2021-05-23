@@ -28,7 +28,7 @@
     <div class="ml-auto md:hidden">
       <ClickOutside on:clickoutside="{() => (open = false)}">
         <button
-          class="flex items-center px-3 py-2 text-green-700 border border-gray-400 hover:text-green-800 hover:border-gray-500"
+          class="flex items-center px-3 py-2 bg-green-500 border border-green-600 hover:bg-green-500 hover:border-green-500"
           aria-label="Hamburger menu"
           on:click="{toggleHamburgerMenu}"
         >

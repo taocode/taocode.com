@@ -9,47 +9,53 @@
   // need https://github.com/sveltejs/svelte/pull/4282 to get merged
   export let readableSlug: string;
 
-  const programmingGoals = [
-    {
-      text: 'Learn Svelte',
-      reached: false,
-    },
-    {
-      text: 'Learn TailwindCSS',
-      reached: true,
-    },
-    {
-      text: 'Contribute to an Open Source project',
-      reached: false,
-    },
-  ];
-
-
-  const lifeGoals = [
-    {
-      text: 'Workout more than 30 minutes a day, 6 days a week',
-      reached: true,
-    },
-    {
-      text: 'Fast for 12+ hours every night',
-      reached: true,
-    },
-    {
-      text: 'Replace all cleaning products with zero-waste solutions',
-      reached: false,
-    },
-    {
-      text: 'Fast for a full day',
-      reached: false,
-    },
-    {
-      text: 'Participate in a 140km bike race',
-      reached: false,
-    },
-  ];
+  const goalCats = {
+    'Programming': [
+      {
+        text: 'Learn Svelte',
+        reached: true,
+      },
+      {
+        text: 'Learn TailwindCSS',
+        reached: true,
+      },
+      {
+        text: 'Contribute to an Open Source project',
+        reached: false,
+      },
+    ],
+    'Life': [
+      {
+        text: 'Workout 30+ minutes a day',
+        reached: true,
+      },
+      {
+        text: 'Fast for 12+ hours every night',
+        reached: true,
+      },
+      {
+        text: 'Compost kitchen scraps',
+        reached: false,
+      },
+      {
+        text: 'Get a bike',
+        reached: false,
+      },
+    ],
+    "Portfolio": [
+      {
+        text: 'Create a Svelte App',
+        reached: true,
+      },
+      {
+        text: 'Migrate legacy Drupal 7 site to D9',
+        reached: false,
+      },
+    ],
+  }
 
   $: isProgrammingCategory = readableSlug !== 'Life';
-  $: goals = isProgrammingCategory ? programmingGoals : lifeGoals;
+  $: goals = goalCats[readableSlug];
 </script>
 
 <div class="w-full md:w-2/4">
@@ -67,7 +73,7 @@
     </div>
   {/each}
 </div>
-<div class="w-full md:w-2/4">
+<div class="w-3/4 md:w-2/4">
   {#if isProgrammingCategory}
     <img srcset="{CodeReview}" type="image/webp" alt="Man with code editor" />
   {:else}
