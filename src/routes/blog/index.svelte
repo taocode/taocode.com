@@ -12,7 +12,7 @@
 </script>
 
 <script lang="ts">
-  import BlogPost from '../../../static/blog-post.png';
+  import BlogPost from '../../../static/b-flopped-on-sidewalk.jpg';
   import BlogOverviewHeader from '$lib/BlogOverviewHeader.svelte';
   import BlogPostFilters from '$lib/BlogPostFilters.svelte';
   import BlogPostSidebar from '$lib/BlogPostSidebar.svelte';

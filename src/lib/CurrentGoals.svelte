@@ -1,6 +1,9 @@
 <script>
   import CodeReview from '../../static/code-review.png';
   import IntoTheNight from '../../static/into-the-night.png';
+  import EmpurrorSunNap from '../../static/empurror-scratcher-sun-nap.jpg';
+  import MillerParkMushrooms from '../../static/miller-park-tree-mushrooms.jpg';
+  import MillerParkGreenery from '../../static/miller-park-greenery.jpg';
   import Icon from 'svelte-awesome/components/Icon.svelte';
   import { faCheck } from '@fortawesome/free-solid-svg-icons';
   import { faClock } from '@fortawesome/free-regular-svg-icons';
@@ -9,6 +12,20 @@
   // need https://github.com/sveltejs/svelte/pull/4282 to get merged
   export let readableSlug: string;
 
+  const accentImage = {
+    'Life': {
+      'alt': 'Black cat napping in the sun on a cardboard scratcher',
+      'img': EmpurrorSunNap,
+    },
+    'Programming': {
+      'alt': "Miller Park green space framed by trees",
+      'img': MillerParkGreenery,
+    },
+    'Portfolio': {
+      'alt': "Cherry blossoms on ground and tree",
+      'img': MillerParkMushrooms,
+    },
+  }
   const goalCats = {
     'Programming': [
       {
@@ -74,13 +91,5 @@
   {/each}
 </div>
 <div class="w-3/4 md:w-2/4">
-  {#if isProgrammingCategory}
-    <img srcset="{CodeReview}" type="image/webp" alt="Man with code editor" />
-  {:else}
-    <img
-      srcset="{IntoTheNight}"
-      type="image/webp"
-      alt="Man sitting next to campfire"
-    />
-  {/if}
+    <img srcset="{accentImage[readableSlug]['img']}" type="image/webp" alt="{accentImage[readableSlug]['alt']}" />
 </div>
