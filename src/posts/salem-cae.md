@@ -8,6 +8,7 @@ excerpt: Salem's Celebration of Academic Excellence Drupal powered micro site
 lead: Built with a custom Bulma CSS based theme on Drupal 9
 layout: blog
 author: Mark Jones
+thumbnail: /images/portfolio/salem-cae-thumbnail.jpg
 tags:
   - Drupal 9
   - CMS

@@ -8,6 +8,8 @@ export type Post = {
   html: string;
   hasAffiliateLink?: boolean;
   cover?: string;
+  thumbnail?: string;
+  site_url?: string;
   lead?: string;
   readingTime: string;
 };

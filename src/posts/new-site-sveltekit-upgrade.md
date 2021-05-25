@@ -1,21 +1,29 @@
 ---
-title: New Website!
-slug: new-site
+title: "New Website: Now with SvelteKit!"
+slug: new-site-sveltekit
 category: Programming
-creationDate: '2021-01-10'
-excerpt: The new TAOcode site launched.
-lead: Built with Svelte, Svite, Routify, Windicss, and MDSVEX
+creationDate: '2021-05-24'
+excerpt: The new TAOCode site reworked with SvelteKit.
+lead: Built with SvelteKit, MDSVEX, and TailwindCSS
 layout: blog
 author: Mark Jones
 tags:
   - Static Site
   - Svelte
-  - Routify
-  - Vite
+  - SvelteKit
+  - MDSVEX
   - WindiCSS
 ---
 
-> *May 24, 2021 Update:* this site is now powered by SvelteKit. Read more about this update on 
+Less than 6 months since I started this [new site using Svelte with Routify](/blog/new-site), I've upgraded to SvelteKit and a new codebase, [thanks to Markus Hatvan](#thanks-markus-hatvan) for sharing his site's code.
+
+## Why?
+
+I wanted to be able to tag my content so that visitors could navigate by subject and/or category. I couldn't figure out how to do that with the prior Routify build.
+
+Plus, I get to work with SvelteKit, which I tried to set up 
+
+1. Routify
 
 I've worked on websites since Before Google (BGE). There have been so many advancements since those PERL scripts running through the `/cgi-bin/` folder in the mid-90s. I've loved the static site since before it has become the trend. It's is a direction that I like for many projects because it makes hosting faster, cheaper and more secure.
 
@@ -66,6 +74,6 @@ Because I love Tailwind but suffer from it's rebuild time. Now that I've found w
 
 WindiCSS does some magic that makes TailwindCSS syntax very fast to make any changes.
 
-## Thanks to Reepolee
+## Thanks Markus Hatvan
 
-Special thanks to [reepolee on github](https://github.com/reepolee/) for sharing the starter package [svelte-routify-windi-vite](https://github.com/reepolee/svelte-routify-windi-vite).
+Special thanks to [Markus Hatvan](https://markushatvan.com/) for sharing his site's source [markushatvan.com source on github](https://github.com/mhatvan/markushatvan.com).

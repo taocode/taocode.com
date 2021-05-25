@@ -33,25 +33,31 @@
 
 <SEO />
 
+<style>
+a {
+  @apply underline;
+}
+</style>
+
 <BlogOverviewHeader>
   <div class="w-full md:w-2/3 md:pr-10">
     <h1>Blog</h1>
     <p>
-      Insights and things I've learned working on the web:
+      Insights and things I've learned working on the web for over 2 decades:
       <a href="/categories/programming" sveltekit:prefetch>Programming</a>,
       <a href="/categories/portfolio" sveltekit:prefetch>Portfolio</a>,
       <a href="/categories/life" sveltekit:prefetch>Life</a>
       and other topics.
     </p>
-    <h2>Got a blog post topic proposal?</h2>
+    <h2>Blog post topic?</h2>
     <p>
-      You can suggest content
+      Suggest content on the
       <a
         href="https://github.com/taocode/taocode.com/issues/new"
         target="_blank"
         rel="noopener noreferrer"
       >
-        on the GitHub project page
+        taocode.com GitHub project page
       </a>
       or through my socials.
     </p>

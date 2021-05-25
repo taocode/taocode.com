@@ -3,7 +3,7 @@
   import { faBars } from '@fortawesome/free-solid-svg-icons';
   import { bars } from 'svelte-awesome/icons';
   import ClickOutside from 'svelte-click-outside';
-  import TaocodeLogo from '$lib/taocode-logo.svelte';
+  import TaocodeLogo from './TaocodeLogo.svelte';
 
   let open = false;
 
@@ -22,13 +22,13 @@
         href="/"
         class="mt-0 text-xl font-semibold tracking-tight nav-link text-green-500 md:inline-block"
       >
-        <TaocodeLogo class="h-8"/>
+        <TaocodeLogo classes="h-8"/>
       </a>
     </div>
     <div class="ml-auto md:hidden">
       <ClickOutside on:clickoutside="{() => (open = false)}">
         <button
-          class="flex items-center px-3 py-2 bg-green-500 border border-green-600 hover:bg-green-500 hover:border-green-500"
+          class="flex items-center rounded px-3 py-2 bg-green-500 border border-green-600 hover:bg-green-500 hover:border-green-500"
           aria-label="Hamburger menu"
           on:click="{toggleHamburgerMenu}"
         >

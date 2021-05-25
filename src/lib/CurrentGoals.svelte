@@ -1,6 +1,4 @@
 <script>
-  import CodeReview from '../../static/code-review.png';
-  import IntoTheNight from '../../static/into-the-night.png';
   import EmpurrorSunNap from '../../static/empurror-scratcher-sun-nap.jpg';
   import MillerParkMushrooms from '../../static/miller-park-tree-mushrooms.jpg';
   import MillerParkGreenery from '../../static/miller-park-greenery.jpg';
@@ -71,7 +69,6 @@
     ],
   }
 
-  $: isProgrammingCategory = readableSlug !== 'Life';
   $: goals = goalCats[readableSlug];
 </script>
 
