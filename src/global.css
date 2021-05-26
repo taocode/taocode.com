@@ -1,6 +1,3 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
 /* @font-face {
   font-family: 'Lato';
@@ -126,7 +123,7 @@ body {
 
 h1, h2, h3, h4, h5, h6,
 .prose h1, .prose h2, .prose h3, .prose h4, .prose h5, .prose h6  {
-  font-family: 'Rubik', sans-serif;
+  @apply font-display;
 }
 
 .mh a {
@@ -295,7 +292,7 @@ h1, h2, h3, h4, h5, h6,
 
 .applause-gradient {
   position: relative;
-  z-index: 10;
+  z-index: 0;
   overflow: hidden;
 }
 .applause-gradient::after {

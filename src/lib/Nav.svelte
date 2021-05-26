@@ -14,7 +14,7 @@
 
 <header class="fixed top-0 z-20 w-full bg-gray-900 header-box-shadow">
   <div
-    class="container flex flex-wrap items-center justify-between p-3 mx-auto"
+    class="container flex flex-wrap items-center justify-between pb-3 mx-auto"
   >
     <div class="flex">
       <a
@@ -81,4 +81,11 @@
   header {
     z-index: 1;
   }
+  .nav-link {
+  @apply block text-green-500 mt-4 mr-4 transition duration-200 font-display;
+}
+
+.nav-link:hover {
+  @apply text-green-200;
+}
 </style>
