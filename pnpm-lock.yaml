@@ -50,7 +50,7 @@ specifiers:
   tslib: ^2.2.0
   typescript: ^4.2.4
   vite-imagetools: ^3.6.8
-  vite-plugin-windicss: ^0.14.0
+  vite-plugin-windicss: ^0.15.0
   yup: ^0.32.9
 
 dependencies:
@@ -105,7 +105,7 @@ devDependencies:
   tslib: 2.2.0
   typescript: 4.2.4
   vite-imagetools: 3.6.8
-  vite-plugin-windicss: 0.14.6
+  vite-plugin-windicss: 0.15.10
   yup: 0.32.9
 
 packages:
@@ -1184,8 +1184,8 @@ packages:
       eslint-visitor-keys: 2.1.0
     dev: true
 
-  /@windicss/plugin-utils/0.14.6:
-    resolution: {integrity: sha512-jF+dJ6D4/UqVHSbH5kCdSoPnklLTZDf+seck4unICI0qyzmyPsrO15nmSS/gIvnmCedUfBrQj1MfYOX0tccFjQ==}
+  /@windicss/plugin-utils/0.15.10:
+    resolution: {integrity: sha512-xhC/d2oqjN1XEjXzG1+8YLOXiktIq3kPXOH3Rv0XOGdmN27XV7eur5g/yXE0fQ8xGrrzOijUb3qAItTgCO1hFA==}
     dependencies:
       debug: 4.3.2
       fast-glob: 3.2.5
@@ -5036,12 +5036,12 @@ packages:
       - rollup
     dev: true
 
-  /vite-plugin-windicss/0.14.6:
-    resolution: {integrity: sha512-bFyKfvnsa3nAab9LgrFInzdQhsIJyeNdCczgjrYMxjO8WlgiQuIFyJ1RTYQnYmQRlbvU9jpOL5XDxsFUMKRLUg==}
+  /vite-plugin-windicss/0.15.10:
+    resolution: {integrity: sha512-6thupz/vOt6XTIHZGRd8vVwjmC+8/FNgdhZGfyp2gnkPxC4SKUa4wZFpLBhirw+ApP8vdm9oVpe2liBZdQIwIg==}
     peerDependencies:
       vite: ^2.0.1
     dependencies:
-      '@windicss/plugin-utils': 0.14.6
+      '@windicss/plugin-utils': 0.15.10
       chalk: 4.1.1
       debug: 4.3.2
       windicss: 2.5.14
