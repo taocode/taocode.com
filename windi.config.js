@@ -1,9 +1,5 @@
 module.exports = {
   important: true,
-  mode: 'jit',
-  purge: {
-    content: ['./src/**/*.svelte'],
-  },
   theme: {
     fontFamily: {
       'display': ['Rubik','sans-serif'],
