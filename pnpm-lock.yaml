@@ -6,6 +6,7 @@ specifiers:
   '@fortawesome/free-brands-svg-icons': ^5.15.3
   '@fortawesome/free-regular-svg-icons': ^5.15.3
   '@fortawesome/free-solid-svg-icons': ^5.15.3
+  '@sveltejs/adapter-node': ^1.0.0-next.22
   '@sveltejs/adapter-static': 1.0.0-next.11
   '@sveltejs/kit': 1.0.0-next.109
   '@testing-library/svelte': ^3.0.3
@@ -51,7 +52,7 @@ specifiers:
   typescript: ^4.2.4
   vite: ^2.3.4
   vite-imagetools: ^3.6.8
-  vite-plugin-windicss: ^0.16.0
+  vite-plugin-windicss: ^0.16.0-beta.23
   yup: ^0.32.9
 
 dependencies:
@@ -63,6 +64,7 @@ devDependencies:
   '@fortawesome/free-brands-svg-icons': 5.15.3
   '@fortawesome/free-regular-svg-icons': 5.15.3
   '@fortawesome/free-solid-svg-icons': 5.15.3
+  '@sveltejs/adapter-node': 1.0.0-next.22_@sveltejs+kit@1.0.0-next.109
   '@sveltejs/adapter-static': 1.0.0-next.11_@sveltejs+kit@1.0.0-next.109
   '@sveltejs/kit': 1.0.0-next.109_svelte@3.38.2
   '@testing-library/svelte': 3.0.3_svelte@3.38.2
@@ -107,7 +109,7 @@ devDependencies:
   typescript: 4.2.4
   vite: 2.3.4
   vite-imagetools: 3.6.8
-  vite-plugin-windicss: 0.16.0_vite@2.3.4
+  vite-plugin-windicss: 0.16.0-beta.23_vite@2.3.4
   yup: 0.32.9
 
 packages:
@@ -868,6 +870,14 @@ packages:
       '@sinonjs/commons': 1.8.3
     dev: true
 
+  /@sveltejs/adapter-node/1.0.0-next.22_@sveltejs+kit@1.0.0-next.109:
+    resolution: {integrity: sha512-8LCv8jLSvG7btIYqHiQ+9+xEMQjbPYXi0/jZa/+z+5nYnqoIzqd8g5dyqDm8S+lJcdyE/dZctD4aQCnNuDCXhw==}
+    peerDependencies:
+      '@sveltejs/kit': 1.0.0-next.109
+    dependencies:
+      '@sveltejs/kit': 1.0.0-next.109_svelte@3.38.2
+    dev: true
+
   /@sveltejs/adapter-static/1.0.0-next.11_@sveltejs+kit@1.0.0-next.109:
     resolution: {integrity: sha512-flqdt6nJxzRPfhYDZbvrw1iFmc87E3rLJ/Rz7K+d4or/slyqHSxH+yOmQ7CJKej5DidliuTpAOvulithuDc0yw==}
     peerDependencies:
@@ -1199,8 +1209,8 @@ packages:
       eslint-visitor-keys: 2.1.0
     dev: true
 
-  /@windicss/plugin-utils/0.16.0:
-    resolution: {integrity: sha512-Gu6iHqFnqfxE0J8Oa74+2W5L2052ptqEHBtPaOuXOFgIMTJAT2KoXb6v+/Z0ldHsxVC1q+MSsom877SJ0cL2iA==}
+  /@windicss/plugin-utils/0.16.0-beta.23:
+    resolution: {integrity: sha512-dVAK6WS8X37a4wDCN9Kid3sQ+fTyQq29rIL4uKv773x9hzpgK4i2Lj99ItXg3o2+Y3aX81W1CUjJl9dKqUp8gA==}
     dependencies:
       '@antfu/utils': 0.1.6
       debug: 4.3.2
@@ -4771,8 +4781,8 @@ packages:
       fsevents: 2.3.2
     dev: true
 
-  /rollup/2.50.0:
-    resolution: {integrity: sha512-wO+F2MqWPGUCZx0549oqY8dsQqHVjuSxoyBWWnxKoQE+1UGcDKjtL7wHq/8jnnLJEeoGDQLf3ztrpgRwlbGJ0A==}
+  /rollup/2.50.1:
+    resolution: {integrity: sha512-3MQhSdGpms4xjYrtR3WNHMT+VrWWM4oqUxUC770MmLo1FWFR2pr/OL81HSPC/ifmiu0uMFk0qPGLmjkSMRIESw==}
     engines: {node: '>=10.0.0'}
     hasBin: true
     optionalDependencies:
@@ -5553,12 +5563,12 @@ packages:
       - rollup
     dev: true
 
-  /vite-plugin-windicss/0.16.0_vite@2.3.4:
-    resolution: {integrity: sha512-XaYnPNKsq2yZ5Ph39ZmPvtsTheyVsGSXibTOq/kWCKcXyLxIinTL6xQvLsagjF8QzHpHPF4NbsFvvGtO81gxgA==}
+  /vite-plugin-windicss/0.16.0-beta.23_vite@2.3.4:
+    resolution: {integrity: sha512-L8wPJQcgFbSZK8b20Uis+XaZAbd7MUCt13fUiFMuY4+kUTS0oiIi7MdQbpWiwwWcaK5j/AIasXdlGQG4Som0WQ==}
     peerDependencies:
       vite: ^2.0.1
     dependencies:
-      '@windicss/plugin-utils': 0.16.0
+      '@windicss/plugin-utils': 0.16.0-beta.23
       chalk: 4.1.1
       debug: 4.3.2
       vite: 2.3.4
@@ -5588,7 +5598,7 @@ packages:
       esbuild: 0.11.23
       postcss: 8.3.0
       resolve: 1.20.0
-      rollup: 2.50.0
+      rollup: 2.50.1
     optionalDependencies:
       fsevents: 2.3.2
     dev: true

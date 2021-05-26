@@ -1,8 +1,9 @@
 import sveltePreprocess from 'svelte-preprocess';
 import adapter from '@sveltejs/adapter-static';
 import { mdsvex } from 'mdsvex';
-import { imagetools } from 'vite-imagetools';
-import WindiCSS from 'vite-plugin-windicss';
+// import { imagetools } from 'vite-imagetools';
+
+import windicss from 'vite-plugin-windicss';
 
 import { createRequire } from "module"; // Bring in the ability to create the 'require' method
 const require = createRequire(import.meta.url); // construct the require method
@@ -22,9 +23,9 @@ const preprocess = [
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
-  extensions: extensions,
+  // extensions: extensions,
   // options passed to svelte.preprocess (https://svelte.dev/docs#svelte_preprocess)
-  preprocess: preprocess,
+  preprocess: sveltePreprocess(),
   kit: {
     adapter: adapter(),
     target: '#svelte',
@@ -32,10 +33,10 @@ const config = {
       ssr: {
 				noExternal: Object.keys(pkg.dependencies || {})
 			},
-      // plugins: [
-      //   WindiCSS.default(),
-      //   // imagetools({ force: true }),
-      // ],
+      plugins: [
+        windicss.default(),
+        // imagetools({ force: true }),
+      ],
     },
     trailingSlash: 'ignore',
   },
