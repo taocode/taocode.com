@@ -2,7 +2,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/02681d9e-f73d-4562-9125-4989a4bc4128/deploy-status)](https://app.netlify.com/sites/taocode/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/2a3c91de-4dc2-4b5f-adac-46c69e0e92fc/deploy-status)](https://app.netlify.com/sites/taocode-com/deploys)
 
 My personal website hosted on Netlify built with SvelteKit.
 
