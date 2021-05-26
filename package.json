@@ -6,12 +6,8 @@
   "private": true,
   "license": "MIT",
   "scripts": {
-<<<<<<< HEAD
     "clean": "rm -rf .svelte && rm -rf build",
     "dev": "run-p dev:svelte-kit",
-=======
-    "dev": "run-p dev:css dev:svelte-kit",
->>>>>>> upgrades
     "dev:css": "cross-env NODE_ENV=development postcss src/global.pcss -o static/global.css -w",
     "dev:svelte-kit": "svelte-kit dev",
     "dev:validate": "svelte-check",
@@ -44,16 +40,9 @@
     "@types/nprogress": "^0.2.0",
     "@types/prismjs": "^1.16.5",
     "@types/yup": "^0.29.11",
-<<<<<<< HEAD
-    "@typescript-eslint/eslint-plugin": "^4.24.0",
-    "@typescript-eslint/parser": "^4.24.0",
-    "babel-jest": "^26.6.3",
-=======
     "@typescript-eslint/eslint-plugin": "^4.25.0",
     "@typescript-eslint/parser": "^4.25.0",
-    "autoprefixer": "^10.2.5",
     "babel-jest": "^27.0.1",
->>>>>>> upgrades
     "cross-env": "^7.0.3",
     "cssnano": "^5.0.4",
     "date-fns": "^2.21.3",
