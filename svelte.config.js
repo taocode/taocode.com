@@ -2,6 +2,7 @@ import sveltePreprocess from 'svelte-preprocess';
 import adapter from '@sveltejs/adapter-static';
 import { mdsvex } from 'mdsvex';
 import { imagetools } from 'vite-imagetools';
+import {default as WindiCSS} from 'vite-plugin-windicss';
 
 const extensions = [`.svelte`, '.svx', '.md'];
 
@@ -9,9 +10,7 @@ const preprocess = [
   sveltePreprocess({
     defaults: {
       script: 'typescript',
-      style: 'postcss',
     },
-    postcss: true,
     preserve: ['ld+json'],
   }),
   mdsvex({ extensions: extensions }),
@@ -25,9 +24,9 @@ const config = {
   kit: {
     adapter: adapter(),
     target: '#svelte',
-    vite: {
-      plugins: [imagetools({ force: true })],
-    },
+    // vite: {
+    //   plugins: [WindiCSS.default(), imagetools({ force: true })],
+    // },
     trailingSlash: 'ignore',
   },
 };

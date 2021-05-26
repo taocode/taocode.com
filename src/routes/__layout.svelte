@@ -12,7 +12,14 @@
 </script>
 
 <script lang="ts">
-  import { afterUpdate } from 'svelte';
+  import { afterUpdate, onMount } from 'svelte';
+
+  import 'virtual:windi.css';
+
+  onMount(() => {
+    import('virtual:windi-devtools');
+  });
+
   import BreakpointHelper from '$lib/BreakpointHelper.svelte';
   import CookieNotice from '$lib/CookieNotice.svelte';
   import NProgress from '$lib/NProgress.svelte';
@@ -24,6 +31,7 @@
   import 'prismjs/themes/prism-tomorrow.css';
 
   let fullURL: string = '';
+
 
   afterUpdate(() => {
     let tmpURL = window.location.href;

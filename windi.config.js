@@ -96,5 +96,6 @@ module.exports = {
       // '2xl': '1536px',
     },
   },
-  plugins: [require('@tailwindcss/forms'), require('@tailwindcss/typography')],
+  plugins: [require('windicss/plugin/forms'),
+   require('windicss/plugin/typography')],
 };
