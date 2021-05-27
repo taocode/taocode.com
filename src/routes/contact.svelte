@@ -1,12 +1,10 @@
 <script lang="ts">
-  import { fade } from 'svelte/transition';
+  // import { fade } from 'svelte/transition';
   import { createForm } from 'svelte-forms-lib';
   import * as yup from 'yup';
   import Icon from 'svelte-awesome/components/Icon.svelte';
   import axios from 'redaxios';
   import {
-    faTwitter,
-    faMedium,
     faGithub,
     faLinkedin,
   } from '@fortawesome/free-brands-svg-icons';

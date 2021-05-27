@@ -1,11 +1,8 @@
 <script>
   import Icon from 'svelte-awesome/components/Icon.svelte';
   import {
-    faTwitter,
-    faMedium,
     faGithub,
     faLinkedin,
-    faDev,
     faReddit,
   } from '@fortawesome/free-brands-svg-icons';
   import { faRss } from '@fortawesome/free-solid-svg-icons';
