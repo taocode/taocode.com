@@ -18,7 +18,7 @@ $: {
 $: max = stacks.reduce((max, stack) => Math.max(max, ...stack.values.map(v => v.end)), 0);
 
 </script>
-<style>
+<style lang="postcss">
 	.chart {
 		position: relative;
 	}
@@ -49,15 +49,17 @@ $: max = stacks.reduce((max, stack) => Math.max(max, ...stack.values.map(v => v.
 	}
 
 	.x-label {
-		position: absolute;
+    @apply absolute text-gray-500;
 		width: 4em;
 		left: -2em;
-		bottom: -22px;
+		bottom: -2em;
 		font-family: sans-serif;
 		font-size: 14px;
-		color: #999;
 		text-align: center;
 	}
+  .x-meta-label {
+    @apply text-center pointer-events-none pt-4 text-base font-display text-gray-500;
+  }
 
 	.box {
 		position: absolute;
@@ -74,8 +76,8 @@ $: max = stacks.reduce((max, stack) => Math.max(max, ...stack.values.map(v => v.
     @apply bg-green-600;
   }
   .overview {
-    @apply text-white cursor-auto pointer-events-none border-2 border-transparent
-  transition duration-200 ease-out;
+    @apply text-white cursor-auto pointer-events-none border-gray-200 border-2 border-opacity-25 
+  transition duration-200 ease-out ;
   }
   .activated {
     @apply text-primary cursor-pointer pointer-events-auto;
@@ -85,7 +87,7 @@ $: max = stacks.reduce((max, stack) => Math.max(max, ...stack.values.map(v => v.
   }
 </style>
 
-<div class="chart -mt-3 lg:-mt-5 lg:pl-3 max-w-screen-sm mx-auto">
+<div class="chart -mt-3 lg:-mt-10 lg:pl-3 max-w-screen-sm mx-auto">
   <button class="overview font-display text-sm uppercase py-1 px-2 my-2 rounded"
   class:activated={currentChild}
   on:click={() => { dChildren = techEx; currentChild = ''; }}>Overview</button>
@@ -123,5 +125,5 @@ $: max = stacks.reduce((max, stack) => Math.max(max, ...stack.values.map(v => v.
       {/each}
     {/each}
   </Pancake.Chart>
-  <div class="text-center pointer-events-none pt-4 text-base font-display italic text-gray-400">Years of Experience</div>
+  <div class="x-meta-label ">Years of Experience</div>
 </div>
