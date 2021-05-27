@@ -19,7 +19,7 @@ Less than 6 months since I started this [new site using Svelte with Routify](/bl
 
 ## Why Upgrade So Soon?
 
-I wanted to tag my content so that it could navigated by subject or category. I looked for solutions within the Routify ecosystem but did not find a suitable demonstration and this probably isn't Routify's realm of responsibility. Certainly this is possible via Svelte in general (maybe with stores?), but I hadn't found a Svelte demonstration out there either; then I came across Markus Hatvan's code which had all the features I wanted and ***in SvelteKit***, the shiny new code with official Svelte routing. 
+I wanted to tag my content so that it could be navigated by subject or category. I looked for solutions within the Routify ecosystem but did not find a suitable demonstration and this probably isn't Routify's realm of responsibility. Certainly this is possible via Svelte in general (maybe with stores?), but I hadn't found a Svelte demonstration out there either; then I came across Markus Hatvan's code which had all the features I wanted and ***in SvelteKit***, the shiny new code with official Svelte routing. 
 
 I initially chose Routify simply because the starter package from Reepolee worked and it was *fast!* Development startup in roughly 10 seconds and builds in a similar amount of time on my local system. Svite indeed! [MarkJonesVoice](/blog/markjonesvoice) is still based on Reepolee's build with Routify + Vite + MDSVEX.
 
@@ -36,7 +36,7 @@ Current local system production build times for this site:
 - WindiCSS: 21.24s
 - TailwindCSS: 40.65s
 
-In this case, I don't think the JIT mode for Tailwind makes any difference but it certainly improves dev start-up time, just not as much as WindiCSS.
+For the production build I don't think the JIT mode for Tailwind makes any difference but it certainly improves dev start-up time, just not as much as WindiCSS.
 
 ## Thanks Markus Hatvan
 

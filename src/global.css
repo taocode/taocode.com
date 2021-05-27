@@ -150,7 +150,7 @@ h1, h2, h3, h4, h5, h6,
 }
 
 .mh p {
-  @apply mb-4 text-gray-800;
+  @apply mb-4;
 }
 
 .mh .blog code p {
@@ -235,11 +235,10 @@ h1, h2, h3, h4, h5, h6,
 }
 
 .nav-link {
-  @apply block text-green-500 mt-4 mr-4 transition duration-200 font-display;
+  @apply block text-green-550 mt-2 mr-4 transition duration-200 font-display;
+&:hover {
+  @apply text-green-650;
 }
-
-.nav-link:hover {
-  @apply text-green-200;
 }
 
 .footer-link {
@@ -288,6 +287,19 @@ h1, h2, h3, h4, h5, h6,
 
 .mh .alert-success {
   @apply p-4 text-green-800 bg-green-100 border-l-4 border-green-500;
+}
+
+.btn {
+  @apply py-1 px-4 rounded m-1 border-2 border-black;
+}
+.btn-primary {
+  @apply bg-green-600 text-black;
+}
+.btn-secondary {
+  @apply bg-secondary text-primary;
+}
+.btn-reset {
+  @apply bg-gray-500 text-gray-200 border-gray-500;
 }
 
 .applause-gradient {

@@ -53,7 +53,7 @@
 
 <Footer />
 
-{#if true || !$isDev}
+{#if !$isDev}
   <CookieNotice />
 {/if}
 

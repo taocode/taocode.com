@@ -33,7 +33,7 @@
       href="/blog/{post.slug}"
       class="inline-block rounded-br btn-primary"
     >
-      Read the article
+      Read more <span class='sr-only'> about {post.title}</span>
     </a>
   </div>
 </div>

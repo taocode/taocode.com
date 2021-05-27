@@ -8,6 +8,7 @@ specifiers:
   '@fortawesome/free-solid-svg-icons': ^5.15.3
   '@sveltejs/adapter-static': 1.0.0-next.11
   '@sveltejs/kit': 1.0.0-next.109
+  '@sveltejs/pancake': ^0.0.17
   '@testing-library/svelte': ^3.0.3
   '@types/jest': ^26.0.23
   '@types/js-cookie': ^2.2.6
@@ -64,6 +65,7 @@ devDependencies:
   '@fortawesome/free-solid-svg-icons': 5.15.3
   '@sveltejs/adapter-static': 1.0.0-next.11_@sveltejs+kit@1.0.0-next.109
   '@sveltejs/kit': 1.0.0-next.109_svelte@3.38.2
+  '@sveltejs/pancake': 0.0.17
   '@testing-library/svelte': 3.0.3_svelte@3.38.2
   '@types/jest': 26.0.23
   '@types/js-cookie': 2.2.6
@@ -885,6 +887,12 @@ packages:
     transitivePeerDependencies:
       - rollup
       - supports-color
+    dev: true
+
+  /@sveltejs/pancake/0.0.17:
+    resolution: {integrity: sha512-8YpV/PXSmlw3ypTlhwp5r6mnZUCVwQPloQTGTb0QBdDZyGdAgybF9NWkmDe516PkLx84MfZhWw56ztcqxd3X0Q==}
+    dependencies:
+      yootils: 0.0.16
     dev: true
 
   /@sveltejs/vite-plugin-svelte/1.0.0-next.10_svelte@3.38.2+vite@2.3.3:
@@ -5220,6 +5228,10 @@ packages:
       string-width: 4.2.2
       y18n: 5.0.8
       yargs-parser: 20.2.7
+    dev: true
+
+  /yootils/0.0.16:
+    resolution: {integrity: sha512-aIVecm5ucOzwhtKbl0zkfg0ZSOUR9c2da0k8cIc9umjjzkvVCWUUX/UHZ1CLPsv4wmJLqt0aWeLB7p9n9JDwYQ==}
     dev: true
 
   /yup/0.32.9:

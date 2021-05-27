@@ -18,6 +18,8 @@
   import OSSContributions from '$lib/OSSContributions.svelte';
   import CurrentProjects from '$lib/CurrentProjects.svelte';
   import Talks from '$lib/Talks.svelte';
+  import Experience from "$lib/Experience.svelte";
+
   import RecentPosts from '$lib/RecentPosts.svelte';
   import SEO from '$lib/SEO.svelte';
   import type { Post } from '../models/post';
@@ -38,6 +40,8 @@
 <SEO />
 
 <Introduction />
+
+<Experience />
 
 <RecentPosts posts="{posts}" />
 

@@ -5,16 +5,21 @@
   import ClickOutside from 'svelte-click-outside';
   import TaocodeLogo from './TaocodeLogo.svelte';
 
+  import ToTop from './ToTop.svelte';
+  import Headroom from "$lib/headroom/index.svelte";
+
   let open = false;
 
   const toggleHamburgerMenu = () => {
     open = !open;
   };
 </script>
+<div id="top" hidden></div>
 
-<header class="fixed top-0 z-20 w-full bg-gray-900 header-box-shadow">
+<Headroom>
+<header class="w-full bg-gray-900 header-box-shadow">
   <div
-    class="container flex flex-wrap items-center justify-between pb-3 mx-auto"
+    class="container flex flex-wrap items-center justify-between p-3 mx-auto"
   >
     <div class="flex">
       <a
@@ -22,7 +27,7 @@
         href="/"
         class="mt-0 text-xl font-semibold tracking-tight nav-link text-green-500 md:inline-block"
       >
-        <TaocodeLogo classes="h-8"/>
+        <TaocodeLogo classes="h-8 -mt-3"/>
       </a>
     </div>
     <div class="ml-auto md:hidden">
@@ -72,6 +77,9 @@
     </nav>
   </div>
 </header>
+</Headroom>
+
+<ToTop />
 
 <style>
   .header-box-shadow {
@@ -81,11 +89,5 @@
   header {
     z-index: 1;
   }
-  .nav-link {
-  @apply block text-green-500 mt-4 mr-4 transition duration-200 font-display;
-}
-
-.nav-link:hover {
-  @apply text-green-200;
-}
+  
 </style>
