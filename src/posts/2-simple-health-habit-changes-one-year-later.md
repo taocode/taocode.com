@@ -1,9 +1,9 @@
 ---
-title: '2 Simple Health Habit Changes - One Year Later'
+title: '2 Simple Habit Changes - One Year Later'
 slug: '2-simple-health-habit-changes-one-year-later'
 creationDate: '2021-05-20'
 category: 'Life'
-excerpt: '*2 simple changes* made 1 year ago that have improved my health.'
+excerpt: '*2 simple health habit changes* made 1 year ago that have improved my health.'
 lead: Based on over 40 years of experience, I can attest that my future days *and weight* are dependent on my daily habits. **Duh, *right‽*** The lesson finally sunk in and *—with my focus on health—* I've been able to stick to *2 simple daily habit changes*.
 cover: pen-writing-on-a-paper.jpeg
 tags:
@@ -17,7 +17,7 @@ tags:
 
 May 20, 2020 — I was in a minor health crisis if I'd bother to pay attention to my weight. The daily walks around the neighborhood weren't enough to offset the cheese and crispy-crunchy late-night *and overnight* snacking.
 
-To my thinking: *30 minutes everyday* is better than *1 hour every-other-day* and *eating less is key to weight loss*
+To my thinking: *30 minutes everyday* is better than *1 hour every-other-day* and *eat nutritionally dense food* and *eating less* are key to weight loss.
 
 ## 1) Exercise: 30+ minutes/day
 
@@ -47,12 +47,22 @@ Facing many life changes largely brought on by the global coronavirus pandemic, 
 
 ### Pool Closure
 
-My primary form of exercise has been **swimming**. I love getting out of gravity for a moment, even if it means *always* smelling the pool chemicals in my hair and beard. But then the pools were closed and I needed to find another option.
+My primary form of exercise has been *swimming*. I love getting out of gravity for a moment, even if it means *always* smelling the pool chemicals in my hair and beard. But then the pools were closed and I needed to find another option.
 
 ### Houshold Changes
 
 During the first part of the pandemic lockdown my best friend moved in with his 2 children. This was a delight and they helped straighten up my place and make it a space we could all share, but it was a big adjustment for me personally; I couldn't imagine braving the start of this lockdown without the support and company of these fine people.
 
+After that Cassidy came to live with me. It's been great to have loved ones to share these stressful days.
+
 ### Sit-Stand Desk
 
+I got an electronic sit-stand desk and like it very much. I split my time between sitting and standing, shifting is as easy as pressing a button and waiting about 30 seconds. 
+
 ## Exercise Inspiration
+
+I have a few workouts on YouTube that I've done repeatedly. Even after a year I still consider myself generally a "beginner" and modify the workouts by skipping jumping and opting for other low-impact modifications.
+
+I get my heart rate up while challenging my myself with the intent to build muscle strength. By executing in a circuit, I get some cardio benefits while using the time wisely.
+
+Along with some YouTube works (favorites from SELF and Fitness Blender), I have designed my own suspension strap upper body plus core workout.

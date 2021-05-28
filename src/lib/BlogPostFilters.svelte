@@ -59,7 +59,7 @@
         bind:value="{textSearch}"
         class="w-full text-gray-700 border border-gray-400 rounded hover:border-gray-500"
         type="text"
-        placeholder="e.g: 6 Reasons why I started this blog"
+        placeholder="e.g: Why I started this blog"
       />
     </div>
 

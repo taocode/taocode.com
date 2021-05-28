@@ -73,7 +73,7 @@ $: max = stacks.reduce((max, stack) => Math.max(max, ...stack.values.map(v => v.
     cursor: pointer;
   }
   .has-children:hover {
-    @apply bg-green-600;
+    @apply bg-green-800;
   }
   .overview {
     @apply text-white cursor-auto pointer-events-none border-gray-200 border-2 border-opacity-25 

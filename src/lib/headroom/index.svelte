@@ -58,7 +58,7 @@
     position: fixed;
     width: 100%;
     top: 0;
-    transition: transform 300ms linear;
+    transition: transform 300ms ease-out;
     transform: translateY(0%);
     z-index: 20;
   }
