@@ -52,6 +52,17 @@
       <p class="mt-0 mb-4"><b>If you liked this post, share it:</b></p>
       <ShareButtons post="{post}" />
     </div>
+    <div class="w-full">
+      <script src="https://utteranc.es/client.js"
+      repo="taocode/taocode.com"
+      issue-term="pathname"
+      label="✨💬"
+      theme="github-light"
+      crossorigin="anonymous"
+      async>
+  </script>  
+    </div>
+  
     <div class="flex items-center my-8">
       <BackToBlogOverviewBtn />
     </div>
