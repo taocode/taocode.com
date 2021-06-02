@@ -17,13 +17,13 @@
       sm:flex-row sm:flex-nowrap"
     >
       {#if post.thumbnail}
-      <div class="w-1/2 mx-auto sm:w-1/2 md:w-1/3 lg:w-1/4">
-        <figure class="mx-auto max-w-screen">
+      <div class="flex-shrink w-3/4 sm:w-1/2 mx-auto sm:pt-0 md:w-1/3 lg:pl-12">
+        <figure class="mx-auto p-4 max-w-sm">
           <img src="{post.thumbnail}" alt="{post.title} Thumbnail" loading="lazy" />
         </figure>
       </div>
       {/if}
-      <div class="w-full">
+      <div class="w-full flex-shrink">
         <h1>{post.title}</h1>
         {#if post.site_url}
           <div><a target="_blank" href={post.site_url}>{post.site_url.substr(8)}
