@@ -13,6 +13,7 @@
   import BackToBlogOverviewBtn from '$lib/BackToBlogOverviewBtn.svelte';
   import BlogPostHeader from '$lib/BlogPostHeader.svelte';
   import BlogPostSidebar from '$lib/BlogPostSidebar.svelte';
+  import CommentsUtterances from '$lib/CommentsUtterances.svelte';
   import PrevNextArticle from '$lib/PrevNextArticle.svelte';
   import ShareButtons from '$lib/ShareButtons.svelte';
   import type { Post } from 'src/models/post';
@@ -53,14 +54,7 @@
       <ShareButtons post="{post}" />
     </div>
     <div class="w-full">
-      <script src="https://utteranc.es/client.js"
-      repo="taocode/taocode.com"
-      issue-term="pathname"
-      label="✨💬"
-      theme="github-light"
-      crossorigin="anonymous"
-      async>
-  </script>  
+      <CommentsUtterances />
     </div>
   
     <div class="flex items-center my-8">
