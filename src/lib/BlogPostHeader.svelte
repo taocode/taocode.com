@@ -1,4 +1,5 @@
 <script lang="ts">
+  import BlogPostThumbnail from './BlogPostThumbnail.svelte';
   import BlogPostTag from './BlogPostTag.svelte';
   import ShareButtons from './ShareButtons.svelte';
   import InfoTags from './InfoTags.svelte';
@@ -9,21 +10,19 @@
 
   export let post: Post;
 </script>
-
-<section class="applause-gradient">
-  <div class="container mh-container">
+<style>
+  .applause-gradient {
+    @apply font-display;
+  }
+</style>
+<section class="applause-gradient blog-post-header rotating-bg">
+  <div class="container mh-container md:flex md:items-stretch">
+    <BlogPostThumbnail {post} />
     <div
       class="flex flex-wrap items-center justify-between p-6 text-center bg-white bg-opacity-70 rounded shadow-xl
-      sm:flex-row sm:flex-nowrap"
+      sm:flex-row sm:flex-nowrap sm:mx-auto flex-grow"
     >
-      {#if post.thumbnail}
-      <div class="flex-shrink w-3/4 sm:w-1/2 mx-auto sm:pt-0 md:w-1/3 lg:pl-12">
-        <figure class="mx-auto p-4 max-w-sm">
-          <img src="{post.thumbnail}" alt="{post.title} Thumbnail" loading="lazy" />
-        </figure>
-      </div>
-      {/if}
-      <div class="w-full flex-shrink">
+      <div class="w-full px-4">
         <h1>{post.title}</h1>
         {#if post.site_url}
           <div><a target="_blank" href={post.site_url}>{post.site_url.substr(8)}
@@ -31,6 +30,7 @@
           </a></div>
         {/if}
         <InfoTags post="{post}" />
+
 
         <BlogPostTag tags="{post.tags}" />
 

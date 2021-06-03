@@ -339,6 +339,11 @@ h1, h2, h3, h4, h5, h6,
   top: -75%;
   left: calc(-42vw + -42vh);
 }
+.blog-post-header::after {
+  /* left: -33vw; */
+  top: -85%;
+  left: calc(-39vw + -39vh);
+}
 @screen sm {
   .applause-gradient::after {
     top: -100vh;
@@ -350,6 +355,10 @@ h1, h2, h3, h4, h5, h6,
   }
   .blog-applause::after {
     left: calc(-25vw + -25vh);
+  }
+  .blog-post-header::after {
+    top: -127vh;
+    left: -80vw;
   }
 }
 @screen lg {
@@ -381,7 +390,8 @@ h1, h2, h3, h4, h5, h6,
   }
 }
 .rotating,
-.rotating-after::after {
+.rotating-after::after,
+.rotating-bg::after {
   animation: rotating 45s linear infinite;
 }
 

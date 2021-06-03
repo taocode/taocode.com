@@ -13,6 +13,7 @@
   import BackToBlogOverviewBtn from '$lib/BackToBlogOverviewBtn.svelte';
   import BlogPostHeader from '$lib/BlogPostHeader.svelte';
   import BlogPostSidebar from '$lib/BlogPostSidebar.svelte';
+  import CommentsUtterances from '$lib/CommentsUtterances.svelte';
   import PrevNextArticle from '$lib/PrevNextArticle.svelte';
   import ShareButtons from '$lib/ShareButtons.svelte';
   import type { Post } from 'src/models/post';
@@ -42,16 +43,24 @@
   <title>{pageTitle}</title>
 </svelte:head>
 
+<style>
+
+</style>
+
 <SEO blogPostInfo="{blogPostInfo}" />
 <BlogPostHeader post="{post}" />
 <section class="container flex flex-wrap mh-container">
   <article class="w-full pb-12 prose-lg lg:prose-xl blog lg:w-3/4 lg:pr-16">
     {#if post.lead }<p class="lead">{@html marked(post.lead)}</p>{/if}
     {@html post.html}
-    <div class="p-5 my-8 text-center border-4 border-green-700">
-      <p class="mt-0 mb-4"><b>If you liked this post, share it:</b></p>
+    <div class="max-w-md mx-auto p-2 my-3 pb-6 text-center border-2 rounded bg-green-100 bg-opacity-70 border-green-700">
+      <p class="font-display">If you liked this post, share it:</p>
       <ShareButtons post="{post}" />
     </div>
+    <div class="w-full">
+      <CommentsUtterances />
+    </div>
+  
     <div class="flex items-center my-8">
       <BackToBlogOverviewBtn />
     </div>
