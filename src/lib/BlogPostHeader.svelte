@@ -14,12 +14,24 @@
   .applause-gradient {
     @apply font-display;
   }
+  h1 {
+    @apply mt-2;
+  }
 </style>
 <section class="applause-gradient blog-post-header rotating-bg">
-  <div class="container mh-container md:flex md:items-stretch">
-    <BlogPostThumbnail {post} />
+  <div class="container mh-container md:flex 
+  md:items-center
+  md:gap-8">
+    {#if post.thumbnail}
+    <div class="w-3/5 mx-auto mb-6 flex-shrink align-middle
+    p-2 rounded bg-opacity-40 bg-white
+    md:mb-0 md:w-1/3 lg:w-1/4 ">
+      <BlogPostThumbnail {post} />
+    </div>
+    {/if}
     <div
-      class="flex flex-wrap items-center justify-between p-6 text-center bg-white bg-opacity-70 rounded shadow-xl
+      class="blog-header px-6 py-3 text-center
+      
       sm:flex-row sm:flex-nowrap sm:mx-auto flex-grow"
     >
       <div class="w-full px-4">
