@@ -11,7 +11,6 @@ tags:
   - Wellbeing
   - Exercise
   - Fasting
-  - Weight management
 ---
 
 May 20, 2020 — I was in a minor health crisis if I'd bother to pay attention to my weight. The daily walks around the neighborhood weren't enough to offset the cheese and crispy-crunchy late-night *and overnight* snacking.

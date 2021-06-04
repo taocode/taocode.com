@@ -27,4 +27,4 @@ A promotional site for my voicework, you can get an Instant Quote and Hire Me wi
 - Vite
 - Firebase Hosting
 
-This site was a rewrite from vanilla JS built on 11ty. [Read more about markjonesvoice.com](/blog/my-1st-svelte-app-markjonesvoice)
+This site was a rewrite from vanilla JS built on 11ty. [Read more about markjonesvoice.com](/blog/my-1st-svelte-app)

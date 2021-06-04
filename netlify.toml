@@ -14,3 +14,47 @@ publish = "build/"
   from = "/categories/personal-development"
   to = "/categories/life/"
 
+[[redirects]]
+  from = "/portfolio"
+  to = "/categories/portfolio"
+
+[[redirects]]
+  from = "/posts"
+  to = "/blog"
+
+[[redirects]]
+  from = "/portfolio/markjonesvoice"
+  to = "/blog/markjonesvoice"
+
+[[redirects]]
+  from = "/portfolio/traincycle"
+  to = "/blog/traincycle"
+
+[[redirects]]
+  from = "/portfolio/salem-cae"
+  to = "/blog/salem-cae"
+
+[[redirects]]
+  from = "/portfolio/etsaman"
+  to = "/blog/etsaman"
+
+[[redirects]]
+  from = "/portfolio/salem"
+  to = "/blog/salem"
+
+[[redirects]]
+  from = "/posts/firebase-cloud-function-send-email"
+  to = "/blog/firebase-cloud-function-send-email"
+
+[[redirects]]
+  from = "/posts/my-1st-svelte-app"
+  to = "/blog/my-1st-svelte-app"
+
+[[redirects]]
+  from = "/posts/svelte-is-cool"
+  to = "/blog/svelte-is-nice-piece-of-app"
+
+[[redirects]]
+  from = "/posts/new-site"
+  to = "/blog/new-site"
+

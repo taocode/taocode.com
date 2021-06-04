@@ -1,6 +1,6 @@
 ---
 title: My 1st Svelte App - Mark Jones Voice
-slug: my-1st-svelte-app-markjonesvoice
+slug: my-1st-svelte-app
 creationDate: '2021-02-12'
 category: Programming
 excerpt: My first Svelte App, using Vite, WindiCSS and MDSVEX
