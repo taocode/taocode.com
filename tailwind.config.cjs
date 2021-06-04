@@ -90,6 +90,11 @@ module.exports = {
       xl: '1280px',
       // '2xl': '1536px',
     },
+    extend: {
+      fontSize: {
+        '2xs': ['0.625rem', { lineHeight: '0.9rem' }],
+      }
+    }
   },
-  plugins: [require('windicss/plugin/forms'), require('windicss/plugin/typography')],
+  plugins: [require('windicss/plugin/aspect-ratio'),require('windicss/plugin/forms'), require('windicss/plugin/typography')],
 };

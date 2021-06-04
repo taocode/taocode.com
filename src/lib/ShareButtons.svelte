@@ -27,7 +27,7 @@
   class="{shareButtonStyle}"
   title="Share on Facebook"
 >
-  <Icon data="{faFacebook}" class="mr-3" scale="{1.5}" />
+  <Icon data="{faFacebook}" class="mx-3" scale="{1.5}" />
 </a>
 <a
   href="https://www.linkedin.com/shareArticle?mini=true&url={encodedURL}&title={encodedPostTitle}&summary={encodedPostExcerpt}&source=LinkedIn"

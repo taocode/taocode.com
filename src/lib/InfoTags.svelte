@@ -8,7 +8,3 @@
 <span class="text-green-700">{formatDate(post.creationDate)}</span>
 &middot;
 <span class="text-green-700">{post.readingTime}</span>
-&middot;
-<a sveltekit:prefetch href="/categories/{convertToSlug(post.category)}"
-  >{post.category}
-</a>
