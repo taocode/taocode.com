@@ -7,7 +7,7 @@ specifiers:
   '@fortawesome/free-regular-svg-icons': ^5.15.3
   '@fortawesome/free-solid-svg-icons': ^5.15.3
   '@sveltejs/adapter-static': 1.0.0-next.11
-  '@sveltejs/kit': 1.0.0-next.112
+  '@sveltejs/kit': 1.0.0-next.109
   '@sveltejs/pancake': ^0.0.17
   '@testing-library/svelte': ^3.0.3
   '@types/jest': ^26.0.23
@@ -63,8 +63,8 @@ devDependencies:
   '@fortawesome/free-brands-svg-icons': 5.15.3
   '@fortawesome/free-regular-svg-icons': 5.15.3
   '@fortawesome/free-solid-svg-icons': 5.15.3
-  '@sveltejs/adapter-static': 1.0.0-next.11_@sveltejs+kit@1.0.0-next.112
-  '@sveltejs/kit': 1.0.0-next.112_svelte@3.38.2
+  '@sveltejs/adapter-static': 1.0.0-next.11_@sveltejs+kit@1.0.0-next.109
+  '@sveltejs/kit': 1.0.0-next.109_svelte@3.38.2
   '@sveltejs/pancake': 0.0.17
   '@testing-library/svelte': 3.0.3_svelte@3.38.2
   '@types/jest': 26.0.23
@@ -859,26 +859,26 @@ packages:
       '@sinonjs/commons': 1.8.3
     dev: true
 
-  /@sveltejs/adapter-static/1.0.0-next.11_@sveltejs+kit@1.0.0-next.112:
+  /@sveltejs/adapter-static/1.0.0-next.11_@sveltejs+kit@1.0.0-next.109:
     resolution: {integrity: sha512-flqdt6nJxzRPfhYDZbvrw1iFmc87E3rLJ/Rz7K+d4or/slyqHSxH+yOmQ7CJKej5DidliuTpAOvulithuDc0yw==}
     peerDependencies:
       '@sveltejs/kit': 1.0.0-next.109
     dependencies:
-      '@sveltejs/kit': 1.0.0-next.112_svelte@3.38.2
+      '@sveltejs/kit': 1.0.0-next.109_svelte@3.38.2
     dev: true
 
-  /@sveltejs/kit/1.0.0-next.112_svelte@3.38.2:
-    resolution: {integrity: sha512-n+GyrDB7j4CJTazRAnwZolsoRp76g38x7+8msEul6DctghtNBRtW1eIyCcIuUn0nQMVQdseZUmifrbQ9NTEvJQ==}
+  /@sveltejs/kit/1.0.0-next.109_svelte@3.38.2:
+    resolution: {integrity: sha512-72iHsgcZTj9WU2VMq/qzMdFidTrSlJ1+KE0Iiw43Gee8TkKi5tMOyeu/f8lWa4HzdHLFZ2CJdvmcL7w3F4SWjg==}
     engines: {node: ^12.20 || ^14.13.1 || >= 16}
     hasBin: true
     peerDependencies:
       svelte: ^3.38.2
     dependencies:
-      '@sveltejs/vite-plugin-svelte': 1.0.0-next.10_svelte@3.38.2+vite@2.3.3
+      '@sveltejs/vite-plugin-svelte': 1.0.0-next.10_svelte@3.38.2+vite@2.3.6
       cheap-watch: 1.0.3
       sade: 1.7.4
       svelte: 3.38.2
-      vite: 2.3.3
+      vite: 2.3.6
     transitivePeerDependencies:
       - rollup
       - supports-color
@@ -890,7 +890,7 @@ packages:
       yootils: 0.0.16
     dev: true
 
-  /@sveltejs/vite-plugin-svelte/1.0.0-next.10_svelte@3.38.2+vite@2.3.3:
+  /@sveltejs/vite-plugin-svelte/1.0.0-next.10_svelte@3.38.2+vite@2.3.6:
     resolution: {integrity: sha512-ImvxbhPePm2hWNTKBSA3LHAYGwiEjHjvvgfPLXm4R87sfZ+BMXql9jBmDpzUC/URBLT4BB3Jxos/i523qkJBHg==}
     engines: {node: '>=12.0.0'}
     peerDependencies:
@@ -906,7 +906,7 @@ packages:
       source-map: 0.7.3
       svelte: 3.38.2
       svelte-hmr: 0.14.4_svelte@3.38.2
-      vite: 2.3.3
+      vite: 2.3.6
     transitivePeerDependencies:
       - rollup
       - supports-color
@@ -2068,8 +2068,8 @@ packages:
       is-symbol: 1.0.4
     dev: true
 
-  /esbuild/0.11.23:
-    resolution: {integrity: sha512-iaiZZ9vUF5wJV8ob1tl+5aJTrwDczlvGP0JoMmnpC2B0ppiMCu8n8gmy5ZTGl5bcG081XBVn+U+jP+mPFm5T5Q==}
+  /esbuild/0.12.5:
+    resolution: {integrity: sha512-vcuP53pA5XiwUU4FnlXM+2PnVjTfHGthM7uP1gtp+9yfheGvFFbq/KyuESThmtoHPUrfZH5JpxGVJIFDVD1Egw==}
     hasBin: true
     requiresBuild: true
     dev: true
@@ -4266,8 +4266,8 @@ packages:
       glob: 7.1.7
     dev: true
 
-  /rollup/2.50.5:
-    resolution: {integrity: sha512-Ztz4NurU2LbS3Jn5rlhnYv35z6pkjBUmYKr94fOBIKINKRO6kug9NTFHArT7jqwMP2kqEZ39jJuEtkk91NBltQ==}
+  /rollup/2.50.6:
+    resolution: {integrity: sha512-6c5CJPLVgo0iNaZWWliNu1Kl43tjP9LZcp6D/tkf2eLH2a9/WeHxg9vfTFl8QV/2SOyaJX37CEm9XuGM0rviUg==}
     engines: {node: '>=10.0.0'}
     hasBin: true
     optionalDependencies:
@@ -5106,15 +5106,15 @@ packages:
       - supports-color
     dev: true
 
-  /vite/2.3.3:
-    resolution: {integrity: sha512-eO1iwRbn3/BfkNVMNJDeANAFCZ5NobYOFPu7IqfY7DcI7I9nFGjJIZid0EViTmLDGwwSUPmRAq3cRBbO3+DsMA==}
+  /vite/2.3.6:
+    resolution: {integrity: sha512-fsEpNKDHgh3Sn66JH06ZnUBnIgUVUtw6ucDhlOj1CEqxIkymU25yv1/kWDPlIjyYHnalr0cN6V+zzUJ+fmWHYw==}
     engines: {node: '>=12.0.0'}
     hasBin: true
     dependencies:
-      esbuild: 0.11.23
+      esbuild: 0.12.5
       postcss: 8.3.0
       resolve: 1.20.0
-      rollup: 2.50.5
+      rollup: 2.50.6
     optionalDependencies:
       fsevents: 2.3.2
     dev: true
