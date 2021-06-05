@@ -48,7 +48,7 @@
         </div>
 
         <div class="my-3">
-          <InfoTags post="{post}" />
+          <InfoTags {post} hide_category={true} />
         </div>
 
         {#if post.excerpt}
