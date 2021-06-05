@@ -10,7 +10,7 @@
   import ExternalLink from './ExternalLink.svelte';
   import SpeedlifyFooter from './SpeedlifyFooter.svelte';
   import PrivacyPolicyLink from './PrivacyPolicyLink.svelte';
-  import TermsConditionsLink from './TermsConditionsLink.svelte';
+  // import TermsConditionsLink from './TermsConditionsLink.svelte';
 </script>
 
 <footer class="text-green-200 border-t-4 border-green-700 applause-gradient">

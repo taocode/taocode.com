@@ -19,10 +19,3 @@
 
 </section>
 
-<style>
-  embed {
-    width: 100%;
-    height: 100vh;
-    margin: 0 auto;
-  }
-</style>

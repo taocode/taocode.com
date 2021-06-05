@@ -13,11 +13,7 @@
 
 <script lang="ts">
   import Introduction from '$lib/Introduction.svelte';
-  import Applause from '$lib/Applause.svelte';
-  import InspirationalQuote from '$lib/InspirationalQuote.svelte';
-  import OSSContributions from '$lib/OSSContributions.svelte';
   import CurrentProjects from '$lib/CurrentProjects.svelte';
-  import Talks from '$lib/Talks.svelte';
   import Experience from "$lib/Experience.svelte";
 
   import RecentPosts from '$lib/RecentPosts.svelte';

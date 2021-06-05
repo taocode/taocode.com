@@ -1,5 +1,5 @@
 <script>
-  import ExternalLink from '$lib/ExternalLink.svelte';
+  // import ExternalLink from '$lib/ExternalLink.svelte';
   import SEO from '$lib/SEO.svelte';
 </script>
 

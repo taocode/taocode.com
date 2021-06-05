@@ -8,7 +8,7 @@
 
   export let post: Post;
 </script>
-<style>
+<style type="postcss">
   .card {
     perspective: 600px;
   }
