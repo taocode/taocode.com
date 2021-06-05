@@ -22,7 +22,7 @@
   import marked from 'marked';
 
   import Icon from 'svelte-awesome/components/Icon.svelte';
-  import { share, refresh, comment, codeFork, camera, ban } from 'svelte-awesome/icons';
+  import { share } from 'svelte-awesome/icons';
 
   export let posts: Post[];
 
@@ -76,6 +76,6 @@
     />
   </article>
   <aside class="w-full mt-8 lg:mt-0 lg:w-3/12">
-    <BlogPostSidebar posts="{posts}" />
+    <BlogPostSidebar {posts} />
   </aside>
 </section> 

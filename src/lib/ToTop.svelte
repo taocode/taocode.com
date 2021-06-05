@@ -1,5 +1,4 @@
 <script>
-  import { onMount } from 'svelte';
   import Icon from 'svelte-awesome';
   import { chevronUp } from 'svelte-awesome/icons';
   import Headroom from "./headroom/index.svelte";

@@ -1,5 +1,5 @@
 <script>
-  export let post;
+  export let post: Post;
 </script>
 {#if post.thumbnail}
   <figure class="block w-full flex-none">

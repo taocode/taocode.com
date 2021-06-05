@@ -13,8 +13,8 @@
   let lastY = 0;
   let prefix = "svelte-headroom--";
   let attop = true;
-  let atbottom = false;
-  let win;
+  let atbottom: boolean = false;
+  let win: Window;
 
   const dispatch = createEventDispatcher();
 
