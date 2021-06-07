@@ -35,19 +35,21 @@
     let tmpURL = window.location.href;
     fullURL = tmpURL[tmpURL.length - 1] === '/' ? tmpURL : tmpURL + '/';
   });
+  let dark = true;
 </script>
 
 <svelte:head>
   <link rel="canonical" href="{fullURL}" />
 </svelte:head>
 
+<div class:dark>
 <BreakpointHelper />
 
 <NProgress />
 
-<Nav />
+<Nav bind:darkMode={dark} />
 
-<main class="pb-12 mh">
+<main class="pb-12 mj">
   <slot />
 </main>
 
@@ -56,6 +58,7 @@
 {#if !$isDev}
   <CookieNotice />
 {/if}
+</div>
 
 <style>
   main {

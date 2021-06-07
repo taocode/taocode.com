@@ -1,10 +1,10 @@
 ---
-title: '2 Simple Habit Changes - One Year Later'
-slug: '2-simple-health-habit-changes-one-year-later'
+title: '2 Easy Habits - 1 Year Later'
+slug: '2-easy-habits-1-year-later'
 creationDate: '2021-05-20'
 category: 'Life'
-excerpt: '*2 simple health habit changes* made 1 year ago that have improved my health.'
-lead: Based on over 40 years of experience, I can attest that my future days *and weight* are dependent on my daily habits. **Duh, *right‽*** The lesson finally sunk in and *—with my focus on health—* I've been able to stick to *2 simple daily habit changes*.
+excerpt: '*2 habits* made 1 year ago that have improved my health.'
+lead: Based on over 40 years of experience, I can attest that my future days *and weight* are dependent on my daily habits. **Duh, *right‽*** The lesson finally sunk in and *—with my focus on health—* I've been able to stick to *2 easy daily habit changes*.
 cover: pen-writing-on-a-paper.jpeg
 tags:
   - Health

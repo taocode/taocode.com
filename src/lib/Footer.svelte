@@ -13,7 +13,7 @@
   // import TermsConditionsLink from './TermsConditionsLink.svelte';
 </script>
 
-<footer class="text-green-200 border-t-4 border-green-700 applause-gradient">
+<footer class="text-green-200 border-t-4 border-green-700 applause-gradient bg-green-800">
   <div
     class="container flex flex-wrap items-top justify-between px-3 py-5 mx-auto"
   >

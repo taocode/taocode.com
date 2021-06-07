@@ -5,11 +5,11 @@
   export let nextArticle: Post;
 </script>
 
-<div class="flex flex-wrap mb-10 -m-2">
+<div class="font-display flex flex-wrap mb-10 -m-2">
   {#if previousArticle}
     <div class="w-full p-2 md:w-1/2">
-      <div class="h-full p-5 card">
-        <small class="block text-sm text-gray-600">
+      <div class="h-full p-5 card bg-gray-light">
+        <small class="block text-sm text-gray">
           <em>Previous article</em>
         </small>
         <b>
@@ -27,8 +27,8 @@
   {/if}
   {#if nextArticle}
     <div class="w-full p-2 md:w-1/2">
-      <div class="h-full p-5 card">
-        <small class="block text-sm text-gray-600">
+      <div class="h-full p-5 card bg-gray-light">
+        <small class="block text-sm text-gray">
           <em>Next article</em>
         </small>
         <b>

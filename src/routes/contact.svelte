@@ -80,39 +80,17 @@
   />
 </svelte:head>
 
+
 <SEO />
 
-<section class="container mh-container">
+<section class="container mj-container">
   <h1>Contact for business inquiries</h1>
 
   <p>
     You can find an
     overview of the services that I offer under the
     <a href="/services" sveltekit:prefetch>Services</a>
-    tab.
-  </p>
-
-  <h2>What projects am I looking for?</h2>
-
-  <ul>
-    <li>awesome animations</li>
-    <li>medium duration; one quarter to half year with follow-up projects</li>
-    <li>remote only or near Winston-Salem, North Carolina</li>
-  </ul>
-
-  <p>Please include answers to the following questions in the form below:</p>
-
-  <ul>
-    <li>How many hours are needed?</li>
-    <li>Approximate deadline?</li>
-    <li>Type of company? (Startup, Midsize or large corporation)</li>
-    <li>Years in business?</li>
-    <li>How did you hear about us?</li>
-    <li>Why did you decide to work with us?</li>
-  </ul>
-
-  <h2>Let's get in touch!</h2>
-  <p>I will guarantee to get back to you within 48 hours.</p>
+    tab. I will get back to you within 48 hours.</p>
   <form
     name="contact"
     class="mt-3 mb-8"
@@ -120,13 +98,12 @@
     data-netlify="true"
     on:submit="{handleSubmit}"
   >
-    <div class="flex flex-wrap p-3 bg-gray-200 border border-gray-500 rounded">
+    <div class="flex flex-wrap p-3 bg-gray-light border border-gray-500 rounded dark:border-gray-700">
       <input type="hidden" name="form-name" value="contact" />
       <input type="text" name="bot-field" class="hidden" />
       <div class="w-1/2 px-2 my-2">
-        <label
-          for="name"
-          class="mb-2 text-sm font-bold tracking-wide text-gray-700">Name</label
+        <label for="name"
+          >Name</label
         >
         <input
           type="text"
@@ -137,13 +114,11 @@
           on:change="{handleChange}"
           bind:value="{$form.name}"
         />
-        {#if $errors.name}<small transition:fade>{$errors.name}</small>{/if}
+        {#if $errors.name}<small class="form-error" transition:fade>{$errors.name}</small>{/if}
       </div>
 
       <div class="w-1/2 px-2 my-2">
-        <label
-          for="email"
-          class="mb-2 text-sm font-bold tracking-wide text-gray-700"
+        <label for="email"
           >Email</label
         >
         <input
@@ -155,13 +130,11 @@
           on:change="{handleChange}"
           bind:value="{$form.email}"
         />
-        {#if $errors.email}<small transition:fade>{$errors.email}</small>{/if}
+        {#if $errors.email}<small class="form-error" transition:fade>{$errors.email}</small>{/if}
       </div>
 
       <div class="w-full px-2 my-2">
-        <label
-          for="comment"
-          class="mb-2 text-sm font-bold tracking-wide text-gray-700"
+        <label for="comment"
           >Comment</label
         >
         <textarea
@@ -173,7 +146,7 @@
           on:change="{handleChange}"
           bind:value="{$form.comment}"></textarea>
         {#if $errors.comment}
-          <small transition:fade>{$errors.comment}</small>
+          <small class="form-error" transition:fade>{$errors.comment}</small>
         {/if}
       </div>
 
@@ -201,6 +174,30 @@
       {/if}
     </div>
   </form>
+
+  <div class="md:flex gap-x-6">
+    <div class="md:max-w-2/5">
+      <h2>Projects That Interest Me</h2>
+
+      <ul>
+        <li>awesome animations</li>
+        <li>medium duration; one quarter to half year with follow-up projects</li>
+        <li>remote only or near Winston-Salem, North Carolina</li>
+      </ul>
+    </div>
+    <div>
+      <h2>Serious Inquiry?</h2>
+      <p>As best as you can estimate, please answer any of these:</p>
+      <ul>
+        <li>How many hours are needed?</li>
+        <li>Approximate deadline?</li>
+        <li>Type of company? (Startup, Midsize or large corporation)</li>
+        <li>Years in business?</li>
+        <li>How did you hear about us?</li>
+        <li>Why did you decide to work with us?</li>
+      </ul>
+    </div>
+</div>
 
   <h2>Not convinced?</h2>
   <p>
@@ -245,7 +242,7 @@
     <div class="w-full sm:w-1/3">
       <h3>Found an unexpected bug?</h3>
       <ExternalLink
-        href="https://github.com/mhatvan/taocode.com/issues/new"
+        href="https://github.com/taocode/taocode.com/issues/new"
         customClass="inline-flex"
       >
         Submit issue
@@ -275,8 +272,8 @@
   </div>
 </section>
 
-<style>
-  small {
-    @apply text-red-600;
+<style type="postcss">
+  label {
+    @apply font-display text-sm font-bold tracking-wide text-gray mb-2;
   }
 </style>

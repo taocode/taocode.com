@@ -7,7 +7,7 @@ onMount(() => {
     s.setAttribute('repo',"taocode/taocode.com");
     s.setAttribute('issue-term',"pathname");
     s.setAttribute('label',"✨💬");
-    s.setAttribute('theme',"github-light");
+    s.setAttribute('theme',"github-dark");
     s.setAttribute('crossorigin',"anonymous");
 
     s.src = 'https://utteranc.es/client.js';

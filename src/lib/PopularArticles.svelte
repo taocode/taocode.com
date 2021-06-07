@@ -7,7 +7,7 @@
   const popularPosts = posts.filter((_post: Post, idx: number) => idx < 3);
 </script>
 
-<div class="mb-16">
+<div class="mb-16 font-display">
   <header class="topic-box">
     <h2>Popular Articles</h2>
   </header>

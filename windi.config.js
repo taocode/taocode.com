@@ -1,4 +1,11 @@
-module.exports = {
+import { defineConfig } from 'windicss/helpers';
+
+import aspectRatio from 'windicss/plugin/aspect-ratio';
+import forms from 'windicss/plugin/forms';
+import typography from 'windicss/plugin/typography';
+
+export default defineConfig({
+  darkMode: 'class',
   theme: {
     fontFamily: {
       'display': ['Rubik','sans-serif'],
@@ -72,16 +79,25 @@ module.exports = {
         900: '#234e52',
       },
       gray: {
-        100: '#f7fafc',
+        DEFAULT: '#4a5568',
+        light: '#cbd5e0',
+        50: '#f7fafc',
+        100: '#f1f2f5',
+        150: '#eff0f2',
         200: '#edf2f7',
+        250: '#e3e6ea',
         300: '#e2e8f0',
+        350: '#d4d9e0',
         400: '#cbd5e0',
         500: '#a0aec0',
         600: '#718096',
         700: '#4a5568',
         800: '#2d3748',
+        850: '#22262d',
         900: '#1a202c',
+        950: '#0b0d0f',
       },
+      primary: '#357c26',
     },
     screens: {
       sm: '640px',
@@ -96,5 +112,5 @@ module.exports = {
       }
     }
   },
-  plugins: [require('windicss/plugin/aspect-ratio'),require('windicss/plugin/forms'), require('windicss/plugin/typography')],
-};
+  plugins: [aspectRatio,forms,typography],
+});

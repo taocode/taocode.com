@@ -8,7 +8,7 @@
   const filteredPosts = posts.filter((_post: Post, idx: number) => idx < 3);
 </script>
 
-<section class="container mh-container">
+<section class="container mj-container">
   <h2>Recent Posts</h2>
 
   <div class="flex flex-wrap -m-2">

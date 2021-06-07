@@ -49,7 +49,7 @@
   <CurrentGoals readableSlug="{readableSlug}" />
 </BlogOverviewHeader>
 
-<section class="container flex flex-wrap mh-container">
+<section class="container flex flex-wrap mj-container">
   <BlogPostFilters posts="{postsByCategory}" filteredByCategory />
 
   <aside class="w-full mt-8 lg:mt-0 lg:w-3/12">

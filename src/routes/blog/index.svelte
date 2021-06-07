@@ -67,7 +67,7 @@ a {
   </div>
 </BlogOverviewHeader>
 
-<section class="container flex flex-wrap mh-container">
+<section class="container flex flex-wrap mj-container">
   <BlogPostFilters posts="{posts}" />
 
   <aside class="w-full mt-8 lg:mt-0 lg:w-3/12">

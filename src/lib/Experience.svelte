@@ -2,7 +2,7 @@
     import ExperienceChart from './ExperienceChart.svelte';
 </script>
 <div class="bg-gray-900 text-gray-200 py-16">
-    <article class="container mh-container -mt-16 leading-10" >
+    <article class="container mj-container -mt-16 leading-10" >
       <h2>Experience</h2>
         <div class="lg:flex">
             <div class="lg:w-1/2">

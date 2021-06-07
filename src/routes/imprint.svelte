@@ -16,7 +16,7 @@
 
 <SEO />
 
-<div class="container mh-container">
+<div class="container mj-container">
   <h1>Imprint</h1>
 
   <p>

@@ -74,6 +74,7 @@
     "vite": "^2.3.6",
     "vite-imagetools": "^3.6.8",
     "vite-plugin-windicss": "^0.15.0",
+    "windicss": "^3.1.1",
     "windicss-analysis": "^0.2.0",
     "yup": "^0.32.9"
   },

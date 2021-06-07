@@ -10,7 +10,7 @@
 </script>
 
 <!-- Mailchimp Signup Form -->
-<section class="container mb-16 text-center bg-gray-200 border-t-4 border-green-700 mh-container">
+<section class="container mb-16 text-center bg-gray-light border-t-4 border-green-700 mj-container">
   <div id="mc_embed_signup">
     <form
       action="https://taocode.us6.list-manage.com/subscribe/post?u=43229d3d4d5354a0a9b5629fb&amp;id=32bdc2ddb0"
@@ -29,7 +29,7 @@
           type="email"
           value=""
           name="EMAIL"
-          class="w-full px-5 py-3 mb-3 text-gray-700 bg-white border border-gray-400 rounded appearance-none hover:border-gray-500"
+          class="w-full px-5 py-3 mb-3 text-gray border border-gray rounded appearance-none hover:border-gray-500"
           id="mce-EMAIL"
           placeholder="johndoe@mail.com"
           required
@@ -43,7 +43,7 @@
             value=""
           />
         </div>
-        <p class="text-xs text-gray-700">
+        <p class="text-xs text-gray-light">
           By clicking below to subscribe, you acknowledge that your information will be transferred
           to Mailchimp for processing.
           <ExternalLink href="https://mailchimp.com/legal/">

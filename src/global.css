@@ -126,80 +126,97 @@ h1, h2, h3, h4, h5, h6,
   @apply font-display;
 }
 
-.mh a {
+.mj a {
   @apply text-green-700;
 }
+.dark .mj a {
+  @apply text-green-400;
+  &:hover {
+    @apply text-green-300;
+  }
+}
+.dark {
+  @apply bg-black text-gray-300;
+}
 
-.mh a:hover {
+.dark .blog-post-card.card {
+  @apply bg-black;
+}
+.dark .card-face-front {
+  @apply bg-gray-900;
+}
+
+
+.mj a:hover {
   @apply underline text-green-800;
 }
 
-.mh h1 {
+.mj h1 {
   @apply text-3xl mb-3 mt-6 font-bold;
 }
 
-.mh h2 {
+.mj h2 {
   @apply text-2xl mb-3 mt-6 font-bold;
 }
 
-.mh h3,
-.mh h4,
-.mh h5,
-.mh h6 {
+.mj h3,
+.mj h4,
+.mj h5,
+.mj h6 {
   @apply text-xl mb-3 mt-6 font-semibold;
 }
 
-.mh p {
+.mj p {
   @apply mb-4;
 }
 
-.mh .blog code p {
+.mj .blog code p {
   @apply mb-0;
   color: inherit;
 }
 
-.mh pre > p {
+.mj pre > p {
   @apply m-0;
 }
 
-.mh ol {
-  @apply list-decimal text-gray-800 mb-4 ml-8;
+.mj ol {
+  @apply list-decimal text-gray-800 dark:text-gray-200 mb-4 ml-8;
 }
 
-.mh ul {
-  @apply list-disc text-gray-800 mb-4 ml-8;
+.mj ul {
+  @apply list-disc text-gray-800 dark:text-gray-200 mb-4 ml-8;
 }
 
-.mh ul ul {
+.mj ul ul {
   @apply mb-4 ml-8 text-gray-800 list-circle;
 }
 
-.mh blockquote {
+.mj blockquote {
   @apply p-2 bg-gray-100 mb-4 border-l-4 border-gray-400 italic;
 }
 
-.mh blockquote > p {
+.mj blockquote > p {
   @apply mb-0;
 }
 
-.mh pre[class*='language-'] {
+.mj pre[class*='language-'] {
   margin: 16px 0 32px 0 !important;
 }
 
-.mh td,
-.mh th {
+.mj td,
+.mj th {
   @apply mx-2 my-1 border border-gray-400;
 }
 
-.mh tr:nth-child(odd) {
+.mj tr:nth-child(odd) {
   @apply bg-gray-100;
 }
 
-.mh table {
+.mj table {
   @apply mb-6;
 }
 
-.mh hr {
+.mj hr {
   display: block;
   unicode-bidi: isolate;
   margin-block-start: 0.5em;
@@ -211,14 +228,14 @@ h1, h2, h3, h4, h5, h6,
   border-width: 1px;
 }
 
-.mh figcaption {
+.mj figcaption {
   @apply text-gray-600 text-sm;
 }
 
-.mh p > code:not([class*='language-']),
-.mh h3 > code,
-.mh li > code,
-.mh figcaption > code {
+.mj p > code:not([class*='language-']),
+.mj h3 > code,
+.mj li > code,
+.mj figcaption > code {
   word-break: break-word;
   background-color: rgba(240, 240, 240, 0.5);
   padding: 0.1em 0.2em;
@@ -226,11 +243,11 @@ h1, h2, h3, h4, h5, h6,
   border: 1px solid rgba(0, 0, 0, 0.25);
 }
 
-.mh .anchor-link {
+.mj .anchor-link {
   @apply no-underline text-opacity-25;
 }
 
-.mh .anchor-link:hover {
+.mj .anchor-link:hover {
   @apply no-underline;
 }
 
@@ -252,41 +269,50 @@ h1, h2, h3, h4, h5, h6,
   @apply text-white;
 }
 
-.mh .link-inherit,
-.mh .link-inherit:hover {
+.mj .link-inherit,
+.mj .link-inherit:hover {
   color: inherit !important;
 }
 
-.mh .mh-container {
-  @apply px-6 py-10 mx-auto;
+.mj .mj-container {
+  @apply px-6 py-3 mx-auto;
 }
 
-.mh .btn-primary {
+.mj .btn-primary {
   @apply inline-block px-5 py-3 text-sm font-semibold text-black bg-green-500 font-display;
 }
 
-.mh .btn-primary:hover {
+.mj .btn-primary:hover {
   @apply bg-green-400 text-black no-underline;
 }
 
-.mh .card {
-  @apply relative bg-white border rounded shadow-xl w-full;
+.mj .card {
+  @apply relative border rounded shadow-xl w-full dark:border-gray-700;
 }
 
-.mh .topic-box {
+.mj .topic-box {
   @apply text-center border-b-4 border-green-700;
 }
 
-.mh .info-tag {
-  @apply inline-flex items-center bg-gray-200 rounded py-1 my-1 text-sm font-semibold font-display mr-2 px-3;
+.mj .info-tag {
+  @apply inline-flex items-center bg-gray-200 rounded py-1 my-1 text-sm font-semibold font-display mr-2 px-3
+  dark:(bg-gray-950 ring-green-400 ring-1 ring-opacity-30)
+  hover:ring-opacity-90;
 }
 
-.mh .alert-gray {
+.mj .alert-gray {
   @apply p-4 text-gray-700 bg-gray-200 border-l-4 border-gray-500;
 }
 
-.mh .alert-success {
+.mj .alert-success {
   @apply p-4 text-green-800 bg-green-100 border-l-4 border-green-500;
+}
+
+.form-error {
+  @apply font-display text-red-700;
+}
+.dark .form-error {
+  @apply text-red-400;
 }
 
 .btn {
@@ -304,7 +330,8 @@ h1, h2, h3, h4, h5, h6,
 .blog-header {
   @apply bg-white bg-opacity-70 rounded shadow-xl max-w-screen-sm
   mx-auto
-  w-auto;
+  w-auto
+  dark:(bg-black bg-opacity-70 text-gray-300);
 }
 .overview-header {
   @apply w-full max-w-screen-md lg:max-w-screen-lg;
@@ -313,6 +340,7 @@ h1, h2, h3, h4, h5, h6,
   position: relative;
   z-index: 0;
   overflow: hidden;
+  @apply py-9;
 }
 .applause-gradient::after {
   content: '';
@@ -413,8 +441,29 @@ h1, h2, h3, h4, h5, h6,
 .lg\:prose-xl ul > li {
   padding-left: 0 !important;
 }
-
-
+.dark {
+  [type='text'], [type='email'], [type='url'], [type='password'], [type='number'], [type='date'], [type='datetime-local'], [type='month'], [type='search'], [type='tel'], [type='time'], [type='week'], [multiple], textarea, select {
+    @apply bg-gray-850 text-gray-300 placeholder-gray-350;
+  }
+  .text-gray {
+    @apply text-gray-500
+  }
+.bg-gray-light {
+    @apply bg-gray-850;
+  }
+  .text-primary {
+    @apply text-green-400;
+  }
+  .mj .btn-primary {
+    @apply text-black;
+  }
+  .mj .card {
+    box-shadow: 0 7px 20px -5px rgba(255,255,255, 0.12), 0 10px 10px -5px rgba(255,255,255, 0.08);
+  }
+  .bg-gray-light label {
+    @apply text-gray-300;
+  }
+}
 /*This would all go into the global.css file*/
 [data-tooltip] {
   position: relative;

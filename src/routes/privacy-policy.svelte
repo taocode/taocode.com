@@ -18,7 +18,7 @@
 </svelte:head>
 
 <SEO />
-<div class="mh-container container py-12 text-center">
+<div class="mj-container container py-12 text-center">
   <h1>Privacy Policy</h1>
   <p>
   Click the button for taocode.com's privacy policy:

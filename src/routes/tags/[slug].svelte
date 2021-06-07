@@ -51,7 +51,7 @@
   </h1>
 </BlogOverviewHeader>
 
-<section class="container flex flex-wrap mh-container">
+<section class="container flex flex-wrap mj-container">
   <BlogPostFilters posts="{postsByTag}" filteredByTag />
 
   <aside class="w-full mt-8 lg:mt-0 lg:w-3/12">

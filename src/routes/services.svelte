@@ -13,7 +13,7 @@
 
 <SEO />
 
-<section class="container mh-container">
+<section class="container mj-container">
   <h1>Services that I offer</h1>
 
   <p>
@@ -45,7 +45,7 @@ I get accustomed to new projects quickly and
   </p>
 
   <div class="flex flex-wrap -m-2">
-    <div class="flex w-full p-2 lg:w-1/2">
+    <div class="flex w-full p-2 md:w-1/2">
       <div class="px-6 py-4 card">
         <h2>
           <!-- <Icon data="{faDraftingCompass}" class="mr-3" scale="{2}" /> -->
@@ -62,7 +62,7 @@ I get accustomed to new projects quickly and
         </p>
       </div>
     </div>
-    <div class="flex w-full p-2 lg:w-1/2">
+    <div class="flex w-full p-2 md:w-1/2">
       <div class="px-6 py-4 card">
         <h2>
           <!-- <Icon data="{faClipboardList}" class="mr-3" scale="{2}" /> -->
@@ -75,7 +75,7 @@ I get accustomed to new projects quickly and
         </p>
       </div>
     </div>
-    <div class="flex w-full p-2 lg:w-1/2">
+    <div class="flex w-full p-2 md:w-1/2">
       <div class="px-6 py-4 card">
         <h2>
           <!-- <Icon data="{faChalkboardTeacher}" class="mr-3" scale="{2}" /> -->
@@ -100,7 +100,7 @@ I get accustomed to new projects quickly and
       </div>
     </div>
 
-    <div class="flex w-full p-2 lg:w-1/2">
+    <div class="flex w-full p-2 md:w-1/2">
       <div class="px-6 py-4 card">
         <h2>
           <!-- <Icon data="{faPenFancy}" class="mr-3" scale="{2}" /> -->

@@ -6,8 +6,10 @@
 
   import ToTop from './ToTop.svelte';
   import Headroom from "$lib/headroom/index.svelte";
+	import DarkModeToggle from '$lib/DarkModeToggle.svelte';
 
   let open = false;
+	export let darkMode = false;
 
   const toggleHamburgerMenu = () => {
     open = !open;
@@ -18,7 +20,7 @@
 <Headroom>
 <header class="w-full bg-gray-900 header-box-shadow">
   <div
-    class="container flex flex-wrap items-center justify-between p-3 mx-auto"
+    class="container relative flex flex-wrap items-center justify-between p-3 mx-auto"
   >
     <div class="flex">
       <a
@@ -29,10 +31,16 @@
         <TaocodeLogo classes="h-8 -mt-3"/>
       </a>
     </div>
-    <div class="ml-auto md:hidden">
+    <div class="flex-grow text-right mr-2 
+    md:(absolute right-0 flex-none)">
+      <DarkModeToggle bind:enabled={darkMode} />
+    </div>
+    <div class="ml-auto flex-shrink md:hidden">
       <ClickOutside on:clickoutside="{() => (open = false)}">
         <button
-          class="flex items-center rounded px-3 py-2 bg-green-500 border border-green-600 hover:bg-green-500 hover:border-green-500"
+          class="flex items-center rounded px-3 py-2 bg-green-500 border border-green-500
+          text-black
+          hover:bg-green-400 hover:border-green-400"
           aria-label="Hamburger menu"
           on:click="{toggleHamburgerMenu}"
         >
@@ -43,7 +51,7 @@
     <nav
       aria-label="Header navigation"
       class:hidden="{!open}"
-      class="w-full ml-auto md:flex md:w-auto"
+      class="w-full ml-auto md:(flex w-auto mr-4)"
     >
       <a
         sveltekit:prefetch

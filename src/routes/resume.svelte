@@ -9,7 +9,7 @@
 
 <SEO />
 
-<section class="container mh-container">
+<section class="container mj-container">
   <h1>Resume</h1>
   <p>
     In case you are interested in hiring me for a project, my CV should give you

@@ -14,7 +14,7 @@
 
 <SEO />
 
-<section class="container mh-container">
+<section class="container mj-container">
   <h1>About Me</h1>
   
   <p>

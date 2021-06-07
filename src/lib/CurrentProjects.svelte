@@ -30,7 +30,7 @@
   ];
 </script>
 
-<section class="container mh-container">
+<section class="container mj-container">
   <h2 class="border-b-4 border-green-700">Current Projects</h2>
   {#each projects as project}
     <div

@@ -1,5 +1,5 @@
 <section class="applause-gradient">
-  <div class="container mh-container">
+  <div class="container mj-container">
     <div class="w-full p-2 mx-auto lg:w-3/4">
       <h2 class="mb-8 text-3xl text-center text-white">
         Need help with your product development?

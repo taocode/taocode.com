@@ -17,7 +17,7 @@
   <title>{status}</title>
 </svelte:head>
 
-<div class="text-center mh-container">
+<div class="text-center mj-container">
   <h1>{status}</h1>
 
   <p>{error.message}</p>
