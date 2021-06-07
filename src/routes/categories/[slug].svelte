@@ -28,6 +28,25 @@
   import type { Post } from '../../models/post';
   import type { LoadInput } from '@sveltejs/kit/types/page';
 
+  import EmpurrorSunNap from '../../../static/empurror-scratcher-sun-nap.jpg';
+  import MillerParkMushrooms from '../../../static/miller-park-tree-mushrooms.jpg';
+  import MillerParkGreenery from '../../../static/miller-park-greenery.jpg';
+
+  const accentImage = {
+    'Life': {
+      'alt': 'Black cat napping in the sun on a cardboard scratcher',
+      'img': EmpurrorSunNap,
+    },
+    'Programming': {
+      'alt': "Miller Park green space framed by trees",
+      'img': MillerParkGreenery,
+    },
+    'Portfolio': {
+      'alt': "Cherry blossoms on ground and tree",
+      'img': MillerParkMushrooms,
+    },
+  }
+
   export let postsByCategory: Post[];
   export let posts: Post[];
 
@@ -45,7 +64,7 @@
 
 <SEO />
 
-<BlogOverviewHeader>
+<BlogOverviewHeader image={accentImage[readableSlug].img} alt={accentImage[readableSlug].alt}>
   <CurrentGoals readableSlug="{readableSlug}" />
 </BlogOverviewHeader>
 

@@ -275,7 +275,7 @@ h1, h2, h3, h4, h5, h6,
 }
 
 .mj .mj-container {
-  @apply px-6 py-3 mx-auto;
+  @apply px-6 py-3 mx-auto max-w-screen-lg;
 }
 
 .mj .btn-primary {
@@ -334,7 +334,7 @@ h1, h2, h3, h4, h5, h6,
   dark:(bg-black bg-opacity-70 text-gray-300);
 }
 .overview-header {
-  @apply w-full max-w-screen-md lg:max-w-screen-lg;
+  @apply w-full;
 }
 .applause-gradient {
   position: relative;

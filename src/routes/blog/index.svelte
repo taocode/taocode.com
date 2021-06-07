@@ -12,7 +12,7 @@
 </script>
 
 <script lang="ts">
-  import BlogPost from '../../../static/b-flopped-on-sidewalk.jpg';
+  import BlogPostHeaderImage from '../../../static/b-flopped-on-sidewalk.jpg';
   import BlogOverviewHeader from '$lib/BlogOverviewHeader.svelte';
   import BlogPostFilters from '$lib/BlogPostFilters.svelte';
   import BlogPostSidebar from '$lib/BlogPostSidebar.svelte';
@@ -24,7 +24,7 @@
 </script>
 
 <svelte:head>
-  <title>Blog | Mark Jones</title>
+  <title>Blog | TAOCode</title>
   <meta
     name="description"
     content="Insights and things learned about Programming websites and other topics."
@@ -39,15 +39,14 @@ a {
 }
 </style>
 
-<BlogOverviewHeader>
-  <div class="w-full md:w-2/3 md:pr-10">
+<BlogOverviewHeader image={BlogPostHeaderImage}>
+  <div class="w-full">
     <h1>Blog</h1>
     <p>
       Insights and things I've learned working on the web for over 2 decades:
       <a href="/categories/programming" sveltekit:prefetch>Programming</a>,
-      <a href="/categories/portfolio" sveltekit:prefetch>Portfolio</a>,
-      <a href="/categories/life" sveltekit:prefetch>Life</a>
-      and other topics.
+      <a href="/categories/portfolio" sveltekit:prefetch>Portfolio</a>, and 
+      <a href="/categories/life" sveltekit:prefetch>Life</a>.
     </p>
     <h2>Blog post topic?</h2>
     <p>
@@ -61,9 +60,6 @@ a {
       </a>
       or through my socials.
     </p>
-  </div>
-  <div class="w-3/5 mx-auto max-width sm:w-1/2 md:w-1/3">
-    <img srcset="{BlogPost}" type="image/webp" alt="Blog post card" />
   </div>
 </BlogOverviewHeader>
 

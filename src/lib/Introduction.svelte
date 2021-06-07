@@ -5,10 +5,11 @@
 <section class="applause-gradient home-applause rotating-after">
   <div class="container mj-container">
     <div
-      class="bg-white bg-opacity-75 flex flex-col-reverse flex-wrap items-center justify-between px-8 py-8 rounded-lg shadow-xl md:flex-row
-      dark:(bg-black bg-opacity-70 text-gray-300)"
+      class="flex flex-col-reverse items-center justify-between gap-6 rounded-lg 
+      md:flex-row
+      daark:(bg-black bg-opacity-70 text-gray-300)"
     >
-      <div class="w-full md:w-2/3 md:pr-10">
+      <div class="blog-header w-full py-4 px-8 md:w-3/5 md:pr-10 shadow-xl">
         <h1>The Art of Code - Web Productions</h1>
 
         <p>
@@ -27,7 +28,8 @@
           >!
         </p>
       </div>
-      <div class="w-full mx-auto max-w-[250px] sm:w-1/2 md:w-1/3">
+      <div class="bg-white bg-opacity-70 w-full mx-auto max-w-[250px] p-2 rounded-full sm:w-1/2 md:w-full
+      dark:(bg-black bg-opacity-40)">
         <img
           srcset="{Image}"
           type="image/webp"

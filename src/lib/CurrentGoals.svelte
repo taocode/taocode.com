@@ -72,7 +72,7 @@
   $: goals = goalCats[readableSlug];
 </script>
 
-<div class="w-full md:w-2/4">
+<div class="w-full flex-shrink">
   <h1>{readableSlug}</h1>
   <h2>Current goals</h2>
 
@@ -87,6 +87,4 @@
     </div>
   {/each}
 </div>
-<div class="w-3/4 md:w-2/4">
-    <img srcset="{accentImage[readableSlug]['img']}" type="image/webp" alt="{accentImage[readableSlug]['alt']}" />
-</div>
+
