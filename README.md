@@ -22,7 +22,7 @@ This site is based on some fine work by 👤 **[Markus Hatvan](https://markushat
 
 ## 🖍️ Changes
 
-Alterations made where I departed from [Markus Hatvan's project](https://github.com/mhatvan/markushatvan.com):
+Where I've departed from [Markus Hatvan's project](https://github.com/mhatvan/markushatvan.com):
 
 - 🏃💨 WindiCSS replaced TailwindCSS
 - ➕🤯 Headroom - hides fixed header *(based on [collardeau/svelte-headroom](https://github.com/collardeau/svelte-headroom))*
