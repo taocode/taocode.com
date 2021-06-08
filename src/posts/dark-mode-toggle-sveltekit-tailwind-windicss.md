@@ -4,18 +4,18 @@ slug: dark-mode-toggle-sveltekit-tailwind-windicss
 category: Programming
 creationDate: '2021-06-06'
 excerpt: How I added a dark mode toggle and headroom fixed header hiding feature to this SvelteKit site.
-lead: Dark mode toggle, headroom fixed header hider, back to top
+lead: How I added dark mode toggle, headroom fixed header hider, and back to top features; dark mode honor's your system preference.
 author: Mark Jones
 tags:
-  - Static Site
-  - SvelteKit
-  - WindiCSS
   - Dark Mode
+  - WindiCSS
+  - SvelteKit
+  - Static Site
 ---
 
-I prefer dark themes, which is why dark mode is enabled by default on my site. In the future I may add code to catch your preference setting for the initial setting of the dark mode toggle.
+I prefer dark mode enabled on themes but I leave that preference to you. My dark mode code toggle honors your system preferences: if your system theme preference is light, you may notice a dark-to-light switch on first load as I enabled it by default and then switch to your preference.
 
-## ≠ Minor
+## ≠ Minor Upgrade
 
 From a diff summary comparison `37 files changed, 160 insertions(+), 306 deletions(-)`. It's probably easier if you start with plans for dark mode but adding it involves some analisys:
 
@@ -66,7 +66,25 @@ theme: {
 
 ## Toggle adapted from munxar's windicss example
 
-I'm thankful for [munxar's WindiCSS+SvelteKit example](https://github.com/munxar/sveltekit-tailwind). It was critical in helping me migrate to WindiCSS for this site. Awesomely, munxar's example included a svelte way to toggle the dark mode. I updated the styling to be up/down but otherwise, the example gave me critical insight into at least 1 way to include a dark mode toggle.
+I'm thankful for [munxar's WindiCSS+SvelteKit example](https://github.com/munxar/sveltekit-tailwind). It was critical in helping me migrate to WindiCSS for this site. Awesomely, munxar's example included a Svelte way to toggle the dark mode. I updated the styling to be up/down but otherwise, the example gave me critical insight into including a dark mode toggle.
+
+### Preferred Color Scheme Default
+
+By using `window.matchMedia('(prefers-color-scheme: ...)').matches` I can honor your preference. Using the code below, it ultimately defaults to dark but adjusts on first loading and upon changing your system's setting.
+
+``` js
+let dark = true
+const updateSystemPreferenceDarkTheme = () => {
+  dark = ! matchMedia('(prefers-color-scheme: light)').matches
+}
+onMount(() => {
+  updateSystemPreferenceDarkTheme();
+  matchMedia('(prefers-color-scheme: light)')
+    .addEventListener("change",updateSystemPreferenceDarkTheme)
+});
+
+```
+
 
 ## 3D Rotation Effect on Blog Cards
 
@@ -78,10 +96,10 @@ I thought this might help a slow browser or connection feel faster. Upon tapping
 
 I like *and loathe* fixed headers. They're great, except when they cover the #target or take up too much space on my not-very-tall laptop screen. There are many ways to adjust this but getting it entirely out of the way seems perfect to me.
 
-Headroom just lets me show the fixed navigation when you scroll up at all, making the assumption that you may want to use the navigation. The Back To Top link borrows the same technique and both will show when you're at the bottom of the page.
+Headroom just lets me show the fixed navigation when you scroll up, making the assumption that you may want to use the navigation. The Back To Top link borrows the same technique and both will show when you're at the bottom of the page.
 
 What do you think? Do you loathe fixed headers? *Love them?*
 
 ## Improvement Recommendations Welcome
 
-If you've got a better way to handle the dark shift, something that's handled better by the tailwind/windi theme, please tell me how I may improve my approach. I feel like there must be a better way to this; inverting most everything (with exclusions) could be much simpler... What do you think? How do you add Dark Mode? Any neat tricks?
+If you've got a better way to handle the dark mode toggle, something that's more intelligently integrated with the tailwind/windi theme, please share. I feel like there must be a better way to this; inverting most everything (with exclusions) could be much simpler... What do you think? How do you add Dark Mode? Any neat tricks?

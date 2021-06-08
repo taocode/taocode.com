@@ -26,14 +26,16 @@
   let fullURL: string = ''
 
   import 'virtual:windi.css'
-  const updateSystemDarkThemePreference = () => {
+
+  let dark = true
+  const updateSystemPreferenceDarkTheme = () => {
     dark = ! matchMedia('(prefers-color-scheme: light)').matches
   }
   onMount(() => {
 		import('virtual:windi-devtools')
-    updateSystemDarkThemePreference();
+    updateSystemPreferenceDarkTheme()
     matchMedia('(prefers-color-scheme: light)')
-    .addEventListener("change",updateSystemDarkThemePreference)
+    .addEventListener("change",updateSystemPreferenceDarkTheme)
 	});
   
 
@@ -43,7 +45,6 @@
     let tmpURL = window.location.href
     fullURL = tmpURL[tmpURL.length - 1] === '/' ? tmpURL : tmpURL + '/'
   })
-  let dark = true
 </script>
 
 <svelte:head>

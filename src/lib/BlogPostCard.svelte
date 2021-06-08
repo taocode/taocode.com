@@ -74,7 +74,7 @@
         <BlogPostThumbnail {post} />
       </div>
       <div aria-hidden="true" class="relative z-10 text-black font-display leading-13 font-extrabold 
-      text-3xl md:text-6xl p-3 bg-green-600 bg-opacity-70">
+      text-3xl md:text-5xl lg:text-6xl p-3 bg-green-600 bg-opacity-70">
          {post.title}
       </div>
     </div>
