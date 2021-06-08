@@ -30,7 +30,7 @@
     </div>
     {/if}
     <div
-      class="blog-header px-6 py-3 text-center
+      class="blog-header p-3 text-center
       
       sm:flex-row sm:flex-nowrap sm:mx-auto flex-grow"
     >
