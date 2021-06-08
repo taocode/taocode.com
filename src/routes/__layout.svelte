@@ -1,41 +1,49 @@
 <script context="module">
   export async function load({ fetch }: LoadInput) {
     try {
-      await fetch('/sitemap.xml');
-      await fetch('/rss.xml');
+      await fetch('/sitemap.xml')
+      await fetch('/rss.xml')
 
-      return true;
+      return true
     } catch (error) {
-      console.error(error);
+      console.error(error)
     }
   }
 </script>
 
 <script lang="ts">
-  import { afterUpdate, onMount } from 'svelte';
-  import BreakpointHelper from '$lib/BreakpointHelper.svelte';
-  import CookieNotice from '$lib/CookieNotice.svelte';
-  import NProgress from '$lib/NProgress.svelte';
-  import Nav from '$lib/Nav.svelte';
-  import Footer from '$lib/Footer.svelte';
-  import { isDev } from '../stores';
-  import type { LoadInput } from '@sveltejs/kit/types/page';
+  import { afterUpdate, onMount } from 'svelte'
+  import BreakpointHelper from '$lib/BreakpointHelper.svelte'
+  import CookieNotice from '$lib/CookieNotice.svelte'
+  import NProgress from '$lib/NProgress.svelte'
+  import Nav from '$lib/Nav.svelte'
+  import Footer from '$lib/Footer.svelte'
+  import { isDev } from '../stores'
+  import type { LoadInput } from '@sveltejs/kit/types/page'
 
-  import 'prismjs/themes/prism-tomorrow.css';
+  import 'prismjs/themes/prism-tomorrow.css'
 
-  let fullURL: string = '';
+  let fullURL: string = ''
 
-  import 'virtual:windi.css';
+  import 'virtual:windi.css'
+  const updateSystemDarkThemePreference = () => {
+    dark = ! matchMedia('(prefers-color-scheme: light)').matches
+  }
   onMount(() => {
-		import('virtual:windi-devtools');
+		import('virtual:windi-devtools')
+    updateSystemDarkThemePreference();
+    matchMedia('(prefers-color-scheme: light)')
+    .addEventListener("change",updateSystemDarkThemePreference)
 	});
-  import Style from '../global.css';
+  
+
+  import Style from '../global.css'
 
   afterUpdate(() => {
-    let tmpURL = window.location.href;
-    fullURL = tmpURL[tmpURL.length - 1] === '/' ? tmpURL : tmpURL + '/';
-  });
-  let dark = true;
+    let tmpURL = window.location.href
+    fullURL = tmpURL[tmpURL.length - 1] === '/' ? tmpURL : tmpURL + '/'
+  })
+  let dark = true
 </script>
 
 <svelte:head>

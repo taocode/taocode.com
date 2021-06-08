@@ -8,9 +8,15 @@
 	"icons": [
 		{
 			"src": "taocode-favicon.svg",
-			"sizes": "192x192",
+			"sizes": "150x150",
 			"type": "image/svg",
-			"purpose": "any maskable"
+			"purpose": "maskable"
+		},
+		{
+			"src": "taocode-favicon.svg",
+			"sizes": "150x150",
+			"type": "image/svg",
+			"purpose": "any"
 		}
 	]
 }
