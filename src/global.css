@@ -448,7 +448,7 @@ h1, h2, h3, h4, h5, h6,
   .text-gray {
     @apply text-gray-500
   }
-.bg-gray-light {
+  .bg-gray-light {
     @apply bg-gray-850;
   }
   .text-primary {
@@ -462,6 +462,12 @@ h1, h2, h3, h4, h5, h6,
   }
   .bg-gray-light label {
     @apply text-gray-300;
+  }
+  .mj blockquote {
+    @apply bg-gray-850;
+  }
+  .mj p > code:not([class*='language-']), .mj h3 > code, .mj li > code, .mj figcaption > code {
+    @apply bg-gray-800;
   }
 }
 /*This would all go into the global.css file*/

@@ -56,7 +56,7 @@
   <article class="w-full pb-12 prose-lg lg:prose-xl blog lg:w-3/4 lg:pr-16">
     {#if post.lead }<p class="lead">{@html marked(post.lead)}</p>{/if}
     {@html post.html}
-    <div class="flex justify-between items-center w-auto max-w-xs mx-auto p-3 mt-3 mb-6 border-2 rounded bg-green-100 bg-opacity-70 border-green-700 dark:bg-green-900">
+    <div class="flex justify-between items-center w-auto max-w-xs mx-auto p-3 mt-6 mb-8 border-2 rounded bg-green-100 bg-opacity-70 border-green-700 dark:bg-green-900">
       <div class="h-full -m-3 mr-1 py-1 px-3 bg-green-700 text-green-100 dark:text-green-950">
         <Icon data="{share}" class="" scale="{1.5}" />
         <div class="font-display text-2xs">share</div>
