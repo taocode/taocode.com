@@ -10,14 +10,14 @@
         'Personal website and blog with SvelteKit and TailwindCSS.',
       techStack:
         'SvelteKit, Svelte, TailwindCSS, NodeJS, Rollup, Markdown, GitHub, Netlify',
-      websiteLink: 'https://taocode.com',
+      websiteLink: 'https://www.taocode.com',
       githubLink: 'https://github.com/taocode/www.taocode.com',
     },
     {
       name: 'TRAINcycle',
       description: 'Get training in the arts and arts production.',
       techStack: 'Hugo, TailwindCSS, Markdown, GitHub, Firebase',
-      websiteLink: 'https://taocode.com',
+      websiteLink: 'https://www.taocode.com',
       githubLink: 'https://github.com/taocode/traincycle-hugo-site',
     },
     {

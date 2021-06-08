@@ -2,7 +2,7 @@
   import { page } from '$app/stores';
   import { onMount } from 'svelte';
 
-  const baseURL = `https://taocode.com`;
+  const baseURL = `https://www.taocode.com`;
 
   const fullURL = `${baseURL}${$page.path}`;
 

@@ -103,7 +103,7 @@
       </ExternalLink>
 
       <ExternalLink
-        href="https://taocode.com/rss.xml"
+        href="https://www.taocode.com/rss.xml"
         ariaLabel="Read the RSS feed"
         customClass="inline-flex mt-4 lg:mt-0 hover:text-white"
       >

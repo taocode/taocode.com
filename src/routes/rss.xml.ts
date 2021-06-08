@@ -1,7 +1,7 @@
 import posts from './blog/_posts';
 import type { Post } from '../models/post';
 
-const siteUrl = 'https://taocode.com';
+const siteUrl = 'https://www.taocode.com';
 
 const renderXmlRssFeed = (
   posts: Post[],

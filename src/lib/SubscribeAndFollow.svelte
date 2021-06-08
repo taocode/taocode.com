@@ -39,7 +39,7 @@
     </ExternalLink>
 
     <ExternalLink
-      href="https://taocode.com/rss.xml"
+      href="https://www.taocode.com/rss.xml"
       ariaLabel="Read the RSS feed"
       customClass="inline-flex text-green-900 hover:text-green-700"
     >
