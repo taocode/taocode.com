@@ -4,8 +4,7 @@ slug: added-feature-utterances-comments
 category: Programming
 creationDate: '2021-06-02'
 excerpt: Feel like commenting? Now you can.
-lead: After evaluating commenting systems, I figure utterances is nice and would suffice!
-layout: blog
+lead: After evaluating a handful of commenting systems, Utterances likely provides the least friction for most developers.
 author: Mark Jones
 tags:
   - Static Site
@@ -15,6 +14,8 @@ tags:
 ---
 
 I wanted a commenting feature for blog posts.
+
+## What was evaluated?
 
 ## Why Utterances?
 
