@@ -5,7 +5,8 @@
   import TaocodeLogo from './TaocodeLogo.svelte';
 
   import ToTop from './ToTop.svelte';
-  import Headroom from "$lib/headroom/index.svelte";
+  import Headroom from "./headroom/index.svelte";
+  // import Headroom from "@taocode/svelte-headroom";
 	import DarkModeToggle from '$lib/DarkModeToggle.svelte';
 
   let open = false;
@@ -17,7 +18,7 @@
 </script>
 <div id="top" hidden></div>
 
-<Headroom>
+<Headroom styleClass="z-20 w-full" showAtTop={true} showAtBottom={true}>
 <header class="w-full bg-gray-900 header-box-shadow">
   <div
     class="container relative flex flex-wrap items-center justify-between p-3 mx-auto"

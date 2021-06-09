@@ -6,27 +6,33 @@
   export let offset = 0;
   export let tolerance = 0;
   export let bottom = false;
+  export let hideAtBottom = false;
+  export let hideAtTop = false;
+  export let showAtBottom = false;
+  export let showAtTop = false;
+  export let styleClass = "";
 
-  let headerClass = "";
-  let lastHeaderClass = "";
+  let headerClass = "pin";
+  let lastHeaderClass = "pin";
   let y = 0;
   let lastY = 0;
-  let prefix = "svelte-headroom--";
-  let attop = true;
-  let atbottom: boolean = false;
+  let atTop: boolean = true;
+  let atBottom: boolean = false;
   let win: Window;
 
   const dispatch = createEventDispatcher();
 
   onMount(() => {
     win = window;
+    console.log('taocode/svelte-header onMount(v2)',win);
   });
 
   function deriveClass(y = 0, scrolled = 0) {
-    if (y < offset) return "";
-    if (Math.abs(scrolled) < tolerance) return headerClass;
-    if (scrolled > 0) return "";
-    if (scrolled < 0) return `${prefix}unpin`;
+    if (y < offset) return "pin";
+    if (!scrolled || Math.abs(scrolled) < tolerance) return headerClass;
+    const dir = scrolled < 0 ? "down" : "up";
+    if (dir === "up") return "pin";
+    if (dir === "down") return "unpin";
     return headerClass;
   }
 
@@ -44,8 +50,8 @@
   $: {
     validate({ duration, offset, tolerance });
     headerClass = updateClass(y);
-    attop = y <= 2;
-    atbottom = win && (win.innerHeight + win.pageYOffset) >= document.body.offsetHeight - 2;
+    atTop = y <= 2;
+    atBottom = win && (win.innerHeight + win.pageYOffset) >= document.body.offsetHeight - 2;
     if (headerClass !== lastHeaderClass) {
       dispatch(headerClass ? "unpin" : "pin");
     }
@@ -58,31 +64,33 @@
     position: fixed;
     width: 100%;
     top: 0;
-    transition: transform 300ms ease-out;
-    transform: translateY(0%);
-    z-index: 20;
+    transition: transform 300ms linear;
   }
-  .svelte-headroom--unpin {
-    transform: translateY(-110%);
-  }
-  .atbottom.svelte-headroom--unpin {
-    transform: translateY(0);
-  }
-  .bottom,
-  .bottom.atbottom.svelte-headroom--unpin {
+  .bottom {
     top: auto;
     bottom: 0;
     width: auto;
-    right: 0;
-    transform: translateY(0);
+    /* so a single back to top button, for example, doesn't cover (and block) page links */
   }
-  .svelte-headroom--unpin.bottom,
-  .bottom.attop {
-    transform: translateY(110%);
+  .pin,
+  .atTop.showAtTop.unpin,
+  .atBottom.showAtBottom.unpin {
+    transform: translateY(0%);
+  }
+  .unpin,
+  .atTop.hideAtTop,
+  .atBottom.hideAtBottom {
+    transform: translateY(-100%);
+  }  
+  .bottom.unpin,
+  .bottom.atTop.hideAtTop,
+  .bottom.atBottom.hideAtBottom {
+    transform: translateY(100%);
   }
 </style>
 
 <svelte:window bind:scrollY={y} />
-<div use:action class={headerClass} class:bottom class:attop class:atbottom>
-  <slot /><button hidden></button>
+<div use:action class={styleClass +' '+ headerClass} 
+class:bottom class:atTop class:atBottom class:showAtTop class:hideAtTop class:showAtBottom class:hideAtBottom>
+  <slot />
 </div>
