@@ -1,17 +1,17 @@
 <script>
-import { onMount } from 'svelte';
+import { onMount } from 'svelte'
 
 onMount(() => {
-    var s = document.createElement('script'),
-    tag = document.getElementById('utterances');
-    s.setAttribute('repo',"taocode/taocode.com");
-    s.setAttribute('issue-term',"pathname");
-    s.setAttribute('label',"✨💬");
-    s.setAttribute('theme',"github-dark");
-    s.setAttribute('crossorigin',"anonymous");
-
-    s.src = 'https://utteranc.es/client.js';
-    tag.parentNode.insertBefore(s, tag);
-});
+    const darkMode = ! matchMedia('(prefers-color-scheme: light)').matches
+    const s = document.createElement('script')
+    const tag = document.getElementById('utterances')
+    s.setAttribute('repo',"taocode/taocode.com")
+    s.setAttribute('issue-term',"pathname")
+    s.setAttribute('label',"✨💬")
+    s.setAttribute('theme',"github-"+(darkMode)?"dark":"light")
+    s.setAttribute('crossorigin',"anonymous")
+    s.src = 'https://utteranc.es/client.js'
+    tag.parentNode.insertBefore(s, tag)
+})
 </script>
 <div id="utterances"></div>
