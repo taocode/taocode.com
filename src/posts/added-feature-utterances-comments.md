@@ -13,9 +13,19 @@ tags:
   - Utterances
 ---
 
-I wanted a commenting feature for blog posts.
+I wanted a commenting feature for blog posts. Utterances is utterly simple and very easy to integrate.
 
-## What was evaluated?
+## Other Commenting Systems Evaluated
+
+I found (Uzay-G's article on dev.to about commenting systems for static sites)[https://dev.to/uzayg/how-to-add-comments-to-your-static-site-31od] helpful. I also considered:
+
+- Disqus
+- staticman
+- commento
+
+## References
+
+- https://averagelinuxuser.com/static-website-commenting/
 
 ## Why Utterances?
 
@@ -26,7 +36,7 @@ The topics in this blog are generally of interest to other github developers, [u
 ### Utterances code
 ``` html
 <script src="https://utteranc.es/client.js"
-    repo="taocode/taocode.com"
+    repo="[user/repo]"
     issue-term="pathname"
     label="✨💬"
     theme="github-dark"
@@ -42,20 +52,22 @@ The topics in this blog are generally of interest to other github developers, [u
 <script>
 import { onMount } from 'svelte';
 onMount(() => {
-    var s = document.createElement('script'),
-    tag = document.getElementById('utterances');
-    s.setAttribute('repo',"taocode/taocode.com");
-    s.setAttribute('issue-term',"pathname");
-    s.setAttribute('label',"✨💬");
-    s.setAttribute('theme',"github-dark");
-    s.setAttribute('crossorigin',"anonymous");
-    s.src = 'https://utteranc.es/client.js';
-    tag.parentNode.insertBefore(s, tag);
+    const darkMode = ! matchMedia('(prefers-color-scheme: light)').matches
+    const s = document.createElement('script')
+    const tag = document.getElementById('utterances')
+    s.setAttribute('repo',"[user/repo]")
+    s.setAttribute('issue-term',"pathname")
+    s.setAttribute('label',"✨💬")
+    s.setAttribute('theme',"github-"+(darkMode)?"dark":"light")
+    s.setAttribute('crossorigin',"anonymous")
+    s.src = 'https://utteranc.es/client.js'
+    tag.parentNode.insertBefore(s, tag)
 });
 </script>
 <div id="utterances"></div>
 ```
 
+The darkMode `window.matchMedia()` could be applied to the Utterances code but this is how I adapted the vanilla js utterances code.
 
 ## What do you think?
 
