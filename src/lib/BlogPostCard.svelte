@@ -70,11 +70,11 @@
       </div>
     </div>
     <div class="card-face card-face-back">
-      <div class="w-full absolute top-0 left-0 right-0 bottom-0">
+      <div class="w-full absolute -z-10 top-0 left-0 right-0 bottom-0">
         <BlogPostThumbnail {post} />
       </div>
-      <div aria-hidden="true" class="relative z-10 text-black font-display leading-13 font-extrabold 
-      text-3xl md:text-5xl lg:text-6xl p-3 bg-green-600 bg-opacity-70">
+      <div aria-hidden="true" class="text-black font-display leading-10 font-extrabold 
+      text-3xl md:text-6xl lg:text-4xl p-3 bg-green-600 bg-opacity-70">
          {post.title}
       </div>
     </div>

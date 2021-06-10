@@ -22,8 +22,8 @@
       novalidate
     >
       <div id="mc_embed_signup_scroll">
-        <label for="mce-EMAIL" class="block pb-3 text-2xl font-bold">
-          Subscribe to the email list for more content!
+        <label for="mce-EMAIL" class="block pb-3 text-2xl font-bold font-display">
+          Subscribe to my email list for more content!
         </label>
         <input
           type="email"
@@ -56,7 +56,7 @@
             value="Subscribe"
             name="subscribe"
             id="mc-embedded-subscribe"
-            class="w-full px-5 py-3 font-semibold text-white bg-green-700 rounded cursor-pointer hover:bg-green-800"
+            class="w-full px-5 py-3 font-semibold font-display text-white bg-green-700 rounded cursor-pointer hover:bg-green-800"
           />
         </div>
       </div>
