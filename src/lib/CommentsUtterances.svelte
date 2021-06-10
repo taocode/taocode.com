@@ -2,13 +2,12 @@
 import { onMount } from 'svelte'
 
 onMount(() => {
-    const darkMode = ! matchMedia('(prefers-color-scheme: light)').matches
     const s = document.createElement('script')
     const tag = document.getElementById('utterances')
     s.setAttribute('repo',"taocode/taocode.com")
     s.setAttribute('issue-term',"pathname")
     s.setAttribute('label',"✨💬")
-    s.setAttribute('theme',"github-"+(darkMode)?"dark":"light")
+    s.setAttribute('theme',"preferred-color-scheme")
     s.setAttribute('crossorigin',"anonymous")
     s.src = 'https://utteranc.es/client.js'
     tag.parentNode.insertBefore(s, tag)
