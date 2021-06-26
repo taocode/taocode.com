@@ -64,7 +64,7 @@
 
 <Footer />
 
-{#if !$isDev}
+{#if $isDev && !$isDev}
   <CookieNotice />
 {/if}
 </div>

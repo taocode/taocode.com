@@ -21,7 +21,7 @@
   import SEO from '$lib/SEO.svelte';
   import marked from 'marked';
 
-  import Icon from 'svelte-awesome/components/Icon.svelte';
+  import Icon from 'svelte-awesome';
   import { share } from 'svelte-awesome/icons';
 
   export let posts: Post[];

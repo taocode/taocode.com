@@ -1,5 +1,5 @@
 <script lang="ts">
-  import Icon from 'svelte-awesome/components/Icon.svelte';
+  import Icon from 'svelte-awesome';
   import { faBars } from '@fortawesome/free-solid-svg-icons';
   import ClickOutside from 'svelte-click-outside';
   import TaocodeLogo from './TaocodeLogo.svelte';

@@ -5,7 +5,7 @@
   import InfoTags from './InfoTags.svelte';
   import type { Post } from '../models/post';
 
-  import Icon from 'svelte-awesome/components/Icon.svelte';
+  import Icon from 'svelte-awesome';
   import { faExternalLinkSquareAlt } from '@fortawesome/free-solid-svg-icons';
 
   export let post: Post;

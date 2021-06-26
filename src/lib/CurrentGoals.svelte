@@ -2,7 +2,7 @@
   import EmpurrorSunNap from '../../static/empurror-scratcher-sun-nap.jpg';
   import MillerParkMushrooms from '../../static/miller-park-tree-mushrooms.jpg';
   import MillerParkGreenery from '../../static/miller-park-greenery.jpg';
-  import Icon from 'svelte-awesome/components/Icon.svelte';
+  import Icon from 'svelte-awesome';
   import { faCheck } from '@fortawesome/free-solid-svg-icons';
   import { faClock } from '@fortawesome/free-regular-svg-icons';
 

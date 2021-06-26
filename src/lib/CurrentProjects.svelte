@@ -1,5 +1,5 @@
 <script>
-  import Icon from 'svelte-awesome/components/Icon.svelte';
+  import Icon from 'svelte-awesome';
   import { faGithub } from '@fortawesome/free-brands-svg-icons';
   import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 

@@ -1,5 +1,5 @@
 <script>
-  import Icon from 'svelte-awesome/components/Icon.svelte';
+  import Icon from 'svelte-awesome';
   import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
   import BlogPostCard from './BlogPostCard.svelte';
   import type { Post } from '../models/post';
