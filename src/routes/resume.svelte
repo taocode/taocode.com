@@ -21,18 +21,21 @@
       <p class=""><a href="tel:+1-336-608-9475">336.608.9475</a></p>
     </div>
     <h2>About Me</h2>
-    <p>I am a thoughtful nerd that is continually problem solving. I   enjoy programming and have developed websites for over a dozen   years beginning with NT 3.51 and ASP using VBScript. We've all   come a long way since then and I have taught myself many more   programming languages and techniques including most of the usual   suspects (Java, SQL, PHP, Javascript, OOP, etc...). I'm a   tenacious debugger and feel very strongly about my ability to   analyze project needs and create elegant, forward-thinking   solutions. I've worked with a variety of business systems and   databases throughout my career and have written multithreaded,   multi-user, networked, distributed applications. Beyond   programming, I have a broad variety of web-relevant skills   including image optimization and a thorough knowledge of CSS. I   consider myself a good fit for a position that requires a   flexible, agile programmer/go-to-guy.</p>
-    <h2>Objective</h2>
-    <p>I want a leadership role with a dynamic team to create quality   software that employs best-of-breed technologies to leverage all   participants and their time effectively. I have rich experience   in a broad number of programming languages and have learned and   implemented industry best practices to efficiently and   consistently produce quality work. Understanding what's available   and how to bring the pieces together are a big part of being   effective in technology and, specifically, on the web. I am a   problem solver and debugger by nature and have a habit of   modeling internal systems from external evidence. I am   self-taught in the programming/web building realm and have   learned not only design patterns and object oriented programming   practices, but how to best streamline the development cycle with   an emphasis on reusing solutions by integrating existing projects   where appropriate. I want to share this knowledge and experience   with coworkers to make the work enjoyable, reliable and on, if   not ahead of, schedule.</p>
+    <p>I am a thoughtful nerd that is continually problem solving and looking for improvements. I’m well versed in all parts of web development and can work with multiple languages, platforms and back-ends to produce robust, optimized sites. I’ve developed websites for over two dozen years beginning with NT 3.51 and ASP using VBScript. I'm a tenacious debugger and analyze project needs to create elegant, forward-thinking solutions. Beyond programming, I have a broad variety of web-relevant skills including deep CSS familiarity and know how to make a performant website. I consider myself a good fit for a position that requires a flexible, agile programmer/fixer.</p>
+
     <h2>Summary</h2>
     <ul>
-    <li>Excellent verbal and written communication abilities</li>
-    <li>Fourteen years of direct experience developing web     applications including:<br> Integration, Plone, Joomla!, Servlets, JSP, XML, XSLT, ASP,     CGI, CSS2, XHTML, HTML, CFML, and PHP</li>
-    <li>Extensive experience with several programming languages and     application platforms:<br> Java, Python, JavaScript, XSLT, Visual Basic, VB Script, UML,     and SQL</li>
-    <li>Experience with distributed applications using J2EE:<br> JFC/Swing User Interface, JDBC, RMI, Java networking     libraries</li>
-    <li>Theoretical and practical knowledge of reusable design     patterns and Object Oriented Programming practices</li>
-    <li>Mastery of all Windows flavors (Vista, XP, 2k, NT...), and     UN*X (Mac OS X, Ubuntu, Linux, FreeBSD)</li>
-    <li>Experienced with office suites (Microsoft Office, Open     Office) and graphics and publishing programs (GIMP, Inkscape,     Scribus, PhotoShop, Illustrator, Publisher, Visio)</li>
+    <li>Excellent verbal and written communication communication</li>
+    <li>Over 2 decades of direct experience developing websites including:<br>
+      Platform migrations, XML/XSLT, CSS3, HTML5, CFML, PHP and more
+      </li>
+    <li>
+      Extensive experience with several programming languages and application platforms:<br>
+      Node.js, PHP, Python, JavaScript, Java, XSLT, Visual Basic, VB Script, UML, SQL, and noSQL
+    </li>
+    <li>Experienced with office suites (Microsoft Office, Open Office) and graphics and publishing programs (GIMP, Inkscape, Scribus, PhotoShop, Illustrator, Publisher, Visio)</li>
+    <li>Graphics skills including animated SVG, logo design, optimized image delivery</li>
+
     </ul>
     <h2>Experience</h2>
     <h3>Salem Academy and College<br></h3>
