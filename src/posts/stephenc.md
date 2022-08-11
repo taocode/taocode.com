@@ -6,6 +6,7 @@ published: 2021-07-07T09:20:00Z
 category: 'Portfolio'
 excerpt: Artist Stephen Czaikoski's virtual online gallery.
 lead: Built with Hugo and WidiCSS with Swiper carousel.
+site_url: https://StephenC.art
 layout: blog
 author: Mark Jones
 thumbnail: /images/portfolio/stephenc-thumbnail.jpg
@@ -13,11 +14,11 @@ tags:
   - Hugo
   - WindiCSS
   - Swiper.js
-  - Lazy media
+  - LazyLoad
   - Firebase hosting
 ---
 
-Stephen Czaikoski is a talented artist that I've known for my entire life because he's also my cousin. I've always admired his work both in quality and quantity. I'm impressed with his inner drive that moves him down his artistic path and when he asked if I could help him with a website, I was very pleased and wanted to make something special to showcase his art.
+Stephen Czaikoski is a talented artist that I've known for my entire life because he's also my cousin. I've admired his work both in quality and quantity and am impressed with his inner drive that moves him down his artistic path. When he asked if I could help him with a website, I was very pleased and wanted to make something special to showcase his art.
 
 ## Goals
 
@@ -27,7 +28,7 @@ Show off Stephen's art via
 1. Carousel
 1. Zoom enabled for detailed views
 
-Using [Hugo's native image processing](https://gohugo.io/content-management/image-processing/) with [WindiCSS](https://windicss.org/) and [Swiper.js](https://swiperjs.com/), I combined them all to provide www.stephenc.art.
+Using [Hugo's native image processing](https://gohugo.io/content-management/image-processing/) with [WindiCSS](https://windicss.org/) and [Swiper](https://swiperjs.com/), I combined them all to provide www.stephenc.art.
 
 ## Hugo Image Optimization
 
@@ -35,34 +36,12 @@ One of the biggest pieces to this site is handling the images intelligently, opt
 
 ## Firebase Hosting
 
-This static site is delivered via Firebase hosting. The CSS is optimized and the javascript is minimal but one of the speed advantages is using specific caching rules that can make the Hugo-processed, optimized images have a longer caching period, it can improve the loading time of these higher resolution images.
+This static site is delivered very cheaply (free with current traffic) via Firebase hosting. The CSS is optimized and the javascript is minimal but one of the speed advantages is leveraging browser caching by providing [optimized caching rules](/blog/optimize-firebase-hosting-cache-rules) that can make the Hugo-processed, optimized images have a longer caching period; the cache headers allow the browser to not even bother to check for updates on items that won't change like fingerprinted CSS, JS and optimized images.
 
-### Caching Rules
+## LazyLoad Media
 
-These headers rules for Firebase hosting allow visitors to cache Hugo processed images and all CSS/JS as "good forever" by setting the max-age to 1 year *(31540000 seconds max-age)* and adding immutable. What about images that were not processed by Hugo? They cache for 6 hours only *(21600 seconds max-age)*. Everthing else defaults to 15 minutes *(900 seconds max-age)*.
+The site also uses [Vanilla Lazyload](https://www.andreaverlicchi.eu/vanilla-lazyload/) to lazyload the images. This resulted in some cross behavior with swiper, especially when attempting to use swiper's lazy load in addition to vanilla. I ended up stick with vanilla-lazyload and excluding swiper's lazyload; they seem to get along now and I get to use lazyload for non-swiper images as well, so win-win.
 
-``` json
-"headers": [ {
-    "key": "Cache-Control",
-    "value": "public, max-age=900"
-  } ]}, {
-  "source": "**/*.@(jpg|jpeg|png|gif|webp)", 
-  "headers": [ {
-    "key": "Cache-Control",
-    "value": "public, max-age=21600"
-  } ]}, {
-  "source": "**/*_@(resize|fit|fill)_q*.@(jpg|jpeg|png|gif|webp)", 
-  "headers": [ {
-    "key": "Cache-Control",
-    "value": "public, max-age=31540000, immutable"
-  } ]}, {
-  "source": "**/*.@(css|js)", 
-  "headers": [ {
-    "key": "Cache-Control",
-    "value": "public, max-age=31540000, immutable"
-  } ]}
-]
-```
+## Swiper for Carousels
 
-***But wait‽*** won't that mean nobody ever gets CSS or JS updates? *No,* because these files are "fingerprinted" by Hugo, similar to the images it processes; they really are immutable as no change will happen at that URL. These fingerprinted items will be included via new URLs to produce the next version, if they change.
-
+[Swiper](https://swiperjs.com/) is awesome. This is my first use and it's so much better than my own custom carousels. I didn't want to have to learn the details on handling the swipe and why should I? Swiper solves this problem with far more options that I could've produced. Kudos to the swiper team.

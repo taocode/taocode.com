@@ -1,6 +1,6 @@
 <script>
-  export let image;
-  export let alt: string = "";
+  export let image
+  export let alt = ""
 </script>
 <section class="applause-gradient blog-applause rotating-bg">
   <div class="container mj-container flex flex-col-reverse items-center gap-4 md:flex-row">
