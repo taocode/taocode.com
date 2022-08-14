@@ -1,27 +1,33 @@
 import sveltePreprocess from 'svelte-preprocess';
 import adapter from '@sveltejs/adapter-static';
 import { mdsvex } from 'mdsvex';
-import { imagetools } from 'vite-imagetools';
-import WindiCSS from 'vite-plugin-windicss';
+import { trusted } from 'svelte/internal';
 
 
 const extensions = [`.svelte`, '.svx', '.md'];
 
 const preprocess = [
   sveltePreprocess({
-    defaults: {
-      script: 'typescript',
-    },
+    typescript: true,
     preserve: ['ld+json'],
   }),
-  mdsvex({ extensions: extensions }),
+  mdsvex({ extensions }),
 ];
+
+const kit = {
+  adapter: adapter(),
+  prerender: {
+    default: true
+  },
+}
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
-  extensions: extensions,
+  kit,
+  extensions,
   // options passed to svelte.preprocess (https://svelte.dev/docs#svelte_preprocess)
-  preprocess: preprocess,
+  preprocess,
+
 };
 
 export default config;

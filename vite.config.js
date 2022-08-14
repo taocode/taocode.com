@@ -1,6 +1,11 @@
-import { imagetools } from 'vite-imagetools';
-import WindiCSS from 'vite-plugin-windicss';
+import { sveltekit } from '@sveltejs/kit/vite'
+import { imagetools } from 'vite-imagetools'
+import WindiCSS from 'vite-plugin-windicss'
 
 export default {
-  plugins: [WindiCSS(),imagetools({ force: true }),],
+  plugins: [
+    sveltekit(),
+    WindiCSS(),
+    imagetools({ force: true }),
+  ],
 }

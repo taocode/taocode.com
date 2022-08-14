@@ -32,7 +32,7 @@ const renderXmlRssFeed = (
   </channel>
 </rss>`;
 
-export function get() {
+export function GET() {
   const feed = renderXmlRssFeed(posts);
 
   return {

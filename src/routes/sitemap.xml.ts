@@ -69,7 +69,7 @@ const render = (
 </urlset>
 `;
 
-export function get() {
+export function GET() {
   const sitemap = render(pages, posts);
 
   return {
