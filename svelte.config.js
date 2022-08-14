@@ -22,14 +22,6 @@ const config = {
   extensions: extensions,
   // options passed to svelte.preprocess (https://svelte.dev/docs#svelte_preprocess)
   preprocess: preprocess,
-  kit: {
-    adapter: adapter(),
-    target: '#svelte',
-    vite: {
-      plugins: [WindiCSS.default(),imagetools({ force: true }),],
-    },
-    trailingSlash: 'ignore',
-  },
 };
 
 export default config;

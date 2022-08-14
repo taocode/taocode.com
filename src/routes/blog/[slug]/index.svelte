@@ -19,10 +19,11 @@
   import type { Post } from 'src/models/post';
   import { page } from '$app/stores';
   import SEO from '$lib/SEO.svelte';
-  import marked from 'marked';
+  import { marked } from 'marked';
 
   import Icon from 'svelte-awesome/components/Icon.svelte';
   import { share } from 'svelte-awesome/icons';
+import { parse } from 'date-fns/esm';
 
   export let posts: Post[];
 
@@ -54,7 +55,7 @@
 <BlogPostHeader post="{post}" />
 <section class="container flex flex-wrap mj-container">
   <article class="w-full pb-12 prose-lg lg:prose-xl blog lg:w-3/4 lg:pr-16">
-    {#if post.lead }<p class="lead">{@html marked(post.lead)}</p>{/if}
+    {#if post.lead }<p class="lead">{@html marked.parse(post.lead)}</p>{/if}
     {@html post.html}
     <div class="flex justify-between items-center w-auto max-w-xs mx-auto p-3 mt-6 mb-8 border-2 rounded bg-green-100 bg-opacity-70 border-green-700 dark:bg-green-900">
       <div class="h-full -m-3 mr-1 py-1 px-3 bg-green-700 text-green-100 dark:text-green-950">
