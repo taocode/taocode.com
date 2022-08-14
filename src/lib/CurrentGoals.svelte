@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import EmpurrorSunNap from '../../static/empurror-scratcher-sun-nap.jpg';
   import MillerParkMushrooms from '../../static/miller-park-tree-mushrooms.jpg';
   import MillerParkGreenery from '../../static/miller-park-greenery.jpg';
