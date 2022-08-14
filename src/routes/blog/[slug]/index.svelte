@@ -19,7 +19,7 @@
   import type { Post } from 'src/models/post';
   import { page } from '$app/stores';
   import SEO from '$lib/SEO.svelte';
-  import marked from 'marked';
+  import { marked } from 'marked';
 
   import Icon from 'svelte-awesome/components/Icon.svelte';
   import { share } from 'svelte-awesome/icons';

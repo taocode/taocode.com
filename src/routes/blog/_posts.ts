@@ -1,6 +1,6 @@
 import fs from 'fs';
 import frontMatter from 'front-matter';
-import marked from 'marked';
+import { marked } from 'marked';
 import Prism from 'prismjs';
 import 'prism-svelte';
 import loadLanguages from 'prismjs/components/index.js';
