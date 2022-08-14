@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import AboutMe from './AboutMe.svelte';
   import PopularArticles from './PopularArticles.svelte';
   import SubscribeAndFollow from './SubscribeAndFollow.svelte';

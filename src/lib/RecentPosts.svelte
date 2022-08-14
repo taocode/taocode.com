@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import Icon from 'svelte-awesome/components/Icon.svelte';
   import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
   import BlogPostCard from './BlogPostCard.svelte';

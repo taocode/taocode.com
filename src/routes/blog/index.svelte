@@ -1,4 +1,4 @@
-<script context="module">
+<script lang="ts" context="module">
   export async function load({ fetch }: LoadInput) {
     try {
       const blog = await fetch(`/blog.json`);

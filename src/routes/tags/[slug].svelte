@@ -1,4 +1,4 @@
-<script context="module">
+<script lang="ts" context="module">
   import { convertToSentenceCase } from '../../utils';
 
   export async function load({ page, fetch }: LoadInput) {
