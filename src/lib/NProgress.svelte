@@ -13,7 +13,7 @@
   }
 </script>
 
-<style>
+<style lang="postcss" global>
   /* Make clicks pass-through */
   :global(#nprogress) {
     pointer-events: none;
