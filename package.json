@@ -68,6 +68,7 @@
     "svelte": "3.43.1",
     "svelte-awesome": "^3.0.0",
     "svelte-check": "^2.1.0",
+    "svelte-feather-icons": "^4.0.0",
     "svelte-forms-lib": "^1.10.3",
     "svelte-jester": "^2.1.0",
     "svelte-preprocess": "^4.7.3",

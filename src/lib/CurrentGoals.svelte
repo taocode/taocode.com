@@ -2,10 +2,7 @@
   import EmpurrorSunNap from '../../static/empurror-scratcher-sun-nap.jpg';
   import MillerParkMushrooms from '../../static/miller-park-tree-mushrooms.jpg';
   import MillerParkGreenery from '../../static/miller-park-greenery.jpg';
-  import Icon from 'svelte-awesome/components/Icon.svelte';
-  import { faCheck } from '@fortawesome/free-solid-svg-icons';
-  import { faClock } from '@fortawesome/free-regular-svg-icons';
-
+  import { CheckIcon, ClockIcon } from 'svelte-feather-icons'
   // adding types throws compiler error for some reason
   // need https://github.com/sveltejs/svelte/pull/4282 to get merged
   export let readableSlug: string;
@@ -79,9 +76,9 @@
   {#each goals as goal}
     <div class="flex items-baseline italic">
       {#if goal.reached}
-        <Icon data="{faCheck}" class="mr-3 text-green-500" />
+        <CheckIcon class="mr-3 text-green-500" size="1x" />
       {:else}
-        <Icon data="{faClock}" class="mr-3 text-gray-600" />
+        <ClockIcon class="mr-3 text-gray-600" size="1x" />
       {/if}
       <p>{goal.text}</p>
     </div>

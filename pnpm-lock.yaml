@@ -47,6 +47,7 @@ specifiers:
   svelte-awesome: ^3.0.0
   svelte-check: ^2.1.0
   svelte-click-outside: ^1.0.0
+  svelte-feather-icons: ^4.0.0
   svelte-forms-lib: ^1.10.3
   svelte-jester: ^2.1.0
   svelte-preprocess: ^4.7.3
@@ -109,6 +110,7 @@ devDependencies:
   svelte: 3.43.1
   svelte-awesome: 3.0.0_svelte@3.43.1
   svelte-check: 2.1.0_yghdnle6epa7najhhws5rl2htm
+  svelte-feather-icons: 4.0.0
   svelte-forms-lib: 1.10.3
   svelte-jester: 2.3.2_jest@27.5.1+svelte@3.43.1
   svelte-preprocess: 4.7.3_33muzirseuix4mepxfzy7gjpju
@@ -4930,6 +4932,12 @@ packages:
   /svelte-click-outside/1.0.0:
     resolution: {integrity: sha512-TVDn5Vd8L0WI0Y9BFh/2I7judkIqYCbFKkGwGl/f8D0inwBFNyU0weKhrbJY4VQtYnWriq0NPl+mIYGisgALbw==}
     dev: false
+
+  /svelte-feather-icons/4.0.0:
+    resolution: {integrity: sha512-4ieUsjp+VYa1r6y80jDt9zRiRUZyJNbESpRdHdJJhiBubyuXX96A7f1UZSK4olxzP6Qsg5ZAuyZlnmvD+/swAA==}
+    dependencies:
+      svelte: 3.43.1
+    dev: true
 
   /svelte-forms-lib/1.10.3:
     resolution: {integrity: sha512-H4hW86tpt3ltzIdZgx8V1KY7QG1WhdB5qAbJKwkDS6M8ucSEo4iATMTi/9P0HlwLtXUBubCkySkegKVfb+wS6g==}

@@ -5,7 +5,7 @@
     faLinkedin,
     faReddit,
   } from '@fortawesome/free-brands-svg-icons';
-  import { faEnvelope, faRss } from '@fortawesome/free-solid-svg-icons';
+  import { MailIcon, LinkedinIcon, GithubIcon, RssIcon } from 'svelte-feather-icons'
   // import { faRss } from 'svelte-awesome/icons';
   import ExternalLink from './ExternalLink.svelte';
   import SpeedlifyFooter from './SpeedlifyFooter.svelte';
@@ -74,7 +74,7 @@
         ariaLabel="Write an email to me"
         customClass="inline-flex mt-4 lg:mt-0 hover:text-white"
       >
-        <Icon data="{faEnvelope}" class="mr-3" scale="{1.5}" />
+        <MailIcon class="mr-3" size="1.5x" />
       </ExternalLink>
 
       <ExternalLink
@@ -83,7 +83,7 @@
         customClass="inline-flex mt-4 lg:mt-0 hover:text-white"
         rel="me"
       >
-        <Icon data="{faGithub}" class="mr-3" scale="{1.5}" />
+        <GithubIcon class="mr-3" size="1.5x" />
       </ExternalLink>
 
       <ExternalLink
@@ -91,7 +91,7 @@
         ariaLabel="Network with me on Linkedin"
         customClass="inline-flex mt-4 lg:mt-0 hover:text-white"
       >
-        <Icon data="{faLinkedin}" class="mr-3" scale="{1.5}" />
+        <LinkedinIcon class="mr-3" size="1.5x" />
       </ExternalLink>
 
       <ExternalLink
@@ -107,7 +107,7 @@
         ariaLabel="Read the RSS feed"
         customClass="inline-flex mt-4 lg:mt-0 hover:text-white"
       >
-        <Icon data="{faRss}" class="mr-3" scale="{1.5}" />
+        <RssIcon class="mr-3" size="1.5x" />
       </ExternalLink>
     </nav>
 

@@ -2,17 +2,9 @@
   import { fade } from 'svelte/transition';
   import { createForm } from 'svelte-forms-lib';
   import * as yup from 'yup';
-  import Icon from 'svelte-awesome/components/Icon.svelte';
   import axios from 'redaxios';
-  import {
-    faGithub,
-    faLinkedin,
-  } from '@fortawesome/free-brands-svg-icons';
-  import {
-    faEnvelope,
-    faExternalLinkAlt,
-    faCheckCircle,
-  } from '@fortawesome/free-solid-svg-icons';
+
+  import { CheckCircleIcon, ExternalLinkIcon, MailIcon, GithubIcon, LinkedinIcon } from 'svelte-feather-icons'
   import SEO from '$lib/SEO.svelte';
   import ExternalLink from '$lib/ExternalLink.svelte';
 
@@ -163,11 +155,7 @@
       {#if didSubmit}
         <div class="w-full px-2 my-2" transition:fade>
           <div class="alert-success">
-            <Icon
-              data="{faCheckCircle}"
-              class="mr-3 text-green-500"
-              scale="{1.5}"
-            />
+            <CheckCircleIcon size="1.5x" class="mr-3 text-green-500" />
             Message submitted successfully!
           </div>
         </div>
@@ -218,14 +206,14 @@
       ariaLabel="Write me a mail"
       customClass="inline-flex text-green-900 hover:text-green-700"
     >
-      <Icon data="{faEnvelope}" scale="{2}" />
+      <MailIcon size="2x" />
     </ExternalLink>
     <ExternalLink
       href="https://github.com/taocode"
       ariaLabel="Follow me on GitHub"
       customClass="inline-flex text-green-900 hover:text-green-700"
     >
-      <Icon data="{faGithub}" class="ml-5" scale="{2}" />
+      <GithubIcon class="ml-5" size="2x" />
     </ExternalLink>
 
     <ExternalLink
@@ -233,7 +221,7 @@
       ariaLabel="Network with me on Linkedin"
       customClass="inline-flex text-green-900 hover:text-green-700"
     >
-      <Icon data="{faLinkedin}" class="ml-5" scale="{2}" />
+      <LinkedinIcon class="ml-5" size="2x" />
     </ExternalLink>
 
   </div>
@@ -246,7 +234,7 @@
         customClass="inline-flex"
       >
         Submit issue
-        <Icon data="{faExternalLinkAlt}" class="mt-1 ml-2" />
+        <ExternalLinkIcon size="1x" class="mt-1 ml-2" />
       </ExternalLink>
     </div>
     <div class="w-full sm:w-1/3">
@@ -256,7 +244,7 @@
         customClass="inline-flex"
       >
         Request feature
-        <Icon data="{faExternalLinkAlt}" class="mt-1 ml-2" />
+        <ExternalLinkIcon size="1x" class="mt-1 ml-2" />
       </ExternalLink>
     </div>
     <div class="w-full sm:w-1/3">
@@ -266,7 +254,7 @@
         customClass="inline-flex"
       >
         Suggest content
-        <Icon data="{faExternalLinkAlt}" class="mt-1 ml-2" />
+        <ExternalLinkIcon size="1x" class="mt-1 ml-2" />
       </ExternalLink>
     </div>
   </div>

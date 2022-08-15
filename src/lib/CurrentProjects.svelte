@@ -1,8 +1,5 @@
 <script>
-  import Icon from 'svelte-awesome/components/Icon.svelte';
-  import { faGithub } from '@fortawesome/free-brands-svg-icons';
-  import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
-
+  import { ExternalLinkIcon, GithubIcon } from 'svelte-feather-icons'
   const projects = [
     {
       name: 'TAOCode',
@@ -17,7 +14,7 @@
       name: 'TRAINcycle',
       description: 'Get training in the arts and arts production.',
       techStack: 'Hugo, TailwindCSS, Markdown, GitHub, Firebase',
-      websiteLink: 'https://www.taocode.com',
+      websiteLink: 'https://www.traincycle.org',
       githubLink: 'https://github.com/taocode/traincycle-hugo-site',
     },
     {
@@ -46,7 +43,7 @@
             rel="noopener noreferrer"
             aria-label="Link to Website for {project.name}"
           >
-            <Icon data="{faExternalLinkAlt}" class="ml-3" />
+            <ExternalLinkIcon class="ml-3" size="1x" />
           </a>
         {/if}
         <a
@@ -56,7 +53,7 @@
           rel="noopener noreferrer"
           aria-label="Link to GitHub for {project.name}"
         >
-          <Icon data="{faGithub}" class="ml-3" />
+          <GithubIcon class="ml-3" size="1x" />
         </a>
       </div>
       <div class="w-full my-3 lg:w-3/4">

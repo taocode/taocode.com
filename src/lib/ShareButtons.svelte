@@ -3,10 +3,8 @@
   import {
     faReddit,
     faPinterest,
-    faTwitter,
-    faFacebook,
-    faLinkedin,
   } from '@fortawesome/free-brands-svg-icons';
+  import { FacebookIcon, LinkedinIcon, TwitterIcon } from 'svelte-feather-icons'
   import { page } from '$app/stores';
   import type { Post } from '../models/post';
 
@@ -27,7 +25,7 @@
   class="{shareButtonStyle}"
   title="Share on Facebook"
 >
-  <Icon data="{faFacebook}" class="mx-3" scale="{1.5}" />
+  <FacebookIcon class="mx-3" scale="{1.5}" />
 </a>
 <a
   href="https://www.linkedin.com/shareArticle?mini=true&url={encodedURL}&title={encodedPostTitle}&summary={encodedPostExcerpt}&source=LinkedIn"
@@ -36,7 +34,7 @@
   class="{shareButtonStyle}"
   title="Share on LinkedIn"
 >
-  <Icon data="{faLinkedin}" class="mx-3" scale="{1.5}" />
+  <LinkedinIcon class="mx-3" scale="{1.5}" />
 </a>
 <a
   href="https://twitter.com/intent/tweet?text={encodedPostTitle}&url={encodedURL}"
@@ -45,7 +43,7 @@
   class="{shareButtonStyle}"
   title="Share on Twitter"
 >
-  <Icon data="{faTwitter}" class="mx-3" scale="{1.5}" />
+  <TwitterIcon class="mx-3" scale="{1.5}" />
 </a>
 <a
   href="https://www.reddit.com/submit?url={encodedURL}&title={encodedPostTitle}"

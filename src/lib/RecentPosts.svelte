@@ -1,6 +1,5 @@
 <script lang="ts">
-  import Icon from 'svelte-awesome/components/Icon.svelte';
-  import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
+  import { ChevronLeftIcon } from 'svelte-feather-icons'
   import BlogPostCard from './BlogPostCard.svelte';
   import type { Post } from '../models/post';
 
@@ -25,6 +24,6 @@
     class="inline-flex items-center mt-8 font-bold rounded text-md btn-primary"
   >
     View all blog posts
-    <Icon data="{faAngleRight}" class="ml-3" scale="{1.5}" />
+    <ChevronLeftIcon />
   </a>
 </section>

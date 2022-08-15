@@ -1,11 +1,10 @@
 <script>
   import Icon from 'svelte-awesome/components/Icon.svelte';
   import {
-    faGithub,
-    faLinkedin,
     faReddit,
   } from '@fortawesome/free-brands-svg-icons';
   import { faRss } from '@fortawesome/free-solid-svg-icons';
+  import { GithubIcon, LinkedinIcon, RssIcon } from 'svelte-feather-icons'
   // import { faRss } from 'svelte-awesome/icons';
   import ExternalLink from './ExternalLink.svelte';
 </script>
@@ -20,14 +19,14 @@
       ariaLabel="Follow me on GitHub"
       customClass="inline-flex text-green-900 hover:text-green-700"
     >
-      <Icon data="{faGithub}" class="m-3" scale="{2}" />
+      <GithubIcon class="m-3" size="2x" />
     </ExternalLink>
     <ExternalLink
       href="https://www.linkedin.com/in/taocode/"
       ariaLabel="Network with me on Linkedin"
       customClass="inline-flex text-green-900 hover:text-green-700"
     >
-      <Icon data="{faLinkedin}" class="m-3" scale="{2}" />
+      <LinkedinIcon class="m-3" size="2x" />
     </ExternalLink>
 
     <ExternalLink
@@ -43,7 +42,7 @@
       ariaLabel="Read the RSS feed"
       customClass="inline-flex text-green-900 hover:text-green-700"
     >
-      <Icon data="{faRss}" class="m-3" scale="{2}" />
+      <RssIcon class="m-3" size="2x" />
     </ExternalLink>
   </div>
 </div>
