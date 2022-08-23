@@ -1,36 +1,18 @@
-<script lang="ts" context="module">
-  import { convertToSentenceCase } from '../../utils';
-
-  export async function load({ page, fetch }: LoadInput) {
-    try {
-      const allPosts = await fetch(`/blog.json`);
-      const posts = await allPosts.json();
-
-      const postsByCategory = posts.filter(
-        (post: Post) =>
-          post.category === convertToSentenceCase(page.params.slug),
-      );
-
-      return { props: { posts, postsByCategory, slug: page.params.slug } };
-    } catch (error) {
-      console.error(error);
-    }
-  }
-</script>
-
 <script lang="ts">
+  // throw new Error("@migration task: Add data prop (https://github.com/sveltejs/kit/discussions/5774#discussioncomment-3292707)");
+
   import BlogOverviewHeader from '$lib/BlogOverviewHeader.svelte';
   import BlogPostSidebar from '$lib/BlogPostSidebar.svelte';
   import BlogPostFilters from '$lib/BlogPostFilters.svelte';
   import CurrentGoals from '$lib/CurrentGoals.svelte';
   import SEO from '$lib/SEO.svelte';
   import { page } from '$app/stores';
-  import type { Post } from '../../models/post';
+  import type { Post } from '../../../models/post';
   import type { LoadInput } from '@sveltejs/kit/types/page';
 
-  import EmpurrorSunNap from '../../../static/empurror-scratcher-sun-nap.jpg';
-  import MillerParkMushrooms from '../../../static/miller-park-tree-mushrooms.jpg';
-  import MillerParkGreenery from '../../../static/miller-park-greenery.jpg';
+  import EmpurrorSunNap from '../../../../static/empurror-scratcher-sun-nap.jpg';
+  import MillerParkMushrooms from '../../../../static/miller-park-tree-mushrooms.jpg';
+  import MillerParkGreenery from '../../../../static/miller-park-greenery.jpg';
 
   const accentImage = {
     'Life': {
@@ -47,6 +29,7 @@
     },
   }
 
+  export let data
   export let postsByCategory: Post[];
   export let posts: Post[];
 

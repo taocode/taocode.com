@@ -1,10 +1,10 @@
-import posts from './_posts';
+import posts from '../_posts';
 
 export function GET() {
-  return {
-    body: Object.keys(posts).map((slug) => ({
-      slug,
-      ...posts[slug],
-    })),
-  };
+  // throw new Error("@migration task: Migrate this return statement (https://github.com/sveltejs/kit/discussions/5774#discussioncomment-3292701)");
+  // Suggestion (check for correctness before using):
+  return new Response(Object.keys(posts).map((slug) => ({
+    slug,
+    ...posts[slug],
+  })));
 }

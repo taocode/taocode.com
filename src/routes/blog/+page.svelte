@@ -1,17 +1,6 @@
-<script lang="ts" context="module">
-  export async function load({ fetch }: LoadInput) {
-    try {
-      const blog = await fetch(`/blog.json`);
-      const posts = await blog.json();
-
-      return { props: { posts } };
-    } catch (error) {
-      console.error(error);
-    }
-  }
-</script>
-
 <script lang="ts">
+  // throw new Error("@migration task: Add data prop (https://github.com/sveltejs/kit/discussions/5774#discussioncomment-3292707)");
+
   import BlogPostHeaderImage from '../../../static/b-flopped-on-sidewalk.jpg';
   import BlogOverviewHeader from '$lib/BlogOverviewHeader.svelte';
   import BlogPostFilters from '$lib/BlogPostFilters.svelte';
@@ -20,6 +9,7 @@
   import type { LoadInput } from '@sveltejs/kit/types/page';
   import type { Post } from '../../models/post';
 
+  export let data
   export let posts: Post[];
 </script>
 

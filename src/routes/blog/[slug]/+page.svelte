@@ -1,15 +1,6 @@
-<script lang="ts" context="module">
-  export async function load({ fetch }) {
-    const res = await fetch(`/blog.json`);
-    return {
-      props: {
-        posts: await res.json(),
-      },
-    };
-  }
-</script>
-
 <script lang="ts">
+  // throw new Error("@migration task: Add data prop (https://github.com/sveltejs/kit/discussions/5774#discussioncomment-3292707)");
+
   import BackToBlogOverviewBtn from '$lib/BackToBlogOverviewBtn.svelte';
   import BlogPostHeader from '$lib/BlogPostHeader.svelte';
   import BlogPostSidebar from '$lib/BlogPostSidebar.svelte';
@@ -25,6 +16,7 @@
   import { share } from 'svelte-awesome/icons';
 import { parse } from 'date-fns/esm';
 
+  export let data
   export let posts: Post[];
 
   $: post = posts.find((post) => post.slug === $page.params.slug);

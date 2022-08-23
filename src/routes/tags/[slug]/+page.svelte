@@ -1,38 +1,18 @@
-<script lang="ts" context="module">
-  import { convertToSentenceCase } from '../../utils';
-
-  export async function load({ page, fetch }: LoadInput) {
-    try {
-      const allPosts = await fetch(`/blog.json`);
-      const posts: Post[] = await allPosts.json();
-
-      const postsByTag = posts.filter((post: Post) => {
-        if (!post.tags) {
-          return [];
-        }
-        const regex = new RegExp(post.tags.join('|'), 'i');
-        return regex.test(convertToSentenceCase(page.params.slug));
-      });
-
-      return { props: { posts, postsByTag, slug: page.params.slug } };
-    } catch (error) {
-      console.error(error);
-    }
-  }
-</script>
-
 <script lang="ts">
+  // throw new Error("@migration task: Add data prop (https://github.com/sveltejs/kit/discussions/5774#discussioncomment-3292707)");
+
   import BlogOverviewHeader from '$lib/BlogOverviewHeader.svelte';
   import BlogPostSidebar from '$lib/BlogPostSidebar.svelte';
   import BlogPostFilters from '$lib/BlogPostFilters.svelte';
   import SEO from '$lib/SEO.svelte';
-  import type { Post } from '../../models/post';
+  import type { Post } from '../../../models/post';
   import type { LoadInput } from '@sveltejs/kit/types/page';
 
   export let postsByTag: Post[];
   export let slug: string;
   export let posts: Post[];
 
+  export let data
   const readableSlug = convertToSentenceCase(slug);
 </script>
 

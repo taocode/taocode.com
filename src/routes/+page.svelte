@@ -1,17 +1,6 @@
-<script lang="ts" context="module">
-  export async function load({ fetch }: LoadInput) {
-    const blog = await fetch(`/blog.json`);
-    const posts = await blog.json();
-
-    return {
-      props: {
-        posts,
-      },
-    };
-  }
-</script>
-
 <script lang="ts">
+  // throw new Error("@migration task: Add data prop (https://github.com/sveltejs/kit/discussions/5774#discussioncomment-3292707)");
+
   import Introduction from '$lib/Introduction.svelte';
   import CurrentProjects from '$lib/CurrentProjects.svelte';
   import Experience from "$lib/Experience.svelte";
@@ -22,7 +11,8 @@
   import ServicesCallToAction from '$lib/ServicesCallToAction.svelte';
   import type { LoadInput } from '@sveltejs/kit/types/page';
 
-  export let posts: Post[];
+  export let data
+  export let posts: Post[]
 </script>
 
 <svelte:head>

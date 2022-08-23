@@ -1,30 +1,21 @@
-<script context="module">
-  export function load({ error, status }) {
-    return {
-      props: { error, status },
-    };
-  }
-</script>
-
 <script lang="ts">
+  import { page } from '$app/stores'
   import { browser, dev } from '$app/env';
 
-  export let error: Error;
-  export let status: number;
 </script>
 
 <svelte:head>
-  <title>{status}</title>
+  <title>{$page.status}</title>
 </svelte:head>
 
 <div class="text-center mj-container">
-  <h1>{status}</h1>
+  <h1>{$page.status}</h1>
 
-  <p>{error.message}</p>
+  <p>{$page.error.message}</p>
 </div>
 
 {#if browser && dev && error.stack}
-  <pre>{error.stack}</pre>
+  <pre>{$page.error.stack}</pre>
 {/if}
 
 <style>

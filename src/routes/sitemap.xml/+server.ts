@@ -1,9 +1,10 @@
+import { json } from '@sveltejs/kit';
 // eslint-disable-next-line @typescript-eslint/no-var-requires
-import posts from './blog/_posts';
-import { convertToSlug } from '../utils';
+import posts from '../blog/_posts';
+import { convertToSlug } from '../../utils';
 
 import fs from 'fs';
-import type { Post } from '../models/post';
+import type { Post } from '../../models/post';
 
 const BASE_URL = 'https://www.taocode.com';
 const pages = [''];
@@ -72,7 +73,10 @@ const render = (
 export function GET() {
   const sitemap = render(pages, posts);
 
-  return {
-    body: sitemap,
-  };
+  // throw new Error("@migration task: Migrate this return statement (https://github.com/sveltejs/kit/discussions/5774#discussioncomment-3292701)");
+  // Suggestion (check for correctness before using):
+  return json(sitemap);
+  // return {
+  //   body: sitemap,
+  // };
 }

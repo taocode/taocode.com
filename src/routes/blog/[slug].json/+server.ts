@@ -1,3 +1,5 @@
+
+// @migration task: Check imports
 import posts from './../_posts';
 
 export function get({ params }) {

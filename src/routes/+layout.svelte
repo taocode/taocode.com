@@ -1,16 +1,3 @@
-<script context="module" lang="ts">
-  export async function load({ fetch }: LoadInput) {
-    try {
-      await fetch('/sitemap.xml')
-      await fetch('/rss.xml')
-
-      return true
-    } catch (error) {
-      console.error(error)
-    }
-  }
-</script>
-
 <script lang="ts">
   import { afterUpdate, onMount } from 'svelte'
   import BreakpointHelper from '$lib/BreakpointHelper.svelte'
