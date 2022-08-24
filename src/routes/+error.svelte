@@ -1,7 +1,11 @@
 <script lang="ts">
   import { page } from '$app/stores'
-  import { browser, dev } from '$app/env';
-
+  import { browser, dev } from '$app/env'
+  export let data
+  export let errors
+  $: {
+    console.log({data,errors})
+  }
 </script>
 
 <svelte:head>
@@ -16,6 +20,7 @@
 
 {#if browser && dev && $page.error.stack}
   <pre>{$page.error.stack}</pre>
+  <hr>
 {/if}
 
 <style>
