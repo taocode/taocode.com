@@ -14,7 +14,7 @@
   <p>{$page.error.message}</p>
 </div>
 
-{#if browser && dev && error.stack}
+{#if browser && dev && $page.error.stack}
   <pre>{$page.error.stack}</pre>
 {/if}
 
