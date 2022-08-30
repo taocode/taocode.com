@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { formatDate, convertToSlug } from '../utils';
+  import { formatDate, convertToSlug } from './utils';
   import type { Post } from '../models/post';
 
   export let post: Post;
