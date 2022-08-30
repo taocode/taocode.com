@@ -10,7 +10,8 @@
   import type { Post } from '../../models/post';
 
   export let data
-  export let posts: Post[];
+  export let posts: Post[] = data.posts
+  // console.log('/blog/+page.svelte',{data,posts})
 </script>
 
 <svelte:head>
@@ -54,9 +55,9 @@ a {
 </BlogOverviewHeader>
 
 <section class="container flex flex-wrap mj-container">
-  <BlogPostFilters posts="{posts}" />
+  <BlogPostFilters {posts} />
 
   <aside class="w-full mt-8 lg:mt-0 lg:w-3/12">
-    <BlogPostSidebar posts="{posts}" />
+    <BlogPostSidebar {posts} />
   </aside>
 </section>

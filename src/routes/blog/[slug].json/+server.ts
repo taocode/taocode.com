@@ -2,14 +2,9 @@
 // @migration task: Check imports
 import posts from './../_posts';
 
-export function get({ params }) {
+export function GET({ params }) {
   if (params.slug in posts) {
-    return {
-      body: posts[params.slug],
-    };
+    return new Response(posts[params.slug])
   }
-
-  return {
-    status: 404,
-  };
+  throw Error(404)
 }
