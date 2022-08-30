@@ -12,7 +12,7 @@
   import type { LoadInput } from '@sveltejs/kit/types/page';
 
   export let data
-  export let posts: Post[]
+  export let posts: Post[] = data.posts
 </script>
 
 <svelte:head>
@@ -29,7 +29,7 @@
 
 <Experience />
 
-<RecentPosts posts="{posts}" />
+<RecentPosts {posts} />
 
 <ServicesCallToAction />
 

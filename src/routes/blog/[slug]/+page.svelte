@@ -17,7 +17,7 @@
 import { parse } from 'date-fns/esm';
 
   export let data
-  export let posts: Post[];
+  export let posts: Post[] = data.posts
 
   $: post = posts.find((post) => post.slug === $page.params.slug);
   $: postIndex = posts.findIndex((p) => p.slug === $page.params.slug);

@@ -1,7 +1,7 @@
 <script lang="ts">
   // throw new Error("@migration task: Add data prop (https://github.com/sveltejs/kit/discussions/5774#discussioncomment-3292707)");
 
-  import BlogPostHeaderImage from '../../../static/b-flopped-on-sidewalk.jpg';
+  import BlogPostHeaderImage from '$lib/imagesb-flopped-on-sidewalk.jpg';
   import BlogOverviewHeader from '$lib/BlogOverviewHeader.svelte';
   import BlogPostFilters from '$lib/BlogPostFilters.svelte';
   import BlogPostSidebar from '$lib/BlogPostSidebar.svelte';

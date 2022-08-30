@@ -1,7 +1,7 @@
 import { json } from '@sveltejs/kit';
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 import posts from '../blog/_posts';
-import { convertToSlug } from '../../utils';
+import { convertToSlug } from '$lib/utils';
 
 import fs from 'fs';
 import type { Post } from '../../models/post';

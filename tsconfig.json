@@ -1,5 +1,5 @@
 {
-  "extends": "./sveltekit.tsconfig.json", 
+  "extends": "./.svelte-kit/tsconfig.json",
   "compilerOptions": {
     "strict": false,
     "moduleResolution": "node",

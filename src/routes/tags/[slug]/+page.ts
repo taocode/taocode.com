@@ -1,6 +1,12 @@
-import { convertToSentenceCase } from '../../../utils';
+import type { PageLoad } from './$types'
 
-export async function load({ page, fetch }: LoadInput) {
+export const load: PageLoad = (s,o) => {
+  console.log('tag{slug}.load()',{s,o})
+}
+import { convertToSentenceCase } from '$lib/utils';
+
+export async function loadOld({ page, fetch }: PageLoad) {
+  console.log('load()',{page,fetch, arguments})
   try {
     const allPosts = await fetch(`/blog.json`);
     const posts: Post[] = await allPosts.json();

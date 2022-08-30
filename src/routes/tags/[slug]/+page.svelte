@@ -6,13 +6,13 @@
   import BlogPostFilters from '$lib/BlogPostFilters.svelte';
   import SEO from '$lib/SEO.svelte';
   import type { Post } from '../../../models/post';
-  import type { LoadInput } from '@sveltejs/kit/types/page';
 
-  export let postsByTag: Post[];
-  export let slug: string;
-  export let posts: Post[];
+  import { convertToSentenceCase } from '$lib/utils'
 
   export let data
+  export let { slug, posts, postsByTag } = data
+  $: ({ slug, posts, postsByTag } = data) // so it stays in sync when `data` changes
+
   const readableSlug = convertToSentenceCase(slug);
 </script>
 

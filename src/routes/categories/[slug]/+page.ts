@@ -1,4 +1,4 @@
-import { convertToSentenceCase } from '../../../utils';
+import { convertToSentenceCase } from '$lib/utils'
 
 export async function load({ page, fetch }: LoadInput) {
   try {

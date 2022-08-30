@@ -10,9 +10,11 @@
   import type { Post } from '../../../models/post';
   import type { LoadInput } from '@sveltejs/kit/types/page';
 
-  import EmpurrorSunNap from '../../../../static/empurror-scratcher-sun-nap.jpg';
-  import MillerParkMushrooms from '../../../../static/miller-park-tree-mushrooms.jpg';
-  import MillerParkGreenery from '../../../../static/miller-park-greenery.jpg';
+  import { convertToSentenceCase } from '$lib/utils'
+
+  import EmpurrorSunNap from '$lib/imagesempurror-scratcher-sun-nap.jpg';
+  import MillerParkMushrooms from '$lib/imagesmiller-park-tree-mushrooms.jpg';
+  import MillerParkGreenery from '$lib/imagesmiller-park-greenery.jpg';
 
   const accentImage = {
     'Life': {
@@ -31,7 +33,7 @@
 
   export let data
   export let postsByCategory: Post[];
-  export let posts: Post[];
+  export let posts: Post[] = data.posts;
 
   $: readableSlug = convertToSentenceCase($page.params.slug);
 </script>
@@ -55,6 +57,6 @@
   <BlogPostFilters posts="{postsByCategory}" filteredByCategory />
 
   <aside class="w-full mt-8 lg:mt-0 lg:w-3/12">
-    <BlogPostSidebar posts="{posts}" />
+    <BlogPostSidebar {posts} />
   </aside>
 </section>
