@@ -51,6 +51,7 @@
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-svelte3": "^4.0.0",
+    "eslint-plugin-jsdoc": ">=22.1.0",
     "flatten": "^1.0.3",
     "front-matter": "^4.0.2",
     "jest": "^28.1.3",
