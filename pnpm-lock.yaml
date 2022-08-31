@@ -2,6 +2,8 @@ lockfileVersion: 5.4
 
 specifiers:
   '@babel/core': '>=7.10.2 <8.0.0'
+  '@babel/runtime': ^7.18.9
+  '@fortawesome/fontawesome-common-types': ^6.2.0
   '@fortawesome/fontawesome-free': ^5.15.3
   '@fortawesome/fontawesome-svg-core': ^1.2.35
   '@fortawesome/free-brands-svg-icons': ^5.15.3
@@ -20,6 +22,7 @@ specifiers:
   '@types/yup': ^0.29.11
   '@typescript-eslint/eslint-plugin': ^5.0.0
   '@typescript-eslint/parser': ^5.0.0
+  argparse: ^2.0.1
   autoprefixer: ^10.4.8
   babel-jest: ^28.1.3
   cross-env: ^7.0.3
@@ -33,8 +36,12 @@ specifiers:
   front-matter: ^4.0.2
   jest: ^28.1.3
   js-cookie: ^2.2.1
+  js-yaml: ^4.1.0
+  lodash: ^4.17.21
+  lodash-es: ^4.17.21
   marked: ^4.1.0
   mdsvex: ^0.10.6
+  nanoclone: ^1.0.0
   npm-run-all: ^4.1.5
   nprogress: ^0.2.0
   postcss: '>=8.4.16 <9.0.0'
@@ -42,8 +49,10 @@ specifiers:
   prettier-plugin-svelte: ^2.7.0
   prism-svelte: ^0.5.0
   prismjs: ^1.28.0
+  property-expr: ^2.0.5
   reading-time: ^1.3.0
   redaxios: ^0.5.0
+  regenerator-runtime: ^0.13.9
   rollup: ^2.78.1
   svelte: ^3.49.0
   svelte-awesome: ^3.0.0
@@ -52,6 +61,7 @@ specifiers:
   svelte-forms-lib: ^1.10.3
   svelte-jester: ^2.1.0
   svelte-preprocess: ^4.10.7
+  toposort: ^2.0.2
   ts-jest: ^28.0.7
   tslib: ^2.4.0
   typescript: ^4.7.4
@@ -67,6 +77,8 @@ dependencies:
 
 devDependencies:
   '@babel/core': 7.18.10
+  '@babel/runtime': 7.18.9
+  '@fortawesome/fontawesome-common-types': 6.2.0
   '@fortawesome/fontawesome-free': 5.15.3
   '@fortawesome/fontawesome-svg-core': 1.2.35
   '@fortawesome/free-brands-svg-icons': 5.15.3
@@ -85,6 +97,7 @@ devDependencies:
   '@types/yup': 0.29.11
   '@typescript-eslint/eslint-plugin': 5.33.0_yy5c4q6zhpajzhorvwhnwvctfe
   '@typescript-eslint/parser': 5.33.0_4rv7y5c6xz3vfxwhbrcxxi73bq
+  argparse: 2.0.1
   autoprefixer: 10.4.8_postcss@8.4.16
   babel-jest: 28.1.3_@babel+core@7.18.10
   cross-env: 7.0.3
@@ -98,8 +111,12 @@ devDependencies:
   front-matter: 4.0.2
   jest: 28.1.3
   js-cookie: 2.2.1
+  js-yaml: 4.1.0
+  lodash: 4.17.21
+  lodash-es: 4.17.21
   marked: 4.1.0
   mdsvex: 0.10.6_svelte@3.49.0
+  nanoclone: 1.0.0
   npm-run-all: 4.1.5
   nprogress: 0.2.0
   postcss: 8.4.16
@@ -107,8 +124,10 @@ devDependencies:
   prettier-plugin-svelte: 2.7.0_o3ioganyptcsrh6x4hnxvjkpqi
   prism-svelte: 0.5.0
   prismjs: 1.28.0
+  property-expr: 2.0.5
   reading-time: 1.3.0
   redaxios: 0.5.0
+  regenerator-runtime: 0.13.9
   rollup: 2.78.1
   svelte: 3.49.0
   svelte-awesome: 3.0.0_svelte@3.49.0
@@ -116,6 +135,7 @@ devDependencies:
   svelte-forms-lib: 1.10.3
   svelte-jester: 2.3.2_jest@28.1.3+svelte@3.49.0
   svelte-preprocess: 4.10.7_t2is4qsumypfqw7cn3njojmcvu
+  toposort: 2.0.2
   ts-jest: 28.0.7_ta2dmbt2qiyd6mcpkta7cldhsy
   tslib: 2.4.0
   typescript: 4.7.4
@@ -426,17 +446,11 @@ packages:
       '@babel/helper-plugin-utils': 7.18.9
     dev: true
 
-  /@babel/runtime/7.14.0:
-    resolution: {integrity: sha512-JELkvo/DlpNdJ7dlyw/eY7E0suy5i5GQH+Vlxaq1nsNJ+H7f4Vtv3jMeCEgRhZZQFXTjldYfQgv2qmM6M1v5wA==}
-    dependencies:
-      regenerator-runtime: 0.13.7
-    dev: true
-
   /@babel/runtime/7.18.9:
     resolution: {integrity: sha512-lkqXDcvlFT5rvEjiu6+QYO+1GXrEHRo2LOtS7E4GtX5ESIZOgepqsZBVIj6Pv+a6zqsya9VCgiK1KAK4BvJDAw==}
     engines: {node: '>=6.9.0'}
     dependencies:
-      regenerator-runtime: 0.13.7
+      regenerator-runtime: 0.13.9
     dev: true
 
   /@babel/template/7.18.10:
@@ -516,6 +530,12 @@ packages:
 
   /@fortawesome/fontawesome-common-types/0.2.35:
     resolution: {integrity: sha512-IHUfxSEDS9dDGqYwIW7wTN6tn/O8E0n5PcAHz9cAaBoZw6UpG20IG/YM3NNLaGPwPqgjBAFjIURzqoQs3rrtuw==}
+    engines: {node: '>=6'}
+    requiresBuild: true
+    dev: true
+
+  /@fortawesome/fontawesome-common-types/6.2.0:
+    resolution: {integrity: sha512-rBevIsj2nclStJ7AxTdfsa3ovHb1H+qApwrxcTVo+NNdeJiB9V75hsKfrkG5AwNcRUNxrPPiScGYCNmLMoh8pg==}
     engines: {node: '>=6'}
     requiresBuild: true
     dev: true
@@ -977,7 +997,7 @@ packages:
     engines: {node: '>=12'}
     dependencies:
       '@babel/code-frame': 7.12.13
-      '@babel/runtime': 7.14.0
+      '@babel/runtime': 7.18.9
       '@types/aria-query': 4.2.1
       aria-query: 5.0.0
       chalk: 4.1.1
@@ -3855,6 +3875,10 @@ packages:
     resolution: {integrity: sha512-wynEP02LmIbLpcYw8uBKpcfF6dmg2vcpKqxeH5UcoKEYdExslsdUA4ugFauuaeYdTB76ez6gJW8XAZ6CgkXYxA==}
     dev: true
 
+  /nanoclone/1.0.0:
+    resolution: {integrity: sha512-H9URvpVBEwdOdKaHft26h3IO3oed8ms6TncSiwuCpsPU8OXpB+XOLWWVUuVPvxbBWsxp/+2JgbkO3oiES8O+GQ==}
+    dev: true
+
   /nanoid/3.3.4:
     resolution: {integrity: sha512-MqBkQh/OHTS2egovRtLk45wEyNXwF+cokD+1YPf9u5VfJiRdAiRwB2froX5Co9Rh20xs4siNPm8naNotSD6RBw==}
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
@@ -4252,8 +4276,8 @@ packages:
       sisteransi: 1.0.5
     dev: true
 
-  /property-expr/2.0.4:
-    resolution: {integrity: sha512-sFPkHQjVKheDNnPvotjQmm3KD3uk1fWKUN7CrpdbwmUx3CrG3QiM8QpTSimvig5vTXmTvjz7+TDvXOI9+4rkcg==}
+  /property-expr/2.0.5:
+    resolution: {integrity: sha512-IJUkICM5dP5znhCckHSv30Q4b5/JA5enCtkRHYaOVOAocnH/1BQEYTC5NMfT3AVl/iXKdr3aqQbQn9DxyWknwA==}
     dev: true
 
   /pump/3.0.0:
@@ -4323,8 +4347,8 @@ packages:
     resolution: {integrity: sha512-qmEJjQF0igI+H9SDKlQdWz6XskJ5zm2s6KPY0AvtlbQtRNe1OcuJIfxGmySDCpoU18/UtC7zWEFIWpkHMZ1/Ow==}
     dev: true
 
-  /regenerator-runtime/0.13.7:
-    resolution: {integrity: sha512-a54FxoJDIr27pgf7IgeQGxmqUNYrcV338lf/6gH456HZ/PhX+5BcwHXG9ajESmwe6WRO0tAzRUrRmNONWgkrew==}
+  /regenerator-runtime/0.13.9:
+    resolution: {integrity: sha512-p3VT+cOEgxFsRRA9X4lkI1E+k2/CtnKtU4gcxyaCUreilL/vqI6CdZ3wxVUx3UOUg+gnUOQQcRI7BmSI656MYA==}
     dev: true
 
   /regexp.prototype.flags/1.4.3:
@@ -5313,6 +5337,6 @@ packages:
       lodash: 4.17.21
       lodash-es: 4.17.21
       nanoclone: 0.2.1
-      property-expr: 2.0.4
+      property-expr: 2.0.5
       toposort: 2.0.2
     dev: true
