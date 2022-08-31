@@ -1,15 +1,16 @@
 <script lang="ts">
   // throw new Error("@migration task: Add data prop (https://github.com/sveltejs/kit/discussions/5774#discussioncomment-3292707)");
 
-  import BlogOverviewHeader from '$lib/BlogOverviewHeader.svelte';
-  import BlogPostSidebar from '$lib/BlogPostSidebar.svelte';
-  import BlogPostFilters from '$lib/BlogPostFilters.svelte';
-  import SEO from '$lib/SEO.svelte';
-  import type { Post } from '../../../models/post';
+  import BlogOverviewHeader from '$lib/BlogOverviewHeader.svelte'
+  import BlogPostSidebar from '$lib/BlogPostSidebar.svelte'
+  import BlogPostFilters from '$lib/BlogPostFilters.svelte'
+  import SEO from '$lib/SEO.svelte'
+  import type { Post } from '$lib/models/post'
+  import type { PageData } from './$types';
 
   import { convertToSentenceCase } from '$lib/utils'
 
-  export let data
+  export let data: PageData
   export let { slug, posts, postsByTag } = data
   $: ({ slug, posts, postsByTag } = data) // so it stays in sync when `data` changes
 

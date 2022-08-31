@@ -7,7 +7,7 @@
   import CommentsUtterances from '$lib/CommentsUtterances.svelte';
   import PrevNextArticle from '$lib/PrevNextArticle.svelte';
   import ShareButtons from '$lib/ShareButtons.svelte';
-  import type { Post } from 'src/models/post';
+  import type { Post } from '$lib/models/post';
   import { page } from '$app/stores';
   import SEO from '$lib/SEO.svelte';
   import { marked } from 'marked';

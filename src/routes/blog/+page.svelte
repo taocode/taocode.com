@@ -1,13 +1,12 @@
 <script lang="ts">
   // throw new Error("@migration task: Add data prop (https://github.com/sveltejs/kit/discussions/5774#discussioncomment-3292707)");
 
-  import BlogPostHeaderImage from '$lib/imagesb-flopped-on-sidewalk.jpg';
+  import BlogPostHeaderImage from '$lib/images/b-flopped-on-sidewalk.jpg';
   import BlogOverviewHeader from '$lib/BlogOverviewHeader.svelte';
   import BlogPostFilters from '$lib/BlogPostFilters.svelte';
   import BlogPostSidebar from '$lib/BlogPostSidebar.svelte';
   import SEO from '$lib/SEO.svelte';
-  import type { LoadInput } from '@sveltejs/kit/types/page';
-  import type { Post } from '../../models/post';
+  import type { Post } from '$lib/models/post'
 
   export let data
   export let posts: Post[] = data.posts

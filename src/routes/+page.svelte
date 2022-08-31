@@ -7,7 +7,7 @@
 
   import RecentPosts from '$lib/RecentPosts.svelte';
   import SEO from '$lib/SEO.svelte';
-  import type { Post } from '../models/post';
+  import type { Post } from '$lib/models/post';
   import ServicesCallToAction from '$lib/ServicesCallToAction.svelte';
   import type { LoadInput } from '@sveltejs/kit/types/page';
 

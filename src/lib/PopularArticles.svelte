@@ -1,6 +1,6 @@
 <script lang="ts">
   import InfoTags from './InfoTags.svelte';
-  import type { Post } from '../models/post';
+  import type { Post } from './models/post';
 
   export let posts: Post[];
 

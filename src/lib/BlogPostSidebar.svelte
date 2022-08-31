@@ -4,7 +4,7 @@
   import SubscribeAndFollow from './SubscribeAndFollow.svelte';
   import Categories from './Categories.svelte';
   import Newsletter from './Newsletter.svelte';
-  import type { Post } from '../models/post';
+  import type { Post } from './models/post';
 
   export let posts: Post[];
 </script>

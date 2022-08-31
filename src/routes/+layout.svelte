@@ -5,7 +5,7 @@
   import NProgress from '$lib/NProgress.svelte'
   import Nav from '$lib/Nav.svelte'
   import Footer from '$lib/Footer.svelte'
-  import { browser, dev } from '$app/env';
+  import { browser, dev } from '$app/environment';
   import type { LoadInput } from '@sveltejs/kit/types/page'
 
   import 'prismjs/themes/prism-tomorrow.css'
@@ -13,6 +13,10 @@
   let fullURL: string = ''
 
   import 'virtual:windi.css'
+
+  // src/routes/+layout.js
+  // export const csr = false;
+  export const prerender = true;
 
   let dark = true
   const updateSystemPreferenceDarkTheme = () => {

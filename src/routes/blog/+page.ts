@@ -1,4 +1,4 @@
-export async function load({ fetch }: LoadInput) {
+export async function load({ fetch }) {
   try {
     const blog = await fetch(`/blog.json`);
     const posts = await blog.json();

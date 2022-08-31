@@ -1,6 +1,6 @@
 import { json } from '@sveltejs/kit';
 import posts from '../blog/_posts';
-import type { Post } from '../../models/post';
+import type { Post } from '$lib/models/post'
 
 const siteUrl = 'https://www.taocode.com';
 

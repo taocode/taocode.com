@@ -1,6 +1,6 @@
 <script lang="ts">
   import { formatDate, convertToSlug } from './utils';
-  import type { Post } from '../models/post';
+  import type { Post } from './models/post';
 
   export let post: Post;
   export let hide_category = false;

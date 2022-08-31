@@ -1,13 +1,11 @@
+import { convertToSentenceCase } from '$lib/utils'
 import type { PageLoad } from './$types'
+import type { Post } from '$lib/models/post'
 
-export const load: PageLoad = (s,o) => {
-  console.log('tag{slug}.load()',{s,o})
-}
-import { convertToSentenceCase } from '$lib/utils';
-
-export async function loadOld({ page, fetch }: PageLoad) {
-  console.log('load()',{page,fetch, arguments})
+export const load: PageLoad = async ({fetch, params}) => {
+  console.log('tag{slug}.load(params)',params)
   try {
+    const slug = params.slug
     const allPosts = await fetch(`/blog.json`);
     const posts: Post[] = await allPosts.json();
 
@@ -16,10 +14,10 @@ export async function loadOld({ page, fetch }: PageLoad) {
         return [];
       }
       const regex = new RegExp(post.tags.join('|'), 'i');
-      return regex.test(convertToSentenceCase(page.params.slug));
+      return regex.test(convertToSentenceCase(slug));
     });
 
-    return { posts, postsByTag, slug: page.params.slug };
+    return { posts, postsByTag, slug };
   } catch (error) {
     console.error(error);
   }

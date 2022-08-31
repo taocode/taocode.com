@@ -3,8 +3,8 @@ import { json } from '@sveltejs/kit';
 import posts from '../blog/_posts';
 import { convertToSlug } from '$lib/utils';
 
-import fs from 'fs';
-import type { Post } from '../../models/post';
+import fs from 'fs'
+import type { Post } from '$lib/models/post'
 
 const BASE_URL = 'https://www.taocode.com';
 const pages = [''];

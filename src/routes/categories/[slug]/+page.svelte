@@ -7,14 +7,14 @@
   import CurrentGoals from '$lib/CurrentGoals.svelte';
   import SEO from '$lib/SEO.svelte';
   import { page } from '$app/stores';
-  import type { Post } from '../../../models/post';
+  import type { Post } from '$lib/models/post';
   import type { LoadInput } from '@sveltejs/kit/types/page';
 
   import { convertToSentenceCase } from '$lib/utils'
 
-  import EmpurrorSunNap from '$lib/imagesempurror-scratcher-sun-nap.jpg';
-  import MillerParkMushrooms from '$lib/imagesmiller-park-tree-mushrooms.jpg';
-  import MillerParkGreenery from '$lib/imagesmiller-park-greenery.jpg';
+  import EmpurrorSunNap from '$lib/images/empurror-scratcher-sun-nap.jpg';
+  import MillerParkMushrooms from '$lib/images/miller-park-tree-mushrooms.jpg';
+  import MillerParkGreenery from '$lib/images/miller-park-greenery.jpg';
 
   const accentImage = {
     'Life': {
@@ -32,10 +32,11 @@
   }
 
   export let data
-  export let postsByCategory: Post[];
+  export let error
+  export let postsByCategory: Post[] = data.postsByCategory;
   export let posts: Post[] = data.posts;
-
-  $: readableSlug = convertToSentenceCase($page.params.slug);
+  // console.log('categories[slug]+page.svelte',{data, error})
+  $: readableSlug = convertToSentenceCase(data.slug);
 </script>
 
 <svelte:head>

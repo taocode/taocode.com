@@ -1,5 +1,5 @@
 <script lang="ts">
-  import type { Post } from '../models/post';
+  import type { Post } from './models/post';
   import { convertToSlug } from './utils';
 
   export let posts: Post[];

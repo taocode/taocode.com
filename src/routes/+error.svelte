@@ -1,6 +1,6 @@
 <script lang="ts">
   import { page } from '$app/stores'
-  import { browser, dev } from '$app/env'
+  import { browser, dev } from '$app/environment'
   export let data
   export let errors
   $: {

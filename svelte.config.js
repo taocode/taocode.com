@@ -15,10 +15,9 @@ const preprocess = [
 ];
 
 const kit = {
-  adapter: adapter(),
-  prerender: {
-    default: true
-  },
+  adapter: adapter({
+    fallback: '200.html'
+  }),
 }
 
 /** @type {import('@sveltejs/kit').Config} */

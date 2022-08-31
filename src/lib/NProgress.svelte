@@ -1,7 +1,7 @@
 <script>
   import NProgress from 'nprogress';
   import { navigating } from '$app/stores';
-  import { browser } from '$app/env';
+  import { browser } from '$app/environment';
 
   NProgress.configure({
     // Full list: https://github.com/rstacruz/nprogress#configuration
