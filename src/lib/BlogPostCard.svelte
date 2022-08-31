@@ -1,6 +1,6 @@
 <script lang="ts">
   import InfoTags from './InfoTags.svelte';
-  import type { Post } from 'src/models/post';
+  import type { Post } from '$lib/models/post';
   import BlogPostThumbnail from './BlogPostThumbnail.svelte';
 
   // import Icon from 'svelte-awesome/components/Icon.svelte';

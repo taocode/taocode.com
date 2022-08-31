@@ -16,5 +16,5 @@ export const convertToSlug = (text: string): string => {
 };
 
 export const convertToSentenceCase = (text: string): string => {
-  return text.charAt(0).toUpperCase() + text.substr(1).toLowerCase().replace(/-/g, ' ');
+  return (!text) ? 'bad argument convertToSentenceCase' : text.charAt(0).toUpperCase() + text.substr(1).toLowerCase().replace(/-/g, ' ');
 };

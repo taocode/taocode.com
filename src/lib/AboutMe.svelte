@@ -1,5 +1,5 @@
 <script>
-  import Image from '../../static/headshot-tongues-out-with-b.jpg';
+  import Image from '$lib/images/headshot-tongues-out-with-b.jpg';
   // import ExternalLink from './ExternalLink.svelte';
 </script>
 

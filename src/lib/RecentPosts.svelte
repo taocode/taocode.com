@@ -2,7 +2,7 @@
   import Icon from 'svelte-awesome/components/Icon.svelte';
   import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
   import BlogPostCard from './BlogPostCard.svelte';
-  import type { Post } from '../models/post';
+  import type { Post } from './models/post';
 
   export let posts: Post[];
   const filteredPosts = posts.filter((_post: Post, idx: number) => idx < 3);

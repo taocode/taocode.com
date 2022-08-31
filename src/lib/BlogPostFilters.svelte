@@ -1,7 +1,7 @@
 <script lang="ts">
   import BlogPostCard from './BlogPostCard.svelte';
   import flatten from 'flatten';
-  import type { Post } from '../models/post';
+  import type { Post } from './models/post';
 
   export let posts: Post[];
   export let filteredByCategory: boolean = false;
