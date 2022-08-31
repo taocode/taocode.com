@@ -1,0 +1,13 @@
+# from  to
+/categories/personal-development  /categories/life
+/portfolio  /categories/portfolio
+/posts  /blog
+/portfolio/markjonesvoice /blog/markjonesvoice
+/portfolio/traincycle /blog/traincycle
+/portfolio/salem-cae  /blog/salem-cae
+/portfolio/etsaman  /blog/etsaman
+/portfolio/salem  /blog/salem
+/posts/firebase-cloud-function-send-email /blog/firebase-cloud-function-send-email
+/posts/my-1st-svelte-app  /blog/my-1st-svelte-app
+/posts/svelte-is-cool /blog/svelte-is-cool
+/posts/new-site /blog/new-site

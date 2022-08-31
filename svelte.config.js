@@ -1,5 +1,5 @@
 import sveltePreprocess from 'svelte-preprocess';
-import adapter from '@sveltejs/adapter-static';
+import adapter from '@sveltejs/adapter-netlify';
 import { mdsvex } from 'mdsvex';
 import { trusted } from 'svelte/internal';
 
@@ -15,9 +15,7 @@ const preprocess = [
 ];
 
 const kit = {
-  adapter: adapter({
-    fallback: '200.html'
-  }),
+  adapter: adapter(),
 }
 
 /** @type {import('@sveltejs/kit').Config} */

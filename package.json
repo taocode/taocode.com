@@ -30,6 +30,7 @@
     "@fortawesome/free-brands-svg-icons": "^5.15.3",
     "@fortawesome/free-regular-svg-icons": "^5.15.3",
     "@fortawesome/free-solid-svg-icons": "^5.15.3",
+    "@sveltejs/adapter-netlify": "1.0.0-next.75",
     "@sveltejs/adapter-static": "1.0.0-next.40",
     "@sveltejs/kit": "1.0.0-next.449",
     "@sveltejs/pancake": "^0.0.17",
