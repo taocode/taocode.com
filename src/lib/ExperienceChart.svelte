@@ -18,7 +18,7 @@ $: {
 $: max = stacks.reduce((max, stack) => Math.max(max, ...stack.values.map(v => v.end)), 0);
 
 </script>
-<style lang="postcss">
+<style lang="postcss" global>
 	.chart {
 		position: relative;
 	}
@@ -121,7 +121,7 @@ $: max = stacks.reduce((max, stack) => Math.max(max, ...stack.values.map(v => v.
             currentChild = techEx[n].name
             }; }}></div>
         </Pancake.Box>
-        <label class="relative pointer-events-none z-0 p-2 block font-display text-sm text-gray-300 font-semibold">{dChildren[n].name}</label>
+        <div class="relative pointer-events-none z-0 p-2 block font-display text-sm text-gray-300 font-semibold">{dChildren[n].name}</div>
       {/each}
     {/each}
   </Pancake.Chart>
