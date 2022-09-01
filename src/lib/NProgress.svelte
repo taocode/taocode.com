@@ -14,4 +14,3 @@
     $navigating ? NProgress.start() : NProgress.done();
   }
 </script>
-<<<<<<< HEAD
