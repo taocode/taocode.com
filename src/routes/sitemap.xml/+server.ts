@@ -4,6 +4,8 @@ import { convertToSlug } from '$lib/utils'
 import fs from 'fs'
 import type { Post } from '$lib/models/post'
 
+export const prerender = true
+
 const BASE_URL = 'https://www.taocode.com'
 const pages = ['']
 

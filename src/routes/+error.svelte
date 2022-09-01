@@ -1,10 +1,9 @@
 <script lang="ts">
   import { page } from '$app/stores'
   import { browser, dev } from '$app/environment'
-  export let data
-  export let errors
+  export let { data, error } = $page
   $: {
-    console.log({data,errors})
+    console.log({data,error})
   }
 </script>
 

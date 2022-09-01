@@ -1,6 +1,8 @@
 import posts from '../blog/_posts'
 import type { Post } from '$lib/models/post'
 
+export const prerender = true
+
 const siteUrl = 'https://www.taocode.com'
 
 const renderXmlRssFeed = (

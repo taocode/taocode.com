@@ -1,5 +1,6 @@
-import type { LoadLayout } from './$types'
-export async function load({ fetch }: LoadLayout) {
+import type { LayoutLoad } from './$types'
+export const prerender = true
+export async function load({ fetch }: LayoutLoad) {
   try {
     await fetch('/sitemap.xml')
     await fetch('/rss.xml')

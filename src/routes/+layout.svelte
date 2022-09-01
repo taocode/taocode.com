@@ -14,9 +14,6 @@
 
   import 'virtual:windi.css'
 
-  // src/routes/+layout.js
-  // export const csr = false;
-  export const prerender = true;
 
   let dark = true
   const updateSystemPreferenceDarkTheme = () => {
