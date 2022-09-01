@@ -1,5 +1,5 @@
-<script>
-  import Icon from 'svelte-awesome';
+<script lang="ts">
+  import Icon from 'svelte-awesome/components/Icon.svelte';
   import {
     faReddit,
     faPinterest,
@@ -8,11 +8,11 @@
     faLinkedin,
   } from '@fortawesome/free-brands-svg-icons';
   import { page } from '$app/stores';
-  import type { Post } from '../models/post';
+  import type { Post } from './models/post';
 
   export let post: Post;
 
-  const fullURL = `https://www.taocode.com${$page.path}`;
+  const fullURL = `https://www.taocode.com${$page.url.pathname}`;
   const encodedURL = encodeURIComponent(fullURL);
   const encodedPostTitle = encodeURIComponent(post.title);
   const encodedPostExcerpt = encodeURIComponent(post.excerpt);
