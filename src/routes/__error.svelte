@@ -7,7 +7,7 @@
 </script>
 
 <script lang="ts">
-  import { isDev } from '../stores';
+  import { browser, dev } from '$app/env';
 
   export let error: Error;
   export let status: number;
@@ -23,7 +23,7 @@
   <p>{error.message}</p>
 </div>
 
-{#if $isDev && error.stack}
+{#if browser && dev && error.stack}
   <pre>{error.stack}</pre>
 {/if}
 

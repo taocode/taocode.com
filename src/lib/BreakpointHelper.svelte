@@ -1,8 +1,8 @@
 <script>
-  import { isDev } from '../stores';
+  import { browser, dev } from '$app/env';
 </script>
 
-{#if $isDev}
+{#if browser && dev}
   <!-- Display current tailwind breakpoint in dev -->
   <div class="fixed top-0 z-50 p-2 text-xs font-bold text-black">
     <span class="p-1 px-1 bg-yellow-400 rounded sm:hidden">XS</span>
