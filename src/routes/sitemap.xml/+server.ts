@@ -1,17 +1,16 @@
-import { json } from '@sveltejs/kit';
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-import posts from '../blog/_posts';
-import { convertToSlug } from '$lib/utils';
+import posts from '../blog/_posts'
+import { convertToSlug } from '$lib/utils'
 
 import fs from 'fs'
 import type { Post } from '$lib/models/post'
 
-const BASE_URL = 'https://www.taocode.com';
-const pages = [''];
+const BASE_URL = 'https://www.taocode.com'
+const pages = ['']
 
 fs.readdirSync('./src/routes').forEach((file) => {
   file = file.split('.')[0];
   if (
+    file.charAt(0) !== '+' &&
     file.charAt(0) !== '_' &&
     file !== 'sitemap' &&
     file !== 'index' &&
@@ -71,12 +70,6 @@ const render = (
 `;
 
 export function GET() {
-  const sitemap = render(pages, posts);
-
-  // throw new Error("@migration task: Migrate this return statement (https://github.com/sveltejs/kit/discussions/5774#discussioncomment-3292701)");
-  // Suggestion (check for correctness before using):
-  return json(sitemap);
-  // return {
-  //   body: sitemap,
-  // };
+  const sitemap = render(pages, posts)
+  return new Response(sitemap)
 }

@@ -1,8 +1,7 @@
-import { json } from '@sveltejs/kit';
-import posts from '../blog/_posts';
+import posts from '../blog/_posts'
 import type { Post } from '$lib/models/post'
 
-const siteUrl = 'https://www.taocode.com';
+const siteUrl = 'https://www.taocode.com'
 
 const renderXmlRssFeed = (
   posts: Post[],
@@ -31,15 +30,9 @@ const renderXmlRssFeed = (
       )
       .join('\n')}
   </channel>
-</rss>`;
+</rss>`
 
 export function GET() {
-  const feed = renderXmlRssFeed(posts);
-
-  // throw new Error("@migration task: Migrate this return statement (https://github.com/sveltejs/kit/discussions/5774#discussioncomment-3292701)");
-  // Suggestion (check for correctness before using):
-  return json(feed);
-  // return {
-  //   body: feed,
-  // };
+  const feed = renderXmlRssFeed(posts)
+  return new Response(feed)
 }
