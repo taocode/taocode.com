@@ -1,7 +1,9 @@
-import posts from './blog/_posts';
-import type { Post } from '../models/post';
+import posts from '../blog/_posts'
+import type { Post } from '$lib/models/post'
 
-const siteUrl = 'https://www.taocode.com';
+export const prerender = true
+
+const siteUrl = 'https://www.taocode.com'
 
 const renderXmlRssFeed = (
   posts: Post[],
@@ -30,12 +32,9 @@ const renderXmlRssFeed = (
       )
       .join('\n')}
   </channel>
-</rss>`;
+</rss>`
 
-export function get() {
-  const feed = renderXmlRssFeed(posts);
-
-  return {
-    body: feed,
-  };
+export function GET() {
+  const feed = renderXmlRssFeed(posts)
+  return new Response(feed)
 }
