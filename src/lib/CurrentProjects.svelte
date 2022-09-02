@@ -1,5 +1,5 @@
 <script>
-  import Icon from 'svelte-awesome/components/Icon.svelte';
+  import Icon from 'svelte-awesome';
   import { faGithub } from '@fortawesome/free-brands-svg-icons';
   import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 
@@ -11,13 +11,13 @@
       techStack:
         'SvelteKit, Svelte, TailwindCSS, NodeJS, Rollup, Markdown, GitHub, Netlify',
       websiteLink: 'https://www.taocode.com',
-      githubLink: 'https://github.com/taocode/www.taocode.com',
+      githubLink: 'https://github.com/taocode/taocode.com',
     },
     {
       name: 'TRAINcycle',
       description: 'Get training in the arts and arts production.',
       techStack: 'Hugo, TailwindCSS, Markdown, GitHub, Firebase',
-      websiteLink: 'https://www.taocode.com',
+      websiteLink: 'https://TRAINcycle.org',
       githubLink: 'https://github.com/taocode/traincycle-hugo-site',
     },
     {

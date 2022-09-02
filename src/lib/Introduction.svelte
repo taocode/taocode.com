@@ -1,13 +1,12 @@
 <script>
-  import Image from '../../static/headshot-tongues-out-with-b.jpg';
+  import Image from '$lib/images/headshot-tongues-out-with-b.jpg';
 </script>
 
 <section class="applause-gradient home-applause rotating-after">
   <div class="container mj-container">
     <div
       class="flex flex-col-reverse items-center justify-between gap-6 rounded-lg 
-      md:flex-row
-      daark:(bg-black bg-opacity-70 text-gray-300)"
+      md:flex-row"
     >
       <div class="blog-header w-full py-4 px-8 md:w-3/5 md:pr-10 shadow-xl">
         <h1>The Art of Code - Web Productions</h1>

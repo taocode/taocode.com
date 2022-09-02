@@ -1,8 +1,7 @@
 import fs from 'fs';
 import frontMatter from 'front-matter';
-import marked from 'marked';
+import { marked }  from 'marked';
 import Prism from 'prismjs';
-import 'prism-svelte';
 import loadLanguages from 'prismjs/components/index.js';
 import readingTime from 'reading-time';
 
@@ -17,21 +16,20 @@ const posts = fs
     });
 
     const postFrontMatter = frontMatter(postContent);
+    // marked.setOptions({
+    //   highlight: (source, lang: string) => {
+    //     const html = Prism.highlight(source, Prism.languages[lang], lang);
+    //     return `<pre class='language-${lang}'><code class='language-${lang}'>${html}</code></pre>`;
+    //   }
+    // })
 
-    const renderer = new marked.Renderer();
-
-    renderer.code = (source, lang: string) => {
-      const html = Prism.highlight(source, Prism.languages[lang], lang);
-      return `<pre class='language-${lang}'><code class='language-${lang}'>${html}</code></pre>`;
-    };
-
-    const html = marked(postFrontMatter.body, { renderer });
-    const excerpt = marked(postFrontMatter.attributes['excerpt'], { renderer });
+    const html = marked.parse(postFrontMatter.body);
+    const excerpt = marked.parse(postFrontMatter.attributes['excerpt']);
     const readingTimeDuration = readingTime(postFrontMatter.body).text;
 
     return {
       ...postFrontMatter.attributes,
-      html: marked(html),
+      html: marked.parse(html),
       excerpt: excerpt,
       readingTime: readingTimeDuration,
     };

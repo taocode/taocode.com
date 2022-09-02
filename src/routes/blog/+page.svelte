@@ -1,26 +1,16 @@
-<script context="module">
-  export async function load({ fetch }: LoadInput) {
-    try {
-      const blog = await fetch(`/blog.json`);
-      const posts = await blog.json();
-
-      return { props: { posts } };
-    } catch (error) {
-      console.error(error);
-    }
-  }
-</script>
-
 <script lang="ts">
-  import BlogPostHeaderImage from '../../../static/b-flopped-on-sidewalk.jpg';
+  // throw new Error("@migration task: Add data prop (https://github.com/sveltejs/kit/discussions/5774#discussioncomment-3292707)");
+
+  import BlogPostHeaderImage from '$lib/images/b-flopped-on-sidewalk.jpg';
   import BlogOverviewHeader from '$lib/BlogOverviewHeader.svelte';
   import BlogPostFilters from '$lib/BlogPostFilters.svelte';
   import BlogPostSidebar from '$lib/BlogPostSidebar.svelte';
   import SEO from '$lib/SEO.svelte';
-  import type { LoadInput } from '@sveltejs/kit/types/page';
-  import type { Post } from '../../models/post';
+  import type { Post } from '$lib/models/post'
 
-  export let posts: Post[];
+  export let data
+  export let posts: Post[] = data.posts
+  // console.log('/blog/+page.svelte',{data,posts})
 </script>
 
 <svelte:head>
@@ -64,9 +54,9 @@ a {
 </BlogOverviewHeader>
 
 <section class="container flex flex-wrap mj-container">
-  <BlogPostFilters posts="{posts}" />
+  <BlogPostFilters {posts} />
 
   <aside class="w-full mt-8 lg:mt-0 lg:w-3/12">
-    <BlogPostSidebar posts="{posts}" />
+    <BlogPostSidebar {posts} />
   </aside>
 </section>

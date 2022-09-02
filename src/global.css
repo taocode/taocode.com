@@ -428,9 +428,16 @@ h1, h2, h3, h4, h5, h6,
 .rotating,
 .rotating-after::after,
 .rotating-bg::after {
-  animation: rotating 45s linear infinite;
+  animation: rotating 180s linear infinite;
 }
-
+@media (prefers-reduced-motion: reduce) {
+  /* CSS to disable motion goes here */
+  .rotating,
+  .rotating-after::after,
+  .rotating-bg::after {
+    animation: none;
+  }
+}
 /* @tailwindcss/typography overwrites */
 .prose-lg img,
 .lg\:prose-xl img {

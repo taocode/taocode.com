@@ -1,16 +1,18 @@
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-import posts from './blog/_posts';
-import { convertToSlug } from '../utils';
+import posts from '../blog/_posts'
+import { convertToSlug } from '$lib/utils'
 
-import fs from 'fs';
-import type { Post } from '../models/post';
+import fs from 'fs'
+import type { Post } from '$lib/models/post'
 
-const BASE_URL = 'https://www.taocode.com';
-const pages = [''];
+export const prerender = true
+
+const BASE_URL = 'https://www.taocode.com'
+const pages = ['']
 
 fs.readdirSync('./src/routes').forEach((file) => {
   file = file.split('.')[0];
   if (
+    file.charAt(0) !== '+' &&
     file.charAt(0) !== '_' &&
     file !== 'sitemap' &&
     file !== 'index' &&
@@ -69,10 +71,7 @@ const render = (
 </urlset>
 `;
 
-export function get() {
-  const sitemap = render(pages, posts);
-
-  return {
-    body: sitemap,
-  };
+export function GET() {
+  const sitemap = render(pages, posts)
+  return new Response(sitemap)
 }

@@ -1,5 +1,5 @@
 <script lang="ts">
-  import type { Post } from '../models/post';
+  import type { Post } from '$lib/models/post';
 
   export let previousArticle: Post;
   export let nextArticle: Post;
