@@ -32,7 +32,6 @@
   }
 
   export let data
-  export let error
   export let postsByCategory: Post[] = data.postsByCategory;
   export let posts: Post[] = data.posts;
   // console.log('categories[slug]+page.svelte',{data, error})
