@@ -119,6 +119,11 @@ body {
   font-family: 'Spectral', sans-serif;
   padding-top: 56px;
   @apply relative leading-relaxed text-lg;
+  &::before {
+    content: ' ';
+    height: 56px;
+    @apply absolute top-0 w-full bg-gray-900;
+  }
 }
 
 h1, h2, h3, h4, h5, h6,
