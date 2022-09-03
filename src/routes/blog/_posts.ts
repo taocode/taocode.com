@@ -16,12 +16,13 @@ const posts = fs
     });
 
     const postFrontMatter = frontMatter(postContent);
-    // marked.setOptions({
-    //   highlight: (source, lang: string) => {
-    //     const html = Prism.highlight(source, Prism.languages[lang], lang);
-    //     return `<pre class='language-${lang}'><code class='language-${lang}'>${html}</code></pre>`;
-    //   }
-    // })
+    marked.setOptions({
+      highlight: (source, language) => {
+        const lang = language ? language : 'js'
+        const html = Prism.highlight(source, Prism.languages[lang], lang)
+        return `<pre class='language-${lang}'><code class='language-${lang}'>${html}</code></pre>`
+      }
+    })
 
     const html = marked.parse(postFrontMatter.body);
     const excerpt = marked.parse(postFrontMatter.attributes['excerpt']);
