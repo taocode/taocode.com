@@ -1,4 +1,5 @@
-import posts from '../blog/_posts'
+import { get } from 'svelte/store'
+import { posts } from '$lib/stores'
 import { convertToSlug } from '$lib/utils'
 
 import fs from 'fs'
@@ -25,7 +26,7 @@ fs.readdirSync('./src/routes').forEach((file) => {
 });
 
 const generateCategories = () => {
-  const uniqueCategories = posts
+  const uniqueCategories = get(posts)
     .map((post: Post) => post.category)
     .filter(
       (category: string, idx: number, arr: string[]) =>
@@ -72,6 +73,6 @@ const render = (
 `;
 
 export function GET() {
-  const sitemap = render(pages, posts)
+  const sitemap = render(pages, get(posts))
   return new Response(sitemap)
 }

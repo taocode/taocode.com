@@ -5,12 +5,14 @@
   import BlogPostSidebar from '$lib/BlogPostSidebar.svelte';
   import BlogPostFilters from '$lib/BlogPostFilters.svelte';
   import CurrentGoals from '$lib/CurrentGoals.svelte';
-  import SEO from '$lib/SEO.svelte';
-  import { page } from '$app/stores';
+  import SEO from '$lib/SEO.svelte'
   import type { Post } from '$lib/models/post';
   import type { LoadInput } from '@sveltejs/kit/types/page';
-
+  
   import { convertToSentenceCase } from '$lib/utils'
+  
+  import { page } from '$app/stores'
+  import { posts } from '$lib/stores'
 
   import EmpurrorSunNap from '$lib/images/empurror-scratcher-sun-nap.jpg';
   import MillerParkMushrooms from '$lib/images/miller-park-tree-mushrooms.jpg';
@@ -31,11 +33,18 @@
     },
   }
 
-  export let data
-  export let postsByCategory: Post[] = data.postsByCategory;
-  export let posts: Post[] = data.posts;
+  let pn = $page.url.pathname 
+  let slug = pn.substring(1+pn.lastIndexOf('/'))
+  $: pn = $page.url.pathname
+  $: slug = pn.substring(1+pn.lastIndexOf('/'))
+  console.log('slug',{pn,slug})
+  let postsByCategory = $posts.filter(
+      (post: Post) =>
+        post.category === convertToSentenceCase(slug)
+    )
+  // $: postsByCategory = 
   // console.log('categories[slug]+page.svelte',{data, error})
-  $: readableSlug = convertToSentenceCase(data.slug);
+  $: readableSlug = convertToSentenceCase(slug)
 </script>
 
 <svelte:head>
@@ -50,13 +59,13 @@
 <SEO />
 
 <BlogOverviewHeader image={accentImage[readableSlug].img} alt={accentImage[readableSlug].alt}>
-  <CurrentGoals readableSlug="{readableSlug}" />
+  <CurrentGoals {readableSlug} />
 </BlogOverviewHeader>
 
 <section class="container flex flex-wrap mj-container">
-  <BlogPostFilters posts="{postsByCategory}" filteredByCategory />
+  <BlogPostFilters filteredByCategory />
 
   <aside class="w-full mt-8 lg:mt-0 lg:w-3/12">
-    <BlogPostSidebar {posts} />
+    <BlogPostSidebar posts={$posts} />
   </aside>
 </section>

@@ -1,20 +1,21 @@
 <script lang="ts">
-  import BlogPostCard from './BlogPostCard.svelte';
-  import flatten from 'flatten';
-  import type { Post } from './models/post';
+  import BlogPostCard from './BlogPostCard.svelte'
+  import flatten from 'flatten'
+  import type { Post } from './models/post'
 
-  export let posts: Post[];
-  export let filteredByCategory: boolean = false;
-  export let filteredByTag: boolean = false;
+  import { posts } from '$lib/stores'
 
-  const uniqueCategories: string[] = posts
+  export let filteredByCategory: boolean = false
+  export let filteredByTag: boolean = false
+
+  const uniqueCategories: string[] = $posts
     .map((post: Post) => post.category)
     .filter(
       (category: string, idx: number, arr: string[]) =>
         arr.indexOf(category) === idx,
     );
 
-  const allTags: string[][] = posts.map((post: Post) => post.tags);
+  const allTags: string[][] = $posts.map((post: Post) => post.tags);
   const uniqueTags: string[] = flatten(allTags).filter(
     (tag: string, idx: number, arr: string[]) => arr.indexOf(tag) === idx,
   );
@@ -26,7 +27,7 @@
   let filteredPosts: Post[] = [];
 
   $: {
-    filteredPosts = posts.filter((post: Post) =>
+    filteredPosts = $posts.filter((post: Post) =>
       post.title.toLowerCase().includes(textSearch.toLowerCase()),
     );
 

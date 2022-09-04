@@ -1,5 +1,7 @@
-import posts from '../blog/_posts'
+// import posts from '../blog/_posts'
+import { get } from 'svelte/store'
 import type { Post } from '$lib/models/post'
+import { posts } from '$lib/stores'
 
 export const prerender = true
 
@@ -18,7 +20,7 @@ const renderXmlRssFeed = (
     <atom:link href="${siteUrl}/rss.xml" rel="self" type="application/rss+xml" />
     <generator>SvelteKit</generator>
     <lastBuildDate>${new Date().toUTCString()}</lastBuildDate>
-    ${posts
+    ${get(posts)
       .map(
         (post: Post) => `
     <item>

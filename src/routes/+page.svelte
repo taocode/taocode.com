@@ -1,15 +1,15 @@
 <script lang="ts">
-  import Introduction from '$lib/Introduction.svelte';
-  import CurrentProjects from '$lib/CurrentProjects.svelte';
-  import Experience from "$lib/Experience.svelte";
+  import Introduction from '$lib/Introduction.svelte'
+  import CurrentProjects from '$lib/CurrentProjects.svelte'
+  import Experience from "$lib/Experience.svelte"
 
-  import RecentPosts from '$lib/RecentPosts.svelte';
-  import SEO from '$lib/SEO.svelte';
-  import type { Post } from '$lib/models/post';
-  import ServicesCallToAction from '$lib/ServicesCallToAction.svelte';
+  import RecentPosts from '$lib/RecentPosts.svelte'
+  import SEO from '$lib/SEO.svelte'
+  import type { Post } from '$lib/models/post'
+  import ServicesCallToAction from '$lib/ServicesCallToAction.svelte'
 
-  export let data
-  export let posts: Post[] = data.posts
+  import { posts } from '$lib/stores'
+
 </script>
 
 <svelte:head>
@@ -26,7 +26,7 @@
 
 <Experience />
 
-<RecentPosts {posts} />
+<RecentPosts />
 
 <ServicesCallToAction />
 

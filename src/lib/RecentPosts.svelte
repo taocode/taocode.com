@@ -4,8 +4,10 @@
   import BlogPostCard from './BlogPostCard.svelte';
   import type { Post } from './models/post';
 
-  export let posts: Post[];
-  const filteredPosts = posts.filter((_post: Post, idx: number) => idx < 3);
+  import { posts } from '$lib/stores'
+  // export let posts: Post[];
+  const filteredPosts = $posts.filter((_post: Post, idx: number) => idx < 3)
+  // console.log('potss',$posts,{filteredPosts})
 </script>
 
 <section class="container mj-container">

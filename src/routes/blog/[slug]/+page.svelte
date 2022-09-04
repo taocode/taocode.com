@@ -13,16 +13,14 @@
   import { marked } from 'marked';
 
   import Icon from 'svelte-awesome';
-  import { share } from 'svelte-awesome/icons';
-import { parse } from 'date-fns/esm';
+  import { share } from 'svelte-awesome/icons'
 
-  export let data
-  export let posts: Post[] = data.posts
+  import { posts } from '$lib/stores'
 
-  $: post = posts.find((post) => post.slug === $page.params.slug);
-  $: postIndex = posts.findIndex((p) => p.slug === $page.params.slug);
-  $: previousArticle = posts[postIndex + 1];
-  $: nextArticle = posts[postIndex - 1];
+  $: post = $posts.find((p) => p.slug === $page.params.slug);
+  $: postIndex = $posts.findIndex((p) => p.slug === $page.params.slug);
+  $: previousArticle = $posts[postIndex + 1];
+  $: nextArticle = $posts[postIndex - 1];
   $: pageTitle = `${post?.title} | TAOCode`;
 
   $: blogPostInfo = post
@@ -44,7 +42,7 @@ import { parse } from 'date-fns/esm';
 </style>
 
 <SEO blogPostInfo="{blogPostInfo}" />
-<BlogPostHeader post="{post}" />
+<BlogPostHeader {post} />
 <section class="container flex flex-wrap mj-container">
   <article class="w-full pb-12 prose-lg lg:prose-xl blog lg:w-3/4 lg:pr-16">
     {#if post.lead }<p class="lead">{@html marked.parse(post.lead)}</p>{/if}
@@ -69,6 +67,6 @@ import { parse } from 'date-fns/esm';
     />
   </article>
   <aside class="w-full mt-8 lg:mt-0 lg:w-3/12">
-    <BlogPostSidebar {posts} />
+    <BlogPostSidebar posts={$posts} />
   </aside>
 </section> 
