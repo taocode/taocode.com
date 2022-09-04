@@ -63,7 +63,7 @@
 </BlogOverviewHeader>
 
 <section class="container flex flex-wrap mj-container">
-  <BlogPostFilters filteredByCategory />
+  <BlogPostFilters posts={postsByCategory} filteredByCategory />
 
   <aside class="w-full mt-8 lg:mt-0 lg:w-3/12">
     <BlogPostSidebar posts={$posts} />

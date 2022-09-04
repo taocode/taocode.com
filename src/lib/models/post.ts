@@ -7,6 +7,7 @@ export type Post = {
   tags: string[];
   html: string;
   hasAffiliateLink?: boolean;
+  hidden?: boolean;
   cover?: string;
   thumbnail?: string;
   site_url?: string;
