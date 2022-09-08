@@ -1,4 +1,4 @@
-import posts from '../../blog/_posts'
+import posts from '../_posts'
 export const prerender = true
 
 export function GET({params}) {

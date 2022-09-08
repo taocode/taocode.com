@@ -1,14 +1,14 @@
 <script>
-  import { onMount } from 'svelte';
-  import cookies from 'js-cookie';
-  import ExternalLink from './ExternalLink.svelte';
-  import PrivacyPolicyLink from './PrivacyPolicyLink.svelte';
-  import Splitbee from './Splitbee.svelte';
+  import { onMount } from 'svelte'
+  import cookies from 'js-cookie'
+  import ExternalLink from './ExternalLink.svelte'
+  import PrivacyPolicyLink from './layout/PrivacyPolicyLink.svelte'
+  import Splitbee from './Splitbee.svelte'
 
   // We don't want the cookie notice to flash on every page reload, therefore hidden by default
-  export let showCookieNotice = false;
-  export let didOptOut = false;
-  export let consentGiven = false;
+  export let showCookieNotice = false
+  export let didOptOut = false
+  export let consentGiven = false
 
   onMount(() => {
     const hasDNTEnabled =

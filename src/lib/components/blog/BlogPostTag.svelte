@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { convertToSlug } from './utils'
+  import { convertToSlug } from '$lib/utils'
 
   export let tags: string[];
 </script>

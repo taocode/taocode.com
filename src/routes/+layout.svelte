@@ -1,10 +1,10 @@
 <script lang="ts">
   import { afterUpdate, onMount } from 'svelte'
-  import BreakpointHelper from '$lib/BreakpointHelper.svelte'
-  import CookieNotice from '$lib/CookieNotice.svelte'
-  import NProgress from '$lib/NProgress.svelte'
-  import Nav from '$lib/Nav.svelte'
-  import Footer from '$lib/Footer.svelte'
+  import BreakpointHelper from '$lib/components/layout/BreakpointHelper.svelte'
+  import CookieNotice from '$lib/components/CookieNotice.svelte'
+  import NProgress from '$lib/components/layout/NProgress.svelte'
+  import Nav from '$lib/components/layout/Nav.svelte'
+  import Footer from '$lib/components/layout/Footer.svelte'
   import { browser, dev } from '$app/environment';
   import type { LoadInput } from '@sveltejs/kit/types/page'
 

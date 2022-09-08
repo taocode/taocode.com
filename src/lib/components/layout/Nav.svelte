@@ -2,12 +2,12 @@
   import Icon from 'svelte-awesome';
   import { faBars } from '@fortawesome/free-solid-svg-icons';
   import ClickOutside from 'svelte-click-outside';
-  import TaocodeLogo from './TaocodeLogo.svelte';
+  import TaocodeLogo from '../svg/TaocodeLogo.svelte';
 
   import ToTop from './ToTop.svelte';
   import Headroom from "./headroom/index.svelte";
   // import Headroom from "@taocode/svelte-headroom";
-	import DarkModeToggle from '$lib/DarkModeToggle.svelte';
+	import DarkModeToggle from '$lib/components/layout/DarkModeToggle.svelte';
 
   let open = false;
 	export let darkMode = false;

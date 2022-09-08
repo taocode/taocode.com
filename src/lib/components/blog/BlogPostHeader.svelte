@@ -1,16 +1,16 @@
 <script lang="ts">
-  import BlogPostThumbnail from './BlogPostThumbnail.svelte';
-  import BlogPostTag from './BlogPostTag.svelte';
-  import ShareButtons from './ShareButtons.svelte';
-  import InfoTags from './InfoTags.svelte';
-  import type { Post } from './models/post';
+  import BlogPostThumbnail from './BlogPostThumbnail.svelte'
+  import BlogPostTag from './BlogPostTag.svelte'
+  import ShareButtons from '../ShareButtons.svelte'
+  import InfoTags from './InfoTags.svelte'
+  import type { Post } from '$lib/models/post'
 
-  import Icon from 'svelte-awesome';
-  import { faExternalLinkSquareAlt } from '@fortawesome/free-solid-svg-icons';
+  import Icon from 'svelte-awesome'
+  import { faExternalLinkSquareAlt } from '@fortawesome/free-solid-svg-icons'
 
   export let post: Post;
 </script>
-<style>
+<style lang="postcss">
   .applause-gradient {
     @apply font-display;
   }

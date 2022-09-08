@@ -1,12 +1,12 @@
 <script lang="ts">
-  import Introduction from '$lib/Introduction.svelte';
-  import CurrentProjects from '$lib/CurrentProjects.svelte';
-  import Experience from "$lib/Experience.svelte";
+  import Introduction from '$lib/components/content/Introduction.svelte'
+  import CurrentProjects from '$lib/components/content/CurrentProjects.svelte'
+  import Experience from "$lib/components/experience/Experience.svelte"
 
-  import RecentPosts from '$lib/RecentPosts.svelte';
-  import SEO from '$lib/SEO.svelte';
-  import type { Post } from '$lib/models/post';
-  import ServicesCallToAction from '$lib/ServicesCallToAction.svelte';
+  import RecentPosts from '$lib/components/blog/RecentPosts.svelte'
+  import SEO from '$lib/components/layout/SEO.svelte'
+  import type { Post } from '$lib/models/post'
+  import ServicesCallToAction from '$lib/components/content/ServicesCallToAction.svelte'
 
   export let data
   export let posts: Post[] = data.posts

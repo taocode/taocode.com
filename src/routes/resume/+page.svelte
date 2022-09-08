@@ -1,5 +1,5 @@
 <script>
-  import SEO from '$lib/SEO.svelte';
+  import SEO from '$lib/components/layout/SEO.svelte'
 </script>
 
 <svelte:head>

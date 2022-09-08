@@ -1,20 +1,20 @@
 <script lang="ts">
-  import { fade } from 'svelte/transition';
-  import { createForm } from 'svelte-forms-lib';
-  import * as yup from 'yup';
-  import Icon from 'svelte-awesome';
-  import axios from 'redaxios';
+  import { fade } from 'svelte/transition'
+  import { createForm } from 'svelte-forms-lib'
+  import * as yup from 'yup'
+  import Icon from 'svelte-awesome'
+  import axios from 'redaxios'
   import {
     faGithub,
     faLinkedin,
-  } from '@fortawesome/free-brands-svg-icons';
+  } from '@fortawesome/free-brands-svg-icons'
   import {
     faEnvelope,
     faExternalLinkAlt,
     faCheckCircle,
-  } from '@fortawesome/free-solid-svg-icons';
-  import SEO from '$lib/SEO.svelte';
-  import ExternalLink from '$lib/ExternalLink.svelte';
+  } from '@fortawesome/free-solid-svg-icons'
+  import SEO from '$lib/components/layout/SEO.svelte'
+  import ExternalLink from '$lib/components/ExternalLink.svelte'
 
   let didSubmit = false;
 

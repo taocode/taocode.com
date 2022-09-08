@@ -1,7 +1,7 @@
 <script>
-  import ExternalLink from '$lib/ExternalLink.svelte';
-  import PrivacyPolicyLink from '$lib/PrivacyPolicyLink.svelte';
-  import SEO from '$lib/SEO.svelte';
+  import ExternalLink from '$lib/components/ExternalLink.svelte'
+  import PrivacyPolicyLink from '$lib/components/layout/PrivacyPolicyLink.svelte'
+  import SEO from '$lib/components/layout/SEO.svelte'
 </script>
 
 <svelte:head>

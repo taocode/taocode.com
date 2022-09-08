@@ -1,11 +1,11 @@
 <script lang="ts">
   // throw new Error("@migration task: Add data prop (https://github.com/sveltejs/kit/discussions/5774#discussioncomment-3292707)");
 
-  import BlogPostHeaderImage from '$lib/images/b-flopped-on-sidewalk.jpg';
-  import BlogOverviewHeader from '$lib/BlogOverviewHeader.svelte';
-  import BlogPostFilters from '$lib/BlogPostFilters.svelte';
-  import BlogPostSidebar from '$lib/BlogPostSidebar.svelte';
-  import SEO from '$lib/SEO.svelte';
+  import BlogPostHeaderImage from '$lib/images/b-flopped-on-sidewalk.jpg'
+  import BlogOverviewHeader from '$lib/components/blog/BlogOverviewHeader.svelte'
+  import BlogPostFilters from '$lib/components/blog/BlogPostFilters.svelte'
+  import BlogPostSidebar from '$lib/components/blog/BlogPostSidebar.svelte'
+  import SEO from '$lib/components/layout/SEO.svelte'
   import type { Post } from '$lib/models/post'
 
   export let data

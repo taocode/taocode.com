@@ -1,20 +1,19 @@
 <script lang="ts">
   // throw new Error("@migration task: Add data prop (https://github.com/sveltejs/kit/discussions/5774#discussioncomment-3292707)");
 
-  import BackToBlogOverviewBtn from '$lib/BackToBlogOverviewBtn.svelte';
-  import BlogPostHeader from '$lib/BlogPostHeader.svelte';
-  import BlogPostSidebar from '$lib/BlogPostSidebar.svelte';
-  import CommentsUtterances from '$lib/CommentsUtterances.svelte';
-  import PrevNextArticle from '$lib/PrevNextArticle.svelte';
-  import ShareButtons from '$lib/ShareButtons.svelte';
-  import type { Post } from '$lib/models/post';
-  import { page } from '$app/stores';
-  import SEO from '$lib/SEO.svelte';
-  import { marked } from 'marked';
+  import BackToBlogOverviewBtn from '$lib/components/blog/BackToBlogOverviewBtn.svelte'
+  import BlogPostHeader from '$lib/components/blog/BlogPostHeader.svelte'
+  import BlogPostSidebar from '$lib/components/blog/BlogPostSidebar.svelte'
+  import CommentsUtterances from '$lib/components/layout/CommentsUtterances.svelte'
+  import PrevNextArticle from '$lib/components/blog/PrevNextArticle.svelte'
+  import ShareButtons from '$lib/components/ShareButtons.svelte'
+  import type { Post } from '$lib/models/post'
+  import { page } from '$app/stores'
+  import SEO from '$lib/components/layout/SEO.svelte'
+  import { marked } from 'marked'
 
-  import Icon from 'svelte-awesome';
-  import { share } from 'svelte-awesome/icons';
-import { parse } from 'date-fns/esm';
+  import Icon from 'svelte-awesome'
+  import { share } from 'svelte-awesome/icons'
 
   export let data
   export let posts: Post[] = data.posts

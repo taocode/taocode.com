@@ -1,16 +1,16 @@
 <script lang="ts">
-  import Icon from 'svelte-awesome';
+  import Icon from 'svelte-awesome'
   import {
     faGithub,
     faLinkedin,
     faReddit,
-  } from '@fortawesome/free-brands-svg-icons';
-  import { faEnvelope, faRss } from '@fortawesome/free-solid-svg-icons';
-  // import { faRss } from 'svelte-awesome/icons';
-  import ExternalLink from './ExternalLink.svelte';
-  import SpeedlifyFooter from './SpeedlifyFooter.svelte';
-  import PrivacyPolicyLink from './PrivacyPolicyLink.svelte';
-  // import TermsConditionsLink from './TermsConditionsLink.svelte';
+  } from '@fortawesome/free-brands-svg-icons'
+  import { faEnvelope, faRss } from '@fortawesome/free-solid-svg-icons'
+  // import { faRss } from 'svelte-awesome/icons'
+  import ExternalLink from '../ExternalLink.svelte'
+  import SpeedlifyFooter from './SpeedlifyFooter.svelte'
+  import PrivacyPolicyLink from '../layout/PrivacyPolicyLink.svelte'
+  // import TermsConditionsLink from './TermsConditionsLink.svelte'
 </script>
 
 <footer class="text-green-200 border-t-4 border-green-700 applause-gradient bg-green-800">

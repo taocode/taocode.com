@@ -1,13 +1,13 @@
 <script>
-  import PrivacyPolicyLink from '$lib/PrivacyPolicyLink.svelte';
-  import { onMount } from 'svelte';
-  import SEO from '$lib/SEO.svelte';
+  import PrivacyPolicyLink from '$lib/components/layout/PrivacyPolicyLink.svelte'
+  import { onMount } from 'svelte'
+  import SEO from '$lib/components/layout/SEO.svelte'
 
   onMount(() => {
     var s = document.createElement('script'),
       tag = document.getElementsByTagName('script')[0];
-    s.src = 'https://cdn.iubenda.com/iubenda.js';
-    tag.parentNode.insertBefore(s, tag);
+    s.src = 'https://cdn.iubenda.com/iubenda.js'
+    tag.parentNode.insertBefore(s, tag)
   });
 </script>
 
