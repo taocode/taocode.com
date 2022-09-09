@@ -20,7 +20,7 @@
 		<article aria-posinset={index + 1} aria-setsize={postCount}>
 			<BlogPostSummary
 				datePublished={post.datePublished}
-				postTitle={post.postTitle}
+				title={post.title}
 				seoMetaDescription={post.seoMetaDescription}
 				slug={post.slug}
 			/>

@@ -10,7 +10,7 @@
 		datePublished,
 		featuredImageAlt,
 		lastUpdated,
-		postTitle: title,
+		title,
 		seoMetaDescription: metadescription,
 		slug,
 	} = post;

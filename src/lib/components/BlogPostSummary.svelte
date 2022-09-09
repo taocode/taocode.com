@@ -3,7 +3,7 @@
 	import { H_ELLIPSIS_ENTITY } from '$lib/constants/entities';
 	import { goto, prefetch } from '$app/navigation';
 
-	export let postTitle;
+	export let title;
 	export let datePublished;
 	export let seoMetaDescription;
 	export let slug;
@@ -43,10 +43,10 @@
 	<div class="content">
 		<h3>
 			<a
-				aria-label={`Open ${postTitle} blog post`}
+				aria-label={`Open ${title} blog post`}
 				aria-describedby={idString}
 				sveltekit:prefetch
-				href={`/${slug}/`}>{postTitle}</a
+				href={`/${slug}/`}>{title}</a
 			>
 		</h3>
 		<p>{dateString}</p>

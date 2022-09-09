@@ -14,7 +14,6 @@ tags:
   - Svelte
   - Tailwind
   - Firebase hosting
-postTitle: 'Folding Camera'
 focusKeyphrase: 'folding camera best kept secret'
 datePublished: '2021-04-05T15:38:49.000+0100'
 lastUpdated: '2021-04-14T10:17:52.000+0100'

@@ -56,11 +56,11 @@ export const getPosts = async (postsContent, body = false) => {
 	const postPromises = postsContent.map(async (element) => {
 		const { content, slug } = element;
 		const transformedContent = await compile(content);
-		const { datePublished, lastUpdated, postTitle, seoMetaDescription } =
-			/** @type {{datePublished: string; lastUpdated: string; postTitle: string; seoMetaDescription: string;}} */ (
+		const { datePublished, lastUpdated, title, seoMetaDescription } =
+			/** @type {{datePublished: string; lastUpdated: string; title: string; seoMetaDescription: string;}} */ (
 				transformedContent.data.fm
 			);
-		let resultElement = { datePublished, lastUpdated, postTitle, seoMetaDescription, slug };
+		let resultElement = { datePublished, lastUpdated, title, seoMetaDescription, slug };
 		if (body) {
 			resultElement = { ...resultElement, body: transformedContent.code };
 		}
