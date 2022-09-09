@@ -2,6 +2,14 @@
 /// <reference types="svelte" />
 /// <reference types="vite/client" />
 
+import type { ILazyLoadInstance } from 'vanilla-lazyload';
+
+declare global {
+	interface Document {
+		lazyloadInstance: ILazyLoadInstance;
+	}
+}
+
 // added stub declarations for these deps to silence svelte-check warnings
 declare module 'flatten';
 declare module 'svelte-click-outside';

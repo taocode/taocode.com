@@ -4,8 +4,8 @@ import WindiCSS from 'vite-plugin-windicss'
 
 export default {
   plugins: [
-    sveltekit(),
     WindiCSS(),
     imagetools({ force: true }),
+    sveltekit(),
   ],
 }

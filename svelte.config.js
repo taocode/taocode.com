@@ -1,30 +1,27 @@
-import sveltePreprocess from 'svelte-preprocess';
-import adapter from '@sveltejs/adapter-static';
-import { mdsvex } from 'mdsvex';
-import { trusted } from 'svelte/internal';
+import sveltePreprocess from 'svelte-preprocess'
+import adapter from '@sveltejs/adapter-static'
+import { mdsvex } from 'mdsvex'
 
+const extensions = [`.svelte`, '.svx', '.md', '.svelte.md']
 
-const extensions = [`.svelte`, '.svx', '.md'];
-
+// options passed to svelte.preprocess (https://svelte.dev/docs#svelte_preprocess)
 const preprocess = [
+  mdsvex({ extensions }),
   sveltePreprocess({
     typescript: true,
     preserve: ['ld+json'],
   }),
-  mdsvex({ extensions }),
-];
+]
 
 const kit = {
-  adapter: adapter(),
+  adapter: adapter({ precompress: true }),
 }
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
-  kit,
   extensions,
-  // options passed to svelte.preprocess (https://svelte.dev/docs#svelte_preprocess)
   preprocess,
+  kit,
+}
 
-};
-
-export default config;
+export default config
