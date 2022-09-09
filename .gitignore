@@ -15,6 +15,7 @@ static/global.css.map
 .env
 .svelte-kit
 build
+vite.config.js.timestamp-*
 
 # Local Netlify folder
 .netlify
