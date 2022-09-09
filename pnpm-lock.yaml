@@ -37,6 +37,7 @@ specifiers:
   eslint-plugin-svelte3: ^4.0.0
   flatten: ^1.0.3
   front-matter: ^4.0.2
+  husky: ^8.0.1
   jest: ^28.1.3
   js-cookie: ^2.2.1
   js-yaml: ^4.1.0
@@ -119,6 +120,7 @@ devDependencies:
   eslint-plugin-svelte3: 4.0.0_blbzrotp73vgauhdwdfh6jcfra
   flatten: 1.0.3
   front-matter: 4.0.2
+  husky: 8.0.1
   jest: 28.1.3
   js-cookie: 2.2.1
   js-yaml: 4.1.0
@@ -3092,6 +3094,12 @@ packages:
   /human-signals/2.1.0:
     resolution: {integrity: sha512-B4FFZ6q/T2jhhksgkbEW3HBvWIfDW85snkQgawt07S7J5QXTk6BkNV+0yAeZrM5QpMAdYlocGoljn0sJ/WQkFw==}
     engines: {node: '>=10.17.0'}
+    dev: true
+
+  /husky/8.0.1:
+    resolution: {integrity: sha512-xs7/chUH/CKdOCs7Zy0Aev9e/dKOMZf3K1Az1nar3tzlv0jfqnYtu235bstsWTmXOR0EfINrPa97yy4Lz6RiKw==}
+    engines: {node: '>=14'}
+    hasBin: true
     dev: true
 
   /ieee754/1.2.1:

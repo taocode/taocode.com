@@ -1,5 +1,57 @@
 <script>
-  import SEO from '$lib/components/layout/SEO.svelte'
+  import SEO from '$lib/components/SEO/index.svelte'
+  const { author, siteUrl } = website
+
+  let title = 'Home';
+  const breadcrumbs = [
+    {
+      name: 'Home',
+      slug: '',
+    },
+  ];
+  let metadescription =
+    'SvelteKit MDsvex Blog Starter - starter code by Rodney Lab to help you get going on your next blog site';
+  const featuredImageAlt =
+    'picture of a person with long, curly hair, wearing a red had taking a picture with an analogue camera';
+  const featuredImage = {
+    url: featuredImageSrc,
+    alt: featuredImageAlt,
+    width: 672,
+    height: 448,
+    caption: 'Home page',
+  };
+  const ogImage = {
+    url: ogImageSrc,
+    alt: featuredImageAlt,
+  };
+  const ogSquareImage = {
+    url: ogSquareImageSrc,
+    alt: featuredImageAlt,
+  };
+
+  const twitterImage = {
+    url: twitterImageSrc,
+    alt: featuredImageAlt,
+  };
+  const entityMeta = {
+    url: `${siteUrl}/`,
+    faviconWidth: 512,
+    faviconHeight: 512,
+    caption: author,
+  };
+  const seoProps = {
+    title,
+    slug: '',
+    entityMeta,
+    datePublished: '2021-07-07T14:19:33.000+0100',
+    lastUpdated: '2021-07-07T14:19:33.000+0100',
+    breadcrumbs,
+    metadescription,
+    featuredImage,
+    ogImage,
+    ogSquareImage,
+    twitterImage,
+  }
 </script>
 
 <svelte:head>
@@ -7,7 +59,7 @@
   <meta name="description" content="My up-to-date resume, hire me, a quality programmer!" />
 </svelte:head>
 
-<SEO />
+<SEO {...seoProps} />
 
 <section class="container mj-container">
   <h1 class="text-center pt-6">

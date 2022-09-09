@@ -1,5 +1,5 @@
 <script>
-  import SEO from '$lib/components/layout/SEO.svelte'
+  // import SEO from '$lib/components/layout/SEO.svelte'
   // import ExternalLink from '$lib/ExternalLink.svelte';
   // import AffiliateNotice from '$lib/AffiliateNotice.svelte';
 </script>
@@ -11,8 +11,6 @@
     content="Elevate my position on the web as a developer and to share what I've learned over the years."
   />
 </svelte:head>
-
-<SEO />
 
 <section class="container mj-container">
   <h1>About Me</h1>
