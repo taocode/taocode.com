@@ -12,7 +12,8 @@
 stats.html
 static/global.css
 static/global.css.map
-.env
+.env*
+!.env.TAOCODE
 .svelte-kit
 build
 vite.config.js.timestamp-*
