@@ -13,6 +13,10 @@
     perspective: 600px;
   }
 
+  .card a {
+    @apply z-10;
+  }
+
   .card-transform {
     /* @apply relative h-full w-full; */
     width: 100%;

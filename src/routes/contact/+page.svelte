@@ -142,7 +142,7 @@
   <p>
     You can find an
     overview of the services that I offer under the
-    <a href="/services" sveltekit:prefetch>Services</a>
+    <a href="/services" data-sveltekit-prefetch>Services</a>
     tab. I will get back to you within 48 hours.</p>
   <form
     name="contact"
@@ -255,7 +255,7 @@
   <h2>Not convinced?</h2>
   <p>
     You can find my up-to-date CV under
-    <a sveltekit:prefetch href="/resume">Resume</a>
+    <a data-sveltekit-prefetch href="/resume">Resume</a>
     for all my professional references and experience.
   </p>
 

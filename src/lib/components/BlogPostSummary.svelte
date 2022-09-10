@@ -45,7 +45,7 @@
 			<a
 				aria-label={`Open ${title} blog post`}
 				aria-describedby={idString}
-				sveltekit:prefetch
+				data-sveltekit-prefetch
 				href={`/${slug}/`}>{title}</a
 			>
 		</h3>

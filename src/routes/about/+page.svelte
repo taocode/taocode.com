@@ -21,7 +21,7 @@
 
   <p>
     I created this website to hold and share my thoughts as a developer and human being. I anticipate being found by other programmers trying to find some solution to an error or build environment question. I wrote 
-    <a sveltekit:prefetch href="/blog/why-i-started-this-blog">
+    <a data-sveltekit-prefetch href="/blog/why-i-started-this-blog">
       why I started this blog</a
     > for a deeper look.
   </p>

@@ -26,25 +26,25 @@
       aria-label="Left footer navigation"
       class="bg-green-900 bg-opacity-40 py-1 px-3 rounded sm:mr-3"
     >
-      <a sveltekit:prefetch href="/about" class="footer-link"> About </a>
-      <a sveltekit:prefetch href="/blog" class="footer-link"> Blog </a>
+      <a data-sveltekit-prefetch href="/about" class="footer-link"> About </a>
+      <a data-sveltekit-prefetch href="/blog" class="footer-link"> Blog </a>
       <div class="ml-2">
         <a
-          sveltekit:prefetch
+          data-sveltekit-prefetch
           href="/categories/programming"
           class="italic footer-link"
         >
           Programming
         </a>
         <a
-          sveltekit:prefetch
+          data-sveltekit-prefetch
           href="/categories/portfolio"
           class="italic footer-link"
         >
           Portfolio
         </a>
         <a
-          sveltekit:prefetch
+          data-sveltekit-prefetch
           href="/categories/life"
           class="italic footer-link"
         >
@@ -58,10 +58,10 @@
       aria-label="Right footer navigation"
       class="bg-green-900 bg-opacity-40 py-1 px-3 rounded"
     >
-      <a sveltekit:prefetch href="/services" class="footer-link"> Services </a>
-      <a sveltekit:prefetch href="/contact" class="footer-link"> Contact </a>
-      <!-- <a sveltekit:prefetch href="/resume" class="footer-link"> Resume </a> -->
-      <!-- <a sveltekit:prefetch href="/imprint" class="footer-link"> Imprint </a> -->
+      <a data-sveltekit-prefetch href="/services" class="footer-link"> Services </a>
+      <a data-sveltekit-prefetch href="/contact" class="footer-link"> Contact </a>
+      <!-- <a data-sveltekit-prefetch href="/resume" class="footer-link"> Resume </a> -->
+      <!-- <a data-sveltekit-prefetch href="/imprint" class="footer-link"> Imprint </a> -->
       
       <PrivacyPolicyLink />
 
