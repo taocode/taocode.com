@@ -1,11 +1,12 @@
 export type Post = {
   title: string;
   slug: string;
-  creationDate: string;
+  datePublished: string;
+  dateCreated: string;
   category: 'Programming' | 'Portfolio' | 'Life';
   excerpt: string;
   tags: string[];
-  html: string;
+  body: string;
   hasAffiliateLink?: boolean;
   cover?: string;
   thumbnail?: string;

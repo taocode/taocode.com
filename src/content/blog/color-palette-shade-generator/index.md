@@ -1,8 +1,10 @@
 ---
 title: Color Palette Shade Generator
 slug: color-palette-shade-generator
-# creationDate: '2022-08-29'
-# published: 2022-08-29T09:20:00Z
+dateCreated: '2022-08-29T09:20:00Z'
+datePublished: '2022-08-29T09:20:00Z'
+# datePublished: '2021-04-05T15:38:49.000+0100'
+dateUpdated: '2022-08-29T10:17:52.00Z'
 category: 'Programming'
 excerpt: I created an interactive color shade generating app with Svelte
 lead: Want to create a color palette based on color theory?
@@ -15,8 +17,6 @@ tags:
   - Tailwind
   - Firebase hosting
 focusKeyphrase: 'folding camera best kept secret'
-datePublished: '2021-04-05T15:38:49.000+0100'
-lastUpdated: '2021-04-14T10:17:52.000+0100'
 seoMetaDescription: 'Folding cameras have the benefits of high resolution negatives but are so much more compact and often have amazing optics'
 featuredImage: 'folding-camera.jpg'
 featuredImageAlt: 'Photograph of a classic folding camera'

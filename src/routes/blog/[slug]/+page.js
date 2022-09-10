@@ -24,6 +24,7 @@ export async function load({ params, url }) {
 	}
 
 	const {
+		category,
 		datePublished,
 		featuredImage,
 		featuredImageAlt,
@@ -32,10 +33,12 @@ export async function load({ params, url }) {
 		title,
 		seoMetaDescription,
 		twitterImage,
+		tags
 	} = metadata;
 
 	return {
 		post: {
+			category,
 			datePublished,
 			featuredImage,
 			featuredImageAlt,
@@ -46,6 +49,7 @@ export async function load({ params, url }) {
 			twitterImage,
 			slug,
 			body,
+			tags
 		},
 		slug,
 		imageData,
