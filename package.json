@@ -94,6 +94,7 @@
     "svelte-forms-lib": "^1.10.3",
     "svelte-jester": "^2.1.0",
     "svelte-preprocess": "^4.10.7",
+    "sveltekit-autoimport": "^1.6.9",
     "toposort": "^2.0.2",
     "ts-jest": "^28.0.7",
     "tslib": "^2.4.0",
