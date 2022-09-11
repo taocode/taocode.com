@@ -16,4 +16,13 @@
 </script>
 
 <BlogPost {post} {imageData} />
-<svelte:component this={page} />
+<div class="post-body prose">
+  <svelte:component this={page} />
+</div>
+
+<style lang="postcss">
+  .post-body {
+    @apply mx-auto;
+  }
+</style>
+

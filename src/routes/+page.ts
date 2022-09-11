@@ -1,5 +1,5 @@
 import type { PageLoad } from './$types'
-export async function load() {
+export const load: PageLoad = async () => {
 	const mdModules = import.meta.glob('../content/blog/**/index.md');
 	const posts = await Promise.all(
 		Object.keys(mdModules).map(async (path) => {

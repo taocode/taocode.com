@@ -1,7 +1,6 @@
 <script>
-	import readingTime from 'reading-time';
-	import BannerImage from '$lib/components/BannerImage.svelte';
-	import SEO from '$lib/components/SEO/index.svelte';
+	import readingTime from 'reading-time'
+	import SEO from '$lib/components/SEO/index.svelte'
 
 	export let imageData;
 	export let post;
@@ -65,11 +64,11 @@ import BackToBlogOverviewBtn from '$lib/components/blog/BackToBlogOverviewBtn.sv
   // import type { Post } from '$lib/models/post';
   // import { page } from '$app/stores';
   // import SEO from '$lib/SEO.svelte';
-  import { marked } from 'marked';
+  // import { marked } from 'marked';
 
-  import Icon from 'svelte-awesome';
-  import { share } from 'svelte-awesome/icons';
-import BlogOverviewHeader from './BlogOverviewHeader.svelte';
+  // import Icon from 'svelte-awesome';
+  // import { share } from 'svelte-awesome/icons';
+// import BlogOverviewHeader from './BlogOverviewHeader.svelte';
 
   // export let data
   // export let posts: Post[] = data.posts
@@ -78,7 +77,7 @@ import BlogOverviewHeader from './BlogOverviewHeader.svelte';
   // $: postIndex = posts.findIndex((p) => p.slug === $page.params.slug);
   // $: previousArticle = posts[postIndex + 1];
   // $: nextArticle = posts[postIndex - 1];
-  $: pageTitle = `${post?.title} | TAOCode`;
+  // $: pageTitle = `${post?.title} | TAOCode`;
 	// console.log({post})
 
 </script>
@@ -101,3 +100,4 @@ import BlogOverviewHeader from './BlogOverviewHeader.svelte';
 <BlogPostHeader {post} {imageData}/>
 
 <h1>{title}</h1>
+

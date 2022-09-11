@@ -8,6 +8,7 @@
   import website from '$lib/config/website'
   import type { Post } from '$lib/models/post'
   import ServicesCallToAction from '$lib/components/content/ServicesCallToAction.svelte'
+import BlogRoll from '$lib/components/BlogRoll.svelte';
 
   export let data
   export let { posts } = data
@@ -20,6 +21,10 @@
       slug: '',
     },
   ];
+  const featuredImageSrc = 'because'
+  const ogImageSrc = 'another'
+  const ogSquareImageSrc = 'another'
+  const twitterImageSrc = 'another'
   let metadescription =
     'SvelteKit MDsvex Blog Starter - starter code by Rodney Lab to help you get going on your next blog site';
   const featuredImageAlt =
@@ -80,7 +85,8 @@
 
 <Experience />
 
-<RecentPosts {posts} />
+
+<BlogRoll {posts} />
 
 <ServicesCallToAction />
 

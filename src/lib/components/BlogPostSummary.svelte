@@ -8,6 +8,7 @@
 	export let seoMetaDescription;
 	export let slug;
 
+	const BLOG_LINK_PATH = '/blog'
 	/**
 	 * @param event {MouseEvent} - click
 	 */
@@ -46,7 +47,7 @@
 				aria-label={`Open ${title} blog post`}
 				aria-describedby={idString}
 				data-sveltekit-prefetch
-				href={`/${slug}/`}>{title}</a
+				href={`${BLOG_LINK_PATH}/${slug}/`}>{title}</a
 			>
 		</h3>
 		<p>{dateString}</p>
@@ -55,41 +56,45 @@
 	</div>
 </div>
 
-<style lang="scss">
+<style lang="postcss">
 	.container {
-		display: flex;
+		/* display: flex;
 		width: 100%;
-		margin: $spacing-12 $spacing-0;
+		margin: $spacing-12 $spacing-0; */
+		@apply flex w-full mx-12 my-0;
 	}
 
 	.content {
-		width: 80%;
+		/* width: 80%;
 		border: $spacing-px-2 solid $color-theme-2;
 		border-radius: $spacing-3;
 		margin: $spacing-0 auto;
-		padding: $spacing-4;
+		padding: $spacing-4; */
+		@apply w-8/10 border-2 border-yellow-300 rounded p-4 my-0 mx-auto;
 
 		h3 {
-			margin: $spacing-0 $spacing-2;
+			/* margin: $spacing-0 $spacing-2; */
+			@apply my-0 mx-2;
 		}
 		p {
-			color: $color-theme-1;
+			/* color: $color-theme-1;
 			font-size: $mobile-font-size-2;
-			margin: $spacing-2;
+			margin: $spacing-2; */
+			@apply text-teal-500 m-2 text-lg;
 		}
 	}
 
 	.content:focus,
 	.content:hover {
 		h3 {
-			color: $color-theme-2;
+			@apply text-yellow-400;
 		}
 		p {
-			color: $color-theme-3;
+			@apply text-teal-500;
 		}
-		border-color: $color-theme-4;
+		/* border-color: $color-theme-4;
 		background-color: $color-theme-4;
 		box-shadow: $spacing-0 $spacing-0 $spacing-1 $spacing-0 $color-theme-4-alpha-20;
-		color: $color-accent;
+		color: $color-accent; */
 	}
 </style>

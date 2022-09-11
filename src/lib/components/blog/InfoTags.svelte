@@ -4,14 +4,13 @@
   import type { Post } from '$lib/models/post'
 
   export let post: Post
-  let { category } = post
-  $: timeToRead = readingTime(post.body)['text']
-  $: ({ category } = post)
+  let { body, category, readingTimeText } = post
+  $: ({ body, category, readingTimeText } = post)
 </script>
 
 <span class="text-green-750 dark:text-green-200">{formatDate(post.datePublished)}</span>
 &middot;
-<span class="text-green-750 dark:text-green-200">{timeToRead}</span>
+<span class="text-green-750 dark:text-green-200">{readingTimeText}</span>
 {#if category}
 <span>
 &middot;

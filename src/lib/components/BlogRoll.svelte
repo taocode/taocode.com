@@ -16,13 +16,13 @@
 
 <section role="feed">
 	<h2>BLOG POSTS</h2>
-	{#each displayPosts as post, index}
+	{#each displayPosts as { datePublished, title, seoMetaDescription, slug }, index}
 		<article aria-posinset={index + 1} aria-setsize={postCount}>
 			<BlogPostSummary
-				datePublished={post.datePublished}
-				title={post.title}
-				seoMetaDescription={post.seoMetaDescription}
-				slug={post.slug}
+				{datePublished}
+				{title}
+				{seoMetaDescription}
+				{slug}
 			/>
 		</article>
 	{:else}

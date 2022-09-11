@@ -10,7 +10,7 @@ export type Post = {
   hasAffiliateLink?: boolean;
   cover?: string;
   thumbnail?: string;
-  site_url?: string;
+  siteUrl?: string;
   lead?: string;
-  readingTime: string;
+  readingTimeText: string;
 };

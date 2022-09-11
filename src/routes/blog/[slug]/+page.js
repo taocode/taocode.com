@@ -1,4 +1,5 @@
 import { error } from '@sveltejs/kit'
+import readingTime from 'reading-time'
 
 
 /** @type {import('./$types').PageLoad} */
@@ -22,7 +23,9 @@ export async function load({ params, url }) {
 	if (!body) {
 		throw error(404)
 	}
-
+	const postHTML = body.render().html
+	const readingTimeText = readingTime(postHTML)['text']
+	// console.log('rt...',{readingTimeText,postHTML})
 	const {
 		category,
 		datePublished,
@@ -32,6 +35,7 @@ export async function load({ params, url }) {
 		ogSquareImage,
 		title,
 		seoMetaDescription,
+		siteUrl,
 		twitterImage,
 		tags
 	} = metadata;
@@ -48,8 +52,10 @@ export async function load({ params, url }) {
 			seoMetaDescription,
 			twitterImage,
 			slug,
+			siteUrl,
 			body,
-			tags
+			readingTimeText,
+			tags,
 		},
 		slug,
 		imageData,

@@ -37,8 +37,8 @@
     >
       <div class="w-full px-4">
         <h1>{post.title}</h1>
-        {#if post.site_url}
-          <div><a target="_blank" href={post.site_url}>{post.site_url.substr(8)}
+        {#if post.siteUrl}
+          <div><a target="_blank" href={post.siteUrl}>{post.siteUrl.slice(8)}
             <Icon data="{faExternalLinkSquareAlt}" class="text-green-700 -mt-1 inline-block" scale="{0.8}" />
           </a></div>
         {/if}
