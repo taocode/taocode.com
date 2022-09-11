@@ -10,16 +10,15 @@ excerpt: I created an interactive color shade generating app with Svelte
 lead: Want to create a color palette based on color theory?
 layout: blog
 author: Mark Jones
-site_url: https://color-palette-shade-generator.web.app
-thumbnail: /images/programming/color-palette-shade-generator-thumbnail.png
+siteUrl: https://color-palette-shade-generator.web.app
 tags:
   - Svelte
   - Tailwind
   - Firebase hosting
 focusKeyphrase: 'folding camera best kept secret'
 seoMetaDescription: 'Folding cameras have the benefits of high resolution negatives but are so much more compact and often have amazing optics'
-featuredImage: 'folding-camera.jpg'
-featuredImageAlt: 'Photograph of a classic folding camera'
+featuredImage: 'color-palette-shade-generator-thumbnail.png'
+featuredImageAlt: 'Color Palette Shade Generator thumbnail'
 ogImage: 'folding-camera-open-graph.jpg'
 ogSquareImage: 'folding-camera-open-graph-square.jpg'
 twitterImage: 'folding-camera-twitter.jpg'

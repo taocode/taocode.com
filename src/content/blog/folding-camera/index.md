@@ -13,11 +13,7 @@ categories: ''
 tags: ''
 ---
 
-<script>
-  import ExternalLink from '$lib/components/ExternalLink.svelte';
-</script>
-
-Let's test auto-import next, yes? or no
+Let's test <ExternalLink href="https://github.com/yuanchuan/sveltekit-autoimport">auto-import</ExternalLink> next, yes? or no
 
 ## What is a Folding Camera?
 
