@@ -1,3 +1,15 @@
 export const COPYRIGHT_ENTITY = '\u00a9'; // (c)
 export const H_ELLIPSIS_ENTITY = '\u2026'; // ...
 export const VERTICAL_LINE_ENTITY = '\u007c'; // |
+export const SPACE_THIN_ENTITY = '\u2009'
+export const SPACE_HAIR_ENTITY = '\u200a'
+export const LT_ENTITY = '\u003c' // <
+export const GT_ENTITY = '\u003e' // >
+export const LA_CURVE_ENTITY = '\u29fc' // ⧼
+export const RA_CURVE_ENTITY = '\u29fd' // ⧽
+export const LA_CARET_ENTITY = '\u2039' // ‹
+export const RA_CARET_ENTITY = '\u203a' // ›
+export const LA_ANGLE_ENTITY = '\u2329' // 〈
+export const RA_ANGLE_ENTITY = '\u232a' // 〉
+export const LA_MATH_ENTITY = '\u27e8' // ⟨
+export const RA_MATH_ENTITY = '\u27e9' // ⟩

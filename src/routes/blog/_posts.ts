@@ -8,7 +8,7 @@ import readingTime from 'reading-time';
 loadLanguages(['shell', 'markdown', 'json','js','ts']);
 
 const posts = fs
-  .readdirSync('./src/posts')
+  .readdirSync('./src/content/blog')
   .filter((elem) => elem.endsWith('.svx') || elem.endsWith('.md'))
   .map((postFilename) => {
     const postContent = fs.readFileSync(`./src/posts/${postFilename}`, {
