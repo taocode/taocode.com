@@ -5,9 +5,10 @@
 	import defaultTwitterImage from '$lib/assets/home/home-twitter.jpg'
 
 	import website from '$lib/config/website';
-	import { VERTICAL_LINE_ENTITY } from '$lib/constants/entities'
+	import { GT_ENTITY, LA_CURVE_ENTITY, LT_ENTITY, RA_CURVE_ENTITY, SPACE_HAIR_ENTITY } from '$lib/constants/entities'
 	import OpenGraph from './OpenGraph.svelte'
 	import SchemaOrg from './SchemaOrg.svelte'
+import Twitter from './Twitter.svelte';
 
 	const {
 		author,
@@ -60,7 +61,7 @@
 		alt: defaultAlt,
 	};
 
-	const pageTitle = `${siteTitle} ${VERTICAL_LINE_ENTITY} ${title}`;
+	const pageTitle = `${title} ${LA_CURVE_ENTITY}${SPACE_HAIR_ENTITY}${siteTitle}${SPACE_HAIR_ENTITY}${RA_CURVE_ENTITY}`;
 	const url = `${siteUrl}/${slug}`;
 	const openGraphProps = {
 		article,
@@ -118,3 +119,4 @@
 </svelte:head>
 <OpenGraph {...openGraphProps} />
 <SchemaOrg {...schemaOrgProps} />
+<Twitter {...twitterProps} />
