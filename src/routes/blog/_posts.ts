@@ -26,13 +26,13 @@ const posts = fs
 
     const html = marked.parse(postFrontMatter.body);
     const excerpt = marked.parse(postFrontMatter.attributes['excerpt']);
-    const readingTimeDuration = readingTime(postFrontMatter.body).text;
+    const readingTimeText = readingTime(postFrontMatter.body).text;
 
     return {
       ...postFrontMatter.attributes,
       html: marked.parse(html),
       excerpt: excerpt,
-      readingTime: readingTimeDuration,
+      readingTimeText,
     };
   });
 

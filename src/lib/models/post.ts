@@ -11,5 +11,5 @@ export type Post = {
   thumbnail?: string;
   site_url?: string;
   lead?: string;
-  readingTime: string;
+  readingTimeText: string;
 };

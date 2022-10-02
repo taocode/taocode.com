@@ -1,6 +1,10 @@
+
 import readingTime from "reading-time"
 
-export async function load({ fetch }) {
+export const prerender = true
+
+export async function load() {
+
   const postsPromise = import.meta.glob('../../../posts/*.md')
   // const res = await fetch(`/blog.json`);
   const postResult = await Promise.resolve(postsPromise)
