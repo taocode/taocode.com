@@ -2,9 +2,9 @@
   import type { Post } from '$lib/models/post'
   import { convertToSlug } from '$lib/utils'
 
-  export let posts: Post[];
+  import { posts } from '$lib/stores'
 
-  const uniqueCategories: string[] = posts
+  const uniqueCategories: string[] = $posts
     .map((post) => post.category)
     .filter((post, idx, arr) => arr.indexOf(post) === idx);
 </script>

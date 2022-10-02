@@ -8,8 +8,8 @@
   import SEO from '$lib/components/layout/SEO.svelte'
   import type { Post } from '$lib/models/post'
 
-  export let data
-  export let posts: Post[] = data.posts
+  import { posts } from '$lib/stores'
+
   // console.log('/blog/+page.svelte',{data,posts})
 </script>
 
@@ -54,9 +54,9 @@ a {
 </BlogOverviewHeader>
 
 <section class="container flex flex-wrap mj-container">
-  <BlogPostFilters {posts} />
+  <BlogPostFilters />
 
   <aside class="w-full mt-8 lg:mt-0 lg:w-3/12">
-    <BlogPostSidebar {posts} />
+    <BlogPostSidebar />
   </aside>
 </section>

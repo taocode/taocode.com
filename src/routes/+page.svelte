@@ -8,8 +8,8 @@
   import type { Post } from '$lib/models/post'
   import ServicesCallToAction from '$lib/components/content/ServicesCallToAction.svelte'
 
-  export let data
-  export let posts: Post[] = data.posts
+  import { posts } from '$lib/stores'
+
 </script>
 
 <svelte:head>
@@ -26,7 +26,7 @@
 
 <Experience />
 
-<RecentPosts {posts} />
+<RecentPosts posts={$posts} />
 
 <ServicesCallToAction />
 

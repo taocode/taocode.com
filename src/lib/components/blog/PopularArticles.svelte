@@ -1,10 +1,10 @@
 <script lang="ts">
   import InfoTags from './InfoTags.svelte';
-  import type { Post } from './models/post';
+  import type { Post } from '$lib/models/post';
 
-  export let posts: Post[];
+  import { posts } from '$lib/stores'
 
-  const popularPosts = posts.filter((_post: Post, idx: number) => idx < 3);
+  const popularPosts = $posts.filter((_post: Post, idx: number) => idx < 3);
 </script>
 
 <div class="mb-16 font-display">

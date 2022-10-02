@@ -6,7 +6,8 @@
   import Newsletter from '$lib/components/Newsletter.svelte'
   import type { Post } from '$lib/models/post'
 
-  export let posts: Post[]
+  import { posts } from '$lib/stores'
+
 </script>
 
 <div class="md:flex md:gap-6 lg:block">
@@ -15,8 +16,8 @@
     <Newsletter />
   </div>
   <div class="md:w-1/2 lg:w-full">
-    <PopularArticles {posts} />
-    <Categories {posts} />
+    <PopularArticles />
+    <Categories />
   </div>
 </div>
 <div class="mx-auto md:w-1/2 lg:w-full ">

@@ -10,9 +10,11 @@
 
   import { convertToSentenceCase } from '$lib/utils'
 
+  import { posts } from '$lib/stores'
+
   export let data: PageData
-  export let { slug, posts, postsByTag } = data
-  $: ({ slug, posts, postsByTag } = data) // so it stays in sync when `data` changes
+  export let { slug, postsByTag } = data
+  $: ({ slug, postsByTag } = data) // so it stays in sync when `data` changes
 
   const readableSlug = convertToSentenceCase(slug);
 </script>
@@ -36,6 +38,6 @@
   <BlogPostFilters posts="{postsByTag}" filteredByTag />
 
   <aside class="w-full mt-8 lg:mt-0 lg:w-3/12">
-    <BlogPostSidebar posts="{posts}" />
+    <BlogPostSidebar posts="{$posts}" />
   </aside>
 </section>

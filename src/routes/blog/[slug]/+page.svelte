@@ -15,13 +15,12 @@
   import Icon from 'svelte-awesome'
   import { share } from 'svelte-awesome/icons'
 
-  export let data
-  export let posts: Post[] = data.posts
+  import { posts } from '$lib/stores'
 
-  $: post = posts.find((post) => post.slug === $page.params.slug);
-  $: postIndex = posts.findIndex((p) => p.slug === $page.params.slug);
-  $: previousArticle = posts[postIndex + 1];
-  $: nextArticle = posts[postIndex - 1];
+  $: post = $posts.find((post) => post.slug === $page.params.slug);
+  $: postIndex = $posts.findIndex((p) => p.slug === $page.params.slug);
+  $: previousArticle = $posts[postIndex + 1];
+  $: nextArticle = $posts[postIndex - 1];
   $: pageTitle = `${post?.title} | TAOCode`;
 
   $: blogPostInfo = post
@@ -68,6 +67,6 @@
     />
   </article>
   <aside class="w-full mt-8 lg:mt-0 lg:w-3/12">
-    <BlogPostSidebar {posts} />
+    <BlogPostSidebar posts={$posts} />
   </aside>
 </section> 

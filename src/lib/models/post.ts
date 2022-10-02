@@ -2,6 +2,7 @@ export type Post = {
   title: string;
   slug: string;
   creationDate: string;
+  published: Date;
   category: 'Programming' | 'Portfolio' | 'Life';
   excerpt: string;
   tags: string[];
