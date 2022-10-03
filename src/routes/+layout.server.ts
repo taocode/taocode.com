@@ -9,7 +9,7 @@ export async function load() {
   const postsPromise = import.meta.glob('../posts/*.md')
   // const res = await fetch(`/blog.json`);
   const postResult = await Promise.resolve(postsPromise)
-  // console.log('blog/[slug]/+page.ts')
+  // console.log('blog/[slug]/+page.ts') 
   const postMeta = Object.values(postResult).map((c,i,a) => c())
   const postsRes = await Promise.all(postMeta)
   const postsAll = postsRes.map((c,i,a) => {

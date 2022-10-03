@@ -28,11 +28,15 @@
   
 
   import Style from '../global.css'
+import { allPosts } from '$lib/stores';
 
-  afterUpdate(() => {
-    let tmpURL = window.location.href
-    fullURL = tmpURL[tmpURL.length - 1] === '/' ? tmpURL : tmpURL + '/'
-  })
+  // afterUpdate(() => {
+  //   let tmpURL = window.location.href
+  //   fullURL = tmpURL[tmpURL.length - 1] === '/' ? tmpURL : tmpURL + '/'
+  // })
+
+  export let data
+  $: allPosts.set(data.posts)
 </script>
 
 <svelte:head>
