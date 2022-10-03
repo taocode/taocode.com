@@ -37,6 +37,7 @@
   export let postsByCategory: Post[] = data.postsByCategory;
   // export let posts: Post[] = data.posts;
   // console.log('categories[slug]+page.svelte',{data, error})
+  $: postsByCategory = data.postsByCategory
   $: readableSlug = convertToSentenceCase(data.slug);
 </script>
 
@@ -52,13 +53,13 @@
 <SEO />
 
 <BlogOverviewHeader image={accentImage[readableSlug].img} alt={accentImage[readableSlug].alt}>
-  <CurrentGoals readableSlug="{readableSlug}" />
+  <CurrentGoals {readableSlug} />
 </BlogOverviewHeader>
 
 <section class="container flex flex-wrap mj-container">
-  <BlogPostFilters posts="{postsByCategory}" filteredByCategory />
+  <BlogPostFilters posts={postsByCategory} filteredByCategory />
 
   <aside class="w-full mt-8 lg:mt-0 lg:w-3/12">
-    <BlogPostSidebar posts={$posts} />
+    <BlogPostSidebar />
   </aside>
 </section>

@@ -34,9 +34,9 @@ a {
     <h1>Blog</h1>
     <p>
       Insights and things I've learned working on the web for over 2 decades:
-      <a href="/categories/programming" sveltekit:prefetch>Programming</a>,
-      <a href="/categories/portfolio" sveltekit:prefetch>Portfolio</a>, and 
-      <a href="/categories/life" sveltekit:prefetch>Life</a>.
+      <a href="/categories/programming" data-sveltekit-prefetch>Programming</a>,
+      <a href="/categories/portfolio" data-sveltekit-prefetch>Portfolio</a>, and 
+      <a href="/categories/life" data-sveltekit-prefetch>Life</a>.
     </p>
     <h2>Blog post topic?</h2>
     <p>

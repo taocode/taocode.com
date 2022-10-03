@@ -4,7 +4,7 @@
 </script>
 
 <a
-  sveltekit:prefetch
+  data-sveltekit-prefetch
   href="/blog"
   class="inline-flex no-underline rounded hover:underline"
 >

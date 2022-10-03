@@ -16,7 +16,7 @@
 <span class="text-green-750 dark:text-green-200">{post.readingTimeText}</span>
 <span class:hide_category>
 &middot;
-<a sveltekit:prefetch href="/categories/{convertToSlug(post.category)}"
+<a data-sveltekit-prefetch href="/categories/{convertToSlug(post.category)}"
   >{post.category}
 </a>
 </span>

@@ -22,7 +22,7 @@
   <div class="container mj-container md:flex 
   md:items-center
   md:gap-8">
-    {#if post.thumbnail}
+    {#if post && post.thumbnail}
     <div class="w-3/5 mx-auto mb-6 flex-shrink align-middle
     p-2 rounded bg-opacity-40 bg-white dark:(bg-black bg-opacity-40)
     md:mb-0 md:w-1/3 lg:w-1/4 ">

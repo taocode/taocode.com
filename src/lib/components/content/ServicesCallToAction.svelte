@@ -12,7 +12,7 @@
         </p>
         <a
           href="/contact"
-          sveltekit:prefetch
+          data-sveltekit-prefetch
           class="mt-4 text-lg rounded btn-primary"
         >
           Get in touch

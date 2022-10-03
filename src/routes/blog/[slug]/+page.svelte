@@ -42,7 +42,7 @@
 </style>
 
 <SEO blogPostInfo="{blogPostInfo}" />
-<BlogPostHeader post="{post}" />
+<BlogPostHeader {post} />
 <section class="container flex flex-wrap mj-container">
   <article class="w-full pb-12 prose-lg lg:prose-xl blog lg:w-3/4 lg:pr-16">
     {#if post.lead }<p class="lead">{@html marked.parse(post.lead)}</p>{/if}
@@ -67,6 +67,6 @@
     />
   </article>
   <aside class="w-full mt-8 lg:mt-0 lg:w-3/12">
-    <BlogPostSidebar posts={$posts} />
+    <BlogPostSidebar />
   </aside>
 </section> 

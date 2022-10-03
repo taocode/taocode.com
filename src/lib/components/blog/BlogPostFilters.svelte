@@ -1,22 +1,22 @@
 <script lang="ts">
   import BlogPostCard from './BlogPostCard.svelte'
-  import flatten from 'flatten'
   import type { Post } from '$lib/models/post'
 
-  import { posts } from '$lib/stores'
+  import { posts as sPosts } from '$lib/stores'
 
+  export let posts: Post[] = $sPosts
   export let filteredByCategory: boolean = false
   export let filteredByTag: boolean = false
 
-  const uniqueCategories: string[] = $posts
+  const uniqueCategories: string[] = posts
     .map((post: Post) => post.category)
     .filter(
       (category: string, idx: number, arr: string[]) =>
         arr.indexOf(category) === idx,
     );
 
-  const allTags: string[][] = $posts.map((post: Post) => post.tags);
-  const uniqueTags: string[] = flatten(allTags).filter(
+  const allTags: string[][] = posts.map((post: Post) => post.tags);
+  const uniqueTags: string[] = allTags.flat(Infinity).filter(
     (tag: string, idx: number, arr: string[]) => arr.indexOf(tag) === idx,
   );
 
@@ -27,7 +27,7 @@
   let filteredPosts: Post[] = []
 
   $: {
-    filteredPosts = $posts.filter((post: Post) =>
+    filteredPosts = posts.filter((post: Post) =>
       post.title.toLowerCase().includes(textSearch.toLowerCase()),
     )
 
@@ -114,7 +114,7 @@
       Displaying
       <strong>{filteredPosts.length}</strong>
       of
-      {$posts.length}
+      {posts.length}
       posts
     </p>
     <div class="flex flex-wrap -m-2">

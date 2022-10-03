@@ -35,9 +35,9 @@
 </BlogOverviewHeader>
 
 <section class="container flex flex-wrap mj-container">
-  <BlogPostFilters posts="{postsByTag}" filteredByTag />
+  <BlogPostFilters posts={postsByTag} filteredByTag />
 
   <aside class="w-full mt-8 lg:mt-0 lg:w-3/12">
-    <BlogPostSidebar posts="{$posts}" />
+    <BlogPostSidebar />
   </aside>
 </section>

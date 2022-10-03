@@ -25,7 +25,7 @@
   >
     <div class="flex">
       <a
-        sveltekit:prefetch
+        data-sveltekit-prefetch
         href="/"
         class="mt-0 text-xl font-semibold tracking-tight nav-link text-green-500 md:inline-block"
       >
@@ -55,28 +55,28 @@
       class="w-full ml-auto md:(flex w-auto mr-4)"
     >
       <a
-        sveltekit:prefetch
+        data-sveltekit-prefetch
         href="/about"
         class="nav-link md:inline-block md:mt-0"
       >
         About
       </a>
       <a
-        sveltekit:prefetch
+        data-sveltekit-prefetch
         href="/blog"
         class="nav-link md:inline-block md:mt-0"
       >
         Blog
       </a>
       <a
-        sveltekit:prefetch
+        data-sveltekit-prefetch
         href="/services"
         class="nav-link md:inline-block md:mt-0"
       >
         Services
       </a>
       <a
-        sveltekit:prefetch
+        data-sveltekit-prefetch
         href="/contact"
         class="nav-link md:inline-block md:mt-0"
       >

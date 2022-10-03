@@ -38,7 +38,7 @@
   }
 </style>
 <div class="blog-post-card card">
-  <a sveltekit:prefetch href="/blog/{post.slug}" class="link-inherit"
+  <a data-sveltekit-prefetch href="/blog/{post.slug}" class="link-inherit"
   aria-label="{post.slug}"
       >
     <div class="card-transform">
