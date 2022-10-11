@@ -1,5 +1,4 @@
 <script lang="ts">
-  // throw new Error("@migration task: Add data prop (https://github.com/sveltejs/kit/discussions/5774#discussioncomment-3292707)");
 
   import BackToBlogOverviewBtn from '$lib/components/blog/BackToBlogOverviewBtn.svelte'
   import BlogPostHeader from '$lib/components/blog/BlogPostHeader.svelte'
@@ -17,11 +16,12 @@
 
   import { posts } from '$lib/stores'
 
-  $: post = $posts.find((post) => post.slug === $page.params.slug);
-  $: postIndex = $posts.findIndex((p) => p.slug === $page.params.slug);
-  $: previousArticle = $posts[postIndex + 1];
-  $: nextArticle = $posts[postIndex - 1];
-  $: pageTitle = `${post?.title} | TAOCode`;
+  $: slug = $page.params.slug
+  $: postIndex = $posts.findIndex((p) => p.slug === slug)
+  $: post = $posts[postIndex]
+  $: previousArticle = $posts[postIndex + 1]
+  $: nextArticle = $posts[postIndex - 1]
+  $: pageTitle = `${post?.title} | TAOCode`
 
   $: blogPostInfo = post
     ? {
@@ -41,7 +41,7 @@
 
 </style>
 
-<SEO blogPostInfo="{blogPostInfo}" />
+<SEO {blogPostInfo} />
 <BlogPostHeader {post} />
 <section class="container flex flex-wrap mj-container">
   <article class="w-full pb-12 prose-lg lg:prose-xl blog lg:w-3/4 lg:pr-16">
