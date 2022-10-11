@@ -63,60 +63,44 @@
       url('/fonts/rubik-v12-latin/rubik-v12-latin-700italic.woff')
       format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
-
-/* spectral-regular - latin */
+/* noto-sans-regular - latin */
 @font-face {
-  font-family: 'Spectral';
+  font-family: 'Noto Sans';
   font-style: normal;
   font-weight: 400;
-  font-display: swap;
-  src: local(''),
-    url('/fonts/spectral-v7-latin/spectral-v7-latin-regular.woff2')
-      format('woff2'),
-    /* Chrome 26+, Opera 23+, Firefox 39+ */
-      url('/fonts/spectral-v7-latin/spectral-v7-latin-regular.woff')
-      format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  src: local('Noto Sans'),
+       url('/fonts/noto-sans-v27-latin/noto-sans-v27-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('/fonts/noto-sans-v27-latin/noto-sans-v27-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
-/* spectral-italic - latin */
+/* noto-sans-italic - latin */
 @font-face {
-  font-family: 'Spectral';
+  font-family: 'Noto Sans';
   font-style: italic;
   font-weight: 400;
-  font-display: swap;
-  src: local(''),
-    url('/fonts/spectral-v7-latin/spectral-v7-latin-italic.woff2')
-      format('woff2'),
-    /* Chrome 26+, Opera 23+, Firefox 39+ */
-      url('/fonts/spectral-v7-latin/spectral-v7-latin-italic.woff')
-      format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  src: local('Noto Sans'),
+       url('/fonts/noto-sans-v27-latin/noto-sans-v27-latin-italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('/fonts/noto-sans-v27-latin/noto-sans-v27-latin-italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
-/* spectral-700 - latin */
+/* noto-sans-700 - latin */
 @font-face {
-  font-family: 'Spectral';
+  font-family: 'Noto Sans';
   font-style: normal;
   font-weight: 700;
-  font-display: swap;
-  src: local(''),
-    url('/fonts/spectral-v7-latin/spectral-v7-latin-700.woff2') format('woff2'),
-    /* Chrome 26+, Opera 23+, Firefox 39+ */
-      url('/fonts/spectral-v7-latin/spectral-v7-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  src: local('Noto Sans'),
+       url('/fonts/noto-sans-v27-latin/noto-sans-v27-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('/fonts/noto-sans-v27-latin/noto-sans-v27-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
-/* spectral-700italic - latin */
+/* noto-sans-700italic - latin */
 @font-face {
-  font-family: 'Spectral';
+  font-family: 'Noto Sans';
   font-style: italic;
   font-weight: 700;
-  font-display: swap;
-  src: local(''),
-    url('/fonts/spectral-v7-latin/spectral-v7-latin-700italic.woff2')
-      format('woff2'),
-    /* Chrome 26+, Opera 23+, Firefox 39+ */
-      url('/fonts/spectral-v7-latin/spectral-v7-latin-700italic.woff')
-      format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  src: local('Noto Sans'),
+       url('/fonts/noto-sans-v27-latin/noto-sans-v27-latin-700italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('/fonts/noto-sans-v27-latin/noto-sans-v27-latin-700italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
-
 body {
-  font-family: 'Spectral', sans-serif;
+  font-family: 'Noto Sans', sans-serif;
   padding-top: 56px;
   @apply relative leading-relaxed text-lg;
   &::before {
