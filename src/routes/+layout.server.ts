@@ -1,8 +1,14 @@
 
 import { parseISO } from "date-fns"
 import readingTime from "reading-time"
+import { marked }  from 'marked'
+import loadLanguages from 'prismjs/components/index.js'
+
+loadLanguages(['shell', 'markdown', 'json','js','ts'])
 
 export const prerender = true
+
+
 
 export async function load() {
 
@@ -19,6 +25,7 @@ export async function load() {
       data.html = c.default.render().html
       data.readingTimeText = readingTime(data.html).text
     }
+    data.excerpt = marked.parse(data.excerpt)
 		data.published = parseISO(data.creationDate)
 		// console.log('loaded:',data.slug,data.creationDate,data.published,data.creationDate)
     return data
