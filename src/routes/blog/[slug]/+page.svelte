@@ -16,6 +16,10 @@
 
   import { posts } from '$lib/stores'
 
+  export let data
+  let pageComponent = data.pageComponent
+  $: pageComponent = data.pageComponent
+
   $: slug = $page.params.slug
   $: postIndex = $posts.findIndex((p) => p.slug === slug)
   $: post = $posts[postIndex]
@@ -37,16 +41,13 @@
   <title>{pageTitle}</title>
 </svelte:head>
 
-<style>
-
-</style>
 
 <SEO {blogPostInfo} />
 <BlogPostHeader {post} />
 <section class="container flex flex-wrap mj-container">
   <article class="w-full pb-12 prose-lg lg:prose-xl blog lg:w-3/4 lg:pr-16">
     {#if post.lead }<p class="lead">{@html marked.parse(post.lead)}</p>{/if}
-    {@html post.html}
+    <svelte:component this={pageComponent} />
     <div class="flex justify-between items-center w-auto max-w-xs mx-auto p-3 mt-6 mb-8 border-2 rounded bg-green-100 bg-opacity-70 border-green-700 dark:bg-green-900">
       <div class="h-full -m-3 mr-1 py-1 px-3 bg-green-700 text-green-100 dark:text-green-950">
         <Icon data="{share}" class="" scale="{1.5}" />
@@ -70,3 +71,7 @@
     <BlogPostSidebar />
   </aside>
 </section> 
+
+<style lang="postcss">
+
+</style>
