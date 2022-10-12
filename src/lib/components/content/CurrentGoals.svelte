@@ -41,7 +41,7 @@
     ],
     'Life': [
       {
-        text: 'Workout 30+ minutes a day',
+        text: 'Workout 3+ times a week',
         reached: true,
       },
       {
@@ -50,7 +50,11 @@
       },
       {
         text: 'Compost kitchen scraps',
-        reached: false,
+        reached: true,
+      },
+      {
+        text: 'Learn to ride an EUC',
+        reached: true,
       },
       {
         text: 'Get a bike',
