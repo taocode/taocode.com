@@ -5,7 +5,7 @@ creationDate: '2022-10-02'
 category: 'Life'
 draft: true
 excerpt: '*2 habits* made 2.5 years ago that have improved my health, evolved.'
-lead: My workout habbits are less regimented since I started to *ride an EUC* but fasting has been easy to maintain.
+lead: My workout habits are less regimented since I started to *ride an EUC* but fasting has been easy to maintain.
 cover: pen-writing-on-a-paper.jpeg
 tags:
   - Health
@@ -14,54 +14,52 @@ tags:
   - Fasting
 ---
 
-May 20, 2020 — I was in a minor health crisis if I'd bother to pay attention to my weight. The daily walks around the neighborhood weren't enough to offset the cheese and crispy-crunchy late-night *and overnight* snacking.
+October 10, 2022 — it's been a while since I implemented my 2 step program for health. So... *how's it going?*
 
-To my thinking: *30 minutes everyday* is better than *1 hour every-other-day* and *eat nutritionally dense food* and *eating less* are key to weight loss.
+## Exercise everyday - *Mixed* 
 
-## 1) Exercise: 30+ minutes/day
+After maintaining 6 workouts a weeek of 30+ minutes, I found it to be a bit too much. I now aim for 2-3 upper-body strength workouts per week, circuit style using suspension straps. I ride EUC most everyday for about an hour. I take stretch breaks throughout the day and use a sit/stand desk during work, sometimes seated on a balance ball.
 
-I've stuck to various bodyweight and strength-focused circuit training, 6 days a week with a day off. This varies, some days I will workout for over 40 minutes but I try to keep the intensity to a level that makes much more than 30 minutes a challenge, especially in the beginning. Some days I'm sore and the workout is a little less intense.
+### Electric Unicycle Dreams
 
-I use suspension straps (TRX style) for a variety of upper body and core strength-training exercises. For lower body, many varieties of squats, lunges, deadlifts, ice skaters, bridges, etc... are available with no equipment needed, *just move!*
+I've ridden over 3,000 miles on an <abbr title="Electric Unicycle">EUC</abbr> this year; it isn't exactly a *cardio workout* but it also isn't exactly doing nothing. Riding with an HR monitor, I'm typically between 85-110, often under 100 BPM. On extended offroad trails my HR can peak around 160 BPM. 
 
-I like exercising before breaking my fast, I've never felt like hunger detracted from my workout. If anything, the frenetic energy of hunger helps compel me to move, knowing that I'll have food soon after. This maximizes my fat burning potential and it aids in recovery to eat something after a strong workout, helping to be strong for the next workout.
+#### Core & Leg Training
 
-## 2) Fast: 12+ hours/night
+EUC riding requires balance and an active stance with at least a slight bend to the knees. All in all, my core from abs to hips get used to carve and stabilize across bumpy terrain.
 
-A surprisingly easy way to *eat less*. That's important but there appears to be a bit more to fasting than simply eating less. It shifts what your body does with itself; it can more readily access fat as an energy source.
+## 2) Fasting Overnight
 
-I've never intentionally fasted before so this was a bit scary to start with last year, now it's truly habit. It took at least 3 months to get used to fasting with such intention, after 6 months I've often extended up to 16+ hours. My hunger level varies and when I can quietly get up to 16 hours of fast without hunger being a big annoying irritant, I do. Sometimes I break my fast shorter because I'm too distracted by hunger... but never less than 12 hours.
+*After the first 3 months,* fasting overnight has generally been easy to maintain. There's a rare exception to this rule but I still find it fairly easy to not eat for more than 12 hours a night.
 
 ## Results
 
-***I lost 30 pounds in the first 6 months!*** This was great and I thought, cool, *only another 20 to go!*
-
-Except that I've hit a plataeu for the last 6 months and have maintained a higher-than-ideal weight but much healthier than before.
-
-Weight is just one dimension, I've gained a general mood improvement, improved energy and mental/emotional health. I feel like I can actually take on life again, whereas I was feeling a bit dragged by the bus of life before.
-
-## Background
-
-Facing many life changes largely brought on by the global coronavirus pandemic, something finally clicked last year and I knew I needed to make some changes for my longterm health and wellbeing.
-
-### Pool Closure
-
-My primary form of exercise has been *swimming*. I love getting out of gravity for a moment, even if it means *always* smelling the pool chemicals in my hair and beard. But then the pools were closed and I needed to find another option.
-
-### Houshold Changes
-
-During the first part of the pandemic lockdown my best friend moved in with his 2 children. This was a delight and they helped straighten up my place and make it a space we could all share, but it was a big adjustment for me personally; I couldn't imagine braving the start of this lockdown without the support and company of these fine people.
-
-After that Cassidy came to live with me. It's been great to have loved ones to share these stressful days.
+***I've maintained my weight.*** I've generally weighed the same for over a year even with the workout plan changes.
 
 ### Sit-Stand Desk
 
-I got an electronic sit-stand desk and like it very much. I split my time between sitting and standing, shifting is as easy as pressing a button and waiting about 30 seconds. 
+I am looking for a tilting stool to have an option between sitting and standing. I hardly remember being trapped in my chair to work and shift a few times per day from standing to sitting on a balance ball or chair.
 
-## Exercise Inspiration
+## My Suspension Strap (TRX) Workout
 
-I have a few workouts on YouTube that I've done repeatedly. Even after a year I still consider myself generally a "beginner" and modify the workouts by skipping jumping and opting for other low-impact modifications.
+I find it helpful to move my feet away from or towards the suspension point to decrease or increase muscle load, respectively. This is most pronounced in the chest Fly because I like to get a stretch in at the top of the motion but it can put a dangerous amount of load on your shoulders, in particular the rotator cuff tendon. So I step into the stretch, lightening the load. I do this to lesser degrees on other exercises
 
-I get my heart rate up while challenging my myself with the intent to build muscle strength. By executing in a circuit, I get some cardio benefits while using the time wisely.
+1. **Push-Ups** - on floor with grip handles, focus on pushing hands towards each other)
+1. **Back Row** - full range, from face/head to kidneys
+1. **Chest Press** - full range, pushing up for upper chest, middle and low angle
+1. **Torso Twist** - facing suspension point
+1. **Chest Fly** - move arms along multiple angles for even muscle fatigue
+1. **Back Fly** - move along multiple angles from narrow, tall Y to a low T
+1. **Power Pull** - staggered descending repetition: 3 left, 3 right, 2 left, 2 right, ...
+1. **Triceps Extension** - from above head "hammer toss" and from the ears/shoulders
+1. **Bicep Curl** - from separate with wrists rotated in to out to clutched together
 
-Along with some YouTube works (favorites from SELF and Fitness Blender), I have designed my own suspension strap upper body plus core workout.
+I perform each exercise for ~1 minute and move directly to the next with no break. The routine is designed to allow the most recently used muscle to recover. I usually repeat the routine twice but sometimes I'll add a 3rd, bonus round.
+
+The suspension straps have provided me a few hundred upper body workouts. They're relatively cheap, lightweight, easy to travel with and can provide resistance at a variety of angles and loads based on foot placement.
+
+### Suspension Straps Don't Have Numbers
+
+Using freeweights you can easily say *"I bench press 200 pounds"* but using suspension straps has no such simplistic goal. **Why's that good?** *Because,* I cannot compare nor compete with a number. It's not that numbers are bad but without numbers it's all about how it feels. Too much load? Lighten it. Too easy? Step toward the suspension point. It becomes almost a dance with the goal of tiring specific muscles.
+
+
