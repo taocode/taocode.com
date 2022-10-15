@@ -24,7 +24,6 @@
 
   onMount(() => {
     win = window;
-    console.log('taocode/svelte-header onMount(v2)',win);
   });
 
   function deriveClass(y = 0, scrolled = 0) {
