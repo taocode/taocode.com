@@ -1,12 +1,11 @@
 ---
 title: 'Why I Love to Ride EUCs'
 slug: 'why-i-love-to-ride-eucs'
-creationDate: '2022-10-10'
+creationDate: '2022-09-29'
 category: 'Life'
-draft: true
 excerpt: 'Electric Unicycles are incredibly fun!'
-lead: I started to ride an EUC in the last days of 2021. <span class="inline-block my-6 whitespace-nowrap text-3xl font-bold italic">I Love it!</span>
-cover: pen-writing-on-a-paper.jpeg
+lead: I ❤️ to ride Electric Unicycles!
+thumbnail: /images/life/ExN on Broad Street Bridge 2022.jpg
 tags:
   - Health
   - Wellbeing
@@ -14,11 +13,13 @@ tags:
   - Joy
 ---
 
-October 10, 2022 — With nearly 10 months of riding and well over 3,000 miles of mixed street and offroad riding, *what's it like?*
+With nearly 10 months of riding and well over 3,000 miles of mixed street and offroad riding, *what's it like?*
 
 ## Riding an EUC *is Stupid Fun!*
 
-It's a magical vehicle that *"reads your mind"* (by responding to your body position). It's *even more fun* with *more experience!* I've put in a lot of offroad time which has helped me become a better rider at lower speeds and helps me stay with the wheel over bumpy offroad trais and rough streets. There are some smooth surfaces but generally roads have at least some ruts and bumps so it is a necessary skill.
+It's a magical vehicle that *"reads your mind"* (by responding to your body position). It's *even more fun* with *more experience!* I've put in a lot of offroad time which has helped me become a better rider. It's slower and falls are softer than asphalt but it really helped me train for rough streets.
+
+Roads usually have at least some *ruts, bumps and potholes* so it's important to gain competency and stay with the wheel throughout as it tracks, skids and gets kicked around. It's a cooperative endeavor, you have to go with the skid if you want to stay on the wheel.
 
 ## Invisible Vehicle *from the Rider's Perspective*
 
@@ -38,7 +39,7 @@ I've enjoyed the entire learning experience, even those shaky, early days. While
 
 ## Cool, cool, but ... *What About Injuries?*
 
-I've had a few minor bruises from some low-speed falls, generally offroad hitting a hole or a ditch where I couldn't keep the wheel under me. So most of my falls have been on grass and the vast majority of my accidents are under 5 MPH.
+I've had a few minor bruises from some low-speed falls, generally offroad hitting a hole or a ditch where I couldn't keep the wheel under me. Most of my falls have been on grass and most of my accidents have been under 5 MPH.
 
 My left elbow got a raspberry from an early crash and failure of my safety equipment and was bruised again because I missed the elbow pad in the jacket on another fall. My fingers got scraped up and there's been various bruising in calves where they contact the vehicle early on but nothing major.
 
@@ -50,11 +51,14 @@ It isn't exactly a *cardio workout* but it also isn't exactly doing nothing. I'm
 
 EUC riding requires balance and an active stance with at least a slight bend to the knees. All in all, my core from abs to hips get used to carve and stabilize across bumpy terrain.
 
-Calf, hip and hamstring stretches become very meaningful and helpful.
+Calf, hip and hamstring stretches feel fully necessary at times. It uses some muscles in a different enough way that I'm still building up my strength and endurance.
 
 ### Knee Injury
 
-I hurt my right knee at age 11 when I slipped and the ensuing injury has left scar tissue and what's been identified as a ganglion cyst. Occassionally, usually weather dependent, I experience pain and soreness at and near the injury.
+My right knee sustained an injury when I was 11; it left scar tissue and occassionally, *often weather dependent,* I experience pain and soreness at and near the injury.
 
-Since riding an EUC, I've only experienced 1 medium intense flare-up. I expect this is because I'm strengthening all of the connective tissue and muscles while being magically transported around town.
+Since riding an EUC, my knee's only flared-up once. I suspect this is because I'm strengthening all of the connective tissue and muscles while being magically transported around town.
 
+## *Is EUC for You?*
+
+If you think you'd like to ride an EUC, give it a chance! It's fun, light exercise with the health benefits of improving balance and posture. 
