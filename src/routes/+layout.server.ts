@@ -2,6 +2,7 @@
 import { parseISO } from "date-fns"
 import readingTime from "reading-time"
 import { marked }  from 'marked'
+import Prism from 'prismjs'
 import loadLanguages from 'prismjs/components/index.js'
 
 loadLanguages(['shell', 'markdown', 'json','js','ts'])
