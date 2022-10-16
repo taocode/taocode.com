@@ -17,9 +17,9 @@ It's been a while since I implemented my 2 step program for health. So... *how's
 
 ## 1) Exercise everyday - *Mixed* 
 
-After maintaining 6 workouts a weeek of 30+ minutes, I found it to be a bit too much. I now aim for 2-3 upper-body strength workouts per week, circuit style using suspension straps. I ride EUC most everyday for about an hour. I take stretch breaks throughout the day and use a sit/stand desk during work, sometimes seated on a balance ball.
+After maintaining 6 workouts a weeek of 30+ minutes, I found it to be a bit too much. I now aim for 2-3 upper-body strength workouts per week, circuit style using suspension straps. I [ride EUC](/blog/why-i-love-to-ride-eucs) most everyday for about an hour. I take stretch breaks throughout the day and use a sit/stand desk during work, sometimes seated on a balance ball.
 
-Far more exciting: [I can ride an electric unicycle!](/blog/why-i-love-to-ride-eucs). Read about it there but know that I ride an average of an hour everyday, sometimes more. Also, see my [My TRX/Suspension Strap Workout](/blog/my-suspension-strap-workout) for the details on my regular workout routine.
+Also, see my [My TRX/Suspension Strap Workout](/blog/my-suspension-strap-workout) for the details on my regular workout routine.
 
 ### Sit-Stand Desk
 
