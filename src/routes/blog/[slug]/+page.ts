@@ -3,10 +3,9 @@ import type { Post } from '$lib/models/post'
 
 import { allPosts, posts } from '$lib/stores'
 import { get } from 'svelte/store'
-import type { PageServerLoad } from './$types'
+import type { PageLoad } from './$types'
 
-/** @type {import('./$types').PageLoad} */
-export async function load<PageServerLoad>({ fetch, params }) {
+export async function load<PageLoad>({ fetch, params }) {
   try {
     const compPromise = import(`../../../posts/${params.slug}.md`)
     const compResult = await Promise.resolve(compPromise)
