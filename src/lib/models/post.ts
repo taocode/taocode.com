@@ -13,4 +13,5 @@ export type Post = {
   site_url?: string;
   lead?: string;
   readingTimeText: string;
+  wordCount: number;
 };

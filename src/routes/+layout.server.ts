@@ -24,7 +24,9 @@ export async function load() {
 		const data = c.metadata
     if (typeof c.default.render === 'function') {
       data.html = c.default.render().html
-      data.readingTimeText = readingTime(data.html).text
+      const rto = readingTime(data.html)
+      data.readingTimeText = rto.text
+      data.wordCount = rto.words
     }
     data.excerpt = marked.parse(data.excerpt)
 		data.published = parseISO(data.creationDate)

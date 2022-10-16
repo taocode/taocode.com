@@ -11,10 +11,10 @@
 <section class="container mj-container">
   <h2>Recent Posts</h2>
 
-  <div class="flex flex-wrap -m-2">
+  <div class="recent-posts">
     {#each filteredPosts as post}
       <div class="card-post">
-        <BlogPostCard post="{post}" />
+        <BlogPostCard {post} />
       </div>
     {/each}
   </div>
@@ -32,5 +32,14 @@
 <style lang="postcss">
   .card-post {
     @apply flex items-stretch w-full p-2 sm:w-1/2 lg:w-1/3;
+    &:nth-child(3) {
+      @apply hidden lg:block;
+    }
+  }
+  .recent-posts {
+    @apply flex flex-wrap -mx-2;
+  }
+  section {
+    @apply mb-9;
   }
 </style>

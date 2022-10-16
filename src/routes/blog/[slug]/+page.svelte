@@ -18,6 +18,8 @@
 
   export let data
   let pageComponent = data.pageComponent
+  let metadata = data.metadata
+  console.log({metadata})
   $: pageComponent = data.pageComponent
 
   $: slug = $page.params.slug

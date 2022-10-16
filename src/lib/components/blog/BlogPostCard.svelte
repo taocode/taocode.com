@@ -8,48 +8,20 @@
 
   export let post: Post;
 </script>
-<style type="postcss">
-  .card {
-    perspective: 600px;
-  }
 
-  .card-transform {
-    /* @apply relative h-full w-full; */
-    width: 100%;
-    height: 100%;
-    position: relative;
-    transition: transform 0.6s ease;
-    transform-style: preserve-3d;
-    @apply aspect-1/1;
-  }
-  .card:hover .card-transform,
-  .card:focus-within .card-transform {
-    transform: rotateY(180deg);
-  }
-  .card-face {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    backface-visibility: hidden;
-  }
-  .card-face-back {
-    @apply bg-green-600 items-center justify-center flex text-center;
-    transform: rotateY( 180deg );
-  }
-</style>
-<div class="blog-post-card card">
+<div class="blog-post-card dark:bg-black">
   <a data-sveltekit-prefetch href="/blog/{post.slug}" class="link-inherit"
   aria-label="{post.slug}"
       >
-    <div class="card-transform">
-    <div class="card-face card-face-front">
+    <div class="card-transform border-gray-400 dark:border-gray-700">
+    <div class="card-face card-face-front dark:bg-gray-900">
       <div class="px-6 py-8">
         <div class="my-3 text-xl font-bold font-display">
           {post.title}
         </div>
 
         <div class="my-3 font-display">
-          <InfoTags {post} hide_category={true} />
+          <InfoTags {post} hideCategory readTimeText />
         </div>
 
         {#if post.excerpt}
@@ -60,7 +32,7 @@
           </p>
         {/if}
       </div>
-      <div class="absolute bottom-0 right-0 pt-4 pl-6 text-right">
+      <div class="absolute bottom-0 right-0 pt-4 pl-6">
         <span
           aria-hidden="true"
           class="inline-block rounded-br btn-primary"
@@ -82,3 +54,31 @@
   </a>
 </div>
 
+<style type="postcss" global>
+  .blog-post-card {
+    @apply relative w-full h-full;
+  }
+  .card-transform {
+    /* @apply relative h-full w-full; */
+    @apply aspect-1/1 border-2 rounded;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s ease;
+    transform-style: preserve-3d;
+  }
+  .blog-post-card:hover .card-transform,
+  .blog-post-card:focus-within .card-transform {
+    transform: perspective(25rem) rotateY(180deg);
+  }
+  .card-face {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    backface-visibility: hidden;
+  }
+  .card-face-back {
+    @apply bg-green-600 items-center justify-center flex text-center overflow-hidden;
+    transform: rotateY( 180deg );
+  }
+
+</style>
