@@ -1,6 +1,6 @@
 ---
 title: "New Website: Now with SvelteKit!"
-slug: new-site-sveltekit
+slug: new-site-sveltekit-upgrade
 category: Programming
 creationDate: '2021-05-26'
 excerpt: The new TAOCode site reworked with SvelteKit.
