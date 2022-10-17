@@ -26,16 +26,19 @@
     .addEventListener("change",updateSystemPreferenceDarkTheme)
 	});
   
+  import '../vars.css'
+  import '../fonts.css'
+  import '../global.css'
 
-  import Style from '../global.css'
-import { allPosts } from '$lib/stores';
+  import { allPosts } from '$lib/stores'
+  import type { PageData } from './$types'
 
-  // afterUpdate(() => {
-  //   let tmpURL = window.location.href
-  //   fullURL = tmpURL[tmpURL.length - 1] === '/' ? tmpURL : tmpURL + '/'
-  // })
+  afterUpdate(() => {
+    let tmpURL = window.location.href
+    fullURL = tmpURL[tmpURL.length - 1] === '/' ? tmpURL : tmpURL + '/'
+  })
 
-  export let data
+  export let data: PageData
   $: allPosts.set(data.posts)
 </script>
 

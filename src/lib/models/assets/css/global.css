@@ -1,104 +1,31 @@
 
-/* @font-face {
-  font-family: 'Lato';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: local('Lato Regular'), local('Lato-Regular'),
-    url('/fonts/lato-v17-latin-regular.woff2') format('woff2');
+html {
+  font-size: var(--font-size);
+}
+@media only screen and (min-width: 480px) {
+  :root { --font-size: 14px; }
+}
+@media only screen and (min-width: 668px) {
+  :root { --font-size: 14.5px; }
+}
+@media only screen and (min-width: 768px) {
+  :root { --font-size: 15px; }
+}
+@media only screen and (min-width: 1024px) {
+  :root { --font-size: 16px; }
+}
+@media only screen and (min-width: 1280px) {
+  :root { --font-size: 17px; }
+}
+@media only screen and (min-width: 1536px) {
+  :root { --font-size: 18px; }
+}
+/* Selection color */
+::selection {
+  background-color: var(--color-brand-light);
+  color: var(--color-gray-dark,#101);
 }
 
-@font-face {
-  font-family: 'Lato';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: local('Lato Bold'), local('Lato-Bold'),
-    url('/fonts/lato-v17-latin-700.woff2') format('woff2');
-} */
-
-/* rubik-regular - latin */
-@font-face {
-  font-family: 'Rubik';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: local('Rubik'),
-    url('/fonts/rubik-v12-latin/rubik-v12-latin-regular.woff2') format('woff2'),
-    /* Chrome 26+, Opera 23+, Firefox 39+ */
-      url('/fonts/rubik-v12-latin/rubik-v12-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
-/* rubik-700 - latin */
-@font-face {
-  font-family: 'Rubik';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: local('Rubik'),
-    url('/fonts/rubik-v12-latin/rubik-v12-latin-700.woff2') format('woff2'),
-    /* Chrome 26+, Opera 23+, Firefox 39+ */
-      url('/fonts/rubik-v12-latin/rubik-v12-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
-/* rubik-italic - latin */
-@font-face {
-  font-family: 'Rubik';
-  font-style: italic;
-  font-weight: 400;
-  font-display: swap;
-  src: local('Rubic'),
-    url('/fonts/rubik-v12-latin/rubik-v12-latin-italic.woff2') format('woff2'),
-    /* Chrome 26+, Opera 23+, Firefox 39+ */
-      url('/fonts/rubik-v12-latin/rubik-v12-latin-italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
-/* rubik-700italic - latin */
-@font-face {
-  font-family: 'Rubik';
-  font-style: italic;
-  font-weight: 700;
-  font-display: swap;
-  src: local('Rubik'),
-    url('/fonts/rubik-v12-latin/rubik-v12-latin-700italic.woff2')
-      format('woff2'),
-    /* Chrome 26+, Opera 23+, Firefox 39+ */
-      url('/fonts/rubik-v12-latin/rubik-v12-latin-700italic.woff')
-      format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
-/* noto-sans-regular - latin */
-@font-face {
-  font-family: 'Noto Sans';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Noto Sans'),
-       url('/fonts/noto-sans-v27-latin/noto-sans-v27-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('/fonts/noto-sans-v27-latin/noto-sans-v27-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
-/* noto-sans-italic - latin */
-@font-face {
-  font-family: 'Noto Sans';
-  font-style: italic;
-  font-weight: 400;
-  src: local('Noto Sans'),
-       url('/fonts/noto-sans-v27-latin/noto-sans-v27-latin-italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('/fonts/noto-sans-v27-latin/noto-sans-v27-latin-italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
-/* noto-sans-700 - latin */
-@font-face {
-  font-family: 'Noto Sans';
-  font-style: normal;
-  font-weight: 700;
-  src: local('Noto Sans'),
-       url('/fonts/noto-sans-v27-latin/noto-sans-v27-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('/fonts/noto-sans-v27-latin/noto-sans-v27-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
-/* noto-sans-700italic - latin */
-@font-face {
-  font-family: 'Noto Sans';
-  font-style: italic;
-  font-weight: 700;
-  src: local('Noto Sans'),
-       url('/fonts/noto-sans-v27-latin/noto-sans-v27-latin-700italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('/fonts/noto-sans-v27-latin/noto-sans-v27-latin-700italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
 body {
   font-family: 'Noto Sans', sans-serif;
   padding-top: 56px;
