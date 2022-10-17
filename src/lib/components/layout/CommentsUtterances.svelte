@@ -1,7 +1,9 @@
 <script>
+import { dev } from '$app/environment'
 import { onMount } from 'svelte'
 
 onMount(() => {
+	if (!dev) {
     const s = document.createElement('script')
     const tag = document.getElementById('utterances')
     s.setAttribute('repo',"taocode/taocode.com")
@@ -11,6 +13,7 @@ onMount(() => {
     s.setAttribute('crossorigin',"anonymous")
     s.src = 'https://utteranc.es/client.js'
     tag.parentNode.insertBefore(s, tag)
+	}
 })
 </script>
-<div id="utterances"></div>
+<div id="utterances" class="mt-16"></div>
