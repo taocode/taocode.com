@@ -41,13 +41,13 @@
             <Icon data="{faExternalLinkSquareAlt}" class="text-green-700 -mt-1 inline-block" scale="{0.8}" />
           </a></div>
         {/if}
-        <InfoTags post="{post}" />
+        <InfoTags {post} />
 
 
         <BlogPostTag tags="{post.tags}" />
 
         <div class="flex flex-wrap justify-center my-5">
-          <ShareButtons post="{post}" />
+          <ShareButtons {post} />
         </div>
 
         {#if post.hasAffiliateLink}

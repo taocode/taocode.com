@@ -58,7 +58,7 @@
       <input
         id="text-search"
         bind:value="{textSearch}"
-        class="w-full text-gray border border-gray-400 rounded hover:border-gray-500"
+        class="select-filter"
         type="text"
         placeholder="e.g: Why I started this blog"
       />
@@ -75,7 +75,7 @@
         <div class="relative">
           <select
             bind:value="{categorySearch}"
-            class="w-full text-gray border border-gray-400 rounded hover:border-gray-500"
+            class="select-filter"
             id="category-search"
           >
             <option value="">Select a category</option>
@@ -96,7 +96,7 @@
         <div class="relative">
           <select
             bind:value="{tagSearch}"
-            class="w-full text-gray border border-gray-400 rounded hover:border-gray-500"
+            class="select-filter"
             id="tag-search"
           >
             <option value="">Select a tag</option>
@@ -120,7 +120,7 @@
     <div class="flex flex-wrap -m-2">
       {#each filteredPosts as post}
         <div class="flex items-stretch w-full p-2 sm:w-1/2">
-          <BlogPostCard post="{post}" />
+          <BlogPostCard {post} />
         </div>
       {/each}
     </div>
@@ -133,3 +133,9 @@
     </div>
   {/if}
 </div>
+
+<style lang="postcss">
+  .select-filter {
+    @apply w-full px-2 text-gray-light border border-gray-400 rounded hover:border-gray-500;
+  }
+</style>
