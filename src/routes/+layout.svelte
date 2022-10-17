@@ -26,9 +26,9 @@
     .addEventListener("change",updateSystemPreferenceDarkTheme)
 	});
   
-  import '../vars.css'
-  import '../fonts.css'
-  import '../global.css'
+  import '$lib/assets/css/vars.css'
+  import '$lib/assets/css/fonts.css'
+  import '$lib/assets/css/global.pcss'
 
   import { allPosts } from '$lib/stores'
   import type { PageData } from './$types'

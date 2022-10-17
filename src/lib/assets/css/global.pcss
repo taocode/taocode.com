@@ -37,22 +37,17 @@ body {
   }
 }
 
-h1, h2, h3, h4, h5, h6,
-.prose h1, .prose h2, .prose h3, .prose h4, .prose h5, .prose h6  {
+h1, h2, h3, h4, h5, h6 {
   @apply font-display;
+}
+.prose {
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
 }
 
 .mj a {
   @apply text-green-700;
-}
-.dark .mj a {
-  @apply text-green-400;
-  &:hover {
-    @apply text-green-300;
-  }
-}
-.dark {
-  @apply bg-black text-gray-300;
 }
 
 .mj a:hover {
@@ -352,14 +347,35 @@ h1, h2, h3, h4, h5, h6,
 .lg\:prose-xl img {
   margin: 0 !important;
 }
+.prose {
+  .lead,
+  em,
+  strong {
+  /* background: red; */
+  color: inherit;
+}
+}
 
 .prose-lg ul > li,
 .lg\:prose-xl ul > li {
   padding-left: 0 !important;
 }
 .dark {
+  @apply bg-black text-gray-300;
   [type='text'], [type='email'], [type='url'], [type='password'], [type='number'], [type='date'], [type='datetime-local'], [type='month'], [type='search'], [type='tel'], [type='time'], [type='week'], [multiple], textarea, select {
     @apply bg-gray-850 text-gray-300 placeholder-gray-350;
+  }
+  .mj a {
+    @apply text-green-400;
+    &:hover {
+      @apply text-green-300;
+    }
+  }
+  .prose {
+    @apply text-gray-light;
+    h1, h2, h3, h4, h5, h6 {
+      @apply text-gray-light;
+    }  
   }
   .text-gray {
     @apply text-gray-500
