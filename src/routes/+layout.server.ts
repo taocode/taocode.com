@@ -9,24 +9,24 @@ loadLanguages(['shell', 'markdown', 'json','js','ts'])
 
 export const prerender = true
 
-export async function load() {
+import type { LayoutServerLoad } from './$types'
+export async function load<LayoutServerLoad>({params}) {
 
   const postsPromise = import.meta.glob('../posts/*.md')
   // const res = await fetch(`/blog.json`);
   const postResult = await Promise.resolve(postsPromise)
-  // console.log('blog/[slug]/+page.ts') 
+  // console.log('/+layout.server.ts load()',{params}) 
   const postMeta = Object.values(postResult).map((c,i,a) => c())
   const slugs = Object.keys(postResult).map((c) => c.slice(9,c.lastIndexOf('.')))
   // console.log({slugs})
   const postsRes = await Promise.all(postMeta)
   const postsAll = postsRes.map((c,i,a) => {
     // console.dir(typeof c.default.render)
-		const data = c.metadata
+    const data = c.metadata
     if (typeof c.default.render === 'function') {
       const rendered = c.default.render()
       // console.log(c)
-      data.html = rendered.html
-      const rto = readingTime(data.html)
+      const rto = readingTime(rendered.html)
       data.readingTimeText = rto.text
       data.wordCount = rto.words
     }
@@ -35,8 +35,8 @@ export async function load() {
       data.slug = slugs[i]
     }
     data.excerpt = marked.parse(data.excerpt)
-		data.published = parseISO(data.creationDate)
-		// console.log('loaded:',data.slug,data.creationDate,data.published,data.creationDate)
+    data.published = parseISO(data.creationDate)
+    // console.log('loaded:',data.slug,data.creationDate,data.published,data.creationDate)
     return data
   })
   // console.dir(postsRes)
