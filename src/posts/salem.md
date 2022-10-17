@@ -18,7 +18,7 @@ tags:
 
 Managing the public facing sites for salem.edu and salemacademy.com has been my main job since 2008.
 
-I've used many systems over the years from Joomla, Plone, and Cascade Server to Drupl, WordPress and ConcreteCMS.
+I've used many systems over the years from Joomla, Plone, and Cascade Server to Drupal, WordPress and ConcreteCMS.
 
 ## Tech Stack
 
