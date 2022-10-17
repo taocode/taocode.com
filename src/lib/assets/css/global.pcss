@@ -351,9 +351,19 @@ h1, h2, h3, h4, h5, h6 {
   .lead,
   em,
   strong {
-  /* background: red; */
-  color: inherit;
-}
+    color: inherit;
+  }
+  ul,ol {
+    @apply pl-0;
+    > li {
+      @apply pl-1;
+    }
+    li {
+      &::before {
+        content: none;
+      }
+    }
+  }
 }
 
 .prose-lg ul > li,
