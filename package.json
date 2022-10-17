@@ -16,12 +16,11 @@
     "test": "jest",
     "test:watch": "yarn test --watch",
     "build": "vite build",
-    "prebuild": "test \"$CI\" = true && npx pnpm install -r --store=node_modules/.pnpm-store || echo skipping pnpm install",
     "preview": "vite preview"
   },
   "type": "module",
   "engines": {
-    "node": ">= 16.0.0"
+    "node": ">= 16.15.0"
   },
   "devDependencies": {
     "@babel/core": ">=7.10.2 <8.0.0",
