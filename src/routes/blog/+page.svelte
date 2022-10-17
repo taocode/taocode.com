@@ -1,6 +1,4 @@
 <script lang="ts">
-  // throw new Error("@migration task: Add data prop (https://github.com/sveltejs/kit/discussions/5774#discussioncomment-3292707)");
-
   import BlogPostHeaderImage from '$lib/images/b-flopped-on-sidewalk.jpg'
   import BlogOverviewHeader from '$lib/components/blog/BlogOverviewHeader.svelte'
   import BlogPostFilters from '$lib/components/blog/BlogPostFilters.svelte'
@@ -23,7 +21,7 @@
 
 <SEO />
 
-<style>
+<style lang="postcss">
 a {
   @apply underline;
 }

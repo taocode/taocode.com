@@ -3,7 +3,8 @@
   import { browser, dev } from '$app/environment'
   export let { data, error } = $page
   $: {
-    console.log({data,error})
+    console.error('/+error.svelte',error)
+    // console.dir(data)
   }
 </script>
 

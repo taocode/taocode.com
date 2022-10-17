@@ -9,11 +9,11 @@
   export let post: Post;
 </script>
 
-<div class="blog-post-card dark:bg-black">
+<div class="blog-post-card">
   <a data-sveltekit-prefetch href="/blog/{post.slug}" class="link-inherit"
   aria-label="{post.slug}"
       >
-    <div class="card-transform border-gray-400 dark:border-gray-700">
+    <div class="card-transform bg-gray-100 border-gray-400 dark:(bg-gray-900 border-gray-700)">
     <div class="card-face card-face-front dark:bg-gray-900">
       <div class="px-6 py-8">
         <div class="my-3 text-xl font-bold font-display">
