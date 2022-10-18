@@ -1,46 +1,34 @@
-<div class="w-3/4 mx-auto
-text-center
-sm:w-full sm:text-left">
-<div class="bg-green-950 bg-opacity-40 pl-3 pt-2 rounded 
- sm:mr-3
-md:mr-10 
-lg:mr-24">
-<p>Lighthouse Score</p>
-<div class="mt-3 speedlify-score-wrapper justify-center
-sm:justify-start
-">
-  <span class="speedlify-score" title="Performance">100</span>
-  <span class="speedlify-score" title="Accessibility">100</span>
-  <span class="speedlify-score" title="Best practices">100</span>
-  <span class="speedlify-score" title="SEO">100</span>
+<script>
+  import ProgressRing from '$lib/components/ProgressRing.svelte'
+</script>
+<div class="lighthouse">
+<div class="">
+<h2>Lighthouse Score</h2>
+<div class="-mt-1"><span>October, 2022</span></div>
+<div class="rings">
+  <ProgressRing progress={100} title="Performance" />
+  <ProgressRing progress={100} title="Accessibility" />
+  <ProgressRing progress={92}  title="Best practices" />
+  <ProgressRing progress={100} title="SEO" />
 </div>
 
-<p class="mt-3">https://taocode.com</p>
+<p class="mt-2"><a href="https://taocode.com">https://taocode.com</a></p>
 
 </div>
 </div>
 
-<style>
-  .speedlify-score-wrapper {
-    display: flex;
-    flex-wrap: wrap;
+<style lang="postcss">
+  .lighthouse {
+    @apply w-5/6 max-w-90 mx-auto text-center sm:max-w-60;
+    > div {
+      @apply bg-green-950 bg-opacity-40 p-3 rounded;
+    }
+  }
+  .rings {
+    @apply flex flex-row opacity-70 gap-2;
+  }
+  span {
+    @apply text-sm opacity-70 -mt-3 inline-block mb-4;
   }
 
-  .speedlify-score-wrapper > :first-child {
-    margin-left: 0;
-  }
-
-  .speedlify-score {
-    font-size: 0.8125em;
-    width: 2.6em;
-    height: 2.6em;
-    line-height: 1;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    border: 2px solid rgba(178, 245, 234);
-    color: rgba(178, 245, 234);
-    margin-left: 0.4615384615385em;
-  }
 </style>
