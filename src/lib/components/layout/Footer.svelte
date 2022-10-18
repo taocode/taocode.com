@@ -13,62 +13,76 @@
   // import TermsConditionsLink from './TermsConditionsLink.svelte'
 </script>
 
+<style lang="postcss">
+  nav {
+    @apply p-3;
+  }
+  .boxed nav {
+    @apply bg-green-900 bg-opacity-40 rounded;
+  }
+  .social {
+    @apply mt-6;
+  }
+</style>
+
 <footer class="text-green-200 border-t-4 border-green-700 applause-gradient bg-green-800">
   <div
-    class="container flex flex-wrap items-top justify-between px-3 py-5 mx-auto"
+    class="boxed flex gap-2 gap-y-6 flex-wrap items-top justify-around py-6 mx-auto lg:flex-nowrap"
   >
-    <div class="w-full mb-6 sm:mb-0 sm:w-1/3">
+    <div class="">
       <SpeedlifyFooter />
     </div>
 
-    <div class="w-full mb-6 sm:mb-0 sm:w-1/3">
-    <nav
-      aria-label="Left footer navigation"
-      class="bg-green-900 bg-opacity-40 py-1 px-3 rounded sm:mr-3"
-    >
-      <a data-sveltekit-prefetch href="/about" class="footer-link"> About </a>
-      <a data-sveltekit-prefetch href="/blog" class="footer-link"> Blog </a>
-      <div class="ml-2">
-        <a
-          data-sveltekit-prefetch
-          href="/categories/programming"
-          class="italic footer-link"
-        >
-          Programming
-        </a>
-        <a
-          data-sveltekit-prefetch
-          href="/categories/portfolio"
-          class="italic footer-link"
-        >
-          Portfolio
-        </a>
-        <a
-          data-sveltekit-prefetch
-          href="/categories/life"
-          class="italic footer-link"
-        >
-          Life
-        </a>
-      </div>
-    </nav>
+    <div>
+      <nav
+        aria-label="Left footer navigation"
+        class=""
+      >
+        <a data-sveltekit-prefetch href="/about" class="footer-link"> About </a>
+        <a data-sveltekit-prefetch href="/blog" class="footer-link"> Blog </a>
+        <div class="ml-2">
+          <a
+            data-sveltekit-prefetch
+            href="/categories/programming"
+            class="italic footer-link"
+          >
+            Programming
+          </a>
+          <a
+            data-sveltekit-prefetch
+            href="/categories/portfolio"
+            class="italic footer-link"
+          >
+            Portfolio
+          </a>
+          <a
+            data-sveltekit-prefetch
+            href="/categories/life"
+            class="italic footer-link"
+          >
+            Life
+          </a>
+        </div>
+      </nav>
     </div>
-    <div class="w-full mb-6 sm:mb-0 sm:w-1/3">
-    <nav
-      aria-label="Right footer navigation"
-      class="bg-green-900 bg-opacity-40 py-1 px-3 rounded"
-    >
-      <a data-sveltekit-prefetch href="/services" class="footer-link"> Services </a>
-      <a data-sveltekit-prefetch href="/contact" class="footer-link"> Contact </a>
-      <!-- <a data-sveltekit-prefetch href="/resume" class="footer-link"> Resume </a> -->
-      <!-- <a data-sveltekit-prefetch href="/imprint" class="footer-link"> Imprint </a> -->
-      
-      <PrivacyPolicyLink />
+    <div>
+      <nav
+        aria-label="Right footer navigation"
+        class=""
+      >
+        <a data-sveltekit-prefetch href="/services" class="footer-link"> Services </a>
+        <a data-sveltekit-prefetch href="/contact" class="footer-link"> Contact </a>
+        <!-- <a data-sveltekit-prefetch href="/resume" class="footer-link"> Resume </a> -->
+        <!-- <a data-sveltekit-prefetch href="/imprint" class="footer-link"> Imprint </a> -->
+        
+        <PrivacyPolicyLink />
 
-    </nav>
+      </nav>
     </div>
 
-    <nav class="w-full mt-6 sm:w-2/3">
+  </div>
+  <div class="text-center mx-auto">
+    <nav class="social">
       <ExternalLink
         href="mailto:mark@taocode.com"
         ariaLabel="Write an email to me"
@@ -76,7 +90,6 @@
       >
         <Icon data="{faEnvelope}" class="mr-3" scale="{1.5}" />
       </ExternalLink>
-
       <ExternalLink
         href="https://github.com/taocode"
         ariaLabel="Follow me on GitHub"
@@ -85,7 +98,6 @@
       >
         <Icon data="{faGithub}" class="mr-3" scale="{1.5}" />
       </ExternalLink>
-
       <ExternalLink
         href="https://www.linkedin.com/in/taocode/"
         ariaLabel="Network with me on Linkedin"
@@ -93,7 +105,6 @@
       >
         <Icon data="{faLinkedin}" class="mr-3" scale="{1.5}" />
       </ExternalLink>
-
       <ExternalLink
         href="https://www.reddit.com/user/taocode"
         ariaLabel="Follow me Reddit"
@@ -101,7 +112,6 @@
       >
         <Icon data="{faReddit}" class="mr-3" scale="{1.5}" />
       </ExternalLink>
-
       <ExternalLink
         href="https://www.taocode.com/rss.xml"
         ariaLabel="Read the RSS feed"
@@ -110,8 +120,7 @@
         <Icon data="{faRss}" class="mr-3" scale="{1.5}" />
       </ExternalLink>
     </nav>
-
-    <div class="w-full mt-0 sm:w-1/3 sm:mt-6">
+    <div class="px-3">
       <small class="text-sm">
         <span class="hidden md:inline">Copyright</span>
         © 2020 - {new Date().getFullYear()} Mark Jones

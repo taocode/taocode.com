@@ -4,7 +4,7 @@
 <div class="lighthouse">
 <div class="">
 <h2>Lighthouse Score</h2>
-<div class="-mt-1"><span>October, 2022</span></div>
+<div class="-mt-1 mb-2"><span>October, 2022</span></div>
 <div class="rings">
   <ProgressRing progress={100} title="Performance" />
   <ProgressRing progress={100} title="Accessibility" />
@@ -19,7 +19,7 @@
 
 <style lang="postcss">
   .lighthouse {
-    @apply w-5/6 max-w-90 mx-auto text-center sm:max-w-60;
+    @apply max-w-3/4 mx-auto text-center xs:max-w-1/2 sm:max-w-64;
     > div {
       @apply bg-green-950 bg-opacity-40 p-3 rounded;
     }
@@ -28,7 +28,7 @@
     @apply flex flex-row opacity-70 gap-2;
   }
   span {
-    @apply text-sm opacity-70 -mt-3 inline-block mb-4;
+    @apply text-sm opacity-70;
   }
 
 </style>
