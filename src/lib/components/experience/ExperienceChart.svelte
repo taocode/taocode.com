@@ -1,22 +1,31 @@
 <script>
-import { fade } from 'svelte/transition';
-import * as Pancake from '@sveltejs/pancake';
-import techEx from './experience';
+import { fade } from 'svelte/transition'
+import * as Pancake from '@sveltejs/pancake'
+import techEx from './experience'
 
-const colors = ['bg-green-650', 'bg-green-650', 'bg-green-650', 'bg-green-650', 'bg-green-650', 'bg-green-650', 'bg-green-600'];
+const colors = ['bg-green-650', 'bg-green-650', 'bg-green-650', 'bg-green-650', 'bg-green-650', 'bg-green-650', 'bg-green-600']
 
-const techs = ['years'];
-let dChildren = techEx; 
+const techs = ['years']
+let dChildren = techEx
 // dChildren = techEx[0].children
-let stacks;
-let currentChild;
+let stacks
+let currentChild
 $: {
-  stacks = Pancake.stacks(dChildren, techs, 'name');
-// console.log('stacks:',stacks);
+  stacks = Pancake.stacks(dChildren, techs, 'name')
+// console.log('stacks:',stacks)
  }
 		
-$: max = stacks.reduce((max, stack) => Math.max(max, ...stack.values.map(v => v.end)), 0);
-
+$: max = stacks.reduce((max, stack) => Math.max(max, ...stack.values.map(v => v.end)), 0)
+const showChild = (n) => {
+  if (!currentChild && techEx[n].children) {
+    dChildren =  techEx[n].children
+    currentChild = techEx[n].name
+  }
+}
+const showOverview = () => { dChildren = techEx; currentChild = '' }
+const escapeToOverview = (event) => {
+  console.dir(event)
+}
 </script>
 <style lang="postcss" global>
 	.chart {
@@ -69,11 +78,13 @@ $: max = stacks.reduce((max, stack) => Math.max(max, ...stack.values.map(v => v.
 		height: calc(100% - 4px);
 		border-radius: 2px;
 	}
-  .has-children {
-    cursor: pointer;
-  }
-  .has-children:hover {
-    @apply bg-green-800;
+  button.experience {
+    &:not([disabled]):hover {
+      @apply bg-green-800;
+    }
+    &[disabled] {
+      @apply cursor-default;
+    }
   }
   .overview {
     @apply text-white cursor-auto pointer-events-none border-gray-200 border-2 border-opacity-25 
@@ -90,7 +101,7 @@ $: max = stacks.reduce((max, stack) => Math.max(max, ...stack.values.map(v => v.
 <div class="chart -mt-3 lg:-mt-10 lg:pl-3 max-w-screen-sm mx-auto">
   <button class="overview font-display text-sm uppercase py-1 px-2 my-2 rounded"
   class:activated={currentChild}
-  on:click={() => { dChildren = techEx; currentChild = ''; }}>Overview</button>
+  on:click={showOverview}>Overview</button>
   {#if currentChild}
   <span transition:fade class="inline-block font-display text-sm px-2">{currentChild}</span>
   {/if}
@@ -113,13 +124,12 @@ $: max = stacks.reduce((max, stack) => Math.max(max, ...stack.values.map(v => v.
           y1="{n - 0.5}"
           y2="{n + 0.5}"
         >
-          <div class="box pl-2 py-2 absolute left-0 {colors[n]} transition duration-150
+          <button class="experience box pl-2 py-2 absolute left-0 {colors[n]} transition duration-150
            opacity-80 hover:opacity-100"
+           disabled={!dChildren[n].children}
           class:has-children={dChildren[n].children}
-          on:click={()=>{ if (!currentChild && techEx[n].children) {
-            dChildren =  techEx[n].children;
-            currentChild = techEx[n].name
-            }; }}></div>
+          on:click={()=>showChild(n)}
+          on:keydown={escapeToOverview}></button>
         </Pancake.Box>
         <div class="relative pointer-events-none z-0 p-2 block font-display text-sm text-gray-300 font-semibold">{dChildren[n].name}</div>
       {/each}

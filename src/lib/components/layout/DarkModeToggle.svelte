@@ -6,6 +6,7 @@
 
 <button
 	type="button"
+	title="Toggle Dark Mode"
 	class:bg-gray-800={enabled}
 	class="bg-gray-500 dark:(bg-gray-700 text-white) relative inline-flex flex-shrink-0 h-8 w-5 
 	border-2 border-transparent rounded cursor-pointer transition-colors ease-in-out duration-200 

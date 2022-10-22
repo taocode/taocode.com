@@ -9,7 +9,7 @@
       description:
         'Personal website and blog with SvelteKit and TailwindCSS.',
       techStack:
-        'SvelteKit, Svelte, TailwindCSS, NodeJS, Rollup, Markdown, GitHub, Netlify',
+        'SvelteKit, Svelte, WindiCSS, NodeJS, Rollup, Markdown, GitHub, Netlify',
       websiteLink: 'https://www.taocode.com',
       githubLink: 'https://github.com/taocode/taocode.com',
     },
@@ -42,8 +42,7 @@
           <a
             href="{project.websiteLink}"
             class="inline-flex"
-            target="_blank"
-            rel="noopener noreferrer"
+            target="site"
             aria-label="Link to Website for {project.name}"
           >
             <Icon data="{faExternalLinkAlt}" class="ml-3" />

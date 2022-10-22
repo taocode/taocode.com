@@ -18,7 +18,7 @@
       id="mc-embedded-subscribe-form"
       name="mc-embedded-subscribe-form"
       class="validate"
-      target="_blank"
+      target="form"
       novalidate
     >
       <div id="mc_embed_signup_scroll">
