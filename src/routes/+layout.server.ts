@@ -34,7 +34,7 @@ export async function load<LayoutServerLoad>({params}) {
       console.log('corrected slug:',data.slug,slugs[i])
       data.slug = slugs[i]
     }
-    data.excerpt = marked.parse(data.excerpt)
+    if (!data.description) data.description = data.excerpt
     data.published = parseISO(data.creationDate)
     // console.log('loaded:',data.slug,data.creationDate,data.published,data.creationDate)
     return data

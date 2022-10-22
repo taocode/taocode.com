@@ -27,6 +27,7 @@
   $: previousArticle = $posts[postIndex + 1]
   $: nextArticle = $posts[postIndex - 1]
   $: pageTitle = `${post?.title} | TAOCode`
+  $: description = post.description
 
   $: blogPostInfo = post
     ? {
@@ -40,6 +41,7 @@
 
 <svelte:head>
   <title>{pageTitle}</title>
+  <meta name="description" content={description} />
 </svelte:head>
 
 
