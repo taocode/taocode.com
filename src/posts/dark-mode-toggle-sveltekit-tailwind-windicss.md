@@ -1,5 +1,5 @@
 ---
-title: "Dark Mode Toggle for SvelteKit with Tailwind or WindiCSS"
+title: Dark Mode Toggle for SvelteKit with Tailwind or WindiCSS
 slug: dark-mode-toggle-sveltekit-tailwind-windicss
 category: Programming
 creationDate: '2021-06-06'
@@ -9,7 +9,7 @@ author: Mark Jones
 tags:
   - Dark Mode
   - WindiCSS
-  - SvelteKit
+  - Svelte
   - Static Site
 ---
 

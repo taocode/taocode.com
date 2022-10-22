@@ -10,7 +10,6 @@ author: Mark Jones
 tags:
   - Static Site
   - Svelte
-  - SvelteKit
   - MDSVEX
   - WindiCSS
 ---
