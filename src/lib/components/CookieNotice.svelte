@@ -3,7 +3,6 @@
   import cookies from 'js-cookie'
   import ExternalLink from './ExternalLink.svelte'
   import PrivacyPolicyLink from './layout/PrivacyPolicyLink.svelte'
-  import Splitbee from './Splitbee.svelte'
 
   // We don't want the cookie notice to flash on every page reload, therefore hidden by default
   export let showCookieNotice = false
@@ -60,9 +59,6 @@
   </div>
 {/if}
 
-{#if !didOptOut && consentGiven}
-  <Splitbee />
-{/if}
 
 <style type="postcss">
   .cookie-notice-btn {
