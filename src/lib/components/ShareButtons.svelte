@@ -8,7 +8,7 @@
     faLinkedin,
   } from '@fortawesome/free-brands-svg-icons';
   import { page } from '$app/stores';
-  import type { Post } from './models/post';
+  import type { Post } from '$lib/models/post';
 
   export let post: Post;
 

@@ -1,12 +1,19 @@
 <script lang="ts">
-  import InfoTags from './InfoTags.svelte';
-  import type { Post } from '$lib/models/post';
-  import BlogPostThumbnail from './BlogPostThumbnail.svelte';
+  import InfoTags from './InfoTags.svelte'
+  import type { Post } from '$lib/models/post'
+  import BlogPostThumbnail from './BlogPostThumbnail.svelte'
+  import { marked } from 'marked'
 
   // import Icon from 'svelte-awesome';
   // import { faQuoteLeft, faQuoteRight } from '@fortawesome/free-solid-svg-icons';
 
   export let post: Post;
+
+  let excerpt = (post.excerpt) ? 
+                marked.parse( post.excerpt.length > 100
+                  ? `${post.excerpt.slice(0, 100)}...`
+                  : post.excerpt )
+                : false
 </script>
 
 <div class="blog-post-card">
@@ -15,20 +22,18 @@
       >
     <div class="card-transform bg-gray-100 border-gray-400 dark:(bg-gray-900 border-gray-700)">
     <div class="card-face card-face-front dark:bg-gray-900">
-      <div class="px-6 py-8">
+      <div class="p-3">
         <div class="my-3 text-xl font-bold font-display">
           {post.title}
         </div>
 
-        <div class="my-3 font-display">
+        <div class="my-3 font-display text-sm">
           <InfoTags {post} hideCategory readTimeText />
         </div>
 
-        {#if post.excerpt}
+        {#if excerpt}
           <p aria-hidden="true" class="mt-3 mb-12">
-            {@html post.excerpt.length > 100
-              ? `${post.excerpt.substr(0, 100)}...`
-              : post.excerpt}
+            {@html excerpt}
           </p>
         {/if}
       </div>
