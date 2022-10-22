@@ -17,10 +17,10 @@ export default [
 	},
   { name: 'JS', years: 22,
     children: [
-			{ name: 'Svelte', years: 1.2 },
+			{ name: 'Svelte', years: 1.4 },
 			{ name: 'NodeJS', years: 2 }, 
 			{ name: 'jQuery', years: 5}, 
-			{ name: 'Vanilla', years: 10}, 
+			{ name: 'Vanilla JS', years: 11}, 
 		]
 	},
 	{ name: 'HTML', years: 26 },

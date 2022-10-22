@@ -128,8 +128,8 @@ const escapeToOverview = (event) => {
            opacity-80 hover:opacity-100"
            disabled={!dChildren[n].children}
           class:has-children={dChildren[n].children}
-          on:click={()=>showChild(n)}
-          on:keydown={escapeToOverview}></button>
+          title="{dChildren[n].years} years of experience with {dChildren[n].name}"
+          on:click={()=>showChild(n)}></button>
         </Pancake.Box>
         <div class="relative pointer-events-none z-0 p-2 block font-display text-sm text-gray-300 font-semibold">{dChildren[n].name}</div>
       {/each}
