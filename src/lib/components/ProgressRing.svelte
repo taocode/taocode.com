@@ -10,7 +10,7 @@
 <div class="percent" {title} {style}>
   <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
     <circle cx="50" cy="50" r="45"></circle>
-  <text x="50%" y="50%" text-anchor="middle" dy=".33em" fill="currentColor" >{progress}</text>
+  <text x="50%" y="50%" text-anchor="middle" dy="16px" fill="currentColor" style="font-size:40px;">{progress}</text>
   </svg>
 </div>
 
@@ -30,9 +30,6 @@ circle {
   stroke: currentColor;
   animation: percent 1.5s ease-out;
   animation-delay: 1s;
-}
-text {
-  font-size: 2.5em;
 }
 
 @keyframes percent {

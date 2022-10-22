@@ -29,14 +29,11 @@
   <div
     class="boxed flex gap-2 gap-y-6 flex-wrap items-top justify-around py-6 mx-auto lg:flex-nowrap"
   >
-    <div class="">
-      <SpeedlifyFooter />
-    </div>
 
     <div>
       <nav
         aria-label="Left footer navigation"
-        class=""
+        
       >
         <a data-sveltekit-prefetch href="/about" class="footer-link"> About </a>
         <a data-sveltekit-prefetch href="/blog" class="footer-link"> Blog </a>
@@ -68,7 +65,7 @@
     <div>
       <nav
         aria-label="Right footer navigation"
-        class=""
+        
       >
         <a data-sveltekit-prefetch href="/services" class="footer-link"> Services </a>
         <a data-sveltekit-prefetch href="/contact" class="footer-link"> Contact </a>
@@ -78,6 +75,9 @@
         <PrivacyPolicyLink />
 
       </nav>
+    </div>
+    <div class="sm:order-first">
+      <SpeedlifyFooter />
     </div>
 
   </div>
