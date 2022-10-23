@@ -7,9 +7,9 @@
   // import Icon from 'svelte-awesome';
   // import { faQuoteLeft, faQuoteRight } from '@fortawesome/free-solid-svg-icons';
 
-  export let post: Post;
+  export let post: Post
 
-  let excerpt = (post.excerpt) ? 
+  $: excerpt = (post.excerpt) ? 
                 marked.parse( post.excerpt.length > 100
                   ? `${post.excerpt.slice(0, 100)}...`
                   : post.excerpt )
