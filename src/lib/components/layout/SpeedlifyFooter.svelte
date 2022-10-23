@@ -8,7 +8,7 @@
 <div class="rings">
   <ProgressRing progress={100} title="Performance" />
   <ProgressRing progress={100} title="Accessibility" />
-  <ProgressRing progress={92}  title="Best practices" />
+  <ProgressRing progress={100}  title="Best practices" />
   <ProgressRing progress={100} title="SEO" />
 </div>
 
