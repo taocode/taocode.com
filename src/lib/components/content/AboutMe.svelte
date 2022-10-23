@@ -17,7 +17,7 @@
   </div>
   <h2 class="text-center">Mark Jones</h2>
   <p>
-    Full stack web developer, voice actor, artist, hoppy beer
+    Full stack web developer, musician, voice actor, artist, hoppy beer
     and happy pet lover.
   </p>
 </div>
