@@ -47,8 +47,8 @@
 
 <SEO {blogPostInfo} />
 <BlogPostHeader {post} />
-<section class="container flex flex-wrap mj-container">
-  <article class="w-full pb-12 prose blog lg:w-3/4 lg:pr-16">
+<section class="container flex flex-col gap-6 md:flex-row mj-container">
+  <article class="prose blog flex-grow">
     {#if post.lead }<p class="lead">{@html marked.parse(post.lead)}</p>{/if}
     <svelte:component this={pageComponent} />
     <div class="share-post bg-green-100 bg-opacity-70 border-green-700 dark:bg-green-900">
@@ -70,7 +70,7 @@
       nextArticle="{nextArticle}"
     />
   </article>
-  <aside class="w-full mt-8 lg:mt-0 lg:w-3/12">
+  <aside class="">
     <BlogPostSidebar />
   </aside>
 </section> 

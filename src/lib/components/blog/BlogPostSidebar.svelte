@@ -10,16 +10,16 @@
 
 </script>
 
-<div class="md:flex md:gap-6 lg:block">
-  <div class="md:w-1/2 lg:w-full">
+<div class="flex flex-col gap-6 sm:flex-row md:gap-6 md:flex-col">
+  <div class="sm:max-w-1/2 md:max-w-none">
     <AboutMe />
     <Newsletter />
   </div>
-  <div class="md:w-1/2 lg:w-full">
+  <div class="">
     <PopularArticles />
     <Categories />
   </div>
 </div>
-<div class="mx-auto md:w-1/2 lg:w-full ">
+<div class="">
   <SubscribeAndFollow />
 </div>
