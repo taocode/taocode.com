@@ -9,5 +9,11 @@ publish = "build/"
   [headers.values]
     X-Content-Type-Options = "nosniff"
     X-Frame-Options = "SAMEORIGIN"
-    X-XSS-Protection = "1; mode=block"
-    Content-Security-Policy = "default-src 'self'; style-src 'unsafe-inline' 'self' https://cdn.iubenda.com; form-action 'self'; script-src 'unsafe-inline' 'self' https://cdn.iubenda.com; connect-src 'self'; img-src data: 'self' https://cdn.iubenda.com; base-uri 'self'; frame-src 'self' https://www.iubenda.com;"
+    Content-Security-Policy = "child-src 'self'; default-src 'self'; style-src 'self' 'unsafe-inline' https://cdn.iubenda.com; form-action 'self'; script-src 'self' 'unsafe-inline' https://cdn.iubenda.com; connect-src 'self'; img-src 'self' data: https://cdn.iubenda.com; base-uri 'self'; frame-src 'self' https://www.iubenda.com;"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "accelerometer=(), camera=(), document-domain=(), encrypted-media=(), gyroscope=(), interest-cohort=(), magnetometer=(), microphone=(), midi=(), payment=(), picture-in-picture=(), publickey-credentials-get=(), sync-xhr=(), usb=(), xr-spatial-tracking=(), geolocation=()"
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
+    # Report-To = {"group": "csp-endpoint", "max_age": 10886400, "endpoints": [{"url": "https://XXX.ingest.sentry.io/api/XXX/security/?sentry_key=XXX"}]}
+
+  # /contact
+  # Content-Security-Policy: child-src 'self'; default-src 'self'; frame-src 'self'; worker-src 'self'; connect-src 'self' ws://localhost:*; font-src 'self' data:; img-src 'self' data:; manifest-src 'self'; media-src 'self' data:; object-src 'none'; script-src 'self' 'sha256-t7R4W+8Ou9kpe3an17uRnyxB95SfUTIMJ/K2z6vu0Io=' 'sha256-zArBwCFLmTaX5PiopOgysXsLgzWtw+D2DfdI+gej1y0='; style-src 'self' 'unsafe-inline'; base-uri 'self'; form-action 'self'; report-to 'csp-endpoint'

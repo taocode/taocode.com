@@ -20,7 +20,7 @@
   },
   "type": "module",
   "engines": {
-    "node": ">= 16.15.0"
+    "node": ">= 18"
   },
   "devDependencies": {
     "@babel/core": "^7.19.6",
@@ -36,7 +36,7 @@
     "@sveltejs/adapter-static": "next",
     "@sveltejs/kit": "1.0.0-next.522",
     "@sveltejs/pancake": "^0.0.18",
-    "@taocode/svelte-headroom": "2.0.0",
+    "@taocode/svelte-headroom": "2.3.0",
     "@testing-library/svelte": "^3.2.2",
     "@types/jest": "^29.2.0",
     "@types/js-cookie": "^3.0.2",
@@ -87,7 +87,7 @@
     "ts-jest": "^29.0.3",
     "tslib": "^2.4.0",
     "typescript": "^4.8.4",
-    "vite": "3.1.8",
+    "vite": "3.2.4",
     "vite-imagetools": "^4.0.11",
     "vite-plugin-windicss": "^1.8.8",
     "windicss": "^3.5.6",
