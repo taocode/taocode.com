@@ -1,17 +1,19 @@
-import sveltePreprocess from 'svelte-preprocess';
-import adapter from '@sveltejs/adapter-static';
-import { mdsvex } from 'mdsvex';
-import { trusted } from 'svelte/internal';
+import sveltePreprocess from 'svelte-preprocess'
+import adapter from '@sveltejs/adapter-static'
+import { mdsvex } from 'mdsvex'
+import slug from 'rehype-slug'
+import { trusted } from 'svelte/internal'
 
 
-const extensions = [`.svelte`, '.svx', '.md'];
+const extensions = [`.svelte`, '.svx', '.md']
+const rehypePlugins = [slug]
 
 const preprocess = [
   sveltePreprocess({
     typescript: true,
     preserve: ['ld+json'],
   }),
-  mdsvex({ extensions }),
+  mdsvex({ extensions, rehypePlugins }),
 ];
 
 const kit = {
