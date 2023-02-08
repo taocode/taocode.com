@@ -18,3 +18,5 @@ build
 
 # Local Netlify folder
 .netlify
+
+vite.config.js.timestamp*
