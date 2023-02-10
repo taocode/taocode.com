@@ -2,17 +2,7 @@
   import { fade } from 'svelte/transition'
   import { createForm } from 'svelte-forms-lib'
   import * as yup from 'yup'
-  import Icon from 'svelte-awesome'
   import axios from 'redaxios'
-  import {
-    faGithub,
-    faLinkedin,
-  } from '@fortawesome/free-brands-svg-icons'
-  import {
-    faEnvelope,
-    faExternalLinkAlt,
-    faCheckCircle,
-  } from '@fortawesome/free-solid-svg-icons'
   import SEO from '$lib/components/layout/SEO.svelte'
   import ExternalLink from '$lib/components/ExternalLink.svelte'
 
@@ -160,14 +150,12 @@
         </button>
       </div>
 
-      {#if didSubmit}
+      {#if didSubmit }
         <div class="w-full px-2 my-2" transition:fade>
           <div class="alert-success">
-            <Icon
-              data="{faCheckCircle}"
-              class="mr-3 text-green-500"
-              scale="{1.5}"
-            />
+            <div class="inline-block mr-3 text-green-500 text-[1.5em]">
+              <div class="i-fa6-solid-circle-check"></div>
+            </div>
             Message submitted successfully!
           </div>
         </div>
@@ -212,20 +200,24 @@
     these channels below.
   </p>
 
-  <div class="flex flex-wrap mb-6">
+  <div class="biglinks">
     <ExternalLink
       href="mailto:mark@taocode.com"
       ariaLabel="Write me a mail"
       customClass="inline-flex text-green-900 hover:text-green-700"
     >
-      <Icon data="{faEnvelope}" scale="{2}" />
+      <div class="icon">
+        <div class="i-fa6-solid-envelope"></div>
+      </div>
     </ExternalLink>
     <ExternalLink
       href="https://github.com/taocode"
       ariaLabel="Follow me on GitHub"
       customClass="inline-flex text-green-900 hover:text-green-700"
     >
-      <Icon data="{faGithub}" class="ml-5" scale="{2}" />
+      <div class="icon">
+        <div class="i-fa6-brands-github"></div>
+      </div>
     </ExternalLink>
 
     <ExternalLink
@@ -233,7 +225,9 @@
       ariaLabel="Network with me on Linkedin"
       customClass="inline-flex text-green-900 hover:text-green-700"
     >
-      <Icon data="{faLinkedin}" class="ml-5" scale="{2}" />
+      <div class="icon">
+        <div class="i-fa6-brands-linkedin"></div>
+      </div>
     </ExternalLink>
 
   </div>
@@ -246,7 +240,9 @@
         customClass="inline-flex"
       >
         Submit issue
-        <Icon data="{faExternalLinkAlt}" class="mt-1 ml-2" />
+        <div class="icon">
+          <div class="i-feather-external-link"></div>
+        </div>
       </ExternalLink>
     </div>
     <div class="w-full sm:w-1/3">
@@ -256,7 +252,9 @@
         customClass="inline-flex"
       >
         Request feature
-        <Icon data="{faExternalLinkAlt}" class="mt-1 ml-2" />
+        <div class="icon">
+          <div class="i-feather-external-link"></div>
+        </div>
       </ExternalLink>
     </div>
     <div class="w-full sm:w-1/3">
@@ -266,7 +264,9 @@
         customClass="inline-flex"
       >
         Suggest content
-        <Icon data="{faExternalLinkAlt}" class="mt-1 ml-2" />
+        <div class="icon">
+          <div class="i-feather-external-link"></div>
+        </div>
       </ExternalLink>
     </div>
   </div>
@@ -275,5 +275,14 @@
 <style type="postcss">
   label {
     @apply font-display text-sm font-bold tracking-wide text-gray mb-2;
+  }
+  .biglinks {
+    @apply flex flex-wrap mb-6 gap-6;
+    .icon {
+      @apply text-[1.75em];
+    }
+  }
+  .icon {
+    @apply text-[1.34em] ml-2;
   }
 </style>

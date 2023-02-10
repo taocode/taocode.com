@@ -1,6 +1,4 @@
 <script lang="ts">
-  import Icon from 'svelte-awesome';
-  import { faBars } from '@fortawesome/free-solid-svg-icons';
   import ClickOutside from 'svelte-click-outside';
   import TaocodeLogo from '../svg/TaocodeLogo.svelte';
 
@@ -39,13 +37,15 @@
     <div class="ml-auto flex-shrink md:hidden">
       <ClickOutside on:clickoutside="{() => (open = false)}">
         <button
-          class="flex items-center rounded px-3 py-2 bg-green-500 border border-green-500
+          class="flex items-center rounded px-2 py-1 bg-green-500 border border-green-500
           text-black
           hover:bg-green-400 hover:border-green-400"
           aria-label="Hamburger menu"
           on:click="{toggleHamburgerMenu}"
         >
-          <Icon data="{faBars}" />
+          <div class="icon">
+            <div class="i-fa6-solid-bars"></div>
+          </div>
         </button>
       </ClickOutside>
     </div>
@@ -97,6 +97,9 @@
 
   header {
     z-index: 1;
+  }
+  .icon {
+    margin: -0.1em;
   }
   
 </style>

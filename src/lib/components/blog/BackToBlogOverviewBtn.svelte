@@ -1,13 +1,8 @@
-<script>
-  import Icon from 'svelte-awesome';
-  import { faAngleLeft } from '@fortawesome/free-solid-svg-icons';
-</script>
-
 <a
   data-sveltekit-prefetch
   href="/blog"
   class="inline-flex no-underline rounded hover:underline"
 >
-  <Icon data="{faAngleLeft}" class="mt-1 mr-3" scale="{1.5}" />
+  <div class="i-feather-chevron-left text-[1.8em]"></div>
   Back to Blog overview
 </a>

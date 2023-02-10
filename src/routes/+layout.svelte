@@ -13,6 +13,7 @@
   let fullURL: string = ''
 
   import 'virtual:windi.css'
+  import 'uno.css'
 
 
   let dark = true

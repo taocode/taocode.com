@@ -1,11 +1,4 @@
 <script lang="ts">
-  import Icon from 'svelte-awesome'
-  import {
-    faGithub,
-    faLinkedin,
-    faReddit,
-  } from '@fortawesome/free-brands-svg-icons'
-  import { faEnvelope, faRss } from '@fortawesome/free-solid-svg-icons'
   // import { faRss } from 'svelte-awesome/icons'
   import ExternalLink from '../ExternalLink.svelte'
   import SpeedlifyFooter from './SpeedlifyFooter.svelte'
@@ -21,7 +14,10 @@
     @apply bg-green-900 bg-opacity-40 rounded;
   }
   .social {
-    @apply mt-6;
+    @apply mt-6 flex gap-3 justify-center;
+  }
+  .icon {
+    @apply text-[1.34em];
   }
 </style>
 
@@ -88,7 +84,9 @@
         ariaLabel="Write an email to me"
         customClass="inline-flex mt-4 lg:mt-0 hover:text-white"
       >
-        <Icon data="{faEnvelope}" class="mr-3" scale="{1.5}" />
+        <div class="icon">
+          <div class="i-fa6-solid-envelope"></div>
+        </div>
       </ExternalLink>
       <ExternalLink
         href="https://github.com/taocode"
@@ -96,28 +94,36 @@
         customClass="inline-flex mt-4 lg:mt-0 hover:text-white"
         rel="me"
       >
-        <Icon data="{faGithub}" class="mr-3" scale="{1.5}" />
+        <div class="icon">
+          <div class="i-fa6-brands-github"></div>
+        </div>
       </ExternalLink>
       <ExternalLink
         href="https://www.linkedin.com/in/taocode/"
         ariaLabel="Network with me on Linkedin"
         customClass="inline-flex mt-4 lg:mt-0 hover:text-white"
       >
-        <Icon data="{faLinkedin}" class="mr-3" scale="{1.5}" />
+        <div class="icon">
+          <div class="i-fa6-brands-linkedin"></div>
+        </div>
       </ExternalLink>
       <ExternalLink
         href="https://www.reddit.com/user/taocode"
         ariaLabel="Follow me Reddit"
         customClass="inline-flex mt-4 lg:mt-0 hover:text-white"
       >
-        <Icon data="{faReddit}" class="mr-3" scale="{1.5}" />
+        <div class="icon">
+          <div class="i-fa6-brands-reddit"></div>
+        </div>
       </ExternalLink>
       <ExternalLink
         href="https://www.taocode.com/rss.xml"
         ariaLabel="Read the RSS feed"
         customClass="inline-flex mt-4 lg:mt-0 hover:text-white"
       >
-        <Icon data="{faRss}" class="mr-3" scale="{1.5}" />
+        <div class="icon">
+          <div class="i-fa6-solid-rss"></div>
+        </div>
       </ExternalLink>
     </nav>
     <div class="px-3">

@@ -48,7 +48,9 @@ I get accustomed to new projects quickly and
     <div class="flex w-full p-2 md:w-1/2">
       <div class="px-6 py-4 card">
         <h2>
-          <!-- <Icon data="{faDraftingCompass}" class="mr-3" scale="{2}" /> -->
+          <div class="icon">
+            <div class="i-fa6-solid-compass-drafting"></div>
+          </div>
           Prototyping your idea
         </h2>
 
@@ -65,7 +67,9 @@ I get accustomed to new projects quickly and
     <div class="flex w-full p-2 md:w-1/2">
       <div class="px-6 py-4 card">
         <h2>
-          <!-- <Icon data="{faClipboardList}" class="mr-3" scale="{2}" /> -->
+          <div class="icon">
+            <div class="i-fa6-solid-clipboard-list"></div>
+          </div>
           Continue an existing product
         </h2>
 
@@ -78,7 +82,9 @@ I get accustomed to new projects quickly and
     <div class="flex w-full p-2 md:w-1/2">
       <div class="px-6 py-4 card">
         <h2>
-          <!-- <Icon data="{faChalkboardTeacher}" class="mr-3" scale="{2}" /> -->
+          <div class="icon">
+            <div class="i-fa6-solid-person-chalkboard"></div>
+          </div>
           Project review
         </h2>
 
@@ -103,7 +109,9 @@ I get accustomed to new projects quickly and
     <div class="flex w-full p-2 md:w-1/2">
       <div class="px-6 py-4 card">
         <h2>
-          <!-- <Icon data="{faPenFancy}" class="mr-3" scale="{2}" /> -->
+          <div class="icon">
+            <div class="i-fa6-solid-universal-access"></div>
+          </div>
           Accessibility Review
         </h2>
 
@@ -122,3 +130,9 @@ I get accustomed to new projects quickly and
     </div>
   </div>
 </section>
+
+<style lang="postcss">
+  .icon {
+    @apply inline-block mr-2;
+  }
+</style>

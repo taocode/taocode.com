@@ -5,9 +5,6 @@
   import InfoTags from './InfoTags.svelte'
   import type { Post } from '$lib/models/post'
 
-  import Icon from 'svelte-awesome'
-  import { faExternalLinkSquareAlt } from '@fortawesome/free-solid-svg-icons'
-
   export let post: Post;
 </script>
 <style lang="postcss">
@@ -38,7 +35,7 @@
         <h1>{post.title}</h1>
         {#if post.site_url}
           <div><a target="site" href={post.site_url}>{post.site_url.substr(8)}
-            <Icon data="{faExternalLinkSquareAlt}" class="text-green-700 -mt-1 inline-block" scale="{0.8}" />
+            <div class="i-feather-external-link"></div>
           </a></div>
         {/if}
         <InfoTags {post} />

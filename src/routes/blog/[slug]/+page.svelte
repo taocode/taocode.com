@@ -11,9 +11,6 @@
   import SEO from '$lib/components/layout/SEO.svelte'
   import { marked } from 'marked'
 
-  import Icon from 'svelte-awesome'
-  import { share } from 'svelte-awesome/icons'
-
   import { posts } from '$lib/stores'
 
   export let data
@@ -53,7 +50,9 @@
     <svelte:component this={pageComponent} />
     <div class="share-post bg-green-100 bg-opacity-70 border-green-700 dark:bg-green-900">
       <div class="share-icon bg-green-700 text-green-100 dark:text-green-950">
-        <Icon data="{share}" class="" scale="{1.5}" />
+        <div class="icon text-[1.5em]">
+          <div class="i-fa6-solid-share"></div>
+        </div>
         <div class="font-display text-2xs">share</div>
       </div>
       <ShareButtons {post} />
