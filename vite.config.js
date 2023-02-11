@@ -7,8 +7,8 @@ import unoConfig from './uno.config'
 export default {
   plugins: [
     unocss(unoConfig),
-    sveltekit(),
     WindiCSS(),
     imagetools({ force: true }),
+    sveltekit(),
   ],
 }
