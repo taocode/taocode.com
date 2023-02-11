@@ -12,8 +12,8 @@
 
   let fullURL: string = ''
 
-  import 'virtual:windi.css'
   import 'uno.css'
+  import 'virtual:windi.css'
 
 
   let dark = true
@@ -21,7 +21,7 @@
     dark = ! matchMedia('(prefers-color-scheme: light)').matches
   }
   onMount(() => {
-		import('virtual:windi-devtools')
+		if (dev) import('virtual:windi-devtools')
     updateSystemPreferenceDarkTheme()
     matchMedia('(prefers-color-scheme: light)')
     .addEventListener("change",updateSystemPreferenceDarkTheme)
