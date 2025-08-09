@@ -16,6 +16,9 @@ static/global.css.map
 .svelte-kit
 build
 
+# Local Firebase folder
+.firebase
+
 # Local Netlify folder
 .netlify
 
