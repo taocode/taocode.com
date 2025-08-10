@@ -103,15 +103,15 @@ const escapeToOverview = (event) => {
   class:activated={currentChild}
   on:click={showOverview}>Overview</button>
   {#if currentChild}
-  <span transition:fade class="inline-block font-display text-sm px-2">{currentChild}</span>
+  <span transition:fade|global class="inline-block font-display text-sm px-2">{currentChild}</span>
   {/if}
   <Pancake.Chart x1={0} x2={max} y1={3.5} y2={-0.5}>
     <Pancake.Grid horizontal count={techEx.length} let:value let:first>
-      <div transition:fade class="grid-line horizontal"></div>
+      <div transition:fade|global class="grid-line horizontal"></div>
     </Pancake.Grid>
 
     <Pancake.Grid vertical count={5} let:value>
-      <div transition:fade class="grid-line vertical"></div>
+      <div transition:fade|global class="grid-line vertical"></div>
       <span class="x-label">{value}</span>
     </Pancake.Grid>
 

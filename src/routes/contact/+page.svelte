@@ -104,7 +104,7 @@
           on:change="{handleChange}"
           bind:value="{$form.name}"
         />
-        {#if $errors.name}<small class="form-error" transition:fade>{$errors.name}</small>{/if}
+        {#if $errors.name}<small class="form-error" transition:fade|global>{$errors.name}</small>{/if}
       </div>
 
       <div class="w-1/2 px-2 my-2">
@@ -120,7 +120,7 @@
           on:change="{handleChange}"
           bind:value="{$form.email}"
         />
-        {#if $errors.email}<small class="form-error" transition:fade>{$errors.email}</small>{/if}
+        {#if $errors.email}<small class="form-error" transition:fade|global>{$errors.email}</small>{/if}
       </div>
 
       <div class="w-full px-2 my-2">
@@ -136,7 +136,7 @@
           on:change="{handleChange}"
           bind:value="{$form.comment}"></textarea>
         {#if $errors.comment}
-          <small class="form-error" transition:fade>{$errors.comment}</small>
+          <small class="form-error" transition:fade|global>{$errors.comment}</small>
         {/if}
       </div>
 
@@ -151,7 +151,7 @@
       </div>
 
       {#if didSubmit }
-        <div class="w-full px-2 my-2" transition:fade>
+        <div class="w-full px-2 my-2" transition:fade|global>
           <div class="alert-success">
             <div class="inline-block mr-3 text-green-500 text-[1.5em]">
               <div class="i-fa6-solid-circle-check"></div>
