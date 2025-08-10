@@ -1,4 +1,5 @@
-import { defineConfig, extractorSvelte } from 'unocss'
+import { defineConfig } from 'unocss'
+import extractorSvelte from '@unocss/extractor-svelte'
 import presetIcons from "@unocss/preset-icons"
 
 
