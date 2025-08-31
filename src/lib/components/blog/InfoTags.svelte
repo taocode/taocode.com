@@ -2,10 +2,19 @@
   import { formatDate, convertToSlug } from '$lib/utils'
   import type { Post } from '$lib/models/post'
 
-  export let post: Post
-  export let hideCategory = false
-  export let readTimeText = true
-  export let showWordCount = true
+  interface Props {
+    post: Post;
+    hideCategory?: boolean;
+    readTimeText?: boolean;
+    showWordCount?: boolean;
+  }
+
+  let {
+    post,
+    hideCategory = false,
+    readTimeText = true,
+    showWordCount = true
+  }: Props = $props();
 </script>
 
 <span class="text-green-750 dark:text-green-200">{formatDate(post.creationDate)}</span>

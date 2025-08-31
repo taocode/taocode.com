@@ -1,24 +1,42 @@
 <script lang="ts">
+  import { run } from 'svelte/legacy';
+
   import { createEventDispatcher, onMount } from "svelte";
   import validate from "./validation";
 
-  export let duration = "300ms";
-  export let offset = 0;
-  export let tolerance = 0;
-  export let bottom = false;
-  export let hideAtBottom = false;
-  export let hideAtTop = false;
-  export let showAtBottom = false;
-  export let showAtTop = false;
-  export let styleClass = "";
+  interface Props {
+    duration?: string;
+    offset?: number;
+    tolerance?: number;
+    bottom?: boolean;
+    hideAtBottom?: boolean;
+    hideAtTop?: boolean;
+    showAtBottom?: boolean;
+    showAtTop?: boolean;
+    styleClass?: string;
+    children?: import('svelte').Snippet;
+  }
 
-  let headerClass = "pin";
-  let lastHeaderClass = "pin";
-  let y = 0;
+  let {
+    duration = "300ms",
+    offset = 0,
+    tolerance = 0,
+    bottom = false,
+    hideAtBottom = false,
+    hideAtTop = false,
+    showAtBottom = false,
+    showAtTop = false,
+    styleClass = "",
+    children
+  }: Props = $props();
+
+  let headerClass = $state("pin");
+  let lastHeaderClass = $state("pin");
+  let y = $state(0);
   let lastY = 0;
-  let atTop: boolean = true;
-  let atBottom: boolean = false;
-  let win: Window;
+  let atTop: boolean = $state(true);
+  let atBottom: boolean = $state(false);
+  let win: Window = $state();
 
   const dispatch = createEventDispatcher();
 
@@ -46,7 +64,7 @@
     node.style.transitionDuration = duration;
   }
 
-  $: {
+  run(() => {
     validate({ duration, offset, tolerance });
     headerClass = updateClass(y);
     atTop = y <= 2;
@@ -55,7 +73,7 @@
       dispatch(headerClass ? "unpin" : "pin");
     }
     lastHeaderClass = headerClass;
-  }
+  });
 </script>
 
 <style>
@@ -91,5 +109,5 @@
 <svelte:window bind:scrollY={y} />
 <div use:action class={styleClass +' '+ headerClass} 
 class:bottom class:atTop class:atBottom class:showAtTop class:hideAtTop class:showAtBottom class:hideAtBottom>
-  <slot />
+  {@render children?.()}
 </div>

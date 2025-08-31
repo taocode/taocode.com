@@ -1,10 +1,14 @@
-<script>
-  export let title
-  export let progress = 100
-  export let from100 = false
+<script lang="ts">
+  interface Props {
+    title: any;
+    progress?: number;
+    from100?: boolean;
+  }
+
+  let { title, progress = 100, from100 = false }: Props = $props();
   const dashArray = 280
   const dashOffsetStart = from100 ? 0 : dashArray
-  $: style = `--progress: ${progress}; --dasharray: ${dashArray}; --dashoffsetstart: ${dashOffsetStart}`
+  let style = $derived(`--progress: ${progress}; --dasharray: ${dashArray}; --dashoffsetstart: ${dashOffsetStart}`)
 </script>
 
 <div class="percent" {title} {style}>

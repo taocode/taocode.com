@@ -1,12 +1,17 @@
-<script>
-  export let image
-  export let alt = ""
+<script lang="ts">
+  interface Props {
+    image: any;
+    alt?: string;
+    children?: import('svelte').Snippet;
+  }
+
+  let { image, alt = "", children }: Props = $props();
 </script>
 <section class="applause-gradient blog-applause rotating-bg">
   <div class="container mj-container flex flex-col-reverse items-center gap-4 md:flex-row">
     <div class="blog-header overview-header max-w-xl flex-shrink px-12 py-8">
       <div class="">
-        <slot />
+        {@render children?.()}
       </div>
     </div>
     {#if image}

@@ -4,8 +4,13 @@
   import MillerParkGreenery from '$lib/images/miller-park-greenery.jpg';
 
   // adding types throws compiler error for some reason
-  // need https://github.com/sveltejs/svelte/pull/4282 to get merged
-  export let readableSlug: string;
+  
+  interface Props {
+    // need https://github.com/sveltejs/svelte/pull/4282 to get merged
+    readableSlug: string;
+  }
+
+  let { readableSlug }: Props = $props();
 
   const accentImage = {
     'Life': {
@@ -70,7 +75,7 @@
     ],
   }
 
-  $: goals = goalCats[readableSlug];
+  let goals = $derived(goalCats[readableSlug]);
 </script>
 
 <div class="w-full flex-shrink">

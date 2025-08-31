@@ -5,7 +5,11 @@
   import InfoTags from './InfoTags.svelte'
   import type { Post } from '$lib/models/post'
 
-  export let post: Post;
+  interface Props {
+    post: Post;
+  }
+
+  let { post }: Props = $props();
 </script>
 <style lang="postcss">
   @reference "../../../app.css";

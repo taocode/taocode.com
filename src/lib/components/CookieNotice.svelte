@@ -1,13 +1,18 @@
-<script>
+<script lang="ts">
   import { onMount } from 'svelte'
   import cookies from 'js-cookie'
   import ExternalLink from './ExternalLink.svelte'
   import PrivacyPolicyLink from './layout/PrivacyPolicyLink.svelte'
 
-  // We don't want the cookie notice to flash on every page reload, therefore hidden by default
-  export let showCookieNotice = false
-  export let didOptOut = false
-  export let consentGiven = false
+  
+  interface Props {
+    // We don't want the cookie notice to flash on every page reload, therefore hidden by default
+    showCookieNotice?: boolean;
+    didOptOut?: boolean;
+    consentGiven?: boolean;
+  }
+
+  let { showCookieNotice = $bindable(false), didOptOut = $bindable(false), consentGiven = $bindable(false) }: Props = $props();
 
   onMount(() => {
     const hasDNTEnabled =
@@ -51,10 +56,10 @@
     </p>
 
     <div class="text-center">
-      <button class="mr-3 cookie-notice-btn" on:click="{onConfirm}"
+      <button class="mr-3 cookie-notice-btn" onclick={onConfirm}
         >Accept</button
       >
-      <button class="cookie-notice-btn" on:click="{onDecline}">Decline</button>
+      <button class="cookie-notice-btn" onclick={onDecline}>Decline</button>
     </div>
   </div>
 {/if}

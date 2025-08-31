@@ -1,4 +1,6 @@
 <script>
+  import { run } from 'svelte/legacy';
+
   import NProgress from 'nprogress'
   import { navigating } from '$app/stores'
   import { browser } from '$app/environment'
@@ -10,7 +12,9 @@
     showSpinner: false,
   });
 
-  $: if (browser) {
-    $navigating ? NProgress.start() : NProgress.done();
-  }
+  run(() => {
+    if (browser) {
+      $navigating ? NProgress.start() : NProgress.done();
+    }
+  });
 </script>

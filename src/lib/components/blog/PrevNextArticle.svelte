@@ -1,8 +1,12 @@
 <script lang="ts">
   import type { Post } from '$lib/models/post'
 
-  export let previousArticle: Post
-  export let nextArticle: Post
+  interface Props {
+    previousArticle: Post;
+    nextArticle: Post;
+  }
+
+  let { previousArticle, nextArticle }: Props = $props();
 
 </script>
 

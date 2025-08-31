@@ -10,12 +10,16 @@
 
   const schemaOrgURL = 'http://schema.org';
 
-  export let blogPostInfo: {
+  interface Props {
+    blogPostInfo?: {
     title?: string;
     excerpt?: string;
     creationDate?: string;
     cover?: string;
-  } = {};
+  };
+  }
+
+  let { blogPostInfo = {} }: Props = $props();
 
   const fallbackTitle = 'TAOCode - Web productions by Mark Jones';
   const fallbackDescription =
@@ -84,7 +88,7 @@
 
   let isBlogDetailsPage = Object.keys(blogPostInfo).length > 0;
 
-  $: openGraphType = isBlogDetailsPage ? 'article' : 'website';
+  let openGraphType = $derived(isBlogDetailsPage ? 'article' : 'website');
 
   const ldJson = `${JSON.stringify(
     isBlogDetailsPage

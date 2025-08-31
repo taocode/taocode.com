@@ -1,5 +1,5 @@
-<script>
-  export let webmentionCounts;
+<script lang="ts">
+  let { webmentionCounts } = $props();
 </script>
 
 ❤️

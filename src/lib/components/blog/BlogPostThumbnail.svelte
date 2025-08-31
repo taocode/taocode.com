@@ -1,5 +1,9 @@
 <script lang="ts">
-  export let post: Post;
+  interface Props {
+    post: Post;
+  }
+
+  let { post }: Props = $props();
 </script>
 {#if post.thumbnail}
   <figure class="block w-full flex-none">

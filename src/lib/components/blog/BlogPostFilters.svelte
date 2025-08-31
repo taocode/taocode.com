@@ -1,12 +1,18 @@
 <script lang="ts">
+  import { run } from 'svelte/legacy';
+
   import BlogPostCard from './BlogPostCard.svelte'
   import type { Post } from '$lib/models/post'
 
   import { posts as sPosts } from '$lib/stores'
 
-  export let posts: Post[] = $sPosts
-  export let filteredByCategory: boolean = false
-  export let filteredByTag: boolean = false
+  interface Props {
+    posts?: Post[];
+    filteredByCategory?: boolean;
+    filteredByTag?: boolean;
+  }
+
+  let { posts = $sPosts, filteredByCategory = false, filteredByTag = false }: Props = $props();
 
   const uniqueCategories: string[] = posts
     .map((post: Post) => post.category)
@@ -20,13 +26,13 @@
     (tag: string, idx: number, arr: string[]) => arr.indexOf(tag) === idx,
   );
 
-  let textSearch: string = ''
-  let categorySearch: string = ''
-  let tagSearch: string = ''
+  let textSearch: string = $state('')
+  let categorySearch: string = $state('')
+  let tagSearch: string = $state('')
 
-  let filteredPosts: Post[] = []
+  let filteredPosts: Post[] = $state([])
 
-  $: {
+  run(() => {
     filteredPosts = posts.filter((post: Post) =>
       post.title.toLowerCase().includes(textSearch.toLowerCase()),
     )
@@ -42,7 +48,7 @@
         post.tags.includes(tagSearch),
       )
     }
-  }
+  });
 </script>
 
 <div class="w-full lg:w-9/12 lg:pr-16">

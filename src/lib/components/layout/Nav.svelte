@@ -6,8 +6,12 @@
   import Headroom from '@taocode/svelte-headroom'
 	import DarkModeToggle from '$lib/components/layout/DarkModeToggle.svelte';
 
-  let open = false;
-	export let darkMode = false;
+  let open = $state(false);
+  interface Props {
+    darkMode?: boolean;
+  }
+
+  let { darkMode = $bindable(false) }: Props = $props();
 
   const toggleHamburgerMenu = () => {
     open = !open;
@@ -41,7 +45,7 @@
           text-black
           hover:bg-green-400 hover:border-green-400"
           aria-label="Hamburger menu"
-          on:click="{toggleHamburgerMenu}"
+          onclick={toggleHamburgerMenu}
         >
           <div class="icon">
             <div class="i-fa6-solid-bars"></div>

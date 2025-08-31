@@ -1,7 +1,11 @@
 <script lang="ts">
   import { convertToSlug } from '$lib/utils'
 
-  export let tags: string[];
+  interface Props {
+    tags: string[];
+  }
+
+  let { tags }: Props = $props();
 </script>
 
 <div class="mt-3 text-sm">

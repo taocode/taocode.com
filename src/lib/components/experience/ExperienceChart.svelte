@@ -6,16 +6,14 @@ import techEx from './experience'
 const colors = ['bg-green-650', 'bg-green-650', 'bg-green-650', 'bg-green-650', 'bg-green-650', 'bg-green-650', 'bg-green-600']
 
 const techs = ['years']
-let dChildren = techEx
+let dChildren = $state(techEx)
 // dChildren = techEx[0].children
-let stacks
-let currentChild
-$: {
-  stacks = Pancake.stacks(dChildren, techs, 'name')
-// console.log('stacks:',stacks)
- }
+let stacks = $derived(Pancake.stacks(dChildren, techs, 'name'))
+//  console.log('stacks:',stacks)
+let currentChild = $state()
+
 		
-$: max = stacks.reduce((max, stack) => Math.max(max, ...stack.values.map(v => v.end)), 0)
+let max = $derived(stacks.reduce((max, stack) => Math.max(max, ...stack.values.map(v => v.end)), 0))
 const showChild = (n) => {
   if (!currentChild && techEx[n].children) {
     dChildren =  techEx[n].children
@@ -101,19 +99,23 @@ const escapeToOverview = (event) => {
 <div class="chart -mt-3 lg:-mt-10 lg:pl-3 max-w-screen-sm mx-auto">
   <button class="overview font-display text-sm uppercase py-1 px-2 my-2 rounded"
   class:activated={currentChild}
-  on:click={showOverview}>Overview</button>
+  onclick={showOverview}>Overview</button>
   {#if currentChild}
   <span transition:fade|global class="inline-block font-display text-sm px-2">{currentChild}</span>
   {/if}
   <Pancake.Chart x1={0} x2={max} y1={3.5} y2={-0.5}>
-    <Pancake.Grid horizontal count={techEx.length} let:value let:first>
-      <div transition:fade|global class="grid-line horizontal"></div>
-    </Pancake.Grid>
+    <Pancake.Grid horizontal count={techEx.length}  >
+      {#snippet children({ value, first })}
+            <div transition:fade|global class="grid-line horizontal"></div>
+                {/snippet}
+        </Pancake.Grid>
 
-    <Pancake.Grid vertical count={5} let:value>
-      <div transition:fade|global class="grid-line vertical"></div>
-      <span class="x-label">{value}</span>
-    </Pancake.Grid>
+    <Pancake.Grid vertical count={5} >
+      {#snippet children({ value })}
+            <div transition:fade|global class="grid-line vertical"></div>
+        <span class="x-label">{value}</span>
+                {/snippet}
+        </Pancake.Grid>
 
     {#each stacks as stack, i}
       {#each stack.values as d, n}
@@ -129,7 +131,7 @@ const escapeToOverview = (event) => {
            disabled={!dChildren[n].children}
           class:has-children={dChildren[n].children}
           title="{dChildren[n].years} years of experience with {dChildren[n].name}"
-          on:click={()=>showChild(n)}></button>
+          onclick={()=>showChild(n)}></button>
         </Pancake.Box>
         <div class="relative pointer-events-none z-0 p-2 block font-display text-sm text-gray-300 font-semibold">{dChildren[n].name}</div>
       {/each}

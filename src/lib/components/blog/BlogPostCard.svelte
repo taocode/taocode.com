@@ -5,15 +5,20 @@
   import { marked } from 'marked'
 
   // import Icon from 'svelte-awesome';
-  // import { faQuoteLeft, faQuoteRight } from '@fortawesome/free-solid-svg-icons';
+  
 
-  export let post: Post
+  interface Props {
+    // import { faQuoteLeft, faQuoteRight } from '@fortawesome/free-solid-svg-icons';
+    post: Post;
+  }
 
-  $: excerpt = (post.excerpt) ? 
+  let { post }: Props = $props();
+
+  let excerpt = $derived((post.excerpt) ? 
                 marked.parse( post.excerpt.length > 100
                   ? `${post.excerpt.slice(0, 100)}...`
                   : post.excerpt )
-                : false
+                : false)
 </script>
 
 <div class="blog-post-card">

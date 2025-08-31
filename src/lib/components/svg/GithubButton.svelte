@@ -123,8 +123,12 @@
 </style>
 
 <script lang="ts">
-  export let count: number;
-  export let urlSlug: string;
+  interface Props {
+    count: number;
+    urlSlug: string;
+  }
+
+  let { count, urlSlug }: Props = $props();
 </script>
 
 <span class="github-btn github-stargazers github-btn-large">

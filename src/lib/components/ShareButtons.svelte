@@ -2,7 +2,11 @@
   import { page } from '$app/state';
   import type { Post } from '$lib/models/post';
 
-  export let post: Post;
+  interface Props {
+    post: Post;
+  }
+
+  let { post }: Props = $props();
 
   const fullURL = `https://www.taocode.com${page.url.pathname}`;
   const encodedURL = encodeURIComponent(fullURL);

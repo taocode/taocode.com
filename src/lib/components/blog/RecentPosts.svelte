@@ -2,7 +2,11 @@
   import BlogPostCard from './BlogPostCard.svelte';
   import type { Post } from '$lib/models/post';
 
-  export let posts: Post[];
+  interface Props {
+    posts: Post[];
+  }
+
+  let { posts }: Props = $props();
   const filteredPosts = posts.filter((_post: Post, idx: number) => idx < 3);
 </script>
 

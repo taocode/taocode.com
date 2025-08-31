@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { run } from 'svelte/legacy';
+
 
   import BackToBlogOverviewBtn from '$lib/components/blog/BackToBlogOverviewBtn.svelte'
   import BlogPostHeader from '$lib/components/blog/BlogPostHeader.svelte'
@@ -13,27 +15,31 @@
 
   import { posts } from '$lib/stores'
 
-  export let data
-  let pageComponent = data.pageComponent
+  let { data } = $props();
+  let pageComponent = $state(data.pageComponent)
   let metadata = data.metadata
-  $: pageComponent = data.pageComponent
+  run(() => {
+    pageComponent = data.pageComponent
+  });
 
-  $: slug = $page.params.slug
-  $: postIndex = $posts.findIndex((p) => p.slug === slug)
-  $: post = $posts[postIndex]
-  $: previousArticle = $posts[postIndex + 1]
-  $: nextArticle = $posts[postIndex - 1]
-  $: pageTitle = `${post?.title} | TAOCode`
-  $: description = post.description
+  let slug = $derived($page.params.slug)
+  let postIndex = $derived($posts.findIndex((p) => p.slug === slug))
+  let post = $derived($posts[postIndex])
+  let previousArticle = $derived($posts[postIndex + 1])
+  let nextArticle = $derived($posts[postIndex - 1])
+  let pageTitle = $derived(`${post?.title} | TAOCode`)
+  let description = $derived(post.description)
 
-  $: blogPostInfo = post
+  let blogPostInfo = $derived(post
     ? {
         title: pageTitle,
         excerpt: post.excerpt,
         creationDate: post.creationDate,
         cover: post.cover,
       }
-    : {};
+    : {});
+
+  const SvelteComponent = $derived(pageComponent);
 </script>
 
 <svelte:head>
@@ -46,8 +52,8 @@
 <BlogPostHeader {post} />
 <section class="container flex flex-col gap-6 md:flex-row mj-container">
   <article class="prose blog flex-grow">
-    {#if post.lead }<p class="lead">{@html marked.parse(post.lead)}</p>{/if}
-    <svelte:component this={pageComponent} />
+    {#if post.lead}<p class="lead">{@html marked.parse(post.lead)}</p>{/if}
+    <SvelteComponent />
     <div class="share-post bg-green-100-900 bg-opacity-70 border-green-700">
       <div class="share-icon bg-green-700-300 text-green-100-900">
         <div class="icon text-[1.5em]">

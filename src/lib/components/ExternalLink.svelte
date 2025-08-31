@@ -1,9 +1,21 @@
 <script lang="ts">
-  export let href: string;
-  export let title: string | undefined = undefined;
-  export let customClass: string = '';
-  export let ariaLabel: string | undefined = undefined;
-  export let isAffiliateLink: boolean = false;
+  interface Props {
+    href: string;
+    title?: string | undefined;
+    customClass?: string;
+    ariaLabel?: string | undefined;
+    isAffiliateLink?: boolean;
+    children?: import('svelte').Snippet;
+  }
+
+  let {
+    href,
+    title = undefined,
+    customClass = '',
+    ariaLabel = undefined,
+    isAffiliateLink = false,
+    children
+  }: Props = $props();
 </script>
 
 <a
@@ -15,5 +27,5 @@
   aria-label="{ariaLabel}"
 >
   <!-- prettier-ignore -->
-  <slot />{isAffiliateLink ? '*' : ''}
+  {@render children?.()}{isAffiliateLink ? '*' : ''}
 </a>
