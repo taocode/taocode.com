@@ -1,10 +1,10 @@
 <script lang="ts">
-  import { page } from '$app/stores';
+  import { page } from '$app/state';
   import { onMount } from 'svelte';
 
   const baseURL = `https://www.taocode.com`;
 
-  const fullURL = `${baseURL}${$page.url.pathname}`;
+  const fullURL = `${baseURL}${page.url.pathname}`;
 
   const siteLogo = `${baseURL}/taocode-logo.png`;
 
@@ -93,6 +93,7 @@
   )}`;
 
   onMount(() => {
+    if (!document) return
     const ldJsonScript = document.getElementById('addedldJsonScript');
 
     // We want to avoid placing multiple application/ld+json files in the DOM, therefore replace text content,

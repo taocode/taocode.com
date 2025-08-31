@@ -50,7 +50,7 @@
     validate({ duration, offset, tolerance });
     headerClass = updateClass(y);
     atTop = y <= 2;
-    atBottom = win && (win.innerHeight + win.pageYOffset) >= document.body.offsetHeight - 2;
+    atBottom = win && (win.innerHeight + win.pageYOffset) >= document?.body.offsetHeight - 2;
     if (headerClass !== lastHeaderClass) {
       dispatch(headerClass ? "unpin" : "pin");
     }

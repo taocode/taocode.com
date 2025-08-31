@@ -132,6 +132,7 @@ I get accustomed to new projects quickly and
 </section>
 
 <style lang="postcss">
+  @reference "../../app.css";
   .icon {
     @apply inline-block mr-2;
   }

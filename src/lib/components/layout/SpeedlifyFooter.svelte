@@ -18,10 +18,11 @@
 </div>
 
 <style lang="postcss">
+  @reference "../../../app.css";
   .lighthouse {
     @apply max-w-3/4 mx-auto text-center xs:max-w-1/2 sm:max-w-64;
     > div {
-      @apply bg-green-950 bg-opacity-40 p-3 rounded;
+      @apply bg-green-950/40 p-3 rounded;
     }
   }
   .rings {

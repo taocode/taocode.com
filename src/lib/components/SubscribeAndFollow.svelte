@@ -40,10 +40,11 @@
   </div>
 </div>
 <style lang="postcss">
+  @reference "../../app.css";
   .subscribe-follow {
     @apply text-[2em];
   }
   .links {
-    @apply flex flex-wrap gap-3 justify-center mt-5;
+    @apply flex flex-wrap gap-[0.75em] justify-center mt-5;
   }
 </style>

@@ -3,7 +3,7 @@
   import { browser } from '$app/environment'
 
   onMount(() => {
-    if (browser) {
+    if (browser && document) {
       var s = document.createElement('script')
       s.src = 'https://cdn.iubenda.com/iubenda.js'
       document.documentElement.append(s)

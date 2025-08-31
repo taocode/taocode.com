@@ -11,9 +11,8 @@
     </div>
     {#if image}
     <div class="blog-header-image flex-grow">
-      <div class="rounded overflow-hidden bg-gray-200 bg-opacity-50 w-3/5 p-2 mx-auto max-width 
-      md:w-full 
-      dark:(bg-gray-900 bg-opacity-50)">
+      <div class="rounded overflow-hidden bg-gray-200/50 dark:bg-gray-900/50 w-3/5 p-2 mx-auto max-width 
+      md:w-full">
         <img class="rounded" srcset="{image}" type="image/webp" alt={alt} />
       </div>
     </div>

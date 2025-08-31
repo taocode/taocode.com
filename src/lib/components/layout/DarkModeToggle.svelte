@@ -1,7 +1,13 @@
 <script>
+	import { browser } from "$app/environment";
 
-	export let enabled = false;
-	const toggle = () => (enabled = !enabled);
+	let enabled = $state(browser && document ? document.documentElement?.getAttribute('data-mode') : true)
+	$effect(() => {
+		if (browser && document) document.documentElement?.setAttribute('data-mode', enabled ? 'dark' : 'light');
+	})
+	const toggle = () => {
+		enabled = !enabled;
+	};
 </script>
 
 <button
@@ -13,7 +19,7 @@
 	
 	focus:outline-none focus:ring focus:ring-offset focus:ring-green-500"
 	aria-pressed="false"
-	on:click={toggle}
+	onclick={toggle}
 >
 	<span class="sr-only">Use setting</span>
 	<div

@@ -20,8 +20,8 @@
   <a data-sveltekit-prefetch href="/blog/{post.slug}" class="link-inherit"
   aria-label="{post.slug}"
       >
-    <div class="card-transform bg-gray-100 border-gray-400 dark:(bg-gray-900 border-gray-700)">
-    <div class="card-face card-face-front dark:bg-gray-900">
+    <div class="card-transform bg-gray-100 border-gray-400 dark:bg-gray-900 dark:border-gray-700">
+    <div class="card-face card-face-front">
       <div class="p-3">
         <div class="my-3 text-xl font-bold font-display">
           {post.title}
@@ -60,6 +60,7 @@
 </div>
 
 <style type="postcss" global>
+  @reference '../../../app.css';
   .blog-post-card {
     @apply relative w-full h-full;
   }

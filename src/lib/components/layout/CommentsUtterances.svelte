@@ -3,7 +3,7 @@ import { dev } from '$app/environment'
 import { onMount } from 'svelte'
 
 onMount(() => {
-	if (!dev) {
+	if (!dev && document) {
     const s = document.createElement('script')
     const tag = document.getElementById('utterances')
     s.setAttribute('repo',"taocode/taocode.com")

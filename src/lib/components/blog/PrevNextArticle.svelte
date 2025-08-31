@@ -28,6 +28,7 @@
 </div>
 
 <style lang="postcss">
+  @reference "../../../app.css";
 .neighbor {
   @apply w-full p-2 md:w-1/2;
   &.previous {
@@ -38,8 +39,7 @@
   }
   .card {
     @apply relative flex h-full
-      bg-gray-300 border-gray-400
-      dark:(bg-gray-900 border-gray-800);
+      bg-gray-300 dark:bg-gray-900 border-gray-400 dark:border-gray-800;
     &:hover {
       @apply border-gray-700;
     }
@@ -49,7 +49,7 @@
     }
   }
   a {
-    @apply z-10 block p-5 pt-12 text-xl no-underline font-bold text-[inherit] hover:(underline text-[inherit]);
+    @apply z-10 block p-5 pt-12 text-xl no-underline font-bold text-[inherit] hover:underline hover:text-[inherit];
   }
 }
 

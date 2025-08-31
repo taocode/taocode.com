@@ -1,10 +1,10 @@
 <script lang="ts">
-  import { page } from '$app/stores';
+  import { page } from '$app/state';
   import type { Post } from '$lib/models/post';
 
   export let post: Post;
 
-  const fullURL = `https://www.taocode.com${$page.url.pathname}`;
+  const fullURL = `https://www.taocode.com${page.url.pathname}`;
   const encodedURL = encodeURIComponent(fullURL);
   const encodedPostTitle = encodeURIComponent(post.title);
   const encodedPostExcerpt = encodeURIComponent(post.excerpt);
@@ -59,8 +59,9 @@
   </a>
 </div>
 <style lang="postcss">
+  @reference "../../app.css";
   .share-buttons {
-    @apply text-[1.5em] flex gap-3 w-full justify-evenly;
+    @apply text-[1.5em] flex gap-[0.75em] w-full justify-evenly;
   }
   .share-btn {
     @apply inline-flex text-green-700 hover:text-green-800;

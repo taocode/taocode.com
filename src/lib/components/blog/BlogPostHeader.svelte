@@ -8,6 +8,7 @@
   export let post: Post;
 </script>
 <style lang="postcss">
+  @reference "../../../app.css";
   .applause-gradient {
     @apply font-display;
   }

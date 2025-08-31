@@ -61,6 +61,7 @@
 
 
 <style type="postcss">
+  @reference "../../app.css";
   .cookie-notice-btn {
     @apply px-5 py-2 mr-3 font-semibold text-white bg-green-700 rounded text-sm;
   }

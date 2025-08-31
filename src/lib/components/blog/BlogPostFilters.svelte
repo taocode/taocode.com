@@ -135,7 +135,8 @@
 </div>
 
 <style lang="postcss">
+  @reference "../../../app.css";
   .select-filter {
-    @apply w-full px-2 text-gray-light border border-gray-400 rounded hover:border-gray-500;
+    @apply w-full px-2 text-gray-200/700 border border-gray-400 rounded hover:border-gray-500;
   }
 </style>

@@ -48,8 +48,8 @@
   <article class="prose blog flex-grow">
     {#if post.lead }<p class="lead">{@html marked.parse(post.lead)}</p>{/if}
     <svelte:component this={pageComponent} />
-    <div class="share-post bg-green-100 bg-opacity-70 border-green-700 dark:bg-green-900">
-      <div class="share-icon bg-green-700 text-green-100 dark:text-green-950">
+    <div class="share-post bg-green-100-900 bg-opacity-70 border-green-700">
+      <div class="share-icon bg-green-700-300 text-green-100-900">
         <div class="icon text-[1.5em]">
           <div class="i-fa6-solid-share"></div>
         </div>
@@ -75,6 +75,7 @@
 </section> 
 
 <style lang="postcss">
+  @reference "../../../app.css";
 .share-post {
   @apply flex justify-between items-center w-auto max-w-xs mx-auto p-3 mt-12 mb-9 border-2 rounded;
 }

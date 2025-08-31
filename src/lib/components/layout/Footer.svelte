@@ -7,14 +7,15 @@
 </script>
 
 <style lang="postcss">
+  @reference "../../../app.css";
   nav {
     @apply p-3;
   }
   .boxed nav {
-    @apply bg-green-900 bg-opacity-40 rounded;
+    @apply bg-green-900/40 rounded;
   }
   .social {
-    @apply mt-6 flex gap-3 justify-center;
+    @apply mt-6 flex gap-[0.75em] justify-center;
   }
   .icon {
     @apply text-[1.34em];
