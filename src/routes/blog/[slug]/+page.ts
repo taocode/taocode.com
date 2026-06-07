@@ -8,7 +8,7 @@ import type { PageLoad } from './$types'
 
 export async function load<PageLoad>({ params }) {
   try {
-    const compPromise = import(`../../../posts/${params.slug}.svx`)
+    const compPromise = import(`../../../posts/${params.slug}.md`)
     const compResult = await Promise.resolve(compPromise)
     const { default: page } = compResult
     return { pageComponent: page }
