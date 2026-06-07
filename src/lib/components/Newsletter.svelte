@@ -56,7 +56,7 @@
             value="Subscribe"
             name="subscribe"
             id="mc-embedded-subscribe"
-            class="w-full px-5 py-3 font-semibold font-display text-white bg-green-700 rounded cursor-pointer hover:bg-green-800"
+            class="btn preset-filled-primary-700-300 w-full px-5 py-3 font-semibold font-display rounded cursor-pointer"
           />
         </div>
       </div>

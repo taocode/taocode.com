@@ -1,4 +1,5 @@
 <script lang="ts">
+  import Icon from '@iconify/svelte';
   import ClickOutside from 'svelte-click-outside';
   import TaocodeLogo from '../svg/TaocodeLogo.svelte';
 
@@ -34,8 +35,7 @@
         <TaocodeLogo classes="h-8 -mt-3"/>
       </a>
     </div>
-    <div class="flex-grow text-right mr-2 
-    md:(absolute right-0 flex-none)">
+    <div class="flex-grow text-right mr-2 md:absolute md:right-0 md:flex-none">
       <DarkModeToggle bind:enabled={darkMode} />
     </div>
     <div class="ml-auto flex-shrink md:hidden">
@@ -48,7 +48,7 @@
           onclick={toggleHamburgerMenu}
         >
           <div class="icon">
-            <div class="i-fa6-solid-bars"></div>
+            <Icon icon="fa6-solid:bars" />
           </div>
         </button>
       </ClickOutside>
@@ -56,7 +56,7 @@
     <nav
       aria-label="Header navigation"
       class:hidden="{!open}"
-      class="w-full ml-auto md:(flex w-auto mr-4)"
+      class="w-full ml-auto md:flex md:w-auto md:mr-4"
     >
       <a
         data-sveltekit-prefetch

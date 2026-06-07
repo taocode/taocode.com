@@ -6,4 +6,9 @@
     --breakpoint-xl: 1280px;
     --font-display: Rubik, sans-serif;
     --font-body: Spectral, serif;
+    --color-gray-light: #ddd;
+    --color-gray-dark: #333;
+    --color-gray-350: #ccc;
+    --color-gray-850: #222;
+    --color-green-750: #2c6720;
 }

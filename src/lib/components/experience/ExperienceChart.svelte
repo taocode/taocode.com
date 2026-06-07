@@ -26,6 +26,7 @@ const escapeToOverview = (event) => {
 }
 </script>
 <style lang="postcss" global>
+@reference "../../../app.css";
 	.chart {
 		position: relative;
 	}
@@ -85,14 +86,13 @@ const escapeToOverview = (event) => {
     }
   }
   .overview {
-    @apply text-white cursor-auto pointer-events-none border-gray-200 border-2 border-opacity-25 
-  transition duration-200 ease-out ;
+    @apply text-white cursor-auto pointer-events-none border-2 border-gray-200/25 transition duration-200 ease-out;
   }
   .activated {
-    @apply text-primary cursor-pointer pointer-events-auto;
+    @apply text-primary-500 cursor-pointer pointer-events-auto;
   }
   .activated:hover {
-    @apply border-gray-900 bg-gray-700 shadow-glow-primary;
+    @apply border-gray-900 bg-gray-700;
   }
 </style>
 

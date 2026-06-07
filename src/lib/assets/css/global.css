@@ -1,3 +1,4 @@
+@reference "../../../app.css";
 
 html {
   font-size: var(--font-size);
@@ -91,7 +92,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .mj ul ul {
-  @apply mb-4 ml-8 text-gray-800 list-circle;
+  @apply mb-4 ml-8 text-gray-800 list-[circle];
 }
 
 .mj blockquote {
@@ -147,7 +148,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .mj .anchor-link {
-  @apply no-underline text-opacity-25;
+  @apply no-underline opacity-25;
 }
 
 .mj .anchor-link:hover {
@@ -155,9 +156,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav-link {
-  @apply block text-green-550 mt-2 mr-4 transition duration-200 font-display;
+  @apply block text-green-500 mt-2 mr-4 transition duration-200 font-display;
 &:hover {
-  @apply text-green-650;
+  @apply text-green-600;
 }
 }
 
@@ -181,61 +182,19 @@ h1, h2, h3, h4, h5, h6 {
   @apply px-6 py-3 mx-auto max-w-screen-lg;
 }
 
-.mj .btn-primary {
-  @apply inline-block px-5 py-3 text-sm font-semibold text-black bg-green-500 font-display;
-}
-
-.mj .btn-primary:hover {
-  @apply bg-green-400 text-black no-underline;
-}
-
-.mj .card {
-  @apply relative border rounded shadow-xl w-full dark:border-gray-700;
-  box-shadow: 0 7px 20px -5px rgba(255,255,255, 0.12), 0 10px 10px -5px rgba(255,255,255, 0.08);
-}
-
 .mj .topic-box {
   @apply text-center border-b-4 border-green-700;
 }
 
-.mj .info-tag {
-  @apply inline-flex items-center bg-gray-200 rounded py-1 my-1 text-sm font-semibold font-display mr-2 px-3
-  dark:(bg-gray-950 ring-green-400 ring-1 ring-opacity-30)
-  hover:ring-opacity-90;
-}
-
-.mj .alert-gray {
-  @apply p-4 text-gray-700 bg-gray-200 border-l-4 border-gray-500;
-}
-
-.mj .alert-success {
-  @apply p-4 text-green-800 bg-green-100 border-l-4 border-green-500;
-}
-
 .form-error {
-  @apply font-display text-red-700;
-}
-.dark .form-error {
-  @apply text-red-400;
+  @apply font-display text-red-700 dark:text-red-400;
 }
 
-.btn {
-  @apply py-1 px-4 rounded m-1 border-2 border-black;
-}
-.btn-primary {
-  @apply bg-green-600 text-black;
-}
-.btn-secondary {
-  @apply bg-secondary text-primary;
-}
-.btn-reset {
-  @apply bg-gray-500 text-gray-200 border-gray-500;
-}
 .blog-header {
-  @apply bg-white bg-opacity-70 rounded shadow-xl max-w-screen-sm
+  @apply bg-white/70 rounded shadow-xl max-w-screen-sm
   mx-auto
   w-auto
-  dark:(bg-black bg-opacity-70 text-gray-300);
+  dark:bg-black/70 dark:text-gray-300;
 }
 .overview-header {
   @apply w-full;
@@ -371,10 +330,10 @@ h1, h2, h3, h4, h5, h6 {
 .lg\:prose-xl ul > li {
   padding-left: 0 !important;
 }
-.dark {
+[data-mode="dark"] {
   @apply bg-black text-gray-300;
   [type='text'], [type='email'], [type='url'], [type='password'], [type='number'], [type='date'], [type='datetime-local'], [type='month'], [type='search'], [type='tel'], [type='time'], [type='week'], [multiple], textarea, select {
-    @apply bg-gray-850 text-gray-300 placeholder-gray-350;
+    @apply bg-gray-800 text-gray-300 placeholder-gray-350;
   }
   .mj a {
     @apply text-green-400;
@@ -396,9 +355,6 @@ h1, h2, h3, h4, h5, h6 {
   }
   .text-primary {
     @apply text-green-400;
-  }
-  .mj .btn-primary {
-    @apply text-black;
   }
   .bg-gray-light label {
     @apply text-gray-300;

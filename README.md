@@ -24,7 +24,7 @@ This site is based on some fine work by 👤 **[Markus Hatvan](https://markushat
 
 Where I've departed from [Markus Hatvan's project](https://github.com/mhatvan/markushatvan.com):
 
-- 🏃💨 WindiCSS replaced TailwindCSS
+- 🏃💨 Tailwind CSS v4 + Skeleton UI (migrated from WindiCSS)
 - ➕🤯 Headroom - hides fixed header *(based on [collardeau/svelte-headroom](https://github.com/collardeau/svelte-headroom))*
 - ➕🔼 Back To Top button (also uses Headroom)
 - ➕👋💬 [Utterances comments](https://utteranc.es/) for blog posts

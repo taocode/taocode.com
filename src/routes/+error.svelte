@@ -1,26 +1,32 @@
 <script lang="ts">
-  import { page } from '$app/stores'
-  import { browser, dev } from '$app/environment'
-  export let { data, error } = $page
-  $: {
-    console.error('/+error.svelte',error)
-    // console.dir(data)
-  }
+  import { dev } from '$app/environment';
+  import type { PageData } from './$types';
+
+  let {
+    data,
+    error
+  }: {
+    data: PageData;
+    error: App.Error & { message: string };
+  } = $props();
+
+  $effect(() => {
+    console.error('/+error.svelte', error);
+  });
 </script>
 
 <svelte:head>
-  <title>{$page.status}</title>
+  <title>{error?.message ?? 'Error'}</title>
 </svelte:head>
 
 <div class="text-center mj-container">
-  <h1>{$page.status}</h1>
-
-  <p>{$page.error.message}</p>
+  <h1>Something went wrong</h1>
+  <p>{error?.message}</p>
 </div>
 
-{#if browser && dev && $page.error.stack}
-  <pre>{$page.error.stack}</pre>
-  <hr>
+{#if dev && error?.stack}
+  <pre>{error.stack}</pre>
+  <hr />
 {/if}
 
 <style>

@@ -1,20 +1,17 @@
 <script>
-  import { run } from 'svelte/legacy';
+  import NProgress from 'nprogress';
+  import { navigating } from '$app/state';
+  import { browser } from '$app/environment';
 
-  import NProgress from 'nprogress'
-  import { navigating } from '$app/stores'
-  import { browser } from '$app/environment'
-
-  import './NProgress.pcss'
+  import './NProgress.pcss';
 
   NProgress.configure({
-    // Full list: https://github.com/rstacruz/nprogress#configuration
-    showSpinner: false,
+    showSpinner: false
   });
 
-  run(() => {
+  $effect(() => {
     if (browser) {
-      $navigating ? NProgress.start() : NProgress.done();
+      navigating ? NProgress.start() : NProgress.done();
     }
   });
 </script>

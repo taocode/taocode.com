@@ -1,14 +1,9 @@
 <script lang="ts">
-  import BlogPostHeaderImage from '$lib/images/b-flopped-on-sidewalk.jpg'
-  import BlogOverviewHeader from '$lib/components/blog/BlogOverviewHeader.svelte'
-  import BlogPostFilters from '$lib/components/blog/BlogPostFilters.svelte'
-  import BlogPostSidebar from '$lib/components/blog/BlogPostSidebar.svelte'
-  import SEO from '$lib/components/layout/SEO.svelte'
-  import type { Post } from '$lib/models/post'
-
-  import { posts } from '$lib/stores'
-
-  // console.log('/blog/+page.svelte',{data,posts})
+  import BlogPostHeaderImage from '$lib/images/b-flopped-on-sidewalk.jpg';
+  import BlogOverviewHeader from '$lib/components/blog/BlogOverviewHeader.svelte';
+  import BlogPostFilters from '$lib/components/blog/BlogPostFilters.svelte';
+  import BlogPostSidebar from '$lib/components/blog/BlogPostSidebar.svelte';
+  import SEO from '$lib/components/layout/SEO.svelte';
 </script>
 
 <svelte:head>
@@ -22,9 +17,10 @@
 <SEO />
 
 <style lang="postcss">
-a {
-  @apply underline;
-}
+  @reference "../../app.css";
+  a {
+    @apply underline;
+  }
 </style>
 
 <BlogOverviewHeader image={BlogPostHeaderImage}>
@@ -33,7 +29,7 @@ a {
     <p>
       Insights and things I've learned working on the web for over 2 decades:
       <a href="/categories/programming" data-sveltekit-prefetch>Programming</a>,
-      <a href="/categories/portfolio" data-sveltekit-prefetch>Portfolio</a>, and 
+      <a href="/categories/portfolio" data-sveltekit-prefetch>Portfolio</a>, and
       <a href="/categories/life" data-sveltekit-prefetch>Life</a>.
     </p>
     <h2>Blog post topic?</h2>

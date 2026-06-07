@@ -1,4 +1,5 @@
 <script>
+  import Icon from '@iconify/svelte'
   import ExternalLink from './ExternalLink.svelte'
 </script>
 
@@ -12,14 +13,14 @@
       ariaLabel="Follow me on GitHub"
       customClass="inline-flex text-green-900 hover:text-green-700"
     >
-      <div class="i-fa6-brands-github"></div>
+      <Icon icon="fa6-brands:github" />
     </ExternalLink>
     <ExternalLink
       href="https://www.linkedin.com/in/taocode/"
       ariaLabel="Network with me on Linkedin"
       customClass="inline-flex text-green-900 hover:text-green-700"
     >
-      <div class="i-fa6-brands-linkedin"></div>
+      <Icon icon="fa6-brands:linkedin" />
     </ExternalLink>
 
     <ExternalLink
@@ -27,7 +28,7 @@
       ariaLabel="Follow me Reddit"
       customClass="inline-flex text-green-900 hover:text-green-700"
     >
-      <div class="i-fa6-brands-reddit"></div>
+      <Icon icon="fa6-brands:reddit" />
     </ExternalLink>
 
     <ExternalLink
@@ -35,7 +36,7 @@
       ariaLabel="Read the RSS feed"
       customClass="inline-flex text-green-900 hover:text-green-700"
     >
-      <div class="i-fa6-solid-rss"></div>
+      <Icon icon="fa6-solid:rss" />
     </ExternalLink>
   </div>
 </div>

@@ -1,7 +1,5 @@
-<script>
-  import SEO from '$lib/components/layout/SEO.svelte'
-  // import ExternalLink from '$lib/ExternalLink.svelte';
-  // import AffiliateNotice from '$lib/AffiliateNotice.svelte';
+<script lang="ts">
+  import SEO from '$lib/components/layout/SEO.svelte';
 </script>
 
 <svelte:head>

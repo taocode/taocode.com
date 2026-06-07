@@ -13,7 +13,7 @@
 <div class="font-display flex flex-wrap mb-10 -m-2">
   {#if previousArticle}
     <div class="neighbor previous">
-      <div class="card">
+      <div class="card preset-filled-surface-100-900">
         <a data-sveltekit-prefetch href="/blog/{previousArticle.slug}">
           {previousArticle.title}
         </a>
@@ -22,7 +22,7 @@
   {/if}
   {#if nextArticle}
     <div class="neighbor next">
-      <div class="card">
+      <div class="card preset-filled-surface-100-900">
           <a data-sveltekit-prefetch href="/blog/{nextArticle.slug}">
             {nextArticle.title}
           </a>

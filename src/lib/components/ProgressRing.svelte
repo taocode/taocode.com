@@ -19,6 +19,7 @@
 </div>
 
 <style lang="postcss">
+@reference "../../app.css";
 svg {
   @apply w-full h-full;
 }

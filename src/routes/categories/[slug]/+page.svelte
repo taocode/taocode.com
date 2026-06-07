@@ -1,58 +1,45 @@
 <script lang="ts">
-  // throw new Error("@migration task: Add data prop (https://github.com/sveltejs/kit/discussions/5774#discussioncomment-3292707)");
+  import BlogOverviewHeader from '$lib/components/blog/BlogOverviewHeader.svelte';
+  import BlogPostSidebar from '$lib/components/blog/BlogPostSidebar.svelte';
+  import BlogPostFilters from '$lib/components/blog/BlogPostFilters.svelte';
+  import CurrentGoals from '$lib/components/content/CurrentGoals.svelte';
+  import SEO from '$lib/components/layout/SEO.svelte';
+  import { convertToSentenceCase } from '$lib/utils';
+  import EmpurrorSunNap from '$lib/images/empurror-scratcher-sun-nap.jpg';
+  import MillerParkMushrooms from '$lib/images/miller-park-tree-mushrooms.jpg';
+  import MillerParkGreenery from '$lib/images/miller-park-greenery.jpg';
+  import type { PageData } from './$types';
 
-  import BlogOverviewHeader from '$lib/components/blog/BlogOverviewHeader.svelte'
-  import BlogPostSidebar from '$lib/components/blog/BlogPostSidebar.svelte'
-  import BlogPostFilters from '$lib/components/blog/BlogPostFilters.svelte'
-  import CurrentGoals from '$lib/components/content/CurrentGoals.svelte'
-  import SEO from '$lib/components/layout/SEO.svelte'
-  import { page } from '$app/stores'
-  import type { Post } from '$lib/models/post'
-  import type { LoadInput } from '@sveltejs/kit/types/page'
-
-  import { convertToSentenceCase } from '$lib/utils'
-
-  import EmpurrorSunNap from '$lib/images/empurror-scratcher-sun-nap.jpg'
-  import MillerParkMushrooms from '$lib/images/miller-park-tree-mushrooms.jpg'
-  import MillerParkGreenery from '$lib/images/miller-park-greenery.jpg'
+  let { data }: { data: PageData } = $props();
 
   const accentImage = {
-    'Life': {
-      'alt': 'Black cat napping in the sun on a cardboard scratcher',
-      'img': EmpurrorSunNap,
+    Life: {
+      alt: 'Black cat napping in the sun on a cardboard scratcher',
+      img: EmpurrorSunNap
     },
-    'Programming': {
-      'alt': "Miller Park green space framed by trees",
-      'img': MillerParkGreenery,
+    Programming: {
+      alt: 'Miller Park green space framed by trees',
+      img: MillerParkGreenery
     },
-    'Portfolio': {
-      'alt': "Cherry blossoms on ground and tree",
-      'img': MillerParkMushrooms,
-    },
-  }
+    Portfolio: {
+      alt: 'Cherry blossoms on ground and tree',
+      img: MillerParkMushrooms
+    }
+  };
 
-  import { posts } from '$lib/stores'
-
-  export let data
-  export let postsByCategory: Post[] = data.postsByCategory;
-  // export let posts: Post[] = data.posts;
-  // console.log('categories[slug]+page.svelte',{data, error})
-  $: postsByCategory = data.postsByCategory
-  $: readableSlug = convertToSentenceCase(data.slug);
+  const readableSlug = $derived(convertToSentenceCase(data.slug));
+  const postsByCategory = $derived(data.postsByCategory);
+  const headerImage = $derived(accentImage[readableSlug as keyof typeof accentImage]);
 </script>
 
 <svelte:head>
   <title>{readableSlug} | Mark Jones</title>
-
-  <meta
-    name="description"
-    content="Opinions and viewpoints about {readableSlug}."
-  />
+  <meta name="description" content="Opinions and viewpoints about {readableSlug}." />
 </svelte:head>
 
 <SEO />
 
-<BlogOverviewHeader image={accentImage[readableSlug].img} alt={accentImage[readableSlug].alt}>
+<BlogOverviewHeader image={headerImage.img} alt={headerImage.alt}>
   <CurrentGoals {readableSlug} />
 </BlogOverviewHeader>
 

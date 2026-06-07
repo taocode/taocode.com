@@ -1,4 +1,6 @@
 <script lang="ts">
+  import type { Post } from '$lib/models/post';
+
   interface Props {
     post: Post;
   }

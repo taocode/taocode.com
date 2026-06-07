@@ -13,7 +13,7 @@
         <a
           href="/contact"
           data-sveltekit-prefetch
-          class="mt-4 text-lg rounded btn-primary"
+          class="btn preset-filled-primary-700-300 mt-4 text-lg rounded"
         >
           Get in touch
         </a>

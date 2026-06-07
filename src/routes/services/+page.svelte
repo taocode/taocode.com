@@ -1,5 +1,6 @@
 <script>
   // import ExternalLink from '$lib/ExternalLink.svelte';
+  import Icon from '@iconify/svelte'
   import SEO from '$lib/components/layout/SEO.svelte'
 </script>
 
@@ -46,10 +47,10 @@ I get accustomed to new projects quickly and
 
   <div class="flex flex-wrap -m-2">
     <div class="flex w-full p-2 md:w-1/2">
-      <div class="px-6 py-4 card">
+      <div class="card preset-filled-surface-100-900 px-6 py-4">
         <h2>
           <div class="icon">
-            <div class="i-fa6-solid-compass-drafting"></div>
+            <Icon icon="fa6-solid:compass-drafting" />
           </div>
           Prototyping your idea
         </h2>
@@ -65,10 +66,10 @@ I get accustomed to new projects quickly and
       </div>
     </div>
     <div class="flex w-full p-2 md:w-1/2">
-      <div class="px-6 py-4 card">
+      <div class="card preset-filled-surface-100-900 px-6 py-4">
         <h2>
           <div class="icon">
-            <div class="i-fa6-solid-clipboard-list"></div>
+            <Icon icon="fa6-solid:clipboard-list" />
           </div>
           Continue an existing product
         </h2>
@@ -80,10 +81,10 @@ I get accustomed to new projects quickly and
       </div>
     </div>
     <div class="flex w-full p-2 md:w-1/2">
-      <div class="px-6 py-4 card">
+      <div class="card preset-filled-surface-100-900 px-6 py-4">
         <h2>
           <div class="icon">
-            <div class="i-fa6-solid-person-chalkboard"></div>
+            <Icon icon="fa6-solid:person-chalkboard" />
           </div>
           Project review
         </h2>
@@ -107,10 +108,10 @@ I get accustomed to new projects quickly and
     </div>
 
     <div class="flex w-full p-2 md:w-1/2">
-      <div class="px-6 py-4 card">
+      <div class="card preset-filled-surface-100-900 px-6 py-4">
         <h2>
           <div class="icon">
-            <div class="i-fa6-solid-universal-access"></div>
+            <Icon icon="fa6-solid:universal-access" />
           </div>
           Accessibility Review
         </h2>
@@ -132,6 +133,7 @@ I get accustomed to new projects quickly and
 </section>
 
 <style lang="postcss">
+  @reference "../../app.css";
   .icon {
     @apply inline-block mr-2;
   }

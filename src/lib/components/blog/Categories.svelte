@@ -1,12 +1,12 @@
 <script lang="ts">
-  import type { Post } from '$lib/models/post'
-  import { convertToSlug } from '$lib/utils'
+  import { page } from '$app/state';
+  import { convertToSlug } from '$lib/utils';
 
-  import { posts } from '$lib/stores'
-
-  const uniqueCategories: string[] = $posts
-    .map((post) => post.category)
-    .filter((post, idx, arr) => arr.indexOf(post) === idx);
+  const uniqueCategories = $derived(
+    (page.data.posts ?? [])
+      .map((post) => post.category)
+      .filter((category, idx, arr) => arr.indexOf(category) === idx)
+  );
 </script>
 
 <div class="mb-16">
@@ -16,10 +16,7 @@
 
   <nav role="complementary">
     {#each uniqueCategories as category}
-      <a
-        class="block py-4 border-b border-gray-600"
-        href="/categories/{convertToSlug(category)}"
-      >
+      <a class="block py-4 border-b border-gray-600" href="/categories/{convertToSlug(category)}">
         {category}
       </a>
     {/each}

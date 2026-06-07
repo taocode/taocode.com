@@ -27,8 +27,9 @@
           >!
         </p>
       </div>
-      <div class="bg-white bg-opacity-70 w-full mx-auto max-w-[250px] p-2 rounded-full sm:w-1/2 md:w-full
-      dark:(bg-black bg-opacity-40)">
+      <div
+        class="bg-white/70 dark:bg-black/40 w-full mx-auto max-w-[250px] p-2 rounded-full sm:w-1/2 md:w-full"
+      >
         <img
           srcset="{Image}"
           type="image/webp"

@@ -1,13 +1,11 @@
-import posts from '../blog/_posts'
-import type { Post } from '$lib/models/post'
+import { getAllPosts } from '$lib/server/posts';
+import type { Post } from '$lib/models/post';
 
-export const prerender = true
+export const prerender = true;
 
-const siteUrl = 'https://www.taocode.com'
+const siteUrl = 'https://www.taocode.com';
 
-const renderXmlRssFeed = (
-  posts: Post[],
-): string => `<?xml version="1.0" encoding="UTF-8" ?>
+const renderXmlRssFeed = (posts: Post[]): string => `<?xml version="1.0" encoding="UTF-8" ?>
 <rss xmlns:dc="http://purl.org/dc/elements/1.1/"
   xmlns:content="http://purl.org/rss/1.0/modules/content/"
   xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
@@ -19,8 +17,8 @@ const renderXmlRssFeed = (
     <generator>SvelteKit</generator>
     <lastBuildDate>${new Date().toUTCString()}</lastBuildDate>
     ${posts
-      .map(
-        (post: Post) => `
+			.map(
+				(post) => `
     <item>
       <title><![CDATA[${post.title}]]></title>
       <description><![CDATA[${post.excerpt}]]></description>
@@ -28,13 +26,12 @@ const renderXmlRssFeed = (
       <guid isPermaLink="false">${siteUrl}/blog/${post.slug}</guid>
       <pubDate>${new Date(post.creationDate).toUTCString()}</pubDate>
     </item>
-    `,
-      )
-      .join('\n')}
+    `
+			)
+			.join('\n')}
   </channel>
-</rss>`
+</rss>`;
 
 export function GET() {
-  const feed = renderXmlRssFeed(posts)
-  return new Response(feed)
+	return new Response(renderXmlRssFeed(getAllPosts()));
 }

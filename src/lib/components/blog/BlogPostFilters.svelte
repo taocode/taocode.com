@@ -1,10 +1,7 @@
 <script lang="ts">
-  import { run } from 'svelte/legacy';
-
-  import BlogPostCard from './BlogPostCard.svelte'
-  import type { Post } from '$lib/models/post'
-
-  import { posts as sPosts } from '$lib/stores'
+  import { page } from '$app/state';
+  import BlogPostCard from './BlogPostCard.svelte';
+  import type { Post } from '$lib/models/post';
 
   interface Props {
     posts?: Post[];
@@ -12,58 +9,44 @@
     filteredByTag?: boolean;
   }
 
-  let { posts = $sPosts, filteredByCategory = false, filteredByTag = false }: Props = $props();
+  let { posts, filteredByCategory = false, filteredByTag = false }: Props = $props();
 
-  const uniqueCategories: string[] = posts
-    .map((post: Post) => post.category)
-    .filter(
-      (category: string, idx: number, arr: string[]) =>
-        arr.indexOf(category) === idx,
-    );
+  const sourcePosts = $derived(posts ?? page.data.posts ?? []);
 
-  const allTags: string[][] = posts.map((post: Post) => post.tags);
-  const uniqueTags: string[] = allTags.flat(Infinity).filter(
-    (tag: string, idx: number, arr: string[]) => arr.indexOf(tag) === idx,
+  const uniqueCategories = $derived(
+    sourcePosts
+      .map((post: Post) => post.category)
+      .filter((category: string, idx: number, arr: string[]) => arr.indexOf(category) === idx)
   );
 
-  let textSearch: string = $state('')
-  let categorySearch: string = $state('')
-  let tagSearch: string = $state('')
+  const uniqueTags = $derived(
+    sourcePosts
+      .flatMap((post: Post) => post.tags ?? [])
+      .filter((tag: string, idx: number, arr: string[]) => arr.indexOf(tag) === idx)
+  );
 
-  let filteredPosts: Post[] = $state([])
+  let textSearch = $state('');
+  let categorySearch = $state('');
+  let tagSearch = $state('');
 
-  run(() => {
-    filteredPosts = posts.filter((post: Post) =>
-      post.title.toLowerCase().includes(textSearch.toLowerCase()),
-    )
-
-    if (categorySearch) {
-      filteredPosts = filteredPosts.filter((post: Post) =>
-        post.category.includes(categorySearch),
-      )
-    }
-
-    if (tagSearch) {
-      filteredPosts = filteredPosts.filter((post: Post) =>
-        post.tags.includes(tagSearch),
-      )
-    }
-  });
+  const filteredPosts = $derived(
+    sourcePosts
+      .filter((post: Post) => post.title.toLowerCase().includes(textSearch.toLowerCase()))
+      .filter((post: Post) => !categorySearch || post.category.includes(categorySearch))
+      .filter((post: Post) => !tagSearch || post.tags.includes(tagSearch))
+  );
 </script>
 
 <div class="w-full lg:w-9/12 lg:pr-16">
   <div class="flex flex-wrap items-center mb-10 -mx-2">
     <div class="w-full px-2 my-2">
-      <label
-        class="mb-2 text-sm font-bold tracking-wide text-gray"
-        for="text-search"
-      >
+      <label class="mb-2 text-sm font-bold tracking-wide text-gray" for="text-search">
         Search for blog posts
       </label>
 
       <input
         id="text-search"
-        bind:value="{textSearch}"
+        bind:value={textSearch}
         class="select-filter"
         type="text"
         placeholder="e.g: Why I started this blog"
@@ -72,42 +55,26 @@
 
     {#if !filteredByCategory && !filteredByTag}
       <div class="w-full px-2 my-2 sm:w-1/2">
-        <label
-          class="mb-2 text-sm font-bold tracking-wide text-gray"
-          for="category-search"
-        >
+        <label class="mb-2 text-sm font-bold tracking-wide text-gray" for="category-search">
           By category
         </label>
         <div class="relative">
-          <select
-            bind:value="{categorySearch}"
-            class="select-filter"
-            id="category-search"
-          >
+          <select bind:value={categorySearch} class="select-filter" id="category-search">
             <option value="">Select a category</option>
             {#each uniqueCategories as category}
-              <option value="{category}">{category}</option>
+              <option value={category}>{category}</option>
             {/each}
           </select>
         </div>
       </div>
 
       <div class="w-full px-2 my-2 sm:w-1/2">
-        <label
-          class="mb-2 text-sm font-bold tracking-wide text-gray"
-          for="tag-search"
-        >
-          By tag
-        </label>
+        <label class="mb-2 text-sm font-bold tracking-wide text-gray" for="tag-search"> By tag </label>
         <div class="relative">
-          <select
-            bind:value="{tagSearch}"
-            class="select-filter"
-            id="tag-search"
-          >
+          <select bind:value={tagSearch} class="select-filter" id="tag-search">
             <option value="">Select a tag</option>
             {#each uniqueTags as tag}
-              <option value="{tag}">{tag}</option>
+              <option value={tag}>{tag}</option>
             {/each}
           </select>
         </div>
@@ -120,7 +87,7 @@
       Displaying
       <strong>{filteredPosts.length}</strong>
       of
-      {posts.length}
+      {sourcePosts.length}
       posts
     </p>
     <div class="flex flex-wrap -m-2">
@@ -143,6 +110,6 @@
 <style lang="postcss">
   @reference "../../../app.css";
   .select-filter {
-    @apply w-full px-2 text-gray-200/700 border border-gray-400 rounded hover:border-gray-500;
+    @apply w-full px-2 text-gray-200 dark:text-gray-700 border border-gray-400 rounded hover:border-gray-500;
   }
 </style>

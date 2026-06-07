@@ -1,27 +1,19 @@
 <script lang="ts">
-  // throw new Error("@migration task: Add data prop (https://github.com/sveltejs/kit/discussions/5774#discussioncomment-3292707)");
-
-  import BlogOverviewHeader from '$lib/components/blog/BlogOverviewHeader.svelte'
-  import BlogPostSidebar from '$lib/components/blog/BlogPostSidebar.svelte'
-  import BlogPostFilters from '$lib/components/blog/BlogPostFilters.svelte'
-  import SEO from '$lib/components/layout/SEO.svelte'
-  import type { Post } from '$lib/models/post'
+  import BlogOverviewHeader from '$lib/components/blog/BlogOverviewHeader.svelte';
+  import BlogPostSidebar from '$lib/components/blog/BlogPostSidebar.svelte';
+  import BlogPostFilters from '$lib/components/blog/BlogPostFilters.svelte';
+  import SEO from '$lib/components/layout/SEO.svelte';
+  import { convertToSentenceCase } from '$lib/utils';
   import type { PageData } from './$types';
 
-  import { convertToSentenceCase } from '$lib/utils'
+  let { data }: { data: PageData } = $props();
 
-  import { posts } from '$lib/stores'
-
-  export let data: PageData
-  export let { slug, postsByTag } = data
-  $: ({ slug, postsByTag } = data) // so it stays in sync when `data` changes
-
-  const readableSlug = convertToSentenceCase(slug);
+  const readableSlug = $derived(convertToSentenceCase(data.slug));
+  const postsByTag = $derived(data.postsByTag);
 </script>
 
 <svelte:head>
   <title>{readableSlug} | Mark Jones</title>
-
   <meta name="description" content="Posts tagged with {readableSlug}." />
 </svelte:head>
 

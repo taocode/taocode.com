@@ -3,7 +3,6 @@
 @plugin '@tailwindcss/typography';
 
 @import '@skeletonlabs/skeleton';
-@import '@skeletonlabs/skeleton/optional/presets';
 @import '@skeletonlabs/skeleton/themes/terminus';
 
 @import './lib/assets/css/tailwindtheme.css';

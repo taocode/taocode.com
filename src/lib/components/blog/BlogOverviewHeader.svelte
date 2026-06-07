@@ -1,11 +1,11 @@
 <script lang="ts">
   interface Props {
-    image: any;
+    image?: string;
     alt?: string;
     children?: import('svelte').Snippet;
   }
 
-  let { image, alt = "", children }: Props = $props();
+  let { image, alt = '', children }: Props = $props();
 </script>
 <section class="applause-gradient blog-applause rotating-bg">
   <div class="container mj-container flex flex-col-reverse items-center gap-4 md:flex-row">

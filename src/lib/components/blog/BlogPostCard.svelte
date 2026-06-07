@@ -45,7 +45,7 @@
       <div class="absolute bottom-0 right-0 pt-4 pl-6">
         <span
           aria-hidden="true"
-          class="inline-block rounded-br btn-primary"
+          class="btn preset-filled-primary-700-300 inline-block rounded-br"
         >
           Read more 
         </span>

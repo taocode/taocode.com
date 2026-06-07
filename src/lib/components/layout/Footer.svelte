@@ -1,4 +1,5 @@
 <script lang="ts">
+  import Icon from '@iconify/svelte'
   // import { faRss } from 'svelte-awesome/icons'
   import ExternalLink from '../ExternalLink.svelte'
   import SpeedlifyFooter from './SpeedlifyFooter.svelte'
@@ -17,7 +18,7 @@
   .social {
     @apply mt-6 flex gap-[0.75em] justify-center;
   }
-  .icon {
+  :global(.icon) {
     @apply text-[1.34em];
   }
 </style>
@@ -85,9 +86,7 @@
         ariaLabel="Write an email to me"
         customClass="inline-flex mt-4 lg:mt-0 hover:text-white"
       >
-        <div class="icon">
-          <div class="i-fa6-solid-envelope"></div>
-        </div>
+        <Icon icon="fa6-solid:envelope" class="icon" />
       </ExternalLink>
       <ExternalLink
         href="https://github.com/taocode"
@@ -95,36 +94,28 @@
         customClass="inline-flex mt-4 lg:mt-0 hover:text-white"
         rel="me"
       >
-        <div class="icon">
-          <div class="i-fa6-brands-github"></div>
-        </div>
+        <Icon icon="fa6-brands:github" class="icon" />
       </ExternalLink>
       <ExternalLink
         href="https://www.linkedin.com/in/taocode/"
         ariaLabel="Network with me on Linkedin"
         customClass="inline-flex mt-4 lg:mt-0 hover:text-white"
       >
-        <div class="icon">
-          <div class="i-fa6-brands-linkedin"></div>
-        </div>
+        <Icon icon="fa6-brands:linkedin" class="icon" />
       </ExternalLink>
       <ExternalLink
         href="https://www.reddit.com/user/taocode"
         ariaLabel="Follow me Reddit"
         customClass="inline-flex mt-4 lg:mt-0 hover:text-white"
       >
-        <div class="icon">
-          <div class="i-fa6-brands-reddit"></div>
-        </div>
+        <Icon icon="fa6-brands:reddit" class="icon" />
       </ExternalLink>
       <ExternalLink
         href="https://www.taocode.com/rss.xml"
         ariaLabel="Read the RSS feed"
         customClass="inline-flex mt-4 lg:mt-0 hover:text-white"
       >
-        <div class="icon">
-          <div class="i-fa6-solid-rss"></div>
-        </div>
+        <Icon icon="fa6-solid:rss" class="icon" />
       </ExternalLink>
     </nav>
     <div class="px-3">
