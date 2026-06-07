@@ -9,13 +9,15 @@
   async function handleSubmit(event: SubmitEvent) {
     event.preventDefault();
     const form = event.currentTarget as HTMLFormElement;
-    const body = new URLSearchParams(new FormData(form) as unknown as Record<string, string>).toString();
+    const body = new URLSearchParams(
+      new FormData(form) as unknown as Record<string, string>,
+    ).toString();
 
     try {
       await fetch('/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body
+        body,
       });
       form.reset();
       didSubmit = true;
@@ -32,8 +34,7 @@
   <title>Contact | Mark Jones</title>
   <meta
     name="description"
-    content="If you want to say hello, the best way you can reach me is through these channels below."
-  />
+    content="If you want to say hello, the best way you can reach me is through these channels below." />
 </svelte:head>
 
 <SEO />
@@ -51,11 +52,9 @@
     class="mt-3 mb-8"
     netlify-honeypot="bot-field"
     data-netlify="true"
-    onsubmit={handleSubmit}
-  >
+    onsubmit={handleSubmit}>
     <div
-      class="flex flex-wrap p-3 bg-gray-light border border-gray-500 rounded dark:border-gray-700"
-    >
+      class="flex flex-wrap p-3 bg-gray-light border border-gray-500 rounded dark:border-gray-700">
       <input type="hidden" name="form-name" value="contact" />
       <input type="text" name="bot-field" class="hidden" />
       <div class="w-1/2 px-2 my-2">
@@ -66,8 +65,7 @@
           id="name"
           required
           minlength="2"
-          class="w-full text-gray-700 border border-gray-400 rounded hover:border-gray-500"
-        />
+          class="w-full text-gray-700 border border-gray-400 rounded hover:border-gray-500" />
       </div>
 
       <div class="w-1/2 px-2 my-2">
@@ -77,8 +75,7 @@
           name="email"
           id="email"
           required
-          class="w-full text-gray-700 border border-gray-400 rounded hover:border-gray-500"
-        />
+          class="w-full text-gray-700 border border-gray-400 rounded hover:border-gray-500" />
       </div>
 
       <div class="w-full px-2 my-2">
@@ -95,15 +92,15 @@
       <div class="w-full px-2 my-2">
         <button
           type="submit"
-          class="btn preset-filled-primary-700-300 w-full text-lg rounded"
-        >
+          class="btn preset-filled-primary-700-300 w-full text-lg rounded">
           Submit
         </button>
       </div>
 
       {#if didSubmit}
         <div class="w-full px-2 my-2" transition:fade|global>
-          <div class="preset-filled-success-100-900 p-4 rounded flex items-center gap-3">
+          <div
+            class="preset-filled-success-100-900 p-4 rounded flex items-center gap-3">
             <Icon icon="fa6-solid:circle-check" class="text-[1.5em]" />
             Message submitted successfully!
           </div>
@@ -117,7 +114,9 @@
       <h2>Projects That Interest Me</h2>
       <ul>
         <li>awesome animations</li>
-        <li>medium duration; one quarter to half year with follow-up projects</li>
+        <li>
+          medium duration; one quarter to half year with follow-up projects
+        </li>
         <li>remote only or near Winston-Salem, North Carolina</li>
       </ul>
     </div>
@@ -143,28 +142,28 @@
   </p>
 
   <h2>Across the web</h2>
-  <p>If you just want to say hello, the best way you can reach me is through these channels below.</p>
+  <p>
+    If you just want to say hello, the best way you can reach me is through
+    these channels below.
+  </p>
 
   <div class="biglinks">
     <ExternalLink
       href="mailto:mark@taocode.com"
       ariaLabel="Write me a mail"
-      customClass="inline-flex text-green-900 hover:text-green-700"
-    >
+      customClass="inline-flex text-green-900 hover:text-green-700">
       <Icon icon="fa6-solid:envelope" class="icon" />
     </ExternalLink>
     <ExternalLink
       href="https://github.com/taocode"
       ariaLabel="Follow me on GitHub"
-      customClass="inline-flex text-green-900 hover:text-green-700"
-    >
+      customClass="inline-flex text-green-900 hover:text-green-700">
       <Icon icon="fa6-brands:github" class="icon" />
     </ExternalLink>
     <ExternalLink
       href="https://www.linkedin.com/in/taocode/"
       ariaLabel="Network with me on Linkedin"
-      customClass="inline-flex text-green-900 hover:text-green-700"
-    >
+      customClass="inline-flex text-green-900 hover:text-green-700">
       <Icon icon="fa6-brands:linkedin" class="icon" />
     </ExternalLink>
   </div>
@@ -172,21 +171,27 @@
   <div class="flex flex-wrap">
     <div class="w-full sm:w-1/3">
       <h3>Found an unexpected bug?</h3>
-      <ExternalLink href="https://github.com/taocode/taocode.com/issues/new" customClass="inline-flex">
+      <ExternalLink
+        href="https://github.com/taocode/taocode.com/issues/new"
+        customClass="inline-flex">
         Submit issue
         <Icon icon="feather:external-link" class="icon" />
       </ExternalLink>
     </div>
     <div class="w-full sm:w-1/3">
       <h3>Improvements for the website?</h3>
-      <ExternalLink href="https://github.com/taocode/taocode.com/issues/new" customClass="inline-flex">
+      <ExternalLink
+        href="https://github.com/taocode/taocode.com/issues/new"
+        customClass="inline-flex">
         Request feature
         <Icon icon="feather:external-link" class="icon" />
       </ExternalLink>
     </div>
     <div class="w-full sm:w-1/3">
       <h3>Got a blog post topic proposal?</h3>
-      <ExternalLink href="https://github.com/taocode/taocode.com/issues/new" customClass="inline-flex">
+      <ExternalLink
+        href="https://github.com/taocode/taocode.com/issues/new"
+        customClass="inline-flex">
         Suggest content
         <Icon icon="feather:external-link" class="icon" />
       </ExternalLink>
@@ -197,15 +202,15 @@
 <style lang="postcss">
   @reference "../../app.css";
   label {
-    @apply font-display text-sm font-bold tracking-wide text-gray-700 dark:text-gray-300 mb-2;
+    @apply mb-2 font-display text-sm font-bold tracking-wide text-gray-700 dark:text-gray-300;
   }
   .biglinks {
-    @apply flex flex-wrap mb-6 gap-6;
+    @apply mb-6 flex flex-wrap gap-6;
     :global(.icon) {
       @apply text-[1.75em];
     }
   }
   :global(.icon) {
-    @apply text-[1.34em] ml-2;
+    @apply ml-2 text-[1.34em];
   }
 </style>

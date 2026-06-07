@@ -5,7 +5,9 @@ export const prerender = true;
 
 const siteUrl = 'https://www.taocode.com';
 
-const renderXmlRssFeed = (posts: Post[]): string => `<?xml version="1.0" encoding="UTF-8" ?>
+const renderXmlRssFeed = (
+  posts: Post[],
+): string => `<?xml version="1.0" encoding="UTF-8" ?>
 <rss xmlns:dc="http://purl.org/dc/elements/1.1/"
   xmlns:content="http://purl.org/rss/1.0/modules/content/"
   xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
@@ -17,8 +19,8 @@ const renderXmlRssFeed = (posts: Post[]): string => `<?xml version="1.0" encodin
     <generator>SvelteKit</generator>
     <lastBuildDate>${new Date().toUTCString()}</lastBuildDate>
     ${posts
-			.map(
-				(post) => `
+      .map(
+        (post) => `
     <item>
       <title><![CDATA[${post.title}]]></title>
       <description><![CDATA[${post.excerpt}]]></description>
@@ -26,12 +28,12 @@ const renderXmlRssFeed = (posts: Post[]): string => `<?xml version="1.0" encodin
       <guid isPermaLink="false">${siteUrl}/blog/${post.slug}</guid>
       <pubDate>${new Date(post.creationDate).toUTCString()}</pubDate>
     </item>
-    `
-			)
-			.join('\n')}
+    `,
+      )
+      .join('\n')}
   </channel>
 </rss>`;
 
 export function GET() {
-	return new Response(renderXmlRssFeed(getAllPosts()));
+  return new Response(renderXmlRssFeed(getAllPosts()));
 }

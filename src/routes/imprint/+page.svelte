@@ -1,7 +1,7 @@
 <script>
-  import ExternalLink from '$lib/components/ExternalLink.svelte'
-  import PrivacyPolicyLink from '$lib/components/layout/PrivacyPolicyLink.svelte'
-  import SEO from '$lib/components/layout/SEO.svelte'
+  import ExternalLink from '$lib/components/ExternalLink.svelte';
+  import PrivacyPolicyLink from '$lib/components/layout/PrivacyPolicyLink.svelte';
+  import SEO from '$lib/components/layout/SEO.svelte';
 </script>
 
 <svelte:head>
@@ -10,8 +10,7 @@
   <meta
     name="description"
     content="Duty to inform according to §5 e-commerce law, §14 company law, §63 trade
-  regulations and disclosure duty according to §25 media law."
-  />
+  regulations and disclosure duty according to §25 media law." />
 </svelte:head>
 
 <SEO />
@@ -38,7 +37,6 @@
     <b>Business purpose:</b>
     IT services
     <br />
-
   </p>
 
   <p>

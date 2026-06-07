@@ -7,8 +7,13 @@
 
   let { post }: Props = $props();
 </script>
+
 {#if post.thumbnail}
   <figure class="block w-full flex-none">
-    <img class="rounded" src="{post.thumbnail}" alt="{post.title} Thumbnail" loading="lazy" />
+    <img
+      class="rounded"
+      src={post.thumbnail}
+      alt="{post.title} Thumbnail"
+      loading="lazy" />
   </figure>
 {/if}

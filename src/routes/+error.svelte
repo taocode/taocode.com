@@ -4,7 +4,7 @@
 
   let {
     data,
-    error
+    error,
   }: {
     data: PageData;
     error: App.Error & { message: string };

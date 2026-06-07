@@ -10,7 +10,10 @@
   import '$lib/assets/css/global.css';
   import 'prismjs/themes/prism-tomorrow.css';
 
-  let { children, data }: { children: import('svelte').Snippet; data: LayoutData } = $props();
+  let {
+    children,
+    data,
+  }: { children: import('svelte').Snippet; data: LayoutData } = $props();
 
   let dark = $state(true);
   let fullURL = $state('');
@@ -21,7 +24,10 @@
 
   onMount(() => {
     updateSystemPreferenceDarkTheme();
-    matchMedia('(prefers-color-scheme: light)').addEventListener('change', updateSystemPreferenceDarkTheme);
+    matchMedia('(prefers-color-scheme: light)').addEventListener(
+      'change',
+      updateSystemPreferenceDarkTheme,
+    );
 
     const syncCanonical = () => {
       const tmpURL = window.location.href;

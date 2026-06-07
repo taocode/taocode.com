@@ -1,15 +1,14 @@
 <script>
   // import ExternalLink from '$lib/ExternalLink.svelte';
-  import Icon from '@iconify/svelte'
-  import SEO from '$lib/components/layout/SEO.svelte'
+  import Icon from '@iconify/svelte';
+  import SEO from '$lib/components/layout/SEO.svelte';
 </script>
 
 <svelte:head>
   <title>Services | Mark Jones</title>
   <meta
     name="description"
-    content="I create next-level web solutions customized for your needs."
-  />
+    content="I create next-level web solutions customized for your needs." />
 </svelte:head>
 
 <SEO />
@@ -18,13 +17,12 @@
   <h1>Services that I offer</h1>
 
   <p>
-    I support website owners, companies, startups and individuals just
-    like you to improve page performance, accessibility and save time and stress on the long
-    run. I work efficiently to bring together the best experience.
-    
-I get accustomed to new projects quickly and
-    understand that finding the perfect candidate for your project is not easy,
-    but with me, you can be sure that I will always treat your project as if it would be my own!
+    I support website owners, companies, startups and individuals just like you
+    to improve page performance, accessibility and save time and stress on the
+    long run. I work efficiently to bring together the best experience. I get
+    accustomed to new projects quickly and understand that finding the perfect
+    candidate for your project is not easy, but with me, you can be sure that I
+    will always treat your project as if it would be my own!
   </p>
 
   <h2>I create next-level web solutions customized for your needs.</h2>
@@ -117,10 +115,10 @@ I get accustomed to new projects quickly and
         </h2>
 
         <p>
-          Accessibility is always a primary consideration for my projects.
-          It's important for anyone who would like their project to be viable 
-          within the education sector and for those that would like to include
-          the broadest possible audience.
+          Accessibility is always a primary consideration for my projects. It's
+          important for anyone who would like their project to be viable within
+          the education sector and for those that would like to include the
+          broadest possible audience.
         </p>
         <ul>
           <li>Keyboard-only access</li>
@@ -135,6 +133,6 @@ I get accustomed to new projects quickly and
 <style lang="postcss">
   @reference "../../app.css";
   .icon {
-    @apply inline-block mr-2;
+    @apply mr-2 inline-block;
   }
 </style>

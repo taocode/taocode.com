@@ -1,3 +1,31 @@
+<script lang="ts">
+  interface Props {
+    count: number;
+    urlSlug: string;
+  }
+
+  let { count, urlSlug }: Props = $props();
+</script>
+
+<span class="github-btn github-stargazers github-btn-large">
+  <a
+    class="gh-btn"
+    href="https://github.com/{urlSlug}"
+    rel="noopener noreferrer"
+    target="_blank"
+    aria-label="Star {urlSlug} on GitHub">
+    <span class="gh-ico" aria-hidden="true"></span>
+    <span class="gh-text">Star</span>
+  </a>
+  <a
+    class="gh-count"
+    href="https://github.com/{urlSlug}/stargazers"
+    rel="noopener noreferrer"
+    target="_blank">
+    {count}
+  </a>
+</span>
+
 <style>
   .github-btn {
     height: 20px;
@@ -121,33 +149,3 @@
     border-width: 7px 7px 7px 0;
   }
 </style>
-
-<script lang="ts">
-  interface Props {
-    count: number;
-    urlSlug: string;
-  }
-
-  let { count, urlSlug }: Props = $props();
-</script>
-
-<span class="github-btn github-stargazers github-btn-large">
-  <a
-    class="gh-btn"
-    href="https://github.com/{urlSlug}"
-    rel="noopener noreferrer"
-    target="_blank"
-    aria-label="Star {urlSlug} on GitHub"
-  >
-    <span class="gh-ico" aria-hidden="true"></span>
-    <span class="gh-text">Star</span>
-  </a>
-  <a
-    class="gh-count"
-    href="https://github.com/{urlSlug}/stargazers"
-    rel="noopener noreferrer"
-    target="_blank"
-  >
-    {count}
-  </a>
-</span>

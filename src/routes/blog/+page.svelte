@@ -10,18 +10,10 @@
   <title>Blog | TAOCode</title>
   <meta
     name="description"
-    content="Insights and things learned about Programming websites and other topics."
-  />
+    content="Insights and things learned about Programming websites and other topics." />
 </svelte:head>
 
 <SEO />
-
-<style lang="postcss">
-  @reference "../../app.css";
-  a {
-    @apply underline;
-  }
-</style>
 
 <BlogOverviewHeader image={BlogPostHeaderImage}>
   <div class="w-full">
@@ -38,8 +30,7 @@
       <a
         href="https://github.com/taocode/taocode.com/issues/new"
         target="_blank"
-        rel="noopener noreferrer"
-      >
+        rel="noopener noreferrer">
         taocode.com GitHub project page
       </a>
       or through my socials.
@@ -54,3 +45,10 @@
     <BlogPostSidebar />
   </aside>
 </section>
+
+<style lang="postcss">
+  @reference "../../app.css";
+  a {
+    @apply underline;
+  }
+</style>

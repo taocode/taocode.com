@@ -1,6 +1,6 @@
 <script lang="ts">
-  import { formatDate, convertToSlug } from '$lib/utils'
-  import type { Post } from '$lib/models/post'
+  import { formatDate, convertToSlug } from '$lib/utils';
+  import type { Post } from '$lib/models/post';
 
   interface Props {
     post: Post;
@@ -13,26 +13,26 @@
     post,
     hideCategory = false,
     readTimeText = true,
-    showWordCount = true
+    showWordCount = true,
   }: Props = $props();
 </script>
 
 <span>{formatDate(post.creationDate)}</span>
 {#if readTimeText}
-&middot;
-<span>{post.readingTimeText}</span>
+  &middot;
+  <span>{post.readingTimeText}</span>
 {/if}
 {#if showWordCount}
-&middot;
-<span>{post.wordCount} words</span>
+  &middot;
+  <span>{post.wordCount} words</span>
 {/if}
 {#if !hideCategory}
-<span>
-&middot;
-<a data-sveltekit-prefetch href="/categories/{convertToSlug(post.category)}"
-  >{post.category}
-</a>
-</span>
+  <span>
+    &middot;
+    <a data-sveltekit-prefetch href="/categories/{convertToSlug(post.category)}"
+      >{post.category}
+    </a>
+  </span>
 {/if}
 
 <style lang="postcss">

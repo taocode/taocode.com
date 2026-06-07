@@ -7,14 +7,13 @@
 
       <div class="text-center">
         <p class="text-white">
-          I value <b>quality, high performance and consistency</b> and love finding 
+          I value <b>quality, high performance and consistency</b> and love finding
           ways to improve the production, elevating the systemic to the artistic.
         </p>
         <a
           href="/contact"
           data-sveltekit-prefetch
-          class="btn preset-filled-primary-700-300 mt-4 text-lg rounded"
-        >
+          class="btn preset-filled-primary-700-300 mt-4 text-lg rounded">
           Get in touch
         </a>
       </div>

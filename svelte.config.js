@@ -7,20 +7,20 @@ const extensions = ['.svelte', '.svx'];
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
-	preprocess: [
-		vitePreprocess(),
-		mdsvex({
-			extensions: ['.svx'],
-			layout: {
-				post: './src/lib/layouts/post.svx'
-			},
-			rehypePlugins: [[rehypePrism, { ignoreMissing: true }]]
-		})
-	],
-	kit: {
-		adapter: adapter()
-	},
-	extensions
+  preprocess: [
+    vitePreprocess(),
+    mdsvex({
+      extensions: ['.svx'],
+      layout: {
+        post: './src/lib/layouts/post.svx',
+      },
+      rehypePlugins: [[rehypePrism, { ignoreMissing: true }]],
+    }),
+  ],
+  kit: {
+    adapter: adapter(),
+  },
+  extensions,
 };
 
 export default config;

@@ -25,8 +25,7 @@
   <a
     data-sveltekit-prefetch
     href="/blog"
-    class="btn preset-filled-primary-700-300 inline-flex items-center mt-8 font-bold rounded text-md"
-  >
+    class="btn preset-filled-primary-700-300 inline-flex items-center mt-8 font-bold rounded text-md">
     View all blog posts
     <Icon icon="feather:chevron-right" class="text-[2em]" />
   </a>
@@ -35,13 +34,13 @@
 <style lang="postcss">
   @reference "../../../app.css";
   .card-post {
-    @apply flex items-stretch w-full p-2 sm:w-1/2 lg:w-1/3;
+    @apply flex w-full items-stretch p-2 sm:w-1/2 lg:w-1/3;
     &:nth-child(3) {
       @apply hidden lg:block;
     }
   }
   .recent-posts {
-    @apply flex flex-wrap -mx-2;
+    @apply -mx-2 flex flex-wrap;
   }
   section {
     @apply mb-9;

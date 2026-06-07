@@ -12,11 +12,11 @@
 
   interface Props {
     blogPostInfo?: {
-    title?: string;
-    excerpt?: string;
-    creationDate?: string;
-    cover?: string;
-  };
+      title?: string;
+      excerpt?: string;
+      creationDate?: string;
+      cover?: string;
+    };
   }
 
   let { blogPostInfo = {} }: Props = $props();
@@ -97,7 +97,7 @@
   )}`;
 
   onMount(() => {
-    if (!document) return
+    if (!document) return;
     const ldJsonScript = document.getElementById('addedldJsonScript');
 
     // We want to avoid placing multiple application/ld+json files in the DOM, therefore replace text content,
@@ -116,16 +116,16 @@
 
 <svelte:head>
   <!-- Open Graph / Facebook -->
-  <meta property="og:title" content="{socialTitle}" />
-  <meta property="og:description" content="{socialDescription}" />
-  <meta property="og:url" content="{fullURL}" />
-  <meta property="og:image" content="{socialImage}" />
-  <meta property="og:type" content="{openGraphType}" />
+  <meta property="og:title" content={socialTitle} />
+  <meta property="og:description" content={socialDescription} />
+  <meta property="og:url" content={fullURL} />
+  <meta property="og:image" content={socialImage} />
+  <meta property="og:type" content={openGraphType} />
 
   <!-- Twitter -->
-  <meta property="twitter:title" content="{socialTitle}" />
-  <meta property="twitter:description" content="{socialDescription}" />
-  <meta property="twitter:url" content="{fullURL}" />
-  <meta property="twitter:image" content="{socialImage}" />
+  <meta property="twitter:title" content={socialTitle} />
+  <meta property="twitter:description" content={socialDescription} />
+  <meta property="twitter:url" content={fullURL} />
+  <meta property="twitter:image" content={socialImage} />
   <meta property="twitter:card" content="summary_large_image" />
 </svelte:head>

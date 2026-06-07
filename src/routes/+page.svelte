@@ -12,7 +12,9 @@
 
 <svelte:head>
   <title>The Art of Code</title>
-  <meta name="description" content="Personal website and blog with SvelteKit and TailwindCSS." />
+  <meta
+    name="description"
+    content="Personal website and blog with SvelteKit and TailwindCSS." />
 </svelte:head>
 
 <SEO />

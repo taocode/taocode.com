@@ -1,11 +1,11 @@
 <script lang="ts">
-  import Icon from '@iconify/svelte'
+  import Icon from '@iconify/svelte';
   import EmpurrorSunNap from '$lib/images/empurror-scratcher-sun-nap.jpg';
   import MillerParkMushrooms from '$lib/images/miller-park-tree-mushrooms.jpg';
   import MillerParkGreenery from '$lib/images/miller-park-greenery.jpg';
 
   // adding types throws compiler error for some reason
-  
+
   interface Props {
     // need https://github.com/sveltejs/svelte/pull/4282 to get merged
     readableSlug: string;
@@ -14,21 +14,21 @@
   let { readableSlug }: Props = $props();
 
   const accentImage = {
-    'Life': {
-      'alt': 'Black cat napping in the sun on a cardboard scratcher',
-      'img': EmpurrorSunNap,
+    Life: {
+      alt: 'Black cat napping in the sun on a cardboard scratcher',
+      img: EmpurrorSunNap,
     },
-    'Programming': {
-      'alt': "Miller Park green space framed by trees",
-      'img': MillerParkGreenery,
+    Programming: {
+      alt: 'Miller Park green space framed by trees',
+      img: MillerParkGreenery,
     },
-    'Portfolio': {
-      'alt': "Cherry blossoms on ground and tree",
-      'img': MillerParkMushrooms,
+    Portfolio: {
+      alt: 'Cherry blossoms on ground and tree',
+      img: MillerParkMushrooms,
     },
-  }
+  };
   const goalCats = {
-    'Programming': [
+    Programming: [
       {
         text: 'Learn Svelte',
         reached: true,
@@ -42,7 +42,7 @@
         reached: false,
       },
     ],
-    'Life': [
+    Life: [
       {
         text: 'Workout 3+ times a week',
         reached: true,
@@ -64,7 +64,7 @@
         reached: false,
       },
     ],
-    "Portfolio": [
+    Portfolio: [
       {
         text: 'Create a Svelte App',
         reached: true,
@@ -74,7 +74,7 @@
         reached: false,
       },
     ],
-  }
+  };
 
   let goals = $derived(goalCats[readableSlug]);
 </script>
@@ -98,4 +98,3 @@
     </div>
   {/each}
 </div>
-

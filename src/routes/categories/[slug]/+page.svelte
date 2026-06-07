@@ -15,26 +15,30 @@
   const accentImage = {
     Life: {
       alt: 'Black cat napping in the sun on a cardboard scratcher',
-      img: EmpurrorSunNap
+      img: EmpurrorSunNap,
     },
     Programming: {
       alt: 'Miller Park green space framed by trees',
-      img: MillerParkGreenery
+      img: MillerParkGreenery,
     },
     Portfolio: {
       alt: 'Cherry blossoms on ground and tree',
-      img: MillerParkMushrooms
-    }
+      img: MillerParkMushrooms,
+    },
   };
 
   const readableSlug = $derived(convertToSentenceCase(data.slug));
   const postsByCategory = $derived(data.postsByCategory);
-  const headerImage = $derived(accentImage[readableSlug as keyof typeof accentImage]);
+  const headerImage = $derived(
+    accentImage[readableSlug as keyof typeof accentImage],
+  );
 </script>
 
 <svelte:head>
   <title>{readableSlug} | Mark Jones</title>
-  <meta name="description" content="Opinions and viewpoints about {readableSlug}." />
+  <meta
+    name="description"
+    content="Opinions and viewpoints about {readableSlug}." />
 </svelte:head>
 
 <SEO />

@@ -14,18 +14,17 @@
     customClass = '',
     ariaLabel = undefined,
     isAffiliateLink = false,
-    children
+    children,
   }: Props = $props();
 </script>
 
 <a
-  href="{href}"
+  {href}
   target="_blank"
   rel="noreferrer noopener"
   class="cursor-pointer {customClass}"
-  title="{title}"
-  aria-label="{ariaLabel}"
->
+  {title}
+  aria-label={ariaLabel}>
   <!-- prettier-ignore -->
   {@render children?.()}{isAffiliateLink ? '*' : ''}
 </a>

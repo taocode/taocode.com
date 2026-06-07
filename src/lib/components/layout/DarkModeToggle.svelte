@@ -6,12 +6,20 @@
     enabled?: boolean;
   }
 
-  let { enabled = $bindable(browser && document ? document.documentElement?.getAttribute('data-mode') === 'dark' : true) }: Props =
-    $props();
+  let {
+    enabled = $bindable(
+      browser && document
+        ? document.documentElement?.getAttribute('data-mode') === 'dark'
+        : true,
+    ),
+  }: Props = $props();
 
   $effect(() => {
     if (browser && document) {
-      document.documentElement?.setAttribute('data-mode', enabled ? 'dark' : 'light');
+      document.documentElement?.setAttribute(
+        'data-mode',
+        enabled ? 'dark' : 'light',
+      );
     }
   });
 
@@ -26,28 +34,24 @@
   class:bg-gray-800={enabled}
   class="bg-gray-500 dark:bg-gray-700 dark:text-gray-200 relative inline-flex flex-shrink-0 h-8 w-5 border-2 border-transparent rounded cursor-pointer transition-colors ease-in-out duration-200 focus:outline-none focus:ring focus:ring-offset focus:ring-green-500"
   aria-pressed={enabled}
-  onclick={toggle}
->
+  onclick={toggle}>
   <span class="sr-only">Use setting</span>
   <div
     class="{enabled
       ? 'translate-y-3 rounded-b bg-gray-800'
-      : 'translate-y-0 rounded-t'} pointer-events-none relative inline-block h-4 w-4 bg-white dark:bg-black dark:text-white transform ring-0 transition ease-in-out duration-200"
-  >
+      : 'translate-y-0 rounded-t'} pointer-events-none relative inline-block h-4 w-4 bg-white dark:bg-black dark:text-white transform ring-0 transition ease-in-out duration-200">
     <div
       class="{enabled
         ? 'opacity-0'
         : 'opacity-100'} ease-in p-[2.5px] duration-200 absolute h-full w-full flex items-center justify-center transition-opacity duration-75"
-      aria-hidden="true"
-    >
+      aria-hidden="true">
       <Icon icon="carbon:sun" />
     </div>
     <div
       class="{enabled
         ? 'opacity-100 ease-in duration-200'
         : 'opacity-0 ease-out duration-100'} absolute p-[1.75px] inset-0 h-full w-full flex items-center justify-center transition-opacity duration-75"
-      aria-hidden="true"
-    >
+      aria-hidden="true">
       <Icon icon="carbon:moon" />
     </div>
   </div>

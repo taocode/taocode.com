@@ -5,7 +5,7 @@
   const uniqueCategories = $derived(
     (page.data.posts ?? [])
       .map((post) => post.category)
-      .filter((category, idx, arr) => arr.indexOf(category) === idx)
+      .filter((category, idx, arr) => arr.indexOf(category) === idx),
   );
 </script>
 
@@ -16,7 +16,9 @@
 
   <nav role="complementary">
     {#each uniqueCategories as category}
-      <a class="block py-4 border-b border-gray-600" href="/categories/{convertToSlug(category)}">
+      <a
+        class="block py-4 border-b border-gray-600"
+        href="/categories/{convertToSlug(category)}">
         {category}
       </a>
     {/each}

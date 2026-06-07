@@ -14,7 +14,6 @@ The main focus of the website is to provide value to visitors, largely other cod
 
 This site is based on some fine work by 👤 **[Markus Hatvan](https://markushatvan.com)**. Thanks for sharing, Markus!
 
-
 - [Website](https://www.taocode.com/)
 - [GitHub](https://github.com/taocode)
 - [LinkedIn](https://www.linkedin.com/in/taocode/)
@@ -25,7 +24,7 @@ This site is based on some fine work by 👤 **[Markus Hatvan](https://markushat
 Where I've departed from [Markus Hatvan's project](https://github.com/mhatvan/markushatvan.com):
 
 - 🏃💨 Tailwind CSS v4 + Skeleton UI (migrated from WindiCSS)
-- ➕🤯 Headroom - hides fixed header *(based on [collardeau/svelte-headroom](https://github.com/collardeau/svelte-headroom))*
+- ➕🤯 Headroom - hides fixed header _(based on [collardeau/svelte-headroom](https://github.com/collardeau/svelte-headroom))_
 - ➕🔼 Back To Top button (also uses Headroom)
 - ➕👋💬 [Utterances comments](https://utteranc.es/) for blog posts
 - ➕🌓☀️ Dark Mode

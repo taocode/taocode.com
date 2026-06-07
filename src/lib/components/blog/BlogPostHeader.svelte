@@ -1,10 +1,10 @@
 <script lang="ts">
-  import Icon from '@iconify/svelte'
-  import BlogPostThumbnail from './BlogPostThumbnail.svelte'
-  import BlogPostTag from './BlogPostTag.svelte'
-  import ShareButtons from '../ShareButtons.svelte'
-  import InfoTags from './InfoTags.svelte'
-  import type { Post } from '$lib/models/post'
+  import Icon from '@iconify/svelte';
+  import BlogPostThumbnail from './BlogPostThumbnail.svelte';
+  import BlogPostTag from './BlogPostTag.svelte';
+  import ShareButtons from '../ShareButtons.svelte';
+  import InfoTags from './InfoTags.svelte';
+  import type { Post } from '$lib/models/post';
 
   interface Props {
     post: Post;
@@ -12,31 +12,35 @@
 
   let { post }: Props = $props();
 </script>
+
 <section class="applause-gradient blog-post-header rotating-bg">
-  <div class="container mj-container md:flex 
+  <div
+    class="container mj-container md:flex
   md:items-center
   md:gap-8">
     {#if post && post.thumbnail}
-    <div class="w-3/5 mx-auto mb-6 flex-shrink align-middle
+      <div
+        class="w-3/5 mx-auto mb-6 flex-shrink align-middle
     p-2 rounded bg-white/40 dark:bg-black/40
-    md:mb-0 md:w-1/3 lg:w-1/4 ">
-      <BlogPostThumbnail {post} />
-    </div>
+    md:mb-0 md:w-1/3 lg:w-1/4">
+        <BlogPostThumbnail {post} />
+      </div>
     {/if}
     <div
       class="blog-header p-3 text-center
       
-      sm:flex-row sm:flex-nowrap sm:mx-auto flex-grow"
-    >
+      sm:flex-row sm:flex-nowrap sm:mx-auto flex-grow">
       <div class="w-full px-4 text-gray-800 dark:text-gray-200">
         <h1>{post.title}</h1>
         {#if post.site_url}
-          <div><a target="site" href={post.site_url}>{post.site_url.replace(/^https?:\/\//, '')}
-            <Icon icon="feather:external-link" />
-          </a></div>
+          <div>
+            <a target="site" href={post.site_url}
+              >{post.site_url.replace(/^https?:\/\//, '')}
+              <Icon icon="feather:external-link" />
+            </a>
+          </div>
         {/if}
         <InfoTags {post} />
-
 
         <BlogPostTag tags={post.tags} />
 
@@ -55,6 +59,7 @@
     </div>
   </div>
 </section>
+
 <style lang="postcss">
   @reference "../../../app.css";
   .applause-gradient {

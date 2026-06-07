@@ -6,7 +6,7 @@
   import './NProgress.pcss';
 
   NProgress.configure({
-    showSpinner: false
+    showSpinner: false,
   });
 
   $effect(() => {

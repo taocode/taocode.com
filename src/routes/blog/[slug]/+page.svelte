@@ -1,14 +1,14 @@
 <script lang="ts">
-  import BackToBlogOverviewBtn from '$lib/components/blog/BackToBlogOverviewBtn.svelte'
-  import BlogPostHeader from '$lib/components/blog/BlogPostHeader.svelte'
-  import BlogPostSidebar from '$lib/components/blog/BlogPostSidebar.svelte'
-  import CommentsUtterances from '$lib/components/layout/CommentsUtterances.svelte'
-  import PrevNextArticle from '$lib/components/blog/PrevNextArticle.svelte'
-  import ShareButtons from '$lib/components/ShareButtons.svelte'
-  import Icon from '@iconify/svelte'
-  import SEO from '$lib/components/layout/SEO.svelte'
-  import { marked } from 'marked'
-  import type { PageData } from './$types'
+  import BackToBlogOverviewBtn from '$lib/components/blog/BackToBlogOverviewBtn.svelte';
+  import BlogPostHeader from '$lib/components/blog/BlogPostHeader.svelte';
+  import BlogPostSidebar from '$lib/components/blog/BlogPostSidebar.svelte';
+  import CommentsUtterances from '$lib/components/layout/CommentsUtterances.svelte';
+  import PrevNextArticle from '$lib/components/blog/PrevNextArticle.svelte';
+  import ShareButtons from '$lib/components/ShareButtons.svelte';
+  import Icon from '@iconify/svelte';
+  import SEO from '$lib/components/layout/SEO.svelte';
+  import { marked } from 'marked';
+  import type { PageData } from './$types';
 
   let { data }: { data: PageData } = $props();
 
@@ -22,7 +22,7 @@
     title: pageTitle,
     excerpt: post.excerpt,
     creationDate: post.creationDate,
-    cover: post.cover
+    cover: post.cover,
   });
 </script>
 
@@ -37,7 +37,8 @@
   <article class="prose blog flex-grow">
     {#if post.lead}<p class="lead">{@html marked.parse(post.lead)}</p>{/if}
     <pageComponent></pageComponent>
-    <div class="share-post bg-green-100 bg-opacity-70 border-green-700 dark:bg-green-900">
+    <div
+      class="share-post bg-green-100 bg-opacity-70 border-green-700 dark:bg-green-900">
       <div class="share-icon bg-green-700 text-green-100 dark:text-green-950">
         <div class="icon text-[1.5em]">
           <Icon icon="fa6-solid:share" />
@@ -63,10 +64,10 @@
 <style lang="postcss">
   @reference "../../../app.css";
   .share-post {
-    @apply flex justify-between items-center w-auto max-w-xs mx-auto p-3 mt-12 mb-9 border-2 rounded;
+    @apply mx-auto mt-12 mb-9 flex w-auto max-w-xs items-center justify-between rounded border-2 p-3;
   }
   .share-icon {
-    @apply h-full -m-3 mr-1 py-1 px-3;
+    @apply -m-3 mr-1 h-full px-3 py-1;
   }
   .lead {
     @apply font-semibold;
