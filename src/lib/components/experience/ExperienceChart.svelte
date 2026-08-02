@@ -27,16 +27,10 @@
   };
 
   const barTitle = (item) => {
-    const status = item.active ? 'active' : 'frozen';
-    const pct = Math.round(item.intensity * 100);
-    const yearsPart =
-      item.intensity < 1
-        ? `${item.years} yr effective (${item.calendarYears} calendar × ${pct}%)`
-        : `${item.years} yr`;
     if (item.blurb) {
-      return `${item.name}: ${item.blurb} (${yearsPart}, ${status})`;
+      return `${item.name}: ${item.blurb} (${item.years} years)`;
     }
-    return `${yearsPart} of experience with ${item.name} (${status})`;
+    return `${item.years} years of experience with ${item.name}`;
   };
 </script>
 
@@ -69,16 +63,13 @@
           <button
             class="experience box pl-2 py-2 absolute left-0 transition duration-150
            opacity-80 hover:opacity-100"
-            class:frozen={!dChildren[n].active}
             disabled={!dChildren[n].children}
             class:has-children={dChildren[n].children}
             title={barTitle(dChildren[n])}
             onclick={() => showChild(n)}></button>
         </Pancake.Box>
         <div
-          class="relative pointer-events-none z-0 p-2 block font-display text-sm font-semibold"
-          class:text-gray-300={dChildren[n].active}
-          class:text-gray-500={!dChildren[n].active}>
+          class="relative pointer-events-none z-0 p-2 block font-display text-sm text-gray-300 font-semibold">
           {dChildren[n].name}
         </div>
       {/each}
@@ -136,12 +127,6 @@
     }
     &[disabled] {
       @apply cursor-default;
-    }
-    &.frozen {
-      @apply bg-gray-600 opacity-50;
-      &:hover {
-        @apply bg-gray-500 opacity-70;
-      }
     }
   }
   .overview {

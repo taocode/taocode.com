@@ -30,23 +30,23 @@
     - name: NodeJS
       start: 2024-08
     - name: jQuery
-      start: 2012-01
-      end: 2017-01
+      start: 2004-01
+      end: 2012-01
     - name: Vanilla JS
       start: 2015-08
 
 - name: CSS
   start: 2007-08
   children:
-    - name: Tailwind
-      start: 2025-08
     - name: SkeletonUI
       start: 2024-08
+    - name: Tailwind
+      start: 2021-06
     - name: Flex
-      start: 2022-08
+      start: 2020-01
     - name: SASS/SCSS/LESS
-      start: 2018-08
-      end: 2024-08
+      start: 2012-08
+      intensity: 0.2
     - name: CSS3
       start: 2019-08
 
@@ -55,9 +55,9 @@
   children:
     - name: Hugo & other SSG
       start: 2020-10
-      intensity: 0.35
+      intensity: 0.75
     - name: WordPress
-      intensity: 0.25
+      intensity: 0.5
       periods:
         - start: 2016-01
           end: 2018-06
