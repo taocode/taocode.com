@@ -8,7 +8,9 @@
   }
 
   let { posts }: Props = $props();
-  const filteredPosts = posts.filter((_post: Post, idx: number) => idx < 3);
+  const filteredPosts = $derived(
+    posts.filter((_post: Post, idx: number) => idx < 3),
+  );
 </script>
 
 <section class="container mj-container">

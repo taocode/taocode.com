@@ -3,22 +3,10 @@
   import * as Pancake from '@sveltejs/pancake';
   import techEx from './experience';
 
-  const colors = [
-    'bg-green-650',
-    'bg-green-650',
-    'bg-green-650',
-    'bg-green-650',
-    'bg-green-650',
-    'bg-green-650',
-    'bg-green-600',
-  ];
-
   const techs = ['years'];
   let dChildren = $state(techEx);
-  // dChildren = techEx[0].children
   let stacks = $derived(Pancake.stacks(dChildren, techs, 'name'));
-  //  console.log('stacks:',stacks)
-  let currentChild = $state();
+  let currentChild = $state('');
 
   let max = $derived(
     stacks.reduce(
@@ -26,6 +14,7 @@
       0,
     ),
   );
+
   const showChild = (n) => {
     if (!currentChild && techEx[n].children) {
       dChildren = techEx[n].children;
@@ -36,8 +25,18 @@
     dChildren = techEx;
     currentChild = '';
   };
-  const escapeToOverview = (event) => {
-    console.dir(event);
+
+  const barTitle = (item) => {
+    const status = item.active ? 'active' : 'frozen';
+    const pct = Math.round(item.intensity * 100);
+    const yearsPart =
+      item.intensity < 1
+        ? `${item.years} yr effective (${item.calendarYears} calendar × ${pct}%)`
+        : `${item.years} yr`;
+    if (item.blurb) {
+      return `${item.name}: ${item.blurb} (${yearsPart}, ${status})`;
+    }
+    return `${yearsPart} of experience with ${item.name} (${status})`;
   };
 </script>
 
@@ -50,8 +49,8 @@
     <span transition:fade|global class="inline-block font-display text-sm px-2"
       >{currentChild}</span>
   {/if}
-  <Pancake.Chart x1={0} x2={max} y1={3.5} y2={-0.5}>
-    <Pancake.Grid horizontal count={techEx.length}>
+  <Pancake.Chart x1={0} x2={max} y1={dChildren.length - 0.5} y2={-0.5}>
+    <Pancake.Grid horizontal count={dChildren.length}>
       {#snippet children({ value, first })}
         <div transition:fade|global class="grid-line horizontal"></div>
       {/snippet}
@@ -64,22 +63,22 @@
       {/snippet}
     </Pancake.Grid>
 
-    {#each stacks as stack, i}
-      {#each stack.values as d, n}
+    {#each stacks as stack, i (i)}
+      {#each stack.values as d, n (dChildren[n].name)}
         <Pancake.Box x1={d.start} x2={d.end} y1={n - 0.5} y2={n + 0.5}>
           <button
-            class="experience box pl-2 py-2 absolute left-0 {colors[
-              n
-            ]} transition duration-150
+            class="experience box pl-2 py-2 absolute left-0 transition duration-150
            opacity-80 hover:opacity-100"
+            class:frozen={!dChildren[n].active}
             disabled={!dChildren[n].children}
             class:has-children={dChildren[n].children}
-            title="{dChildren[n].years} years of experience with {dChildren[n]
-              .name}"
+            title={barTitle(dChildren[n])}
             onclick={() => showChild(n)}></button>
         </Pancake.Box>
         <div
-          class="relative pointer-events-none z-0 p-2 block font-display text-sm text-gray-300 font-semibold">
+          class="relative pointer-events-none z-0 p-2 block font-display text-sm font-semibold"
+          class:text-gray-300={dChildren[n].active}
+          class:text-gray-500={!dChildren[n].active}>
           {dChildren[n].name}
         </div>
       {/each}
@@ -109,16 +108,6 @@
     border-left: 1px dashed #ccc;
   }
 
-  .grid-line span {
-    position: absolute;
-    left: 0;
-    bottom: -0.5em;
-    font-family: sans-serif;
-    font-size: 14px;
-    color: #999;
-    line-height: 1;
-  }
-
   .x-label {
     @apply absolute text-gray-500;
     width: 4em;
@@ -141,11 +130,18 @@
     border-radius: 2px;
   }
   button.experience {
+    @apply bg-green-750;
     &:not([disabled]):hover {
       @apply bg-green-800;
     }
     &[disabled] {
       @apply cursor-default;
+    }
+    &.frozen {
+      @apply bg-gray-600 opacity-50;
+      &:hover {
+        @apply bg-gray-500 opacity-70;
+      }
     }
   }
   .overview {

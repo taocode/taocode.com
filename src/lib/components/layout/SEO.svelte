@@ -1,13 +1,8 @@
 <script lang="ts">
   import { page } from '$app/state';
-  import { onMount } from 'svelte';
 
   const baseURL = `https://www.taocode.com`;
-
-  const fullURL = `${baseURL}${page.url.pathname}`;
-
   const siteLogo = `${baseURL}/taocode-logo.png`;
-
   const schemaOrgURL = 'http://schema.org';
 
   interface Props {
@@ -25,12 +20,6 @@
   const fallbackDescription =
     'Personal website and blog with SvelteKit and TailwindCSS.';
 
-  const socialTitle = blogPostInfo.title || fallbackTitle;
-  const socialDescription = blogPostInfo.excerpt || fallbackDescription;
-  const socialImage = blogPostInfo.cover
-    ? `${baseURL}/${blogPostInfo.cover}`
-    : siteLogo;
-
   const authorJSONLD = {
     '@type': 'Person',
     name: 'Mark Jones',
@@ -38,7 +27,7 @@
     address: 'Winston-Salem, North Carolina',
   };
 
-  let schemaOrgJSONLD: any[] = [
+  const schemaOrgJSONLD = [
     {
       '@context': schemaOrgURL,
       '@type': 'WebSite',
@@ -48,7 +37,18 @@
     },
   ];
 
-  const detailSchemaOrgJSONLD = [
+  const fullURL = $derived(`${baseURL}${page.url.pathname}`);
+  const socialTitle = $derived(blogPostInfo.title || fallbackTitle);
+  const socialDescription = $derived(
+    blogPostInfo.excerpt || fallbackDescription,
+  );
+  const socialImage = $derived(
+    blogPostInfo.cover ? `${baseURL}/${blogPostInfo.cover}` : siteLogo,
+  );
+  const isBlogDetailsPage = $derived(Object.keys(blogPostInfo).length > 0);
+  const openGraphType = $derived(isBlogDetailsPage ? 'article' : 'website');
+
+  const detailSchemaOrgJSONLD = $derived([
     {
       '@context': schemaOrgURL,
       '@type': 'BreadcrumbList',
@@ -84,24 +84,19 @@
       datePublished: blogPostInfo.creationDate,
       description: socialDescription,
     },
-  ];
+  ]);
 
-  let isBlogDetailsPage = Object.keys(blogPostInfo).length > 0;
+  const ldJson = $derived(
+    JSON.stringify(
+      isBlogDetailsPage
+        ? [...schemaOrgJSONLD, ...detailSchemaOrgJSONLD]
+        : schemaOrgJSONLD,
+    ),
+  );
 
-  let openGraphType = $derived(isBlogDetailsPage ? 'article' : 'website');
-
-  const ldJson = `${JSON.stringify(
-    isBlogDetailsPage
-      ? [...schemaOrgJSONLD, ...detailSchemaOrgJSONLD]
-      : schemaOrgJSONLD,
-  )}`;
-
-  onMount(() => {
-    if (!document) return;
+  $effect(() => {
     const ldJsonScript = document.getElementById('addedldJsonScript');
 
-    // We want to avoid placing multiple application/ld+json files in the DOM, therefore replace text content,
-    // or load script only on first mount of component
     if (ldJsonScript) {
       ldJsonScript.textContent = ldJson;
     } else {

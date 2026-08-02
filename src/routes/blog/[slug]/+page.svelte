@@ -13,7 +13,7 @@
   let { data }: { data: PageData } = $props();
 
   const post = $derived(data.post);
-  const pageComponent = $derived(data.pageComponent);
+  const PostContent = $derived(data.pageComponent);
   const previousArticle = $derived(data.previousArticle);
   const nextArticle = $derived(data.nextArticle);
   const pageTitle = $derived(`${post.title} | TAOCode`);
@@ -36,7 +36,7 @@
 <section class="container flex flex-col gap-6 md:flex-row mj-container">
   <article class="prose blog flex-grow">
     {#if post.lead}<p class="lead">{@html marked.parse(post.lead)}</p>{/if}
-    <pageComponent></pageComponent>
+    <PostContent />
     <div
       class="share-post bg-green-100 bg-opacity-70 border-green-700 dark:bg-green-900">
       <div class="share-icon bg-green-700 text-green-100 dark:text-green-950">

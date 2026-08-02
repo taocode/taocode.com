@@ -9,10 +9,10 @@
 
   let { post }: Props = $props();
 
-  const fullURL = `https://www.taocode.com${page.url.pathname}`;
-  const encodedURL = encodeURIComponent(fullURL);
-  const encodedPostTitle = encodeURIComponent(post.title);
-  const encodedPostExcerpt = encodeURIComponent(post.excerpt);
+  const fullURL = $derived(`https://www.taocode.com${page.url.pathname}`);
+  const encodedURL = $derived(encodeURIComponent(fullURL));
+  const encodedPostTitle = $derived(encodeURIComponent(post.title));
+  const encodedPostExcerpt = $derived(encodeURIComponent(post.excerpt));
 </script>
 
 <div class="share-buttons">

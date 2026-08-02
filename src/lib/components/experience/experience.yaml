@@ -1,0 +1,75 @@
+# Experience chart data. Years are computed at runtime.
+#
+# Dates: YYYY or YYYY-MM
+# - start / end: one stretch (shorthand). Omit end while still learning (active).
+# - periods: multiple stretches; when set, top-level start/end are ignored.
+# - intensity: 0–1 fraction of time on this skill (default 1). Scales calendar years.
+# - blurb: optional hover detail
+#
+# effective years = sum(period calendar years) × intensity
+
+- name: Stack
+  start: 2021-01
+  children:
+    - name: Supabase
+      start: 2026-02
+    - name: Rust Custom API
+      start: 2025-11
+      blurb: High-speed browse/search/auth; Moka+Redis L1/L2; ClickHouse; Tauri
+    - name: SvelteKit
+      start: 2021-01
+      blurb: Including monorepo multi-app with live backends
+    - name: Directus
+      start: 2025-05
+
+- name: JS
+  start: 2004-08
+  children:
+    - name: Svelte
+      start: 2020-08
+    - name: NodeJS
+      start: 2024-08
+    - name: jQuery
+      start: 2012-01
+      end: 2017-01
+    - name: Vanilla JS
+      start: 2015-08
+
+- name: CSS
+  start: 2007-08
+  children:
+    - name: Tailwind
+      start: 2025-08
+    - name: SkeletonUI
+      start: 2024-08
+    - name: Flex
+      start: 2022-08
+    - name: SASS/SCSS/LESS
+      start: 2018-08
+      end: 2024-08
+    - name: CSS3
+      start: 2019-08
+
+- name: HTML & Platforms
+  start: 2000-08
+  children:
+    - name: Hugo & other SSG
+      start: 2020-10
+      intensity: 0.35
+    - name: WordPress
+      intensity: 0.25
+      periods:
+        - start: 2016-01
+          end: 2018-06
+        - start: 2020-01
+          end: 2021-12
+        - start: 2023-06
+    - name: ConcreteCMS
+      start: 2018-01
+      end: 2020-07
+    - name: Drupal
+      start: 2014-01
+      end: 2019-07
+    - name: SQL / MariaDB
+      start: 2011-08
+      intensity: 0.2

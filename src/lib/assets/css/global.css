@@ -260,15 +260,12 @@ h6 {
   top: calc(-50vh + -20vw);
   left: calc(-100vw + -15vh);
 }
-@screen sm {
+@media (width >= theme(--breakpoint-sm)) {
   .applause-gradient::after {
     top: -100vh;
   }
 }
-@screen md {
-  .applause-gradient::after {
-    /* top: -100vw; */
-  }
+@media (width >= theme(--breakpoint-md)) {
   .blog-applause::after {
     left: calc(-25vw + -25vh);
   }
@@ -277,13 +274,13 @@ h6 {
     left: calc(-80vw + -25vh);
   }
 }
-@screen lg {
+@media (width >= theme(--breakpoint-lg)) {
   .applause-gradient::after {
     top: calc(-60vw + -40vh);
     left: calc(-70vw + -40vh);
   }
 }
-@screen xl {
+@media (width >= theme(--breakpoint-xl)) {
   .applause-gradient::after {
     top: -80vw;
   }

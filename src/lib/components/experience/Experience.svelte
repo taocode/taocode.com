@@ -12,16 +12,15 @@
             >2 <abbr data-tooltip="Before Google Era" title="Before Google Era"
               >BGE</abbr
             ></em
-          >, and have experience across a broad range of website technologies,
-          from
-          <abbr
-            data-tooltip="Content Management System"
-            title="Content Management System">CMS</abbr>
-          to
+          >, and work across a modern stack—SvelteKit multi-app, Skeleton UI,
+          Supabase / Directus, and custom Rust APIs—plus long-running
           <abbr
             data-tooltip="Cascading Style Sheets"
-            title="Cascading Style Sheets">CSS</abbr> including JavaScript, Node.js,
-          NoSQL &amp; SQL, PHP, Python, and other languages as needed.
+            title="Cascading Style Sheets">CSS</abbr>, JavaScript, SQL, and
+          classic
+          <abbr
+            data-tooltip="Content Management System"
+            title="Content Management System">CMS</abbr> experience as needed.
         </p>
       </div>
       <div class="lg:w-1/2">

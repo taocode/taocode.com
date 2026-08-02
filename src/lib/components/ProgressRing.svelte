@@ -7,8 +7,8 @@
 
   let { title, progress = 100, from100 = false }: Props = $props();
   const dashArray = 280;
-  const dashOffsetStart = from100 ? 0 : dashArray;
-  let style = $derived(
+  const dashOffsetStart = $derived(from100 ? 0 : dashArray);
+  const style = $derived(
     `--progress: ${progress}; --dasharray: ${dashArray}; --dashoffsetstart: ${dashOffsetStart}`,
   );
 </script>

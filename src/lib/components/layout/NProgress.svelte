@@ -1,7 +1,6 @@
 <script>
   import NProgress from 'nprogress';
   import { navigating } from '$app/state';
-  import { browser } from '$app/environment';
 
   import './NProgress.pcss';
 
@@ -10,8 +9,12 @@
   });
 
   $effect(() => {
-    if (browser) {
-      navigating ? NProgress.start() : NProgress.done();
-    }
+    if (navigating.from === null) return;
+
+    NProgress.start();
+
+    return () => {
+      NProgress.done();
+    };
   });
 </script>
