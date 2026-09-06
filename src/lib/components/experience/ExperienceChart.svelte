@@ -122,6 +122,9 @@
   }
   button.experience {
     @apply bg-green-750;
+    &:not([disabled]) {
+      @apply cursor-pointer;
+    }
     &:not([disabled]):hover {
       @apply bg-green-800;
     }
