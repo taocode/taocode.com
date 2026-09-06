@@ -51,7 +51,7 @@
         <div class="absolute bottom-0 right-0 pt-4 pl-6">
           <span
             aria-hidden="true"
-            class="btn preset-filled-primary-700-300 inline-block rounded-br">
+            class="btn btn-sm preset-filled-primary inline-block rounded-br">
             Read more
           </span>
         </div>
@@ -62,8 +62,8 @@
         </div>
         <div
           aria-hidden="true"
-          class="text-black font-display leading-10 font-extrabold
-      text-3xl md:text-6xl lg:text-4xl p-3 bg-green-600 bg-opacity-70">
+          class="text-black font-display leading-tight font-extrabold
+      text-2xl sm:text-3xl p-3 bg-green-600 bg-opacity-70">
           {post.title}
         </div>
       </div>

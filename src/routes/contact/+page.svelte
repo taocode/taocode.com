@@ -1,32 +1,23 @@
 <script lang="ts">
-  import { fade } from 'svelte/transition';
   import Icon from '@iconify/svelte';
   import SEO from '$lib/components/layout/SEO.svelte';
   import ExternalLink from '$lib/components/ExternalLink.svelte';
 
-  let didSubmit = $state(false);
+  const CONTACT_EMAIL = 'mark@taocode.com';
 
-  async function handleSubmit(event: SubmitEvent) {
+  function handleSubmit(event: SubmitEvent) {
     event.preventDefault();
     const form = event.currentTarget as HTMLFormElement;
-    const body = new URLSearchParams(
-      new FormData(form) as unknown as Record<string, string>,
-    ).toString();
+    const data = new FormData(form);
+    const name = String(data.get('name') ?? '').trim();
+    const email = String(data.get('email') ?? '').trim();
+    const comment = String(data.get('comment') ?? '').trim();
 
-    try {
-      await fetch('/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body,
-      });
-      form.reset();
-      didSubmit = true;
-      setTimeout(() => {
-        didSubmit = false;
-      }, 5000);
-    } catch (submitError) {
-      console.error(submitError);
-    }
+    const subject = encodeURIComponent(`Contact from ${name}`);
+    const body = encodeURIComponent(
+      `${comment}\n\n— ${name}\n${email}`,
+    );
+    window.location.href = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;
   }
 </script>
 
@@ -47,16 +38,14 @@
     <a href="/services" data-sveltekit-prefetch>Services</a>
     tab. I will get back to you within 48 hours.
   </p>
-  <form
-    name="contact"
-    class="mt-3 mb-8"
-    netlify-honeypot="bot-field"
-    data-netlify="true"
-    onsubmit={handleSubmit}>
+  <p class="text-sm text-gray-600 dark:text-gray-400">
+    The form below opens your email client with a draft to
+    <a href="mailto:{CONTACT_EMAIL}">{CONTACT_EMAIL}</a> — nothing is sent to a
+    server from this page.
+  </p>
+  <form name="contact" class="mt-3 mb-8" onsubmit={handleSubmit}>
     <div
       class="flex flex-wrap p-3 bg-gray-light border border-gray-500 rounded dark:border-gray-700">
-      <input type="hidden" name="form-name" value="contact" />
-      <input type="text" name="bot-field" class="hidden" />
       <div class="w-1/2 px-2 my-2">
         <label for="name">Name</label>
         <input
@@ -92,20 +81,10 @@
       <div class="w-full px-2 my-2">
         <button
           type="submit"
-          class="btn preset-filled-primary-700-300 w-full text-lg rounded">
-          Submit
+          class="btn btn-lg preset-tonal-surface w-full cursor-pointer rounded">
+          Open email draft
         </button>
       </div>
-
-      {#if didSubmit}
-        <div class="w-full px-2 my-2" transition:fade|global>
-          <div
-            class="preset-filled-success-100-900 p-4 rounded flex items-center gap-3">
-            <Icon icon="fa6-solid:circle-check" class="text-[1.5em]" />
-            Message submitted successfully!
-          </div>
-        </div>
-      {/if}
     </div>
   </form>
 

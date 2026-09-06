@@ -7,7 +7,7 @@
   class="container mb-16 text-center bg-gray-light border-t-4 border-green-700 mj-container">
   <div id="mc_embed_signup">
     <form
-      action="https://taocode.us6.list-manage.com/subscribe/post?u=43229d3d4d5354a0a9b5629fb&amp;id=32bdc2ddb0"
+      action="https://taocode.us6.list-manage.com/subscribe/post?u=43229d3d4d5354a0a9b5629fb&id=32bdc2ddb0"
       method="post"
       id="mc-embedded-subscribe-form"
       name="mc-embedded-subscribe-form"
@@ -49,7 +49,7 @@
             value="Subscribe"
             name="subscribe"
             id="mc-embedded-subscribe"
-            class="btn preset-filled-primary-700-300 w-full px-5 py-3 font-semibold font-display rounded cursor-pointer" />
+            class="btn btn-lg preset-filled-primary w-full font-semibold font-display rounded cursor-pointer" />
         </div>
       </div>
     </form>

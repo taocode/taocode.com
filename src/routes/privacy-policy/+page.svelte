@@ -27,8 +27,8 @@
     <h2>What this site uses</h2>
     <ul>
       <li>
-        <strong>No analytics cookies</strong> — we do not run Google Analytics, Splitbee,
-        or similar trackers.
+        <strong>Umami</strong> — self-hosted, privacy-friendly analytics at
+        analytics.taocode.com (no advertising cookies).
       </li>
       <li>
         <strong>Google Fonts</strong> — Rubik and Spectral fonts are loaded from Google
@@ -44,8 +44,9 @@
         you subscribe.
       </li>
       <li>
-        <strong>Netlify Forms</strong> — contact form submissions are processed by
-        Netlify.
+        <strong>Contact</strong> — the contact form opens your email client via
+        mailto to mark@taocode.com; this site does not process or store form
+        submissions.
       </li>
     </ul>
     <p>

@@ -19,16 +19,16 @@
 
 <span>{formatDate(post.creationDate)}</span>
 {#if readTimeText}
-  &middot;
+  ·
   <span>{post.readingTimeText}</span>
 {/if}
 {#if showWordCount}
-  &middot;
+  ·
   <span>{post.wordCount} words</span>
 {/if}
 {#if !hideCategory}
   <span>
-    &middot;
+    ·
     <a data-sveltekit-prefetch href="/categories/{convertToSlug(post.category)}"
       >{post.category}
     </a>

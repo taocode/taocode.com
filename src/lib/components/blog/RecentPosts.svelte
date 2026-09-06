@@ -17,7 +17,7 @@
   <h2>Recent Posts</h2>
 
   <div class="recent-posts">
-    {#each filteredPosts as post}
+    {#each filteredPosts as post (post.slug)}
       <div class="card-post">
         <BlogPostCard {post} />
       </div>
@@ -27,9 +27,9 @@
   <a
     data-sveltekit-prefetch
     href="/blog"
-    class="btn preset-filled-primary-700-300 inline-flex items-center mt-8 font-bold rounded text-md">
+    class="btn btn-lg preset-filled-primary inline-flex items-center mt-8 font-bold rounded">
     View all blog posts
-    <Icon icon="feather:chevron-right" class="text-[2em]" />
+    <Icon icon="feather:chevron-right" />
   </a>
 </section>
 

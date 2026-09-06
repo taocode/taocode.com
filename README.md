@@ -2,9 +2,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/2a3c91de-4dc2-4b5f-adac-46c69e0e92fc/deploy-status)](https://app.netlify.com/sites/taocode-com/deploys)
-
-My personal website hosted on Netlify built with SvelteKit.
+My personal website hosted on Firebase Hosting, built with SvelteKit.
 
 The main focus of the website is to provide value to visitors, largely other code nerds, through the [blog](https://taocode.com/blog), which will contain articles about various programming topics, personal development and tool recommendations.
 
@@ -27,6 +25,7 @@ Where I've departed from [Markus Hatvan's project](https://github.com/mhatvan/ma
 - ➕🤯 Headroom - hides fixed header _(based on [collardeau/svelte-headroom](https://github.com/collardeau/svelte-headroom))_
 - ➕🔼 Back To Top button (also uses Headroom)
 - ➕👋💬 [Utterances comments](https://utteranc.es/) for blog posts
+- ➕📊 [Umami](https://analytics.taocode.com) analytics (self-hosted)
 - ➕🌓☀️ Dark Mode
 
 ## 🤝 Contributing

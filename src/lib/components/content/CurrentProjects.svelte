@@ -6,7 +6,7 @@
       name: 'TAOCode',
       description: 'Personal website and blog with SvelteKit and TailwindCSS.',
       techStack:
-        'SvelteKit, Svelte, Tailwind CSS v4, Skeleton UI, Markdown, GitHub, Netlify',
+        'SvelteKit, Svelte, Tailwind CSS v4, Skeleton UI, Markdown, GitHub, Firebase',
       websiteLink: 'https://www.taocode.com',
       githubLink: 'https://github.com/taocode/taocode.com',
     },

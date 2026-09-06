@@ -14,7 +14,7 @@
     <div class="pt-3 mb-6">
       <button
         aria-label="back to top"
-        class="btn preset-filled-primary-700-300 rounded shadow-totop inline-block p-2 pt-0"
+        class="btn btn-sm preset-filled-primary rounded shadow-totop inline-block p-2 pt-0"
         onclick={() => {
           window.scroll(0, 0);
         }}>

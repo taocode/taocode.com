@@ -4,6 +4,7 @@
   import NProgress from '$lib/components/layout/NProgress.svelte';
   import Nav from '$lib/components/layout/Nav.svelte';
   import Footer from '$lib/components/layout/Footer.svelte';
+  import AnalyticsUmami from '$lib/components/layout/AnalyticsUmami.svelte';
   import type { LayoutData } from './$types';
 
   import '../app.css';
@@ -43,6 +44,8 @@
 <svelte:head>
   <link rel="canonical" href={fullURL} />
 </svelte:head>
+
+<AnalyticsUmami />
 
 <BreakpointHelper />
 
