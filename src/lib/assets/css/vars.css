@@ -36,6 +36,6 @@
   --color-brand-light-800: hsl(110.3, 74.8%, 58%);
   --color-brand-light-900: hsl(110, 74.8%, 54.9%);
 
-  --color-brand-highlight: var(--color-brand-light,palegreen);
+  --color-brand-highlight: var(--color-brand-light, palegreen);
   --color-gray-dark: #333;
 }

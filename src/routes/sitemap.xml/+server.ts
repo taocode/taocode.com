@@ -1,65 +1,57 @@
-import posts from '../blog/_posts'
-import { convertToSlug } from '$lib/utils'
+import { getAllPosts } from '$lib/server/posts';
+import { convertToSlug } from '$lib/utils';
+import type { Post } from '$lib/models/post';
+import fs from 'node:fs';
 
-import fs from 'fs'
-import type { Post } from '$lib/models/post'
+export const prerender = true;
 
-export const prerender = true
-
-const BASE_URL = 'https://www.taocode.com'
-const pages = ['']
+const BASE_URL = 'https://www.taocode.com';
+const pages = [''];
 
 fs.readdirSync('./src/routes').forEach((file) => {
-  file = file.split('.')[0];
+  const route = file.split('.')[0];
   if (
-    file.charAt(0) !== '+' &&
-    file.charAt(0) !== '_' &&
-    file !== 'sitemap' &&
-    file !== 'index' &&
-    file !== 'categories' &&
-    file !== 'tags' &&
-    file !== 'rss'
+    route.charAt(0) !== '+' &&
+    route.charAt(0) !== '_' &&
+    route !== 'sitemap' &&
+    route !== 'index' &&
+    route !== 'categories' &&
+    route !== 'tags' &&
+    route !== 'rss'
   ) {
-    pages.push(file);
+    pages.push(route);
   }
 });
 
-const generateCategories = () => {
+const generateCategories = (posts: Post[]) => {
   const uniqueCategories = posts
-    .map((post: Post) => post.category)
-    .filter(
-      (category: string, idx: number, arr: string[]) =>
-        arr.indexOf(category) === idx,
-    );
+    .map((post) => post.category)
+    .filter((category, idx, arr) => arr.indexOf(category) === idx);
 
   return uniqueCategories
     .map(
-      (uniqueCategory: string) => `
-      <url><loc>${BASE_URL}/categories/${convertToSlug(
-        uniqueCategory,
-      )}/</loc><priority>0.85</priority></url>
+      (uniqueCategory) => `
+      <url><loc>${BASE_URL}/categories/${convertToSlug(uniqueCategory)}/</loc><priority>0.85</priority></url>
         `,
     )
     .join('\n');
 };
 
 const render = (
-  pages: string[],
+  pageList: string[],
   posts: Post[],
 ) => `<?xml version="1.0" encoding="UTF-8" ?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-  ${pages
+  ${pageList
     .map(
-      (page: string) => `
-    <url><loc>${BASE_URL}/${
-        page ? `${page}/` : ''
-      }</loc><priority>0.85</priority></url>
+      (page) => `
+    <url><loc>${BASE_URL}/${page ? `${page}/` : ''}</loc><priority>0.85</priority></url>
   `,
     )
     .join('\n')}
   ${posts
     .map(
-      (post: Post) => `
+      (post) => `
     <url>
       <loc>${BASE_URL}/blog/${post.slug}/</loc>
       <priority>0.69</priority>
@@ -67,11 +59,10 @@ const render = (
   `,
     )
     .join('\n')}
-    ${generateCategories()}
+    ${generateCategories(posts)}
 </urlset>
 `;
 
 export function GET() {
-  const sitemap = render(pages, posts)
-  return new Response(sitemap)
+  return new Response(render(pages, getAllPosts()));
 }

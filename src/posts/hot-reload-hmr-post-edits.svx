@@ -24,7 +24,7 @@ Starting from scratch felt very daunting so instead I borrowed a full featured b
 
 ## My Modifications
 
-- 🏃💨 WindiCSS replaced TailwindCSS
+- 🎨 Tailwind CSS v4 (legacy WindiCSS and UnoCSS removed)
 - ➕🤯 Headroom - hides fixed header (based on [collardeau/svelte-headroom](https://github.com/collardeau/svelte-headroom))
 - ➕🔼 Back To Top button (also uses Headroom)
 - ➕👋💬 Utterances comments for blog posts
@@ -37,7 +37,7 @@ I explored more blogs created using SvelteKit and found: [rodneylab/sveltekit-bl
 
 ## My Blog Core Now Uses Vite's Import Functions
 
-By using Vite's `import(../posts/${slug}.md)` and `import.meta.glob(../posts/*.md)`, Vite manages the Hot Module Reload (HMR) upon edit.
+By using Vite's `import(../posts/${slug}.svx)` and `import.meta.glob(../posts/*.svx)`, Vite manages the Hot Module Reload (HMR) upon edit.
 
 ## Previously it Used a JSON Endpoint and Fetch
 

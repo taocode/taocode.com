@@ -1,31 +1,24 @@
 <script lang="ts">
-  import { page } from '$app/stores';
-  import { onMount } from 'svelte';
+  import { page } from '$app/state';
 
   const baseURL = `https://www.taocode.com`;
-
-  const fullURL = `${baseURL}${$page.url.pathname}`;
-
   const siteLogo = `${baseURL}/taocode-logo.png`;
-
   const schemaOrgURL = 'http://schema.org';
 
-  export let blogPostInfo: {
-    title?: string;
-    excerpt?: string;
-    creationDate?: string;
-    cover?: string;
-  } = {};
+  interface Props {
+    blogPostInfo?: {
+      title?: string;
+      excerpt?: string;
+      creationDate?: string;
+      cover?: string;
+    };
+  }
+
+  let { blogPostInfo = {} }: Props = $props();
 
   const fallbackTitle = 'TAOCode - Web productions by Mark Jones';
   const fallbackDescription =
     'Personal website and blog with SvelteKit and TailwindCSS.';
-
-  const socialTitle = blogPostInfo.title || fallbackTitle;
-  const socialDescription = blogPostInfo.excerpt || fallbackDescription;
-  const socialImage = blogPostInfo.cover
-    ? `${baseURL}/${blogPostInfo.cover}`
-    : siteLogo;
 
   const authorJSONLD = {
     '@type': 'Person',
@@ -34,7 +27,7 @@
     address: 'Winston-Salem, North Carolina',
   };
 
-  let schemaOrgJSONLD: any[] = [
+  const schemaOrgJSONLD = [
     {
       '@context': schemaOrgURL,
       '@type': 'WebSite',
@@ -44,7 +37,18 @@
     },
   ];
 
-  const detailSchemaOrgJSONLD = [
+  const fullURL = $derived(`${baseURL}${page.url.pathname}`);
+  const socialTitle = $derived(blogPostInfo.title || fallbackTitle);
+  const socialDescription = $derived(
+    blogPostInfo.excerpt || fallbackDescription,
+  );
+  const socialImage = $derived(
+    blogPostInfo.cover ? `${baseURL}/${blogPostInfo.cover}` : siteLogo,
+  );
+  const isBlogDetailsPage = $derived(Object.keys(blogPostInfo).length > 0);
+  const openGraphType = $derived(isBlogDetailsPage ? 'article' : 'website');
+
+  const detailSchemaOrgJSONLD = $derived([
     {
       '@context': schemaOrgURL,
       '@type': 'BreadcrumbList',
@@ -80,23 +84,19 @@
       datePublished: blogPostInfo.creationDate,
       description: socialDescription,
     },
-  ];
+  ]);
 
-  let isBlogDetailsPage = Object.keys(blogPostInfo).length > 0;
+  const ldJson = $derived(
+    JSON.stringify(
+      isBlogDetailsPage
+        ? [...schemaOrgJSONLD, ...detailSchemaOrgJSONLD]
+        : schemaOrgJSONLD,
+    ),
+  );
 
-  $: openGraphType = isBlogDetailsPage ? 'article' : 'website';
-
-  const ldJson = `${JSON.stringify(
-    isBlogDetailsPage
-      ? [...schemaOrgJSONLD, ...detailSchemaOrgJSONLD]
-      : schemaOrgJSONLD,
-  )}`;
-
-  onMount(() => {
+  $effect(() => {
     const ldJsonScript = document.getElementById('addedldJsonScript');
 
-    // We want to avoid placing multiple application/ld+json files in the DOM, therefore replace text content,
-    // or load script only on first mount of component
     if (ldJsonScript) {
       ldJsonScript.textContent = ldJson;
     } else {
@@ -111,16 +111,16 @@
 
 <svelte:head>
   <!-- Open Graph / Facebook -->
-  <meta property="og:title" content="{socialTitle}" />
-  <meta property="og:description" content="{socialDescription}" />
-  <meta property="og:url" content="{fullURL}" />
-  <meta property="og:image" content="{socialImage}" />
-  <meta property="og:type" content="{openGraphType}" />
+  <meta property="og:title" content={socialTitle} />
+  <meta property="og:description" content={socialDescription} />
+  <meta property="og:url" content={fullURL} />
+  <meta property="og:image" content={socialImage} />
+  <meta property="og:type" content={openGraphType} />
 
   <!-- Twitter -->
-  <meta property="twitter:title" content="{socialTitle}" />
-  <meta property="twitter:description" content="{socialDescription}" />
-  <meta property="twitter:url" content="{fullURL}" />
-  <meta property="twitter:image" content="{socialImage}" />
+  <meta property="twitter:title" content={socialTitle} />
+  <meta property="twitter:description" content={socialDescription} />
+  <meta property="twitter:url" content={fullURL} />
+  <meta property="twitter:image" content={socialImage} />
   <meta property="twitter:card" content="summary_large_image" />
 </svelte:head>

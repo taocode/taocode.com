@@ -1,6 +1,9 @@
 import { format, isBefore, parseISO } from 'date-fns';
 
-export const formatDate = (isoString: string, dateFormat = 'MMMM do, yyyy'): string => {
+export const formatDate = (
+  isoString: string,
+  dateFormat = 'MMMM do, yyyy',
+): string => {
   return format(parseISO(isoString), dateFormat);
 };
 
@@ -16,5 +19,8 @@ export const convertToSlug = (text: string): string => {
 };
 
 export const convertToSentenceCase = (text: string): string => {
-  return (!text) ? 'bad argument convertToSentenceCase' : text.charAt(0).toUpperCase() + text.substr(1).toLowerCase().replace(/-/g, ' ');
+  return !text
+    ? 'bad argument convertToSentenceCase'
+    : text.charAt(0).toUpperCase() +
+        text.substr(1).toLowerCase().replace(/-/g, ' ');
 };

@@ -1,0 +1,21 @@
+@import 'tailwindcss';
+@plugin '@tailwindcss/forms';
+@plugin '@tailwindcss/typography';
+
+@import '@skeletonlabs/skeleton';
+@import '@skeletonlabs/skeleton-svelte';
+
+@import './lib/assets/css/tailwindtheme.css';
+@import './lib/assets/css/skeletontheme.css';
+
+@custom-variant dark (&:where([data-mode=dark], [data-mode=dark] *));
+
+/* Skeleton .btn does not set cursor; use the hand for clickable controls */
+.btn,
+.btn-icon {
+  cursor: pointer;
+}
+.btn:disabled,
+.btn-icon:disabled {
+  cursor: not-allowed;
+}

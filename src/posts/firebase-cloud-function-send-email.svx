@@ -245,7 +245,7 @@ const docref = collection.add(data)
 /* end store data */
 ```
 
-## Recommended Reading
+<h2 id="recommended-reading">Recommended Reading</h2>
 
 Because this page assumes you've already got yourself set up with Firebase, I skip all that. But perhaps you'd like to start with someone's getting started guide:
 

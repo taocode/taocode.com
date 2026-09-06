@@ -1,25 +1,14 @@
-import { convertToSentenceCase } from '$lib/utils'
-import type { PageLoad } from './$types'
-import type { Post } from '$lib/models/post'
+import { convertToSentenceCase } from '$lib/utils';
+import type { Post } from '$lib/models/post';
+import type { PageServerLoad } from './$types';
 
-import { allPosts, posts } from '$lib/stores'
-import { get } from 'svelte/store'
+export const load: PageServerLoad = async ({ params, parent }) => {
+  const { posts } = await parent();
+  const postsByTag = posts.filter((post: Post) => {
+    if (!post.tags?.length) return false;
+    const regex = new RegExp(post.tags.join('|'), 'i');
+    return regex.test(convertToSentenceCase(params.slug));
+  });
 
-export const load: PageLoad = async ({fetch, params}) => {
-  // console.log('tag{slug}.load(params)',params)
-  try {
-    const slug = params.slug
-
-    const postsByTag = get(posts).filter((post: Post) => {
-      if (!post.tags) {
-        return [];
-      }
-      const regex = new RegExp(post.tags.join('|'), 'i');
-      return regex.test(convertToSentenceCase(slug));
-    });
-
-    return { postsByTag, slug };
-  } catch (error) {
-    console.error(error);
-  }
-}
+  return { postsByTag, slug: params.slug };
+};

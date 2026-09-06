@@ -1,11 +1,12 @@
 <script>
+  import Icon from '@iconify/svelte';
+
   const projects = [
     {
       name: 'TAOCode',
-      description:
-        'Personal website and blog with SvelteKit and TailwindCSS.',
+      description: 'Personal website and blog with SvelteKit and TailwindCSS.',
       techStack:
-        'SvelteKit, Svelte, WindiCSS, NodeJS, Rollup, Markdown, GitHub, Netlify',
+        'SvelteKit, Svelte, Tailwind CSS v4, Skeleton UI, Markdown, GitHub, Firebase',
       websiteLink: 'https://www.taocode.com',
       githubLink: 'https://github.com/taocode/taocode.com',
     },
@@ -30,28 +31,25 @@
   <h2 class="border-b-4 border-green-700">Current Projects</h2>
   {#each projects as project}
     <div
-      class="flex flex-wrap items-center justify-between pb-3 my-6 border-b border-gray-300"
-    >
+      class="flex flex-wrap items-center justify-between pb-3 my-6 border-b border-gray-300">
       <div class="inline-flex items-baseline gap-2 w-full lg:w-1/4">
         <h3 class="my-0 font-bold break-all">{project.name}</h3>
         {#if project.websiteLink}
           <a
-            href="{project.websiteLink}"
+            href={project.websiteLink}
             class="inline-flex"
             target="site"
-            aria-label="Link to Website for {project.name}"
-          >
-            <div class="i-feather-external-link"></div>
+            aria-label="Link to Website for {project.name}">
+            <Icon icon="feather:external-link" />
           </a>
         {/if}
         <a
-          href="{project.githubLink}"
+          href={project.githubLink}
           class="inline-flex"
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="Link to GitHub for {project.name}"
-        >
-          <div class="i-fa6-brands-github"></div>
+          aria-label="Link to GitHub for {project.name}">
+          <Icon icon="fa6-brands:github" />
         </a>
       </div>
       <div class="w-full my-3 lg:w-3/4">

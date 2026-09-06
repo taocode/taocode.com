@@ -1,53 +1,52 @@
 <script lang="ts">
-  import { afterUpdate, onMount } from 'svelte'
-  import BreakpointHelper from '$lib/components/layout/BreakpointHelper.svelte'
-  import CookieNotice from '$lib/components/CookieNotice.svelte'
-  import NProgress from '$lib/components/layout/NProgress.svelte'
-  import Nav from '$lib/components/layout/Nav.svelte'
-  import Footer from '$lib/components/layout/Footer.svelte'
-  import { browser, dev } from '$app/environment';
-  import type { LoadInput } from '@sveltejs/kit/types/page'
+  import { onMount } from 'svelte';
+  import BreakpointHelper from '$lib/components/layout/BreakpointHelper.svelte';
+  import NProgress from '$lib/components/layout/NProgress.svelte';
+  import Nav from '$lib/components/layout/Nav.svelte';
+  import Footer from '$lib/components/layout/Footer.svelte';
+  import AnalyticsUmami from '$lib/components/layout/AnalyticsUmami.svelte';
+  import type { LayoutData } from './$types';
 
-  import 'prismjs/themes/prism-tomorrow.css'
+  import '../app.css';
+  import '$lib/assets/css/global.css';
+  import 'prismjs/themes/prism-tomorrow.css';
 
-  let fullURL: string = ''
+  let {
+    children,
+    data,
+  }: { children: import('svelte').Snippet; data: LayoutData } = $props();
 
-  import 'uno.css'
-  import 'virtual:windi.css'
+  let dark = $state(true);
+  let fullURL = $state('');
 
-
-  let dark = true
   const updateSystemPreferenceDarkTheme = () => {
-    dark = ! matchMedia('(prefers-color-scheme: light)').matches
-  }
+    dark = !matchMedia('(prefers-color-scheme: light)').matches;
+  };
+
   onMount(() => {
-		if (dev) import('virtual:windi-devtools')
-    updateSystemPreferenceDarkTheme()
-    matchMedia('(prefers-color-scheme: light)')
-    .addEventListener("change",updateSystemPreferenceDarkTheme)
-	});
-  
-  import '$lib/assets/css/vars.css'
-  import '$lib/assets/css/fonts.css'
-  import '$lib/assets/css/global.pcss'
+    updateSystemPreferenceDarkTheme();
+    matchMedia('(prefers-color-scheme: light)').addEventListener(
+      'change',
+      updateSystemPreferenceDarkTheme,
+    );
 
-  import { allPosts } from '$lib/stores'
-  import type { PageData } from './$types'
+    const syncCanonical = () => {
+      const tmpURL = window.location.href;
+      fullURL = tmpURL.endsWith('/') ? tmpURL : `${tmpURL}/`;
+    };
+    syncCanonical();
+    window.addEventListener('popstate', syncCanonical);
 
-  afterUpdate(() => {
-    let tmpURL = window.location.href
-    fullURL = tmpURL[tmpURL.length - 1] === '/' ? tmpURL : tmpURL + '/'
-  })
-
-  export let data: PageData
-  $: allPosts.set(data.posts)
+    return () => window.removeEventListener('popstate', syncCanonical);
+  });
 </script>
 
 <svelte:head>
-  <link rel="canonical" href="{fullURL}" />
+  <link rel="canonical" href={fullURL} />
 </svelte:head>
 
-<div class:dark>
+<AnalyticsUmami />
+
 <BreakpointHelper />
 
 <NProgress />
@@ -55,15 +54,10 @@
 <Nav bind:darkMode={dark} />
 
 <main class="pb-12 mj">
-  <slot />
+  {@render children()}
 </main>
 
 <Footer />
-
-{#if browser && !dev}
-  <CookieNotice />
-{/if}
-</div>
 
 <style>
   main {

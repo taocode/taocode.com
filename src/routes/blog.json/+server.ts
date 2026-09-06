@@ -1,12 +1,20 @@
-import posts from '../blog/_posts'
+import { getAllPosts } from '$lib/server/posts';
 
-export const prerender = true
+export const prerender = true;
 
 export function GET() {
-  // throw new Error("@migration task: Migrate this return statement (https://github.com/sveltejs/kit/discussions/5774#discussioncomment-3292701)");
-  // Suggestion (check for correctness before using):
-  return new Response(JSON.stringify(Object.keys(posts).map((slug) => ({
-    slug,
-    ...posts[slug],
-  }))));
+  const posts = getAllPosts().map(
+    ({ slug, title, creationDate, category, excerpt, tags }) => ({
+      slug,
+      title,
+      creationDate,
+      category,
+      excerpt,
+      tags,
+    }),
+  );
+
+  return new Response(JSON.stringify(posts), {
+    headers: { 'Content-Type': 'application/json' },
+  });
 }

@@ -1,13 +1,18 @@
 <script lang="ts">
-  import { convertToSlug } from '$lib/utils'
+  import { convertToSlug } from '$lib/utils';
 
-  export let tags: string[];
+  interface Props {
+    tags: string[];
+  }
+
+  let { tags }: Props = $props();
 </script>
 
-<div class="mt-3 text-sm">
+<div class="mt-3 flex flex-wrap justify-center gap-2 text-sm">
   {#each tags as tag}
-    <a data-sveltekit-prefetch class="info-tag" href="/tags/{convertToSlug(tag)}"
-      >{tag}</a
-    >
+    <a
+      data-sveltekit-prefetch
+      class="badge preset-tonal-primary"
+      href="/tags/{convertToSlug(tag)}">{tag}</a>
   {/each}
 </div>

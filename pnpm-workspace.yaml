@@ -1,6 +1,6 @@
-ignoredBuiltDependencies:
-onlyBuiltDependencies:
-  - sharp
-  - '@sveltejs/kit'
-  - esbuild
-  - svelte-preprocess
+allowBuilds:
+  '@sveltejs/kit': true
+  '@tailwindcss/oxide': true
+  esbuild: true
+  sharp: true
+  svelte-preprocess: true

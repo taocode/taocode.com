@@ -37,7 +37,7 @@ Current local system production build times for this site:
 
 For the production build I don't think the JIT mode for Tailwind makes any difference but it certainly improves dev start-up time, just not as much as WindiCSS.
 
-## Thanks Markus Hatvan
+<h2 id="thanks-markus-hatvan">Thanks Markus Hatvan</h2>
 
 Thank you [Markus Hatvan](https://markushatvan.com/), for sharing his site's source [markushatvan.com source on github](https://github.com/mhatvan/markushatvan.com).
 

@@ -9,4 +9,7 @@
   });
 </script>
 
-<a href="https://www.iubenda.com/terms-and-conditions/30856945" class="iubenda-white iubenda-noiframe iubenda-embed iubenda-noiframe " title="Terms and Conditions ">Terms and Conditions</a>
+<a
+  href="https://www.iubenda.com/terms-and-conditions/30856945"
+  class="iubenda-white iubenda-noiframe iubenda-embed iubenda-noiframe"
+  title="Terms and Conditions ">Terms and Conditions</a>

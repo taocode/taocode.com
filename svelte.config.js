@@ -1,32 +1,48 @@
-import sveltePreprocess from 'svelte-preprocess'
-import adapter from '@sveltejs/adapter-static'
-import { mdsvex } from 'mdsvex'
-import slug from 'rehype-slug'
-import { trusted } from 'svelte/internal'
+import { mdsvex } from 'mdsvex';
+import adapter from '@sveltejs/adapter-static';
+import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
+import rehypePrism from 'rehype-prism-plus';
+import Prism from 'prismjs';
 
+globalThis.Prism = Prism;
 
-const extensions = [`.svelte`, '.svx', '.md']
-const rehypePlugins = [slug]
+import 'prismjs/components/prism-markup.js';
+import 'prismjs/components/prism-css.js';
+import 'prismjs/components/prism-clike.js';
+import 'prismjs/components/prism-javascript.js';
+import 'prismjs/components/prism-typescript.js';
+import 'prismjs/components/prism-json.js';
 
-const preprocess = [
-  sveltePreprocess({
-    typescript: true,
-    preserve: ['ld+json'],
-  }),
-  mdsvex({ extensions, rehypePlugins }),
-];
-
-const kit = {
-  adapter: adapter(),
-}
+const extensions = ['.svelte', '.svx'];
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
-  kit,
+  preprocess: [
+    vitePreprocess(),
+    mdsvex({
+      extensions: ['.svx'],
+      layout: {
+        post: './src/lib/layouts/post.svx',
+      },
+      highlight: {
+        alias: {
+          js: 'javascript',
+          ts: 'typescript',
+        },
+      },
+      rehypePlugins: [[rehypePrism, { ignoreMissing: true }]],
+    }),
+  ],
+  kit: {
+    adapter: adapter({
+      pages: 'build',
+      assets: 'build',
+      fallback: undefined,
+      precompress: false,
+      strict: true,
+    }),
+  },
   extensions,
-  // options passed to svelte.preprocess (https://svelte.dev/docs#svelte_preprocess)
-  preprocess,
-
 };
 
 export default config;

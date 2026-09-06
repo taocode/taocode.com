@@ -1,24 +1,42 @@
 <script lang="ts">
-  import { createEventDispatcher, onMount } from "svelte";
-  import validate from "./validation";
+  import { run } from 'svelte/legacy';
 
-  export let duration = "300ms";
-  export let offset = 0;
-  export let tolerance = 0;
-  export let bottom = false;
-  export let hideAtBottom = false;
-  export let hideAtTop = false;
-  export let showAtBottom = false;
-  export let showAtTop = false;
-  export let styleClass = "";
+  import { createEventDispatcher, onMount } from 'svelte';
+  import validate from './validation';
 
-  let headerClass = "pin";
-  let lastHeaderClass = "pin";
-  let y = 0;
+  interface Props {
+    duration?: string;
+    offset?: number;
+    tolerance?: number;
+    bottom?: boolean;
+    hideAtBottom?: boolean;
+    hideAtTop?: boolean;
+    showAtBottom?: boolean;
+    showAtTop?: boolean;
+    styleClass?: string;
+    children?: import('svelte').Snippet;
+  }
+
+  let {
+    duration = '300ms',
+    offset = 0,
+    tolerance = 0,
+    bottom = false,
+    hideAtBottom = false,
+    hideAtTop = false,
+    showAtBottom = false,
+    showAtTop = false,
+    styleClass = '',
+    children,
+  }: Props = $props();
+
+  let headerClass = $state('pin');
+  let lastHeaderClass = $state('pin');
+  let y = $state(0);
   let lastY = 0;
-  let atTop: boolean = true;
-  let atBottom: boolean = false;
-  let win: Window;
+  let atTop: boolean = $state(true);
+  let atBottom: boolean = $state(false);
+  let win: Window = $state();
 
   const dispatch = createEventDispatcher();
 
@@ -27,11 +45,11 @@
   });
 
   function deriveClass(y = 0, scrolled = 0) {
-    if (y < offset) return "pin";
+    if (y < offset) return 'pin';
     if (!scrolled || Math.abs(scrolled) < tolerance) return headerClass;
-    const dir = scrolled < 0 ? "down" : "up";
-    if (dir === "up") return "pin";
-    if (dir === "down") return "unpin";
+    const dir = scrolled < 0 ? 'down' : 'up';
+    if (dir === 'up') return 'pin';
+    if (dir === 'down') return 'unpin';
     return headerClass;
   }
 
@@ -46,17 +64,33 @@
     node.style.transitionDuration = duration;
   }
 
-  $: {
+  run(() => {
     validate({ duration, offset, tolerance });
     headerClass = updateClass(y);
     atTop = y <= 2;
-    atBottom = win && (win.innerHeight + win.pageYOffset) >= document.body.offsetHeight - 2;
+    atBottom =
+      win &&
+      win.innerHeight + win.pageYOffset >= document?.body.offsetHeight - 2;
     if (headerClass !== lastHeaderClass) {
-      dispatch(headerClass ? "unpin" : "pin");
+      dispatch(headerClass ? 'unpin' : 'pin');
     }
     lastHeaderClass = headerClass;
-  }
+  });
 </script>
+
+<svelte:window bind:scrollY={y} />
+<div
+  use:action
+  class={styleClass + ' ' + headerClass}
+  class:bottom
+  class:atTop
+  class:atBottom
+  class:showAtTop
+  class:hideAtTop
+  class:showAtBottom
+  class:hideAtBottom>
+  {@render children?.()}
+</div>
 
 <style>
   div {
@@ -80,16 +114,10 @@
   .atTop.hideAtTop,
   .atBottom.hideAtBottom {
     transform: translateY(-100%);
-  }  
+  }
   .bottom.unpin,
   .bottom.atTop.hideAtTop,
   .bottom.atBottom.hideAtBottom {
     transform: translateY(100%);
   }
 </style>
-
-<svelte:window bind:scrollY={y} />
-<div use:action class={styleClass +' '+ headerClass} 
-class:bottom class:atTop class:atBottom class:showAtTop class:hideAtTop class:showAtBottom class:hideAtBottom>
-  <slot />
-</div>

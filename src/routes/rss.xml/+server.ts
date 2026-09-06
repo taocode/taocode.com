@@ -1,9 +1,9 @@
-import posts from '../blog/_posts'
-import type { Post } from '$lib/models/post'
+import { getAllPosts } from '$lib/server/posts';
+import type { Post } from '$lib/models/post';
 
-export const prerender = true
+export const prerender = true;
 
-const siteUrl = 'https://www.taocode.com'
+const siteUrl = 'https://www.taocode.com';
 
 const renderXmlRssFeed = (
   posts: Post[],
@@ -20,7 +20,7 @@ const renderXmlRssFeed = (
     <lastBuildDate>${new Date().toUTCString()}</lastBuildDate>
     ${posts
       .map(
-        (post: Post) => `
+        (post) => `
     <item>
       <title><![CDATA[${post.title}]]></title>
       <description><![CDATA[${post.excerpt}]]></description>
@@ -32,9 +32,8 @@ const renderXmlRssFeed = (
       )
       .join('\n')}
   </channel>
-</rss>`
+</rss>`;
 
 export function GET() {
-  const feed = renderXmlRssFeed(posts)
-  return new Response(feed)
+  return new Response(renderXmlRssFeed(getAllPosts()));
 }
