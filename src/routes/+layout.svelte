@@ -1,4 +1,5 @@
 <script lang="ts">
+  import '$lib/icons/register';
   import { onMount } from 'svelte';
   import BreakpointHelper from '$lib/components/layout/BreakpointHelper.svelte';
   import NProgress from '$lib/components/layout/NProgress.svelte';
