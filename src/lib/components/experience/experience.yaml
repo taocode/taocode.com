@@ -11,6 +11,9 @@
 - name: Stack
   start: 2021-01
   children:
+    - name: AI Coding
+      start: 2025-11
+      blurb: Gemini then Cursor; directed agents on production work
     - name: Supabase
       start: 2026-02
     - name: Rust Custom API

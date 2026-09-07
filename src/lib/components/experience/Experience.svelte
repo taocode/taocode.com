@@ -13,7 +13,8 @@
               >BGE</abbr
             ></em
           >, and work across a modern stack—SvelteKit multi-app, Skeleton UI,
-          Supabase / Directus, and custom Rust APIs—plus long-running
+          Supabase / Directus, custom Rust APIs, and AI coding with Cursor /
+          Gemini—plus long-running
           <abbr
             data-tooltip="Cascading Style Sheets"
             title="Cascading Style Sheets">CSS</abbr>, JavaScript, SQL, and
