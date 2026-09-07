@@ -1,32 +1,12 @@
 <script lang="ts">
   import Icon from '@iconify/svelte';
-  import EmpurrorSunNap from '$lib/images/empurror-scratcher-sun-nap.jpg';
-  import MillerParkMushrooms from '$lib/images/miller-park-tree-mushrooms.jpg';
-  import MillerParkGreenery from '$lib/images/miller-park-greenery.jpg';
-
-  // adding types throws compiler error for some reason
 
   interface Props {
-    // need https://github.com/sveltejs/svelte/pull/4282 to get merged
     readableSlug: string;
   }
 
   let { readableSlug }: Props = $props();
 
-  const accentImage = {
-    Life: {
-      alt: 'Black cat napping in the sun on a cardboard scratcher',
-      img: EmpurrorSunNap,
-    },
-    Programming: {
-      alt: 'Miller Park green space framed by trees',
-      img: MillerParkGreenery,
-    },
-    Portfolio: {
-      alt: 'Cherry blossoms on ground and tree',
-      img: MillerParkMushrooms,
-    },
-  };
   const goalCats = {
     Programming: [
       {
@@ -76,14 +56,16 @@
     ],
   };
 
-  let goals = $derived(goalCats[readableSlug]);
+  let goals = $derived(
+    goalCats[readableSlug as keyof typeof goalCats] ?? [],
+  );
 </script>
 
 <div class="w-full flex-shrink">
   <h1>{readableSlug}</h1>
   <h2>Current goals</h2>
 
-  {#each goals as goal}
+  {#each goals as goal (goal.text)}
     <div class="flex items-baseline italic">
       {#if goal.reached}
         <div class="text-green-500 text-[1.1em] mr-3">

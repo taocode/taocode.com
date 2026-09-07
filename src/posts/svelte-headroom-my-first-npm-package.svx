@@ -6,7 +6,7 @@ category: 'Programming'
 excerpt: 'Automatically hide your header and footer when not needed!'
 lead: Although it's called *Svelte Headroom*, I use this package nearly twice as often to add a "to top" button to my footer!
 site_url: https://github.com/taocode/svelte-headroom
-thumbnail: /images/programming/hide-header-footer.png
+thumbnail: $lib/images/programming/hide-header-footer.png
 tags:
   - UI
   - Library

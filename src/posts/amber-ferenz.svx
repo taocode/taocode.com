@@ -9,7 +9,7 @@ lead: Built with Hugo and WindiCSS delivered via Firebase.
 site_url: https://AmberFerenz.com
 layout: blog
 author: Mark Jones
-thumbnail: /images/portfolio/amberferenz-thumbnail.jpg
+thumbnail: $lib/images/portfolio/amberferenz-thumbnail.jpg
 tags:
   - Hugo
   - WindiCSS

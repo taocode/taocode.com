@@ -5,9 +5,9 @@
   import CurrentGoals from '$lib/components/content/CurrentGoals.svelte';
   import SEO from '$lib/components/layout/SEO.svelte';
   import { convertToSentenceCase } from '$lib/utils';
-  import EmpurrorSunNap from '$lib/images/empurror-scratcher-sun-nap.jpg';
-  import MillerParkMushrooms from '$lib/images/miller-park-tree-mushrooms.jpg';
-  import MillerParkGreenery from '$lib/images/miller-park-greenery.jpg';
+  import EmpurrorSunNap from '$lib/images/empurror-scratcher-sun-nap.jpg?enhanced';
+  import MillerParkMushrooms from '$lib/images/miller-park-tree-mushrooms.jpg?enhanced';
+  import MillerParkGreenery from '$lib/images/miller-park-greenery.jpg?enhanced';
   import type { PageData } from './$types';
 
   let { data }: { data: PageData } = $props();

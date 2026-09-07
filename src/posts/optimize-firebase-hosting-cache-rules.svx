@@ -8,7 +8,7 @@ excerpt: A quick look at rules I use to improve server cache rules on Firebase h
 lead: How to improve website server header cache rules for Firebase hosting.
 layout: blog
 author: Mark Jones
-thumbnail: /images/programming/firebase-cache-smarter-thumbnail.png
+thumbnail: $lib/images/programming/firebase-cache-smarter-thumbnail.png
 tags:
   - Optimization
   - Firebase hosting

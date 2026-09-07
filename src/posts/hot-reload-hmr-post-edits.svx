@@ -9,7 +9,7 @@ lead: I borrowed *(ehem, stole)* some starter code for this site.
 description: How I used Vite's import(*) functions to improve the editing of this blog.
 layout: blog
 author: Mark Jones
-# thumbnail: /images/programming/color-palette-shade-generator-thumbnail.png
+# thumbnail: $lib/images/programming/color-palette-shade-generator-thumbnail.png
 tags:
   - Upgrades
   - Svelte

@@ -9,7 +9,7 @@ lead: Built with Hugo and WidiCSS with Swiper carousel.
 site_url: https://StephenC.art
 layout: blog
 author: Mark Jones
-thumbnail: /images/portfolio/stephenc-thumbnail.jpg
+thumbnail: $lib/images/portfolio/stephenc-thumbnail.jpg
 tags:
   - Hugo
   - WindiCSS

@@ -8,7 +8,7 @@ lead: An art project and one of my first Static Sites using Hugo.
 layout: blog
 author: Mark Jones
 site_url: https://Etsaman.VIP
-thumbnail: /images/portfolio/etsaman-thumbnail.jpg
+thumbnail: $lib/images/portfolio/etsaman-thumbnail.jpg
 tags:
   - Static Site
   - Hugo

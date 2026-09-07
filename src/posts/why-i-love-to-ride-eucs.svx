@@ -5,7 +5,7 @@ creationDate: '2022-09-29'
 category: 'Life'
 excerpt: 'Electric Unicycles are incredibly fun!'
 lead: I ❤️ to ride Electric Unicycles!
-thumbnail: /images/life/ExN on Broad Street Bridge 2022.jpg
+thumbnail: $lib/images/life/ExN on Broad Street Bridge 2022.jpg
 tags:
   - Health
   - Wellbeing

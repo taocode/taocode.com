@@ -8,7 +8,7 @@ category: Portfolio
 excerpt: Static site with Hugo, TailwindCSS, Animated SVG and more
 lead: A medium sized Hugo static site with light/dark TailwindCSS custom theme and nice animation
 site_url: https://TRAINcycle.org
-thumbnail: /images/portfolio/traincycle-thumbnail.png
+thumbnail: $lib/images/portfolio/traincycle-thumbnail.png
 layout: blog
 author: Mark Jones
 tags:

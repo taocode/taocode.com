@@ -2,6 +2,7 @@ import { createRequire } from 'node:module';
 import { readFileSync } from 'node:fs';
 import tailwindcss from '@tailwindcss/vite';
 import { sveltekit } from '@sveltejs/kit/vite';
+import { enhancedImages } from '@sveltejs/enhanced-img';
 import { defineConfig, type Plugin } from 'vite';
 
 const require = createRequire(import.meta.url);
@@ -85,7 +86,7 @@ function iconifySubsetPlugin(): Plugin {
 }
 
 export default defineConfig({
-  plugins: [iconifySubsetPlugin(), tailwindcss(), sveltekit()],
+  plugins: [iconifySubsetPlugin(), tailwindcss(), enhancedImages(), sveltekit()],
   server: {
     port: 5115,
   },

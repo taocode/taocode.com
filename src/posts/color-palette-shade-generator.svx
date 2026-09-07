@@ -9,7 +9,7 @@ lead: Want to create a color palette based on color theory?
 layout: blog
 author: Mark Jones
 site_url: https://color-palette-shade-generator.web.app
-thumbnail: /images/programming/color-palette-shade-generator-thumbnail.png
+thumbnail: $lib/images/programming/color-palette-shade-generator-thumbnail.png
 tags:
   - Svelte
   - Tailwind

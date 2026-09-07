@@ -1,5 +1,5 @@
 <script lang="ts">
-  import BlogPostHeaderImage from '$lib/images/b-flopped-on-sidewalk.jpg';
+  import BlogPostHeaderImage from '$lib/images/b-flopped-on-sidewalk.jpg?enhanced';
   import BlogOverviewHeader from '$lib/components/blog/BlogOverviewHeader.svelte';
   import BlogPostFilters from '$lib/components/blog/BlogPostFilters.svelte';
   import BlogPostSidebar from '$lib/components/blog/BlogPostSidebar.svelte';

@@ -1,8 +1,11 @@
 <script lang="ts">
+  import type { Picture } from '@sveltejs/enhanced-img';
+  import type { Snippet } from 'svelte';
+
   interface Props {
-    image?: string;
+    image?: Picture;
     alt?: string;
-    children?: import('svelte').Snippet;
+    children?: Snippet;
   }
 
   let { image, alt = '', children }: Props = $props();
@@ -21,7 +24,7 @@
         <div
           class="rounded overflow-hidden bg-gray-200/50 dark:bg-gray-900/50 w-3/5 p-2 mx-auto max-width
       md:w-full">
-          <img class="rounded" srcset={image} type="image/webp" {alt} />
+          <enhanced:img class="rounded w-full" src={image} {alt} />
         </div>
       </div>
     {/if}

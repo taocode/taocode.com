@@ -1,7 +1,3 @@
-<script>
-  import Image from '$lib/images/headshot-tongues-out-with-b.jpg';
-</script>
-
 <section class="applause-gradient home-applause rotating-after">
   <div class="container mj-container">
     <div
@@ -27,11 +23,11 @@
       </div>
       <div
         class="bg-white/70 dark:bg-black/40 w-full mx-auto max-w-[250px] p-2 rounded-full sm:w-1/2 md:w-full">
-        <img
-          srcset={Image}
-          type="image/webp"
+        <enhanced:img
+          src="$lib/images/headshot-tongues-out-with-b.jpg"
           alt="Mark Jones"
-          class="rounded-full" />
+          class="rounded-full w-full"
+          fetchpriority="high" />
       </div>
     </div>
   </div>

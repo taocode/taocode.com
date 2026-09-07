@@ -9,7 +9,7 @@ lead: Built with SvelteKit, Tailwind working with ShareThis.
 layout: blog
 author: Mark Jones
 site_url: https://SugarGeneralWarning.com
-thumbnail: /images/portfolio/sugargeneralwarning-thumbnail.jpg
+thumbnail: $lib/images/portfolio/sugargeneralwarning-thumbnail.jpg
 tags:
   - SvelteKit
   - Tailwind CSS

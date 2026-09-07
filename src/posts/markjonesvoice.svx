@@ -8,7 +8,7 @@ excerpt: WindiCSS themed Svelte/Vite WebApp
 lead: Using a similar tech stack to this site, App includes Instant Quote, uses Cloud Functions and WindiCSS
 layout: blog
 author: Mark Jones
-thumbnail: /images/portfolio/markjonesvoice-thumbnail.jpg
+thumbnail: $lib/images/portfolio/markjonesvoice-thumbnail.jpg
 site_url: https://MarkJonesVoice.com
 tags:
   - WindiCSS
