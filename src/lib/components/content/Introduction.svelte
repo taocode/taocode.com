@@ -7,8 +7,8 @@
         <h1>The Art of Code - Web Productions</h1>
 
         <p>
-          By Mark Jones, a full stack web developer, musician and more, living,
-          breathing and walking my dog around Winston-Salem, North Carolina.
+          By Mark Jones, a full stack web developer, artist, musician and more, living,
+          breathing and walking or EUCing, often becaped, around Winston-Salem, North Carolina.
         </p>
 
         <p>

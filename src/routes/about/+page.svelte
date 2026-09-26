@@ -15,8 +15,8 @@
   <h1>About Me</h1>
 
   <p>
-    Hi, my name is Mark Jones and I'm a freelance full stack web developer,
-    voice over artist, musician and more.
+    Hi, my name is Mark Jones and I'm a full stack web developer,
+    artist, musician and more.
   </p>
 
   <p>
