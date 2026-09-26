@@ -29,18 +29,18 @@ Copy the template into **Pipeline** (or **Backlog** if it is only a spark). Keep
 
 Unpublished work, newest ideas mixed with older threads. Order is not a release order.
 
-### A note about B and Empurror
+### A note about Munk, B, and Empurror
 
 - Status: idea
 - Category: Life
 - Slug:
 - Related:
 - Site chrome:
-  - [`Introduction.svelte`](../src/lib/components/content/Introduction.svelte) still says “walking my dog around Winston-Salem”
-  - Intro/about headshot is still the dog photo (`headshot-tongues-out-with-b.jpg`)
+  - Homepage intro already says “walking or EUCing, often becaped” ([`Introduction.svelte`](../src/lib/components/content/Introduction.svelte))
+  - Intro/about headshot is still B (`headshot-tongues-out-with-b.jpg`)
   - Life category header still uses Empurror (`empurror-scratcher-sun-nap.jpg`)
   - Decide whether photos stay as tribute; update alts either way
-- Notes: Short. B is no longer something I walk around Winston-Salem because he died. The cat in the pictures is no more either. A quick note, not a long essay.
+- Notes: Short. Munk the dog passed away 2 years ago (as of Sep 2026). B the cat died nearly 3 years ago, on my chest. A quick note, not a long essay.
 
 ### 2 Easy Habits — 6 Years Later
 
