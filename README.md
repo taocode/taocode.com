@@ -6,6 +6,8 @@ My personal website hosted on Firebase Hosting, built with SvelteKit.
 
 The main focus of the website is to provide value to visitors, largely other code nerds, through the [blog](https://taocode.com/blog), which will contain articles about various programming topics, personal development and tool recommendations.
 
+Writing: [docs/publishing.md](docs/publishing.md) (how posts work), [docs/content.md](docs/content.md) (what to write next).
+
 ## Author
 
 👤 **Mark Jones <mark@taocode.com>**

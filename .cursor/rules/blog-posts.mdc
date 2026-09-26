@@ -1,0 +1,14 @@
+---
+description: Blog posts and editorial tracker — do not rediscover; follow publishing docs
+globs: src/posts/**/*.svx,docs/content.md,docs/publishing.md
+alwaysApply: false
+---
+
+# Blog content
+
+- Posts are MDSVEX at `src/posts/{slug}.svx`. Filename must equal `slug`.
+- How it works: [docs/publishing.md](docs/publishing.md)
+- Ideas / catalog: [docs/content.md](docs/content.md)
+- Creating or shipping a post: use the `new-blog-post` skill
+- Categories: `Programming` | `Portfolio` | `Life`
+- BidSquare: lessons and patterns only, no employer internals
