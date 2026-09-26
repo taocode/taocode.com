@@ -1,5 +1,13 @@
 {
   "projects": {
     "default": "taocode-com"
+  },
+  "targets": {
+    "taocode-com": {
+      "hosting": {
+        "live": ["taocode-com"],
+        "beta": ["beta-taocode-com"]
+      }
+    }
   }
 }
