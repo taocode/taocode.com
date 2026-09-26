@@ -15,12 +15,12 @@
 
   let excerpt = $derived(
     post.excerpt
-      ? marked.parse(
-          post.excerpt.length > 100
-            ? `${post.excerpt.slice(0, 100)}...`
+      ? marked.parseInline(
+          post.excerpt.length > 140
+            ? `${post.excerpt.slice(0, 140).trimEnd()}...`
             : post.excerpt,
         )
-      : false,
+      : '',
   );
 </script>
 
@@ -32,18 +32,21 @@
     aria-label={post.slug}>
     <div
       class="card-transform bg-gray-100 border-gray-400 dark:bg-gray-900 dark:border-gray-700">
-      <div class="card-face card-face-front">
-        <div class="p-3">
-          <div class="my-3 text-xl font-bold font-display">
+      <div class="card-face card-face-front overflow-hidden">
+        <div class="flex h-full flex-col p-3 pb-12">
+          <div
+            class="line-clamp-2 text-xl leading-tight font-bold font-display">
             {post.title}
           </div>
 
-          <div class="my-3 font-display text-sm">
+          <div class="mt-2 shrink-0 font-display text-sm">
             <InfoTags {post} hideCategory readTimeText />
           </div>
 
           {#if excerpt}
-            <p aria-hidden="true" class="mt-3 mb-12">
+            <p
+              aria-hidden="true"
+              class="mt-2 line-clamp-3 text-sm leading-snug">
               {@html excerpt}
             </p>
           {/if}
@@ -62,8 +65,7 @@
         </div>
         <div
           aria-hidden="true"
-          class="text-black font-display leading-tight font-extrabold
-      text-2xl sm:text-3xl p-3 bg-green-600 bg-opacity-70">
+          class="bg-green-600 bg-opacity-70 p-3 text-2xl leading-tight font-extrabold text-black font-display sm:text-3xl">
           {post.title}
         </div>
       </div>
