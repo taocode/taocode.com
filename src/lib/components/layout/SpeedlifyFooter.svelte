@@ -5,7 +5,7 @@
 <div class="lighthouse">
   <div class="">
     <h2>Lighthouse Score</h2>
-    <div class="-mt-1 mb-2"><span>October, 2022</span></div>
+    <div class="-mt-1 mb-2"><span>September, 2026</span></div>
     <div class="rings">
       <ProgressRing progress={100} title="Performance" />
       <ProgressRing progress={100} title="Accessibility" />
