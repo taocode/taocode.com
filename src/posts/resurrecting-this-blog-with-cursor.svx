@@ -1,0 +1,65 @@
+---
+title: 'Resurrecting This Blog with Cursor'
+slug: 'resurrecting-this-blog-with-cursor'
+creationDate: '2026-09-07'
+category: 'Programming'
+excerpt: 'The blog went quiet for years. Directing Cursor feels like having a team — with a much quicker timeline.'
+lead: I did not stop making things. I stopped *writing them up.* Cursor changed the cost of coming back.
+tags:
+  - Cursor
+  - Svelte
+  - Skeleton UI
+  - Tailwind
+  - Blogging
+---
+
+The last post here was [Svelte Headroom](/blog/svelte-headroom-my-first-npm-package) in November 2022. I [started this blog](/blog/why-i-started-this-blog) with no release schedule, and then I *really* leaned into that.
+
+I did not go idle. Work got interesting. Side projects happened. The site just sat there, a few versions behind, while the pile of “I should write that up” got taller than the pile of posts.
+
+What changed is how I code.
+
+## Directing, not waiting
+
+Cursor is the difference between *meaning* to update this place and actually doing it.
+
+It is a lot like having a team: I describe the outcome, we look at the repo, we argue with the details, someone (something) writes the first pass. The part that is *not* like a team is the clock. I do not wait until tomorrow for a PR, or until next week for a design pass. I steer, read, correct, steer again — in the same sitting.
+
+That loop is what made resurrection cheap. Opening a years-quiet SvelteKit blog used to feel like a weekend of archaeology. Now it feels like a conversation: here is what we want, here is how this repo already works, go.
+
+I still have to know what good looks like. Directing is not the same as abdicating. But the *tax* on starting is gone, and that tax is what killed the blog last time.
+
+## The stack caught up — and it was easy
+
+This site went [SvelteKit in 2021](/blog/new-site-sveltekit-upgrade), then through the usual layering of “one more tool.” Windi, Uno, Tailwind JIT, Svelte 3 → 4 → 5. The kind of trail that makes you *not* want to touch `package.json`.
+
+This round we actually did:
+
+- **Svelte 5** (runes, the whole site)
+- **SvelteKit 2** and a current Vite
+- **Tailwind CSS v4** (the Vite plugin, no more Windi/Uno leftover path)
+- **Skeleton UI v3 → v5** — tokens, the Skeleton stylesheet imports, the Svelte package
+- **Iconify bundled locally** so the UI does not go fetch an icon API at runtime
+- **enhanced:img** for real width/height on photos
+
+Skeleton v5 in particular is the sort of upgrade I used to save for “when I have a clear week.” With Cursor it was a directed pass: read what the site already imports, match the v5 package names and CSS entry points, fix the fallout. Not zero work — CSS never is — but it was *tractable*. The site still looks like my site. It just is not stuck on 2022’s toolchain.
+
+Firebase hosting, MDSVEX posts, [HMR on post edits](/blog/hot-reload-hmr-post-edits): those stayed. I did not rewrite the blog to try a new generator. I brought the generator I already liked up to date.
+
+## What I have been making
+
+Cursor is how a bunch of other work got done faster, too. Those get their own posts; this one is the meta note.
+
+I have been in production with directed agents (Gemini, then Cursor). I started at BidSquare, an online auction SaaS — I cannot share their internals, but I *can* write about what I learned branching into Rust and building a JSON-serializable theme engine in SvelteKit. There is [MedTimeLog.com](https://medtimelog.com) v2 with full E2EE. Amber Ferenz’s site got interactive search and filtering of her works. There is a `taocode-audioplayer`. Life stuff, too: the easy habits are six years on, and the pets on this homepage are a story I owe.
+
+So: more writing, finally. Same irregular schedule. Lower excuse budget.
+
+## Why this is the first post back
+
+I wanted the first one to be honest about *how* the lights came back on, not a pretend changelog.
+
+If you have a personal site in the same boat — last commit in another geological era, stack you still like, dread of `pnpm update` — directing an agent through *your* repo is a different feeling than prompting a chatbot in the abstract. It has the files. It can follow a map. You still decide.
+
+I even wrote the map down this time so the next posts do not start with another archaeology pass. That is a very “I have a team now” move, except the team answers in seconds.
+
+Welcome back. Me too.
