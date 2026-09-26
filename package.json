@@ -17,7 +17,7 @@
     "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch"
   },
   "devDependencies": {
-    "@iconify-json/carbon": "^1.2.26",
+    "@iconify-json/carbon": "^1.2.27",
     "@iconify-json/fa6-brands": "^1.2.6",
     "@iconify-json/fa6-regular": "^1.2.4",
     "@iconify-json/fa6-solid": "^1.2.4",
@@ -28,36 +28,35 @@
     "@sveltejs/adapter-static": "^3.0.10",
     "@sveltejs/enhanced-img": "^0.11.0",
     "@sveltejs/kit": "^2.70.3",
-    "@sveltejs/vite-plugin-svelte": "^7.3.0",
+    "@sveltejs/vite-plugin-svelte": "^7.3.1",
     "@tailwindcss/forms": "^0.5.11",
     "@tailwindcss/typography": "^0.5.20",
     "@tailwindcss/vite": "^4.3.3",
     "@taocode/svelte-headroom": "^2.3.0",
-    "@types/node": "^25.9.5",
+    "@types/node": "^25.9.8",
     "@types/nprogress": "^0.2.3",
     "@types/prismjs": "^1.26.6",
     "date-fns": "^4.4.0",
-    "marked": "^18.0.11",
+    "marked": "^18.0.14",
     "mdsvex": "^0.12.8",
     "nprogress": "^0.2.0",
-    "prettier": "^3.9.6",
+    "prettier": "^3.9.9",
     "prettier-plugin-svelte": "^4.1.1",
     "prettier-plugin-tailwindcss": "^0.8.1",
     "prismjs": "^1.30.0",
     "reading-time": "^1.5.0",
     "rehype-prism-plus": "^2.0.2",
-    "svelte": "^5.57.0",
+    "svelte": "^5.57.1",
     "svelte-check": "^4.7.6",
     "svelte-click-outside": "^1.0.0",
     "tailwindcss": "^4.3.3",
     "typescript": "^6.0.3",
-    "vite": "^8.2.2"
+    "vite": "^8.3.1"
   },
-  "packageManager": "pnpm@11.5.2+sha512.71c631e382066efc25625d5cf029075de07b61b37f6e27350fbd84b1bda5864c8c1967adc280776b45c30a715c0359a3be08fef42d5bb09e2b99029979692916",
+  "packageManager": "pnpm@12.7.0+sha512.9c56477e360068d6e9dca6a92efb4e46b3dc5a52fcebf3d84d78b9736c0ded589a561621a52f68219a7a39facc63cdc079c3226ef9c9d5f02b79f74e69a807b6",
   "dependencies": {
     "@sveltejs/pancake": "^0.0.18",
     "front-matter": "^4.0.2",
-    "sharp": "^0.34.5",
-    "yaml": "^2.9.0"
+    "yaml": "^2.9.1"
   }
 }
