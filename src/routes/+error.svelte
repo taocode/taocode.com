@@ -1,32 +1,44 @@
 <script lang="ts">
   import { dev } from '$app/environment';
-  import type { PageData } from './$types';
+  import { page } from '$app/state';
+  import NotFound from '$lib/components/content/NotFound.svelte';
 
   let {
-    data,
     error,
   }: {
-    data: PageData;
     error: App.Error & { message: string };
   } = $props();
 
+  const isNotFound = $derived(page.status === 404);
+
   $effect(() => {
-    console.error('/+error.svelte', error);
+    if (!isNotFound) {
+      console.error('/+error.svelte', error);
+    }
   });
 </script>
 
 <svelte:head>
-  <title>{error?.message ?? 'Error'}</title>
+  {#if isNotFound}
+    <title>Page not found | TAOCode</title>
+    <meta name="robots" content="noindex" />
+  {:else}
+    <title>{error?.message ?? 'Error'}</title>
+  {/if}
 </svelte:head>
 
-<div class="text-center mj-container">
-  <h1>Something went wrong</h1>
-  <p>{error?.message}</p>
-</div>
+{#if isNotFound}
+  <NotFound />
+{:else}
+  <div class="text-center mj-container">
+    <h1>Something went wrong</h1>
+    <p>{error?.message}</p>
+  </div>
 
-{#if dev && error?.stack}
-  <pre>{error.stack}</pre>
-  <hr />
+  {#if dev && error?.stack}
+    <pre>{error.stack}</pre>
+    <hr />
+  {/if}
 {/if}
 
 <style>

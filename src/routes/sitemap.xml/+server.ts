@@ -17,7 +17,8 @@ fs.readdirSync('./src/routes').forEach((file) => {
     route !== 'index' &&
     route !== 'categories' &&
     route !== 'tags' &&
-    route !== 'rss'
+    route !== 'rss' &&
+    route !== '404'
   ) {
     pages.push(route);
   }
