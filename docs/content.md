@@ -83,7 +83,7 @@ Unpublished work, newest ideas mixed with older threads. Order is not a release 
 - Category: Portfolio
 - Slug:
 - Related: [`resurrecting-this-blog-with-cursor`](../src/posts/resurrecting-this-blog-with-cursor.svx)
-- Site chrome: not listed in [`CurrentProjects.svelte`](../src/lib/components/content/CurrentProjects.svelte) yet
+- Site chrome: listed in [`CurrentProjects.svelte`](../src/lib/components/content/CurrentProjects.svelte) as MedTimeLog
 - Notes: Planned and built with Cursor. Full E2EE, cooldown set features. Lead with the product; Cursor is how it was realized faster.
 
 ### Amber Ferenz — interactive works search
@@ -101,7 +101,7 @@ Unpublished work, newest ideas mixed with older threads. Order is not a release 
 - Category: Programming (or Portfolio)
 - Slug:
 - Related: [`resurrecting-this-blog-with-cursor`](../src/posts/resurrecting-this-blog-with-cursor.svx)
-- Site chrome: optional add to Current Projects
+- Site chrome: listed in [`CurrentProjects.svelte`](../src/lib/components/content/CurrentProjects.svelte) as taocode-audioplayer
 - Notes: Separate post for the audio player. Cursor is a thread, not the headline unless it fits.
 
 Cursor is a thread across MedTimeLog / Amber / audioplayer (and this site). Those posts still lead with the product. Meta note already shipped: [`resurrecting-this-blog-with-cursor`](../src/posts/resurrecting-this-blog-with-cursor.svx).
@@ -149,3 +149,5 @@ Newest first. URL: `/blog/{slug}`
 | 2008-10-20 | Portfolio | Salem Academy & College | `salem` | [`src/posts/salem.svx`](../src/posts/salem.svx) |
 
 **Counts:** 25 published (Programming 12 · Portfolio 8 · Life 5). Last ship: 2026-09-07.
+
+TRAINcycle and Mark Jones Voice stay in the published catalog. They are no longer listed in [`CurrentProjects.svelte`](../src/lib/components/content/CurrentProjects.svelte). Live Mark Jones Voice links use `https://mjv.taocode.com`.

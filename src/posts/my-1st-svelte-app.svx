@@ -41,4 +41,4 @@ While exploring how to improve Tailwind's speed, I came across WindiCSS and ther
 
 ## Starter Template
 
-I'm still figuring out how to brew up my own starter templates and adding WindiCSS can be tricky to those of us new to Rollup; thanks to [reepolee on github](https://github.com/reepolee/) for sharing the starter package [svelte-routify-windi-vite](https://github.com/reepolee/svelte-routify-windi-vite) which was my point of departure for the version 2.1 of [MarkJonesVoice](https://markjonesvoice.com/).
+I'm still figuring out how to brew up my own starter templates and adding WindiCSS can be tricky to those of us new to Rollup; thanks to [reepolee on github](https://github.com/reepolee/) for sharing the starter package [svelte-routify-windi-vite](https://github.com/reepolee/svelte-routify-windi-vite) which was my point of departure for the version 2.1 of [MarkJonesVoice](https://mjv.taocode.com/).

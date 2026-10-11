@@ -3,6 +3,21 @@
 
   const projects = [
     {
+      name: 'MedTimeLog',
+      description: 'Medication time log with end-to-end encryption.',
+      techStack:
+        'SvelteKit, Svelte, Tailwind CSS v4, Skeleton UI, Supabase, Drizzle, Firebase',
+      websiteLink: 'https://medtimelog.com',
+      githubLink: 'https://github.com/taocode/medtimelog',
+    },
+    {
+      name: '@taocode/audio-player',
+      description: 'Playlist audio player as a drop-in web component.',
+      techStack: 'Svelte, Vite, custom elements',
+      websiteLink: 'https://www.npmjs.com/package/@taocode/audio-player',
+      githubLink: 'https://github.com/taocode/audio-player',
+    },
+    {
       name: 'TAOCode',
       description: 'Personal website and blog with SvelteKit and TailwindCSS.',
       techStack:
@@ -10,26 +25,12 @@
       websiteLink: 'https://www.taocode.com',
       githubLink: 'https://github.com/taocode/taocode.com',
     },
-    {
-      name: 'TRAINcycle',
-      description: 'Get training in the arts and arts production.',
-      techStack: 'Hugo, TailwindCSS, Markdown, GitHub, Firebase',
-      websiteLink: 'https://TRAINcycle.org',
-      githubLink: 'https://github.com/taocode/traincycle-hugo-site',
-    },
-    {
-      name: 'Mark Jones Voice',
-      description: 'Hire me to bring life to your script.',
-      techStack: 'Svelte, WindiCSS, Markdown, GitHub, Firebase',
-      websiteLink: 'https://markjonesvoice.com',
-      githubLink: 'https://github.com/taocode/markjonesvoice',
-    },
   ];
 </script>
 
 <section class="container mj-container">
   <h2 class="border-b-4 border-green-700">Current Projects</h2>
-  {#each projects as project}
+  {#each projects as project (project.name)}
     <div
       class="flex flex-wrap items-center justify-between pb-3 my-6 border-b border-gray-300">
       <div class="inline-flex items-baseline gap-2 w-full lg:w-1/4">

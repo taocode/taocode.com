@@ -9,7 +9,7 @@ lead: Using a similar tech stack to this site, App includes Instant Quote, uses 
 layout: blog
 author: Mark Jones
 thumbnail: $lib/images/portfolio/markjonesvoice-thumbnail.jpg
-site_url: https://MarkJonesVoice.com
+site_url: https://mjv.taocode.com
 tags:
   - WindiCSS
   - Svelte
@@ -27,4 +27,4 @@ A promotional site for my voicework, you can get an Instant Quote and Hire Me wi
 - Vite
 - Firebase Hosting
 
-This site was a rewrite from vanilla JS built on 11ty. [Read more about markjonesvoice.com](/blog/my-1st-svelte-app)
+This site was a rewrite from vanilla JS built on 11ty. [Read more about mjv.taocode.com](/blog/my-1st-svelte-app)

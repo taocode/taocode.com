@@ -72,7 +72,7 @@ export const emailFormHandler =  functions.https.onRequest(async (req,res) => {
     try {
 
     const origin = ''+req.headers.origin;
-    if (/markjonesvoice\.com/.test(origin)) {
+    if (/mjv\.taocode\.com/.test(origin)) {
         res.set('Access-Control-Allow-Origin', origin);
         res.set('Vary', 'Origin');    
     } else {
@@ -120,7 +120,7 @@ export const emailFormHandler =  functions.https.onRequest(async (req,res) => {
 
     let reportHTML = 
     `<div style="font-size: 1.1em; background-color: #301F2F; color: #DADADA; text-align: center; padding: 1.5em 0.5em;">
-    <div><a style="font-weight: 900; font-size: 2.5em; text-decoration: none;" href="https://markjonesvoice.com/"><img alt="Mark Jones Voice" style="max-width: 100%; width: 75%; min-width: 300px;" src="${logoGreen}"></a></div>
+    <div><a style="font-weight: 900; font-size: 2.5em; text-decoration: none;" href="https://mjv.taocode.com/"><img alt="Mark Jones Voice" style="max-width: 100%; width: 75%; min-width: 300px;" src="${logoGreen}"></a></div>
     <p><i>Received: ${(new Date()).toLocaleString("en-US",{timeZone:"America/New_York"})}</i>.</p>
     <table width="100%" border=0 cellspacing=0>
     <thead>
@@ -165,7 +165,7 @@ export const emailFormHandler =  functions.https.onRequest(async (req,res) => {
 
     if ( ! fields.hasOwnProperty('cc') && fields.hasOwnProperty('_autoreply')) {
         const replyHTML = `<div style="font-size: 1.2em; padding: 1.5em;">
-    <div><a style="font-weight: 900; font-size: 2.5em; text-decoration: none;" href="https://markjonesvoice.com/"><img alt="Mark Jones Voice" style="max-width: 100%; width: 75%; min-width: 400px;" src="${logoPurple}"></a></div>
+    <div><a style="font-weight: 900; font-size: 2.5em; text-decoration: none;" href="https://mjv.taocode.com/"><img alt="Mark Jones Voice" style="max-width: 100%; width: 75%; min-width: 400px;" src="${logoPurple}"></a></div>
     <p>Hi ${fields.name},</p>
     <p>${fields._autoreply}</p>
     <p>I've received your request and will get back to you shortly.</p>
