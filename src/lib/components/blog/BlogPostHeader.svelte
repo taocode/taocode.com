@@ -34,8 +34,11 @@
         <h1>{post.title}</h1>
         {#if post.site_url}
           <div>
-            <a target="site" href={post.site_url}
-              >{post.site_url.replace(/^https?:\/\//, '')}
+            <a
+              target="site"
+              href={post.site_url}
+              class="inline-flex items-center gap-1">
+              {post.site_url.replace(/^https?:\/\//, '')}
               <Icon icon="feather:external-link" />
             </a>
           </div>
