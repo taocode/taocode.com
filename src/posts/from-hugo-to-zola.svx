@@ -5,7 +5,6 @@ creationDate: '2026-10-11'
 category: 'Programming'
 excerpt: 'Amber Ferenz is a static Zola site now, with search and tags. The build is about five times faster. The GitHub job barely changed.'
 lead: Changing to Zola did not add anything to the site; it builds the same site 5x faster.
-draft: true
 follows: amber-ferenz
 site_url: https://amberferenz.com
 tags:
