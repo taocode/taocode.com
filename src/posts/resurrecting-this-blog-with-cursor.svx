@@ -5,6 +5,7 @@ creationDate: '2026-09-07'
 category: 'Programming'
 excerpt: 'The blog went quiet for years. Directing Cursor feels like having a team — with a much quicker timeline.'
 lead: I did not stop making things. I stopped *writing them up.* Cursor changed the cost of coming back.
+follows: why-i-started-this-blog
 tags:
   - Cursor
   - Svelte
