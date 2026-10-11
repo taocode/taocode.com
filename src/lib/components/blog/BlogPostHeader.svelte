@@ -101,7 +101,7 @@
         <BlogPostTag tags={post.tags} />
 
         <div class="my-5 flex flex-wrap justify-center">
-          <ShareButtons {post} />
+          <ShareButtons {post} collapsed />
         </div>
 
         {#if post.hasAffiliateLink}

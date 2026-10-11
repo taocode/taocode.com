@@ -23,6 +23,7 @@ const usedIcons: Record<string, readonly string[]> = {
   carbon: ['sun', 'moon', 'string-text'],
   'fa6-solid': [
     'share',
+    'xmark',
     'bars',
     'chevron-up',
     'envelope',
