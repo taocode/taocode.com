@@ -3,14 +3,6 @@ import type { PageLoad } from './$types';
 
 export const prerender = true;
 
-const postModules = import.meta.glob('../../../posts/*.svx');
-
-export function entries() {
-  return Object.keys(postModules).map((path) => ({
-    slug: path.split('/').pop()!.replace('.svx', ''),
-  }));
-}
-
 export const load: PageLoad = async ({ params, parent }) => {
   const { posts } = await parent();
   const post = posts.find((p) => p.slug === params.slug);
