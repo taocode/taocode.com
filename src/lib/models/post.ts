@@ -19,4 +19,6 @@ export type Post = {
   description?: string;
   draft?: boolean;
   hidden?: boolean;
+  /** Slug of the post this one continues. The earlier post lists these as follow-ups. */
+  follows?: string;
 };

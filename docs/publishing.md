@@ -35,12 +35,13 @@ tags:
 ---
 ```
 
-Optional (used by the index): `lead`, `thumbnail`, `cover`, `site_url`, `description`, `hasAffiliateLink`, `draft`, `hidden`.
+Optional (used by the index): `lead`, `thumbnail`, `cover`, `site_url`, `description`, `hasAffiliateLink`, `draft`, `hidden`, `follows`.
 
 - `thumbnail`: `$lib/images/{programming|portfolio|life}/file.ext` — listing + post header. Put the file in that folder or it will not resolve.
 - `cover`: filename used as `https://www.taocode.com/{cover}` for social/SEO. Optional; site logo is the fallback. Several old posts set `cover` without a matching static file.
 - `draft: true` — omitted from production listings/feeds; visible in `vite dev`.
 - `hidden: true` — omitted even in dev.
+- `follows`: slug of the post this one continues. The earlier post lists it under Follow-ups. One slug. Drafts are omitted from that list in production.
 
 Ignore leftover `layout: blog` and `author:` on older posts. MDSVEX layout is `post` in `svelte.config.js`; author is not read from frontmatter.
 

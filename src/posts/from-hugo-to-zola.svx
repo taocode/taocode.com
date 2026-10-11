@@ -6,6 +6,7 @@ category: 'Programming'
 excerpt: 'Amber Ferenz is a static Zola site now, with search and tags. The build is about five times faster. The GitHub job barely changed.'
 lead: Changing to Zola did not add anything to the site; it builds the same site 5x faster.
 draft: true
+follows: amber-ferenz
 site_url: https://amberferenz.com
 tags:
   - Zola
@@ -44,4 +45,4 @@ Search is [Pagefind](https://pagefind.app/), run against the HTML after Zola fin
 
 The public site did not need to change. Same pages, same URLs, same Tailwind styling, same Firebase hosting. An old link still lands on the same path.
 
-What changed is the layer I edit. In Zola 0.23 a component is just a template call inside Markdown, so the shortcode layer is gone. Custom fields live under `extra` instead of sitting loose in the front matter. Dates for “upcoming” and “past” use a calendar date I pass in at build time, in the site’s timezone.
+What changed is the layer I edit. In Zola 0.23 a component is just a template call inside Markdown, so the shortcode layer is gone and that thing that used to be suspiciously similar? Now they're just a Template.

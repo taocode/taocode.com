@@ -37,6 +37,10 @@ function parsePostFile(filename: string, includeDrafts: boolean): Post | null {
     description: attrs.description as string | undefined,
     draft: attrs.draft as boolean | undefined,
     hidden: attrs.hidden as boolean | undefined,
+    follows:
+      typeof attrs.follows === 'string' && attrs.follows.length > 0
+        ? attrs.follows
+        : undefined,
   };
 }
 

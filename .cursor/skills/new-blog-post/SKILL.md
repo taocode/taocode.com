@@ -34,7 +34,7 @@ tags:
 ---
 ```
 
-`category` is exactly `Programming`, `Portfolio`, or `Life`. Optional: `thumbnail`, `cover`, `site_url`, `description`, `draft`, `hidden`. Skip unused `layout` / `author` fields.
+`category` is exactly `Programming`, `Portfolio`, or `Life`. Optional: `thumbnail`, `cover`, `site_url`, `description`, `draft`, `hidden`, `follows` (slug of the post this one continues). Skip unused `layout` / `author` fields.
 
 Thumbnail path if needed: `$lib/images/{programming|portfolio|life}/filename.ext` and add the file there.
 

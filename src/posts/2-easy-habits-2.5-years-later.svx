@@ -3,6 +3,7 @@ title: '2 Easy Habits - 2.5 Years Later'
 slug: '2-easy-habits-2.5-years-later'
 creationDate: '2022-10-01'
 category: 'Life'
+follows: 2-easy-habits-1-year-later
 excerpt: '*2 habits* made 2.5 years ago that have improved my health, *evolved.*'
 lead: My workout habits are less regimented since I started to *ride an <abbr title="Electric Unicycle">EUC</abbr>* but fasting has been easy to maintain.
 cover: pen-writing-on-a-paper.jpeg

@@ -22,12 +22,25 @@ export const load: PageLoad = async ({ params, parent }) => {
   const postIndex = posts.findIndex((p) => p.slug === params.slug);
   const previousArticle = posts[postIndex + 1];
   const nextArticle = posts[postIndex - 1];
+  const earlier = post.follows
+    ? posts.find((p) => p.slug === post.follows)
+    : undefined;
+  const followUps = posts
+    .filter((p) => p.follows === post.slug)
+    .sort((a, b) => a.creationDate.localeCompare(b.creationDate));
 
   try {
     const { default: pageComponent } = await import(
       `../../../posts/${params.slug}.svx`
     );
-    return { post, pageComponent, previousArticle, nextArticle };
+    return {
+      post,
+      pageComponent,
+      previousArticle,
+      nextArticle,
+      earlier,
+      followUps,
+    };
   } catch (err) {
     console.error('[slug]/+page.ts', err);
     throw error(404, `blog/${params.slug} not found`);

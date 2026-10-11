@@ -16,6 +16,8 @@
   const PostContent = $derived(data.pageComponent);
   const previousArticle = $derived(data.previousArticle);
   const nextArticle = $derived(data.nextArticle);
+  const earlier = $derived(data.earlier);
+  const followUps = $derived(data.followUps);
   const pageTitle = $derived(`${post.title} | TAOCode`);
   const description = $derived(post.description ?? post.excerpt);
   const blogPostInfo = $derived({
@@ -37,6 +39,28 @@
   <article class="prose blog flex-grow">
     {#if post.lead}<p class="lead">{@html marked.parse(post.lead)}</p>{/if}
     <PostContent />
+    {#if earlier || followUps.length > 0}
+      <nav class="not-prose post-thread" aria-label="Post thread">
+        {#if earlier}
+          <p class="thread-label">Follows</p>
+          <ul>
+            <li>
+              <a data-sveltekit-prefetch href="/blog/{earlier.slug}">{earlier.title}</a>
+            </li>
+          </ul>
+        {/if}
+        {#if followUps.length > 0}
+          <p class="thread-label">Follow-ups</p>
+          <ul>
+            {#each followUps as followUp (followUp.slug)}
+              <li>
+                <a data-sveltekit-prefetch href="/blog/{followUp.slug}">{followUp.title}</a>
+              </li>
+            {/each}
+          </ul>
+        {/if}
+      </nav>
+    {/if}
     <div
       class="share-post bg-green-100 bg-opacity-70 border-green-700 dark:bg-green-900">
       <div class="share-icon bg-green-700 text-green-100 dark:text-green-950">
@@ -71,5 +95,17 @@
   }
   .lead {
     @apply font-semibold;
+  }
+  .post-thread {
+    @apply mt-10 border-t border-gray-300 pt-6 dark:border-gray-700;
+  }
+  .thread-label {
+    @apply mb-1 font-display text-sm font-semibold tracking-wide text-gray-600 uppercase dark:text-gray-400;
+  }
+  .post-thread ul {
+    @apply mb-4 list-none pl-0;
+  }
+  .post-thread a {
+    @apply text-green-800 underline dark:text-green-300;
   }
 </style>
