@@ -29,6 +29,15 @@ Copy the template into **Pipeline** (or **Backlog** if it is only a spark). Keep
 
 Unpublished work, newest ideas mixed with older threads. Order is not a release order.
 
+### From Hugo to Zola
+
+- Status: drafting
+- Category: Programming
+- Slug: `from-hugo-to-zola`
+- Related: [`amber-ferenz`](../src/posts/amber-ferenz.svx) (2021 Hugo launch); pipeline item *Amber Ferenz — interactive works search*; pipeline item *Branching into Rust (and a fast API)*
+- Site chrome: [`CurrentProjects.svelte`](../src/lib/components/content/CurrentProjects.svelte) lists Amber Ferenz (static site, search, tags, Zola) in place of TAOCode
+- Notes: Draft at [`src/posts/from-hugo-to-zola.svx`](../src/posts/from-hugo-to-zola.svx). Why: Go templates, Hugo version churn, Tera is familiar, faster build is a bonus. Tailwind CSS was a little slow before Rust and is now blazingly fast; same for Vite, which no longer has to double-bundle. BidSquare API server made Rust more comfortable — that write-up is the *Branching into Rust* item, still coming. Amber: generator build is ~1/5 of Hugo, GitHub CI is still about the same because the other steps dominate. James Foulkes: same motivation; same URLs, Tailwind, and Firebase. Zola 0.23 components replace shortcodes; custom fields live under `extra`; upcoming/past use a build-time calendar date in the site timezone. Keep the 2021 Amber post as the launch story.
+
 ### A note about Munk, B, and Empurror
 
 - Status: idea
@@ -92,8 +101,8 @@ Unpublished work, newest ideas mixed with older threads. Order is not a release 
 - Category: Portfolio
 - Slug: new follow-up (keep [`amber-ferenz`](../src/posts/amber-ferenz.svx) as the 2021 launch story). Alternative: update that post and bump the date.
 - Related: [`amber-ferenz`](../src/posts/amber-ferenz.svx) (Hugo + WindiCSS, amberferenz.com); [`resurrecting-this-blog-with-cursor`](../src/posts/resurrecting-this-blog-with-cursor.svx)
-- Site chrome: none required
-- Notes: Interactive search of her works, filtering, and the other recent blog features. Much more quickly realized with Cursor, and it was fun. Lead with the product.
+- Site chrome: listed in [`CurrentProjects.svelte`](../src/lib/components/content/CurrentProjects.svelte) as Amber Ferenz
+- Notes: Interactive search of her works, filtering, and the other recent blog features. Much more quickly realized with Cursor, and it was fun. Lead with the product. The generator move is the separate draft *From Hugo to Zola*.
 
 ### taocode-audioplayer
 
@@ -101,7 +110,7 @@ Unpublished work, newest ideas mixed with older threads. Order is not a release 
 - Category: Programming (or Portfolio)
 - Slug:
 - Related: [`resurrecting-this-blog-with-cursor`](../src/posts/resurrecting-this-blog-with-cursor.svx)
-- Site chrome: listed in [`CurrentProjects.svelte`](../src/lib/components/content/CurrentProjects.svelte) as taocode-audioplayer
+- Site chrome: listed in [`CurrentProjects.svelte`](../src/lib/components/content/CurrentProjects.svelte) as Audio Player
 - Notes: Separate post for the audio player. Cursor is a thread, not the headline unless it fits.
 
 Cursor is a thread across MedTimeLog / Amber / audioplayer (and this site). Those posts still lead with the product. Meta note already shipped: [`resurrecting-this-blog-with-cursor`](../src/posts/resurrecting-this-blog-with-cursor.svx).

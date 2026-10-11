@@ -1,0 +1,47 @@
+---
+title: 'From Hugo to Zola'
+slug: 'from-hugo-to-zola'
+creationDate: '2026-10-11'
+category: 'Programming'
+excerpt: 'Amber Ferenz is a static Zola site now, with search and tags. The build is about five times faster. The GitHub job barely changed.'
+lead: Changing to Zola did not add anything to the site; it builds the same site 5x faster.
+draft: true
+site_url: https://amberferenz.com
+tags:
+  - Zola
+  - Hugo
+  - Static Site
+  - Pagefind
+---
+
+[Amber Ferenz](/blog/amber-ferenz) went up in 2021 as a Hugo site: a quiet place for their compositions, scores, and videos. That post is still the launch story, this post is about switching the generator to [Zola](https://www.getzola.org/).
+
+The site is still static. It now has search, and the works can be browsed with tags. Changing to Zola did not add anything to the site; it builds the same site 5x faster.
+
+## Hugo is Great, Golang isn't my Vibe
+
+Hugo is fast and opinionated. The part I kept bumping into was Go. When I wanted to extend the build, I was in a language I do not vibe with. I also did not want to keep up with Hugo's version updates; this doesn't have to be done because if whatever version built your site, it can be used at that version. But I like to keep up these things in case I get so far behind that it becomes a much heavier lift to migrate over multiple breaking changes.
+
+Zola does everything I need for every Hugo based site I've made. Its templates are [Tera](https://keats.github.io/tera/), which is Jinja-style: loops, conditionals, and a syntax I'm already more familiar with. I struggled with the shortcode partial boundary in Hugo, feeling like I should be able to use the same 1 source file but no, it didn't work that way. So fine, maybe I misused shortcodes or partials. I just put what I needed where it was supposed to go, partials for templates, shortcodes for content. That they were suspicously similar things to me, but not the same.
+
+Zola is written in Rust, and I do not have to write Rust to use it. Templates, Markdown, and taxonomies cover the site. Hugo required use of Golang. That Zola builds even faster makes this a win-win upgrade with no serious downside.
+
+Tailwind CSS was a little slow before but Rust based v4 is now blazingly fast. Same for Vite, largely because Rust allowed the tool to no longer double-bundle. Build times are at least 3x faster. I have become much more comfortable with Rust after building an API server for BidSquare. That write-up is still coming.
+
+## A fifth of the build, and then the rest of CI
+
+Zola builds the site in roughly a fifth of the time Hugo took. I like that number. It is also a small slice of the real wait. For these sites with &lt;99 pages Hugo build: &gt;600ms and Zola &lt;200ms.
+
+The GitHub Action that ships the site still spends most of its time on the other steps: dependencies, CSS, JavaScript, the search index, deploy. Those take about as long as they did before. The generator got quicker. End to end, the pipeline feels about the same.
+
+## Search and tags stay static
+
+Search is [Pagefind](https://pagefind.app/), run against the HTML after Zola finishes. Tags are a Zola taxonomy. There is no app server behind the works list. The result is still a folder of files, with search and tags on top.
+
+## James Foulkes
+
+[jamesfoulkes.com](https://jamesfoulkes.com) was the same kind of move, for the same reasons.
+
+The public site did not need to change. Same pages, same URLs, same Tailwind styling, same Firebase hosting. An old link still lands on the same path.
+
+What changed is the layer I edit. In Zola 0.23 a component is just a template call inside Markdown, so the shortcode layer is gone. Custom fields live under `extra` instead of sitting loose in the front matter. Dates for “upcoming” and “past” use a calendar date I pass in at build time, in the site’s timezone.
