@@ -15,12 +15,10 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: ${{ github.ref_name }}
-      url: ${{ steps.hosting.outputs.details_url }}
+      url: ${{ steps.site.outputs.url }}
     permissions:
-      checks: write
       contents: read
       deployments: write
-      pull-requests: write
     steps:
       - uses: actions/checkout@v7
 
@@ -40,13 +38,27 @@ jobs:
         run: pnpm build
 
       - name: Deploy to Firebase Hosting
-        id: hosting
-        uses: FirebaseExtended/action-hosting-deploy@v0
-        with:
-          repoToken: ${{ secrets.GITHUB_TOKEN }}
-          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_TAOCODE_COM }}
-          projectId: taocode-com
+        env:
+          FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_TAOCODE_COM }}
+          TARGET: ${{ github.ref_name }}
+        run: |
+          echo "$FIREBASE_SERVICE_ACCOUNT" > "$RUNNER_TEMP/firebase-sa.json"
+          export GOOGLE_APPLICATION_CREDENTIALS="$RUNNER_TEMP/firebase-sa.json"
           # Branch name matches the Hosting target: beta → beta-taocode-com, live → taocode-com.
-          # channelId live publishes that site's production channel (not a preview channel).
-          target: ${{ github.ref_name }}
-          channelId: live
+          npx --yes firebase-tools@latest deploy --only "hosting:$TARGET" --project taocode-com --non-interactive
+
+      - name: Record site URL
+        id: site
+        env:
+          BRANCH: ${{ github.ref_name }}
+        run: |
+          case "$BRANCH" in
+            live) url="https://www.taocode.com" ;;
+            beta) url="https://beta.taocode.com" ;;
+            *) echo "No public URL for branch $BRANCH" >&2; exit 1 ;;
+          esac
+          echo "url=$url" >> "$GITHUB_OUTPUT"
+          {
+            echo "### Production deploy succeeded"
+            echo "[$url]($url)"
+          } >> "$GITHUB_STEP_SUMMARY"
