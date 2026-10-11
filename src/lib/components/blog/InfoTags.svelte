@@ -1,6 +1,6 @@
 <script lang="ts">
-  import { formatDate, convertToSlug } from '$lib/utils';
-  import type { Post } from '$lib/models/post';
+  import { formatDate, convertToSlug } from '#lib/utils.js';
+  import type { Post } from '#lib/models/post.js';
 
   interface Props {
     post: Post;

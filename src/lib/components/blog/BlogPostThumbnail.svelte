@@ -1,6 +1,6 @@
 <script lang="ts">
-  import { getThumbnail } from '$lib/images/thumbnails';
-  import type { Post } from '$lib/models/post';
+  import { getThumbnail } from '#lib/images/thumbnails.js';
+  import type { Post } from '#lib/models/post.js';
 
   interface Props {
     post: Post;
@@ -14,7 +14,7 @@
 {#if picture}
   <figure class="block w-full flex-none">
     <enhanced:img
-      class="rounded w-full"
+      class="w-full rounded"
       src={picture}
       alt="{post.title} Thumbnail"
       loading="lazy" />

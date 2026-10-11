@@ -1,7 +1,7 @@
 <script>
-  // import ExternalLink from '$lib/ExternalLink.svelte';
+  // import ExternalLink from '#lib/ExternalLink.svelte';
   import Icon from '@iconify/svelte';
-  import SEO from '$lib/components/layout/SEO.svelte';
+  import SEO from '#lib/components/layout/SEO.svelte';
 </script>
 
 <svelte:head>
@@ -13,7 +13,7 @@
 
 <SEO />
 
-<section class="container mj-container">
+<section class="mj-container container">
   <h1>Services that I offer</h1>
 
   <p>
@@ -43,7 +43,7 @@
     page.
   </p>
 
-  <div class="flex flex-wrap -m-2">
+  <div class="-m-2 flex flex-wrap">
     <div class="flex w-full p-2 md:w-1/2">
       <div class="card preset-filled-surface-100-900 px-6 py-4">
         <h2>

@@ -1,4 +1,4 @@
-import type { Post } from '$lib/models/post';
+import type { Post } from '#lib/models/post.js';
 
 declare global {
   namespace App {

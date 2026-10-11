@@ -1,14 +1,15 @@
 <section class="applause-gradient home-applause rotating-after">
-  <div class="container mj-container">
+  <div class="mj-container container">
     <div
       class="flex flex-col-reverse items-center justify-between gap-6 rounded-lg
       md:flex-row">
-      <div class="blog-header w-full py-4 px-8 md:w-3/5 md:pr-10 shadow-xl">
+      <div class="blog-header w-full px-8 py-4 shadow-xl md:w-3/5 md:pr-10">
         <h1>The Art of Code - Web Productions</h1>
 
         <p>
-          By Mark Jones, a full stack web developer, artist, musician and more, living,
-          breathing and walking or EUCing, often becaped, around Winston-Salem, North Carolina.
+          By Mark Jones, a full stack web developer, artist, musician and more,
+          living, breathing and walking or EUCing, often becaped, around
+          Winston-Salem, North Carolina.
         </p>
 
         <p>
@@ -22,11 +23,11 @@
         </p>
       </div>
       <div
-        class="bg-white/70 dark:bg-black/40 w-full mx-auto max-w-[250px] p-2 rounded-full sm:w-1/2 md:w-full">
+        class="mx-auto w-full max-w-[250px] rounded-full bg-white/70 p-2 sm:w-1/2 md:w-full dark:bg-black/40">
         <enhanced:img
-          src="$lib/images/headshot-tongues-out-with-b.jpg"
+          src="#lib/images/headshot-tongues-out-with-b.jpg"
           alt="Mark Jones"
-          class="rounded-full w-full"
+          class="w-full rounded-full"
           fetchpriority="high" />
       </div>
     </div>

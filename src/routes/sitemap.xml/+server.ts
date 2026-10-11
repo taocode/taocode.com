@@ -1,6 +1,6 @@
-import { getAllPosts } from '$lib/server/posts';
-import { convertToSlug } from '$lib/utils';
-import type { Post } from '$lib/models/post';
+import { getAllPosts } from '#lib/server/posts.js';
+import { convertToSlug } from '#lib/utils.js';
+import type { Post } from '#lib/models/post.js';
 import fs from 'node:fs';
 
 export const prerender = true;

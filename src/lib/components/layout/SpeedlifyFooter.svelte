@@ -1,5 +1,5 @@
 <script>
-  import ProgressRing from '$lib/components/ProgressRing.svelte';
+  import ProgressRing from '#lib/components/ProgressRing.svelte';
 </script>
 
 <div class="lighthouse">

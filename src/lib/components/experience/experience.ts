@@ -59,9 +59,7 @@ function normalizePeriods(node: YamlNode): YamlPeriod[] {
     return node.periods;
   }
   if (node.start == null || node.start === '') {
-    throw new Error(
-      `Experience item "${node.name}" needs start or periods`,
-    );
+    throw new Error(`Experience item "${node.name}" needs start or periods`);
   }
   return [{ start: node.start, end: node.end }];
 }
@@ -101,7 +99,9 @@ function hydrate(node: YamlNode, now: Date): ExperienceItem {
 
 export function loadExperience(now = new Date()): ExperienceItem[] {
   const tree = parseYaml(raw) as YamlNode[];
-  return tree.map((node) => hydrate(node, now)).sort((a, b) => a.years - b.years);
+  return tree
+    .map((node) => hydrate(node, now))
+    .sort((a, b) => a.years - b.years);
 }
 
 const techEx = loadExperience();

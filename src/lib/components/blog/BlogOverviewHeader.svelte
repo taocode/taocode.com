@@ -13,7 +13,7 @@
 
 <section class="applause-gradient blog-applause rotating-bg">
   <div
-    class="container mj-container flex flex-col-reverse items-center gap-4 md:flex-row">
+    class="mj-container container flex flex-col-reverse items-center gap-4 md:flex-row">
     <div class="blog-header overview-header max-w-xl flex-shrink px-12 py-8">
       <div class="">
         {@render children?.()}
@@ -22,9 +22,9 @@
     {#if image}
       <div class="blog-header-image flex-grow">
         <div
-          class="rounded overflow-hidden bg-gray-200/50 dark:bg-gray-900/50 w-3/5 p-2 mx-auto max-width
-      md:w-full">
-          <enhanced:img class="rounded w-full" src={image} {alt} />
+          class="max-width mx-auto w-3/5 overflow-hidden rounded bg-gray-200/50 p-2 md:w-full
+      dark:bg-gray-900/50">
+          <enhanced:img class="w-full rounded" src={image} {alt} />
         </div>
       </div>
     {/if}

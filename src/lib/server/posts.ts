@@ -2,7 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import frontMatter from 'front-matter';
 import readingTime from 'reading-time';
-import type { Post, PostCategory } from '$lib/models/post';
+import type { Post, PostCategory } from '#lib/models/post.js';
 
 const POSTS_DIR = path.join(process.cwd(), 'src/posts');
 

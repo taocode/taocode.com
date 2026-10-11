@@ -1,7 +1,7 @@
 <script>
-  import ExternalLink from '$lib/components/ExternalLink.svelte';
-  import PrivacyPolicyLink from '$lib/components/layout/PrivacyPolicyLink.svelte';
-  import SEO from '$lib/components/layout/SEO.svelte';
+  import ExternalLink from '#lib/components/ExternalLink.svelte';
+  import PrivacyPolicyLink from '#lib/components/layout/PrivacyPolicyLink.svelte';
+  import SEO from '#lib/components/layout/SEO.svelte';
 </script>
 
 <svelte:head>
@@ -15,7 +15,7 @@
 
 <SEO />
 
-<div class="container mj-container">
+<div class="mj-container container">
   <h1>Imprint</h1>
 
   <p>

@@ -1,5 +1,5 @@
 <script lang="ts">
-  import type { Post } from '$lib/models/post';
+  import type { Post } from '#lib/models/post.js';
 
   interface Props {
     previousArticle: Post;
@@ -9,7 +9,7 @@
   let { previousArticle, nextArticle }: Props = $props();
 </script>
 
-<div class="font-display flex flex-wrap mb-10 -m-2">
+<div class="-m-2 mb-10 flex flex-wrap font-display">
   {#if previousArticle}
     <div class="neighbor previous">
       <div class="card preset-filled-surface-100-900">

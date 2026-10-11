@@ -2,8 +2,8 @@
   import ExperienceChart from './ExperienceChart.svelte';
 </script>
 
-<div class="bg-gray-900 text-gray-200 py-16">
-  <article class="container mj-container -mt-16 leading-10">
+<div class="bg-gray-900 py-16 text-gray-200">
+  <article class="mj-container container -mt-16 leading-10">
     <h2>Experience</h2>
     <div class="lg:flex">
       <div class="lg:w-1/2">
@@ -17,8 +17,8 @@
           Gemini—plus long-running
           <abbr
             data-tooltip="Cascading Style Sheets"
-            title="Cascading Style Sheets">CSS</abbr>, JavaScript, SQL, and
-          classic
+            title="Cascading Style Sheets">CSS</abbr
+          >, JavaScript, SQL, and classic
           <abbr
             data-tooltip="Content Management System"
             title="Content Management System">CMS</abbr> experience as needed.

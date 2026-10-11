@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { convertToSlug } from '$lib/utils';
+  import { convertToSlug } from '#lib/utils.js';
 
   interface Props {
     tags: string[];

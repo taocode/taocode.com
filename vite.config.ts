@@ -1,3 +1,14 @@
+import { mdsvex } from 'mdsvex';
+import adapter from '@sveltejs/adapter-static';
+import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
+import rehypePrism from 'rehype-prism-plus';
+import Prism from 'prismjs';
+import 'prismjs/components/prism-markup.js';
+import 'prismjs/components/prism-css.js';
+import 'prismjs/components/prism-clike.js';
+import 'prismjs/components/prism-javascript.js';
+import 'prismjs/components/prism-typescript.js';
+import 'prismjs/components/prism-json.js';
 import { createRequire } from 'node:module';
 import { readFileSync } from 'node:fs';
 import tailwindcss from '@tailwindcss/vite';
@@ -85,9 +96,37 @@ function iconifySubsetPlugin(): Plugin {
   };
 }
 
+globalThis.Prism = Prism;
+
+const extensions = ['.svelte', '.svx'];
+
 export default defineConfig({
-  plugins: [iconifySubsetPlugin(), tailwindcss(), enhancedImages(), sveltekit()],
-  server: {
-    port: 5115,
-  },
+  plugins: [
+    iconifySubsetPlugin(),
+    tailwindcss(),
+    enhancedImages(),
+    sveltekit({
+      preprocess: [
+        vitePreprocess(),
+        mdsvex({
+          extensions: ['.svx'],
+          layout: { post: './src/lib/layouts/post.svx' },
+          highlight: { alias: { js: 'javascript', ts: 'typescript' } },
+          // rehype-prism-plus is untyped against mdsvex's unified Plugin type.
+          // This lived in untyped svelte.config.js before the Kit 3 move.
+          rehypePlugins: [[rehypePrism, { ignoreMissing: true }] as never],
+        }),
+      ],
+      extensions,
+      adapter: adapter({
+        pages: 'build',
+        assets: 'build',
+        fallback: undefined,
+        precompress: false,
+        strict: true,
+      }),
+      version: { pollInterval: 0 },
+    }),
+  ],
+  server: { port: 5115 },
 });

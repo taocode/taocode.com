@@ -1,15 +1,15 @@
 <script lang="ts">
-  import '$lib/icons/register';
+  import '#lib/icons/register.js';
   import { onMount } from 'svelte';
-  import BreakpointHelper from '$lib/components/layout/BreakpointHelper.svelte';
-  import NProgress from '$lib/components/layout/NProgress.svelte';
-  import Nav from '$lib/components/layout/Nav.svelte';
-  import Footer from '$lib/components/layout/Footer.svelte';
-  import AnalyticsUmami from '$lib/components/layout/AnalyticsUmami.svelte';
+  import BreakpointHelper from '#lib/components/layout/BreakpointHelper.svelte';
+  import NProgress from '#lib/components/layout/NProgress.svelte';
+  import Nav from '#lib/components/layout/Nav.svelte';
+  import Footer from '#lib/components/layout/Footer.svelte';
+  import AnalyticsUmami from '#lib/components/layout/AnalyticsUmami.svelte';
   import type { LayoutData } from './$types';
 
   import '../app.css';
-  import '$lib/assets/css/global.css';
+  import '#lib/assets/css/global.css';
   import 'prismjs/themes/prism-tomorrow.css';
 
   let {
@@ -54,7 +54,7 @@
 
 <Nav bind:darkMode={dark} />
 
-<main class="pb-12 mj">
+<main class="mj pb-12">
   {@render children()}
 </main>
 

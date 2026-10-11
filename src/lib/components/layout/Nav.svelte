@@ -5,7 +5,7 @@
 
   import ToTop from './ToTop.svelte';
   import Headroom from '@taocode/svelte-headroom';
-  import DarkModeToggle from '$lib/components/layout/DarkModeToggle.svelte';
+  import DarkModeToggle from '#lib/components/layout/DarkModeToggle.svelte';
 
   let open = $state(false);
   interface Props {
@@ -23,27 +23,27 @@
 
 <div class="fixed z-20 w-full">
   <Headroom showAtTop showAtBottom>
-    <header class="w-full bg-gray-900 header-box-shadow">
+    <header class="header-box-shadow w-full bg-gray-900">
       <div
-        class="container relative flex flex-wrap items-center justify-between p-3 mx-auto">
+        class="relative container mx-auto flex flex-wrap items-center justify-between p-3">
         <div class="flex">
           <a
             data-sveltekit-prefetch
             href="/"
-            class="mt-0 text-xl font-semibold tracking-tight nav-link text-green-500 md:inline-block">
+            class="nav-link mt-0 text-xl font-semibold tracking-tight text-green-500 md:inline-block">
             <TaocodeLogo classes="h-8 -mt-3" />
           </a>
         </div>
         <div
-          class="flex-grow text-right mr-2 md:absolute md:right-0 md:flex-none">
+          class="mr-2 flex-grow text-right md:absolute md:right-0 md:flex-none">
           <DarkModeToggle bind:enabled={darkMode} />
         </div>
         <div class="ml-auto flex-shrink md:hidden">
           <ClickOutside on:clickoutside={() => (open = false)}>
             <button
-              class="flex items-center rounded px-2 py-1 bg-green-500 border border-green-500
+              class="flex items-center rounded border border-green-500 bg-green-500 px-2 py-1
           text-black
-          hover:bg-green-400 hover:border-green-400"
+          hover:border-green-400 hover:bg-green-400"
               aria-label="Hamburger menu"
               onclick={toggleHamburgerMenu}>
               <div class="icon">
@@ -55,29 +55,29 @@
         <nav
           aria-label="Header navigation"
           class:hidden={!open}
-          class="w-full ml-auto md:flex md:w-auto md:mr-4">
+          class="ml-auto w-full md:mr-4 md:flex md:w-auto">
           <a
             data-sveltekit-prefetch
             href="/about"
-            class="nav-link md:inline-block md:mt-0">
+            class="nav-link md:mt-0 md:inline-block">
             About
           </a>
           <a
             data-sveltekit-prefetch
             href="/blog"
-            class="nav-link md:inline-block md:mt-0">
+            class="nav-link md:mt-0 md:inline-block">
             Blog
           </a>
           <a
             data-sveltekit-prefetch
             href="/services"
-            class="nav-link md:inline-block md:mt-0">
+            class="nav-link md:mt-0 md:inline-block">
             Services
           </a>
           <a
             data-sveltekit-prefetch
             href="/contact"
-            class="nav-link md:inline-block md:mt-0">
+            class="nav-link md:mt-0 md:inline-block">
             Contact
           </a>
         </nav>

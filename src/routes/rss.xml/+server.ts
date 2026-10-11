@@ -1,5 +1,5 @@
-import { getAllPosts } from '$lib/server/posts';
-import type { Post } from '$lib/models/post';
+import { getAllPosts } from '#lib/server/posts.js';
+import type { Post } from '#lib/models/post.js';
 
 export const prerender = true;
 

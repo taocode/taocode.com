@@ -1,13 +1,13 @@
 <script lang="ts">
-  import BlogOverviewHeader from '$lib/components/blog/BlogOverviewHeader.svelte';
-  import BlogPostSidebar from '$lib/components/blog/BlogPostSidebar.svelte';
-  import BlogPostFilters from '$lib/components/blog/BlogPostFilters.svelte';
-  import CurrentGoals from '$lib/components/content/CurrentGoals.svelte';
-  import SEO from '$lib/components/layout/SEO.svelte';
-  import { convertToSentenceCase } from '$lib/utils';
-  import EmpurrorSunNap from '$lib/images/empurror-scratcher-sun-nap.jpg?enhanced';
-  import MillerParkMushrooms from '$lib/images/miller-park-tree-mushrooms.jpg?enhanced';
-  import MillerParkGreenery from '$lib/images/miller-park-greenery.jpg?enhanced';
+  import BlogOverviewHeader from '#lib/components/blog/BlogOverviewHeader.svelte';
+  import BlogPostSidebar from '#lib/components/blog/BlogPostSidebar.svelte';
+  import BlogPostFilters from '#lib/components/blog/BlogPostFilters.svelte';
+  import CurrentGoals from '#lib/components/content/CurrentGoals.svelte';
+  import SEO from '#lib/components/layout/SEO.svelte';
+  import { convertToSentenceCase } from '#lib/utils.js';
+  import EmpurrorSunNap from '#lib/images/empurror-scratcher-sun-nap.jpg?enhanced';
+  import MillerParkMushrooms from '#lib/images/miller-park-tree-mushrooms.jpg?enhanced';
+  import MillerParkGreenery from '#lib/images/miller-park-greenery.jpg?enhanced';
   import type { PageData } from './$types';
 
   let { data }: { data: PageData } = $props();
@@ -47,10 +47,10 @@
   <CurrentGoals {readableSlug} />
 </BlogOverviewHeader>
 
-<section class="container flex flex-wrap mj-container">
+<section class="mj-container container flex flex-wrap">
   <BlogPostFilters posts={postsByCategory} filteredByCategory />
 
-  <aside class="w-full mt-8 lg:mt-0 lg:w-3/12">
+  <aside class="mt-8 w-full lg:mt-0 lg:w-3/12">
     <BlogPostSidebar />
   </aside>
 </section>

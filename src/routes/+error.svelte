@@ -1,7 +1,7 @@
 <script lang="ts">
-  import { dev } from '$app/environment';
+  import { dev } from '$app/env';
   import { page } from '$app/state';
-  import NotFound from '$lib/components/content/NotFound.svelte';
+  import NotFound from '#lib/components/content/NotFound.svelte';
 
   let {
     error,
@@ -30,12 +30,12 @@
 {#if isNotFound}
   <NotFound />
 {:else}
-  <div class="text-center mj-container">
+  <div class="mj-container text-center">
     <h1>Something went wrong</h1>
     <p>{error?.message}</p>
   </div>
 
-  {#if dev && error?.stack}
+  {#if dev && error && 'stack' in error && typeof error.stack === 'string'}
     <pre>{error.stack}</pre>
     <hr />
   {/if}

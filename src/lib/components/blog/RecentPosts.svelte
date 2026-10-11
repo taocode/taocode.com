@@ -1,7 +1,7 @@
 <script lang="ts">
   import Icon from '@iconify/svelte';
   import BlogPostCard from './BlogPostCard.svelte';
-  import type { Post } from '$lib/models/post';
+  import type { Post } from '#lib/models/post.js';
 
   interface Props {
     posts: Post[];
@@ -13,7 +13,7 @@
   );
 </script>
 
-<section class="container mj-container">
+<section class="mj-container container">
   <h2>Recent Posts</h2>
 
   <div class="recent-posts">
@@ -27,7 +27,7 @@
   <a
     data-sveltekit-prefetch
     href="/blog"
-    class="btn btn-lg preset-filled-primary inline-flex items-center mt-8 font-bold rounded">
+    class="preset-filled-primary mt-8 btn inline-flex items-center rounded font-bold btn-lg">
     View all blog posts
     <Icon icon="feather:chevron-right" />
   </a>

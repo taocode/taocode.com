@@ -4,7 +4,7 @@
 
 <!-- Mailchimp Signup Form -->
 <section
-  class="container mb-16 text-center bg-gray-light border-t-4 border-green-700 mj-container">
+  class="mj-container container mb-16 border-t-4 border-green-700 bg-gray-light text-center">
   <div id="mc_embed_signup">
     <form
       action="https://taocode.us6.list-manage.com/subscribe/post?u=43229d3d4d5354a0a9b5629fb&id=32bdc2ddb0"
@@ -17,14 +17,14 @@
       <div id="mc_embed_signup_scroll">
         <label
           for="mce-EMAIL"
-          class="block pb-3 text-2xl font-bold font-display">
+          class="block pb-3 font-display text-2xl font-bold">
           Subscribe to my email list for more content!
         </label>
         <input
           type="email"
           value=""
           name="EMAIL"
-          class="w-full px-5 py-3 mb-3 text-gray border border-gray rounded appearance-none hover:border-gray-500"
+          class="text-gray border-gray mb-3 w-full appearance-none rounded border px-5 py-3 hover:border-gray-500"
           id="mce-EMAIL"
           placeholder="johndoe@mail.com"
           required />
@@ -49,7 +49,7 @@
             value="Subscribe"
             name="subscribe"
             id="mc-embedded-subscribe"
-            class="btn btn-lg preset-filled-primary w-full font-semibold font-display rounded cursor-pointer" />
+            class="preset-filled-primary btn w-full cursor-pointer rounded font-display font-semibold btn-lg" />
         </div>
       </div>
     </form>

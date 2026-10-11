@@ -1,7 +1,7 @@
 <script lang="ts">
   import Icon from '@iconify/svelte';
   import { page } from '$app/state';
-  import type { Post } from '$lib/models/post';
+  import type { Post } from '#lib/models/post.js';
 
   interface Props {
     post: Post;

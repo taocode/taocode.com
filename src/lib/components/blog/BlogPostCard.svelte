@@ -1,6 +1,6 @@
 <script lang="ts">
   import InfoTags from './InfoTags.svelte';
-  import type { Post } from '$lib/models/post';
+  import type { Post } from '#lib/models/post.js';
   import BlogPostThumbnail from './BlogPostThumbnail.svelte';
   import { marked } from 'marked';
 
@@ -31,11 +31,11 @@
     class="link-inherit"
     aria-label={post.slug}>
     <div
-      class="card-transform bg-gray-100 border-gray-400 dark:bg-gray-900 dark:border-gray-700">
+      class="card-transform border-gray-400 bg-gray-100 dark:border-gray-700 dark:bg-gray-900">
       <div class="card-face card-face-front overflow-hidden">
         <div class="flex h-full flex-col p-3 pb-12">
           <div
-            class="line-clamp-2 text-xl leading-tight font-bold font-display">
+            class="line-clamp-2 font-display text-xl leading-tight font-bold">
             {post.title}
           </div>
 
@@ -51,21 +51,21 @@
             </p>
           {/if}
         </div>
-        <div class="absolute bottom-0 right-0 pt-4 pl-6">
+        <div class="absolute right-0 bottom-0 pt-4 pl-6">
           <span
             aria-hidden="true"
-            class="btn btn-sm preset-filled-primary inline-block rounded-br">
+            class="preset-filled-primary btn inline-block rounded-br btn-sm">
             Read more
           </span>
         </div>
       </div>
       <div class="card-face card-face-back">
-        <div class="w-full absolute -z-10 top-0 left-0 right-0 bottom-0">
+        <div class="absolute top-0 right-0 bottom-0 left-0 -z-10 w-full">
           <BlogPostThumbnail {post} />
         </div>
         <div
           aria-hidden="true"
-          class="bg-green-600 bg-opacity-70 p-3 text-2xl leading-tight font-extrabold text-black font-display sm:text-3xl">
+          class="bg-opacity-70 bg-green-600 p-3 font-display text-2xl leading-tight font-extrabold text-black sm:text-3xl">
           {post.title}
         </div>
       </div>

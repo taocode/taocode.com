@@ -43,7 +43,7 @@ Optional (used by the index): `lead`, `thumbnail`, `cover`, `site_url`, `descrip
 - `hidden: true` — omitted even in dev.
 - `follows`: slug of the post this one continues. The earlier post lists it under Follow-ups. One slug. Drafts are omitted from that list in production.
 
-Ignore leftover `layout: blog` and `author:` on older posts. MDSVEX layout is `post` in `svelte.config.js`; author is not read from frontmatter.
+Ignore leftover `layout: blog` and `author:` on older posts. MDSVEX layout is `post` in `vite.config.ts`; author is not read from frontmatter.
 
 `published:` as a datetime is unused; `creationDate` is parsed into `Post.published`.
 

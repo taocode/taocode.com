@@ -4,7 +4,7 @@
   import BlogPostTag from './BlogPostTag.svelte';
   import ShareButtons from '../ShareButtons.svelte';
   import InfoTags from './InfoTags.svelte';
-  import type { Post } from '$lib/models/post';
+  import type { Post } from '#lib/models/post.js';
 
   interface Props {
     post: Post;
@@ -15,21 +15,21 @@
 
 <section class="applause-gradient blog-post-header rotating-bg">
   <div
-    class="container mj-container md:flex
+    class="mj-container container md:flex
   md:items-center
   md:gap-8">
     {#if post && post.thumbnail}
       <div
-        class="w-3/5 mx-auto mb-6 flex-shrink align-middle
-    p-2 rounded bg-white/40 dark:bg-black/40
-    md:mb-0 md:w-1/3 lg:w-1/4">
+        class="mx-auto mb-6 w-3/5 flex-shrink rounded
+    bg-white/40 p-2 align-middle md:mb-0
+    md:w-1/3 lg:w-1/4 dark:bg-black/40">
         <BlogPostThumbnail {post} />
       </div>
     {/if}
     <div
-      class="blog-header p-3 text-center
+      class="blog-header flex-grow p-3
       
-      sm:flex-row sm:flex-nowrap sm:mx-auto flex-grow">
+      text-center sm:mx-auto sm:flex-row sm:flex-nowrap">
       <div class="w-full px-4 text-gray-800 dark:text-gray-200">
         <h1>{post.title}</h1>
         {#if post.site_url}
@@ -47,7 +47,7 @@
 
         <BlogPostTag tags={post.tags} />
 
-        <div class="flex flex-wrap justify-center my-5">
+        <div class="my-5 flex flex-wrap justify-center">
           <ShareButtons {post} />
         </div>
 

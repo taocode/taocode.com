@@ -1,9 +1,9 @@
 <script lang="ts">
-  import BlogPostHeaderImage from '$lib/images/b-flopped-on-sidewalk.jpg?enhanced';
-  import BlogOverviewHeader from '$lib/components/blog/BlogOverviewHeader.svelte';
-  import BlogPostFilters from '$lib/components/blog/BlogPostFilters.svelte';
-  import BlogPostSidebar from '$lib/components/blog/BlogPostSidebar.svelte';
-  import SEO from '$lib/components/layout/SEO.svelte';
+  import BlogPostHeaderImage from '#lib/images/b-flopped-on-sidewalk.jpg?enhanced';
+  import BlogOverviewHeader from '#lib/components/blog/BlogOverviewHeader.svelte';
+  import BlogPostFilters from '#lib/components/blog/BlogPostFilters.svelte';
+  import BlogPostSidebar from '#lib/components/blog/BlogPostSidebar.svelte';
+  import SEO from '#lib/components/layout/SEO.svelte';
 </script>
 
 <svelte:head>
@@ -38,10 +38,10 @@
   </div>
 </BlogOverviewHeader>
 
-<section class="container flex flex-wrap mj-container">
+<section class="mj-container container flex flex-wrap">
   <BlogPostFilters />
 
-  <aside class="w-full mt-8 lg:mt-0 lg:w-3/12">
+  <aside class="mt-8 w-full lg:mt-0 lg:w-3/12">
     <BlogPostSidebar />
   </aside>
 </section>

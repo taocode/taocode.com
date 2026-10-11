@@ -1,7 +1,7 @@
 <script>
-  import PrivacyPolicyLink from '$lib/components/layout/PrivacyPolicyLink.svelte';
+  import PrivacyPolicyLink from '#lib/components/layout/PrivacyPolicyLink.svelte';
   import { onMount } from 'svelte';
-  import SEO from '$lib/components/layout/SEO.svelte';
+  import SEO from '#lib/components/layout/SEO.svelte';
 
   onMount(() => {
     const s = document.createElement('script');
@@ -23,12 +23,12 @@
     <PrivacyPolicyLink />
   </p>
 
-  <div class="prose mx-auto mt-8 max-w-2xl">
+  <div class="mx-auto prose mt-8 max-w-2xl">
     <h2>What this site uses</h2>
     <ul>
       <li>
-        <strong>Umami</strong> — self-hosted, privacy-friendly analytics at
-        analytics.taocode.com (no advertising cookies).
+        <strong>Umami</strong> — self-hosted, privacy-friendly analytics at analytics.taocode.com
+        (no advertising cookies).
       </li>
       <li>
         <strong>Google Fonts</strong> — Rubik and Spectral fonts are loaded from Google
@@ -44,9 +44,8 @@
         you subscribe.
       </li>
       <li>
-        <strong>Contact</strong> — the contact form opens your email client via
-        mailto to mark@taocode.com; this site does not process or store form
-        submissions.
+        <strong>Contact</strong> — the contact form opens your email client via mailto
+        to mark@taocode.com; this site does not process or store form submissions.
       </li>
     </ul>
     <p>

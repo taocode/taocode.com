@@ -1,5 +1,5 @@
-import { convertToSentenceCase } from '$lib/utils';
-import type { Post } from '$lib/models/post';
+import { convertToSentenceCase } from '#lib/utils.js';
+import type { Post } from '#lib/models/post.js';
 import type { PageServerLoad } from './$types';
 
 export const load: PageServerLoad = async ({ params, parent }) => {

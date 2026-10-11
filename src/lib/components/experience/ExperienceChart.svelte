@@ -34,13 +34,13 @@
   };
 </script>
 
-<div class="chart -mt-3 lg:-mt-10 lg:pl-3 max-w-screen-sm mx-auto">
+<div class="chart mx-auto -mt-3 max-w-screen-sm lg:-mt-10 lg:pl-3">
   <button
-    class="overview font-display text-sm uppercase py-1 px-2 my-2 rounded"
+    class="overview my-2 rounded px-2 py-1 font-display text-sm uppercase"
     class:activated={currentChild}
     onclick={showOverview}>Overview</button>
   {#if currentChild}
-    <span transition:fade|global class="inline-block font-display text-sm px-2"
+    <span transition:fade|global class="inline-block px-2 font-display text-sm"
       >{currentChild}</span>
   {/if}
   <Pancake.Chart x1={0} x2={max} y1={dChildren.length - 0.5} y2={-0.5}>
@@ -61,15 +61,15 @@
       {#each stack.values as d, n (dChildren[n].name)}
         <Pancake.Box x1={d.start} x2={d.end} y1={n - 0.5} y2={n + 0.5}>
           <button
-            class="experience box pl-2 py-2 absolute left-0 transition duration-150
-           opacity-80 hover:opacity-100"
+            class="experience box absolute left-0 py-2 pl-2 opacity-80 transition
+           duration-150 hover:opacity-100"
             disabled={!dChildren[n].children}
             class:has-children={dChildren[n].children}
             title={barTitle(dChildren[n])}
             onclick={() => showChild(n)}></button>
         </Pancake.Box>
         <div
-          class="relative pointer-events-none z-0 p-2 block font-display text-sm text-gray-300 font-semibold">
+          class="pointer-events-none relative z-0 block p-2 font-display text-sm font-semibold text-gray-300">
           {dChildren[n].name}
         </div>
       {/each}

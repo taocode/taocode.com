@@ -1,6 +1,6 @@
 <script>
   import { onMount } from 'svelte';
-  import SEO from '$lib/components/layout/SEO.svelte';
+  import SEO from '#lib/components/layout/SEO.svelte';
 
   onMount(() => {
     var s = document.createElement('script'),

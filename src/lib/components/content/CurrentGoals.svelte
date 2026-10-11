@@ -56,9 +56,7 @@
     ],
   };
 
-  let goals = $derived(
-    goalCats[readableSlug as keyof typeof goalCats] ?? [],
-  );
+  let goals = $derived(goalCats[readableSlug as keyof typeof goalCats] ?? []);
 </script>
 
 <div class="w-full flex-shrink">
@@ -68,7 +66,7 @@
   {#each goals as goal (goal.text)}
     <div class="flex items-baseline italic">
       {#if goal.reached}
-        <div class="text-green-500 text-[1.1em] mr-3">
+        <div class="mr-3 text-[1.1em] text-green-500">
           <Icon icon="fa6-solid:check" />
         </div>
       {:else}

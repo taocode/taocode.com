@@ -1,5 +1,5 @@
 <script lang="ts">
-  import SEO from '$lib/components/layout/SEO.svelte';
+  import SEO from '#lib/components/layout/SEO.svelte';
 </script>
 
 <svelte:head>
@@ -11,12 +11,12 @@
 
 <SEO />
 
-<section class="container mj-container">
+<section class="mj-container container">
   <h1>About Me</h1>
 
   <p>
-    Hi, my name is Mark Jones and I'm a full stack web developer,
-    artist, musician and more.
+    Hi, my name is Mark Jones and I'm a full stack web developer, artist,
+    musician and more.
   </p>
 
   <p>

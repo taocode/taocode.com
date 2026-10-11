@@ -8,9 +8,9 @@
 </script>
 
 <footer
-  class="text-green-200 border-t-4 border-green-700 applause-gradient bg-green-800">
+  class="applause-gradient border-t-4 border-green-700 bg-green-800 text-green-200">
   <div
-    class="boxed flex gap-2 gap-y-6 flex-wrap items-top justify-around py-6 mx-auto lg:flex-nowrap">
+    class="boxed items-top mx-auto flex flex-wrap justify-around gap-2 gap-y-6 py-6 lg:flex-nowrap">
     <div>
       <nav aria-label="Left footer navigation">
         <a data-sveltekit-prefetch href="/about" class="footer-link"> About </a>
@@ -19,19 +19,19 @@
           <a
             data-sveltekit-prefetch
             href="/categories/programming"
-            class="italic footer-link">
+            class="footer-link italic">
             Programming
           </a>
           <a
             data-sveltekit-prefetch
             href="/categories/portfolio"
-            class="italic footer-link">
+            class="footer-link italic">
             Portfolio
           </a>
           <a
             data-sveltekit-prefetch
             href="/categories/life"
-            class="italic footer-link">
+            class="footer-link italic">
             Life
           </a>
         </div>
@@ -55,7 +55,7 @@
       <SpeedlifyFooter />
     </div>
   </div>
-  <div class="text-center mx-auto">
+  <div class="mx-auto text-center">
     <nav class="social">
       <ExternalLink
         href="mailto:mark@taocode.com"

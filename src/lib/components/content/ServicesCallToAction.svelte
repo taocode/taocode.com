@@ -1,7 +1,7 @@
 <section class="applause-gradient">
-  <div class="container mj-container">
-    <div class="w-full p-2 mx-auto lg:w-3/4">
-      <h2 class="mb-8 text-3xl text-center text-white">
+  <div class="mj-container container">
+    <div class="mx-auto w-full p-2 lg:w-3/4">
+      <h2 class="mb-8 text-center text-3xl text-white">
         Need help with your product development?
       </h2>
 
@@ -13,7 +13,7 @@
         <a
           href="/contact"
           data-sveltekit-prefetch
-          class="btn btn-lg preset-filled-primary mt-4 rounded">
+          class="preset-filled-primary mt-4 btn rounded btn-lg">
           Get in touch
         </a>
       </div>

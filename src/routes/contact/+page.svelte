@@ -1,7 +1,7 @@
 <script lang="ts">
   import Icon from '@iconify/svelte';
-  import SEO from '$lib/components/layout/SEO.svelte';
-  import ExternalLink from '$lib/components/ExternalLink.svelte';
+  import SEO from '#lib/components/layout/SEO.svelte';
+  import ExternalLink from '#lib/components/ExternalLink.svelte';
 
   const CONTACT_EMAIL = 'mark@taocode.com';
 
@@ -14,9 +14,7 @@
     const comment = String(data.get('comment') ?? '').trim();
 
     const subject = encodeURIComponent(`Contact from ${name}`);
-    const body = encodeURIComponent(
-      `${comment}\n\n— ${name}\n${email}`,
-    );
+    const body = encodeURIComponent(`${comment}\n\n— ${name}\n${email}`);
     window.location.href = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;
   }
 </script>
@@ -30,7 +28,7 @@
 
 <SEO />
 
-<section class="container mj-container">
+<section class="mj-container container">
   <h1>Contact for business inquiries</h1>
 
   <p>
@@ -40,13 +38,13 @@
   </p>
   <p class="text-sm text-gray-600 dark:text-gray-400">
     The form below opens your email client with a draft to
-    <a href="mailto:{CONTACT_EMAIL}">{CONTACT_EMAIL}</a> — nothing is sent to a
-    server from this page.
+    <a href="mailto:{CONTACT_EMAIL}">{CONTACT_EMAIL}</a> — nothing is sent to a server
+    from this page.
   </p>
   <form name="contact" class="mt-3 mb-8" onsubmit={handleSubmit}>
     <div
-      class="flex flex-wrap p-3 bg-gray-light border border-gray-500 rounded dark:border-gray-700">
-      <div class="w-1/2 px-2 my-2">
+      class="flex flex-wrap rounded border border-gray-500 bg-gray-light p-3 dark:border-gray-700">
+      <div class="my-2 w-1/2 px-2">
         <label for="name">Name</label>
         <input
           type="text"
@@ -54,41 +52,41 @@
           id="name"
           required
           minlength="2"
-          class="w-full text-gray-700 border border-gray-400 rounded hover:border-gray-500" />
+          class="w-full rounded border border-gray-400 text-gray-700 hover:border-gray-500" />
       </div>
 
-      <div class="w-1/2 px-2 my-2">
+      <div class="my-2 w-1/2 px-2">
         <label for="email">Email</label>
         <input
           type="email"
           name="email"
           id="email"
           required
-          class="w-full text-gray-700 border border-gray-400 rounded hover:border-gray-500" />
+          class="w-full rounded border border-gray-400 text-gray-700 hover:border-gray-500" />
       </div>
 
-      <div class="w-full px-2 my-2">
+      <div class="my-2 w-full px-2">
         <label for="comment">Comment</label>
         <textarea
           rows="5"
           name="comment"
           id="comment"
           required
-          class="w-full text-gray-700 border border-gray-400 rounded hover:border-gray-500"
+          class="w-full rounded border border-gray-400 text-gray-700 hover:border-gray-500"
         ></textarea>
       </div>
 
-      <div class="w-full px-2 my-2">
+      <div class="my-2 w-full px-2">
         <button
           type="submit"
-          class="btn btn-lg preset-tonal-surface w-full cursor-pointer rounded">
+          class="btn w-full cursor-pointer rounded preset-tonal-surface btn-lg">
           Open email draft
         </button>
       </div>
     </div>
   </form>
 
-  <div class="md:flex gap-x-6">
+  <div class="gap-x-6 md:flex">
     <div class="md:max-w-2/5">
       <h2>Projects That Interest Me</h2>
       <ul>

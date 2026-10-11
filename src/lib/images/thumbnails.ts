@@ -1,7 +1,7 @@
 import type { Picture } from '@sveltejs/enhanced-img';
 
 const thumbnailModules = import.meta.glob<{ default: Picture }>(
-  '$lib/images/{portfolio,programming,life}/**/*.{jpg,jpeg,png,webp}',
+  '#lib/images/{portfolio,programming,life}/**/*.{jpg,jpeg,png,webp}',
   {
     eager: true,
     query: {
@@ -14,6 +14,7 @@ function thumbnailKeySuffix(path: string): string {
   return path
     .replaceAll('\\', '/')
     .replace(/^\$lib\/images\//, '')
+    .replace(/^#lib\/images\//, '')
     .replace(/^\/images\//, '');
 }
 

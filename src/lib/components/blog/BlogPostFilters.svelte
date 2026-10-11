@@ -1,7 +1,7 @@
 <script lang="ts">
   import { page } from '$app/state';
   import BlogPostCard from './BlogPostCard.svelte';
-  import type { Post } from '$lib/models/post';
+  import type { Post } from '#lib/models/post.js';
 
   interface Props {
     posts?: Post[];
@@ -52,10 +52,10 @@
 </script>
 
 <div class="w-full lg:w-9/12 lg:pr-16">
-  <div class="flex flex-wrap items-center mb-10 -mx-2">
-    <div class="w-full px-2 my-2">
+  <div class="-mx-2 mb-10 flex flex-wrap items-center">
+    <div class="my-2 w-full px-2">
       <label
-        class="mb-2 text-sm font-bold tracking-wide text-gray"
+        class="text-gray mb-2 text-sm font-bold tracking-wide"
         for="text-search">
         Search for blog posts
       </label>
@@ -69,9 +69,9 @@
     </div>
 
     {#if !filteredByCategory && !filteredByTag}
-      <div class="w-full px-2 my-2 sm:w-1/2">
+      <div class="my-2 w-full px-2 sm:w-1/2">
         <label
-          class="mb-2 text-sm font-bold tracking-wide text-gray"
+          class="text-gray mb-2 text-sm font-bold tracking-wide"
           for="category-search">
           By category
         </label>
@@ -88,9 +88,9 @@
         </div>
       </div>
 
-      <div class="w-full px-2 my-2 sm:w-1/2">
+      <div class="my-2 w-full px-2 sm:w-1/2">
         <label
-          class="mb-2 text-sm font-bold tracking-wide text-gray"
+          class="text-gray mb-2 text-sm font-bold tracking-wide"
           for="tag-search">
           By tag
         </label>
@@ -114,16 +114,16 @@
       {sourcePosts.length}
       posts
     </p>
-    <div class="flex flex-wrap -m-2">
+    <div class="-m-2 flex flex-wrap">
       {#each filteredPosts as post}
-        <div class="flex items-stretch w-full p-2 sm:w-1/2">
+        <div class="flex w-full items-stretch p-2 sm:w-1/2">
           <BlogPostCard {post} />
         </div>
       {/each}
     </div>
   {:else}
     <div
-      class="relative w-full px-4 py-3 font-bold text-gray bg-gray-100 border border-gray-400 rounded"
+      class="text-gray relative w-full rounded border border-gray-400 bg-gray-100 px-4 py-3 font-bold"
       role="alert">
       No blog posts found. Try another search.
     </div>

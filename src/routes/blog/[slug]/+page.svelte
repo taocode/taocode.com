@@ -1,12 +1,12 @@
 <script lang="ts">
-  import BackToBlogOverviewBtn from '$lib/components/blog/BackToBlogOverviewBtn.svelte';
-  import BlogPostHeader from '$lib/components/blog/BlogPostHeader.svelte';
-  import BlogPostSidebar from '$lib/components/blog/BlogPostSidebar.svelte';
-  import CommentsUtterances from '$lib/components/layout/CommentsUtterances.svelte';
-  import PrevNextArticle from '$lib/components/blog/PrevNextArticle.svelte';
-  import ShareButtons from '$lib/components/ShareButtons.svelte';
+  import BackToBlogOverviewBtn from '#lib/components/blog/BackToBlogOverviewBtn.svelte';
+  import BlogPostHeader from '#lib/components/blog/BlogPostHeader.svelte';
+  import BlogPostSidebar from '#lib/components/blog/BlogPostSidebar.svelte';
+  import CommentsUtterances from '#lib/components/layout/CommentsUtterances.svelte';
+  import PrevNextArticle from '#lib/components/blog/PrevNextArticle.svelte';
+  import ShareButtons from '#lib/components/ShareButtons.svelte';
   import Icon from '@iconify/svelte';
-  import SEO from '$lib/components/layout/SEO.svelte';
+  import SEO from '#lib/components/layout/SEO.svelte';
   import { marked } from 'marked';
   import type { PageData } from './$types';
 
@@ -35,8 +35,8 @@
 
 <SEO {blogPostInfo} />
 <BlogPostHeader {post} />
-<section class="container flex flex-col gap-6 md:flex-row mj-container">
-  <article class="prose blog flex-grow">
+<section class="mj-container container flex flex-col gap-6 md:flex-row">
+  <article class="blog prose flex-grow">
     {#if post.lead}<p class="lead">{@html marked.parse(post.lead)}</p>{/if}
     <PostContent />
     {#if earlier || followUps.length > 0}
@@ -45,7 +45,8 @@
           <p class="thread-label">Follows</p>
           <ul>
             <li>
-              <a data-sveltekit-prefetch href="/blog/{earlier.slug}">{earlier.title}</a>
+              <a data-sveltekit-prefetch href="/blog/{earlier.slug}"
+                >{earlier.title}</a>
             </li>
           </ul>
         {/if}
@@ -54,7 +55,8 @@
           <ul>
             {#each followUps as followUp (followUp.slug)}
               <li>
-                <a data-sveltekit-prefetch href="/blog/{followUp.slug}">{followUp.title}</a>
+                <a data-sveltekit-prefetch href="/blog/{followUp.slug}"
+                  >{followUp.title}</a>
               </li>
             {/each}
           </ul>
@@ -62,12 +64,12 @@
       </nav>
     {/if}
     <div
-      class="share-post bg-green-100 bg-opacity-70 border-green-700 dark:bg-green-900">
+      class="share-post bg-opacity-70 border-green-700 bg-green-100 dark:bg-green-900">
       <div class="share-icon bg-green-700 text-green-100 dark:text-green-950">
         <div class="icon text-[1.5em]">
           <Icon icon="fa6-solid:share" />
         </div>
-        <div class="font-display text-2xs">share</div>
+        <div class="text-2xs font-display">share</div>
       </div>
       <ShareButtons {post} />
     </div>
@@ -75,7 +77,7 @@
       <CommentsUtterances />
     </div>
 
-    <div class="flex items-center my-8">
+    <div class="my-8 flex items-center">
       <BackToBlogOverviewBtn />
     </div>
     <PrevNextArticle {previousArticle} {nextArticle} />

@@ -13,7 +13,7 @@
   </header>
 
   {#each popularPosts as post}
-    <div class="py-4 border-b border-gray-600">
+    <div class="border-b border-gray-600 py-4">
       <InfoTags {post} />
       <br />
       <a data-sveltekit-prefetch href="/blog/{post.slug}" class="text-gray-800"
