@@ -9,6 +9,8 @@
     hideCategory?: boolean;
     readTimeText?: boolean;
     showWordCount?: boolean;
+    /** Darker meta text for the frosted post header. */
+    highContrast?: boolean;
   }
 
   let {
@@ -16,68 +18,57 @@
     hideCategory = false,
     readTimeText = true,
     showWordCount = true,
+    highContrast = false,
   }: Props = $props();
 </script>
 
-<span class="info">{formatDate(post.creationDate)}</span>
-{#if readTimeText || showWordCount}
-  <span class="info">
-    <span class="meta-chip">
-      {#if readTimeText}
-        <span>
-          <span class="sr-only">{post.readingTimeText}</span>
-          <span aria-hidden="true">
-            {post.readingTimeText.replace(/ min read$/, 'm')}
-            <Glasses class="meta-icon" />
-          </span>
-        </span>
-      {/if}
-      {#if readTimeText && showWordCount}
-        <span class="meta-sep" aria-hidden="true"></span>
-      {/if}
-      {#if showWordCount}
-        <span>
-          <span class="sr-only">{post.wordCount} words</span>
-          <span aria-hidden="true">
-            {post.wordCount}
-            <Icon icon="carbon:string-text" class="meta-icon" />
-          </span>
-        </span>
-      {/if}
+<div class={['info-row', highContrast && 'high-contrast']}>
+  <span class="info">{formatDate(post.creationDate)}</span>
+  {#if readTimeText}
+    <span class="info meta-chip">
+      {post.readingTimeText.replace(/ min read$/, 'm')}
+      <Glasses class="meta-icon" role="img" aria-label="read time" />
     </span>
-  </span>
-{/if}
-{#if !hideCategory}
-  <span class="info">
-    <a data-sveltekit-prefetch href="/categories/{convertToSlug(post.category)}">
-      {post.category}
-    </a>
-  </span>
-{/if}
+  {/if}
+  {#if showWordCount}
+    <span class="info meta-chip">
+      {post.wordCount}
+      <Icon
+        icon="carbon:string-text"
+        class="meta-icon"
+        aria-hidden="false"
+        role="img"
+        aria-label="words" />
+    </span>
+  {/if}
+  {#if !hideCategory}
+    <span class="info">
+      <a
+        data-sveltekit-prefetch
+        class={{ 'header-meta': highContrast }}
+        href="/categories/{convertToSlug(post.category)}">{post.category}</a>
+    </span>
+  {/if}
+</div>
 
 <style lang="postcss">
   @reference "../../../app.css";
-  .info {
-    @apply text-green-750 whitespace-nowrap dark:text-green-200;
+  .info-row {
+    @apply inline-flex max-w-full flex-wrap items-center gap-3;
   }
-  .info + .info {
-    margin-inline-start: 0.55em;
+  .info {
+    @apply whitespace-nowrap text-green-750 dark:text-green-200;
+  }
+  .info-row.high-contrast .info {
+    @apply text-green-950 dark:text-green-200;
   }
   .meta-chip {
     display: inline-flex;
     align-items: center;
-    gap: 0.4em;
     line-height: 1;
-    padding: 0 0.5em;
-    border-radius: 0.55em;
+    padding: 0.125em 0.5em;
+    border-radius: 0.4em;
     background: color-mix(in srgb, currentColor 16%, transparent);
-    vertical-align: -0.05em;
-  }
-  .meta-sep {
-    width: 1px;
-    height: 0.9em;
-    background: currentColor;
-    opacity: 0.45;
   }
   :global(.meta-icon) {
     display: inline-block;

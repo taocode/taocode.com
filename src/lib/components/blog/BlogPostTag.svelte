@@ -16,3 +16,14 @@
       href="/tags/{convertToSlug(tag)}">{tag}</a>
   {/each}
 </div>
+
+<style>
+  /* Beat unlayered `.mj a` so the pill keeps the tonal text token. */
+  a.badge.preset-tonal-primary,
+  a.badge.preset-tonal-primary:hover {
+    color: var(--color-primary-950-50);
+  }
+  a.badge.preset-tonal-primary:hover {
+    text-decoration-line: underline;
+  }
+</style>
