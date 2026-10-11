@@ -191,6 +191,9 @@ importers:
       '@iconify-json/feather':
         specifier: ^1.2.1
         version: 1.2.1
+      '@iconify-svelte/iconoir':
+        specifier: gitlab:iconify-icons/svelte#iconoir
+        version: https://gitlab.com/iconify-icons/svelte/-/archive/dfe2f270f79edff42fc386f7c6434c21f2aa7392/svelte-dfe2f270f79edff42fc386f7c6434c21f2aa7392.tar.gz(svelte@5.57.2)
       '@iconify/svelte':
         specifier: ^5.2.2
         version: 5.2.2(svelte@5.57.2)
@@ -310,6 +313,15 @@ packages:
 
   '@iconify-json/feather@1.2.1':
     resolution: {integrity: sha512-gURNg2TJYuO1U7DoOGCylm9TwkMfzjOH2BHdWsE0IXLXj/MNkFIJu56Wu1xRws27M8hzDzUDt/biGUa/LfAjdg==}
+
+  '@iconify-svelte/iconoir@https://gitlab.com/iconify-icons/svelte/-/archive/dfe2f270f79edff42fc386f7c6434c21f2aa7392/svelte-dfe2f270f79edff42fc386f7c6434c21f2aa7392.tar.gz':
+    resolution: {gitHosted: true, integrity: sha512-qeeoJKFI0z0e64z3W3JMJp37BcuCvrBhbM/69nlQz2nPpKxKW/CAAlhujX8JsKewAMJzbwcLwHMqS2Obp/mnRw==, tarball: https://gitlab.com/iconify-icons/svelte/-/archive/dfe2f270f79edff42fc386f7c6434c21f2aa7392/svelte-dfe2f270f79edff42fc386f7c6434c21f2aa7392.tar.gz}
+    version: 1.0.1
+
+  '@iconify/css-svelte@1.0.1':
+    resolution: {integrity: sha512-f9w1anXXBm48VjDEWDrGTybdiwnDTIChcUpBK/UtXR/AhNp/Co/VPp00t7dO93j+4Je0OwMKyc/HvI7Lpv3PKg==}
+    peerDependencies:
+      svelte: '>4.0.0'
 
   '@iconify/svelte@5.2.2':
     resolution: {integrity: sha512-XMXxD3nzH7yB68C3K4sNwzrJ1TBscODR0ZqCeNf0KGuEMCTSuCo0jHNDZ0o0iRXTylO41NSz/DWam/4atLG1yw==}
@@ -1687,6 +1699,17 @@ snapshots:
   '@iconify-json/feather@1.2.1':
     dependencies:
       '@iconify/types': 2.0.0
+
+  '@iconify-svelte/iconoir@https://gitlab.com/iconify-icons/svelte/-/archive/dfe2f270f79edff42fc386f7c6434c21f2aa7392/svelte-dfe2f270f79edff42fc386f7c6434c21f2aa7392.tar.gz(svelte@5.57.2)':
+    dependencies:
+      '@iconify/css-svelte': 1.0.1(svelte@5.57.2)
+    transitivePeerDependencies:
+      - svelte
+
+  '@iconify/css-svelte@1.0.1(svelte@5.57.2)':
+    dependencies:
+      '@iconify/types': 2.0.0
+      svelte: 5.57.2
 
   '@iconify/svelte@5.2.2(svelte@5.57.2)':
     dependencies:

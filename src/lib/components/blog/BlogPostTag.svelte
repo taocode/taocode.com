@@ -8,8 +8,8 @@
   let { tags }: Props = $props();
 </script>
 
-<div class="mt-3 flex flex-wrap justify-center gap-2 text-sm">
-  {#each tags as tag}
+<div class="mt-5 flex flex-wrap justify-center gap-2 text-sm">
+  {#each tags as tag (tag)}
     <a
       data-sveltekit-prefetch
       class="badge preset-tonal-primary"

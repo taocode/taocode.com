@@ -22,6 +22,7 @@
     "@iconify-json/fa6-regular": "^1.2.4",
     "@iconify-json/fa6-solid": "^1.2.4",
     "@iconify-json/feather": "^1.2.1",
+    "@iconify-svelte/iconoir": "gitlab:iconify-icons/svelte#iconoir",
     "@iconify/svelte": "^5.2.2",
     "@skeletonlabs/skeleton": "^5.0.1",
     "@skeletonlabs/skeleton-svelte": "^5.0.1",

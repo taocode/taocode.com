@@ -20,7 +20,7 @@ const require = createRequire(import.meta.url);
 
 /** Icon names this site renders via `@iconify/svelte`. Keep in sync with `<Icon icon>` usages. */
 const usedIcons: Record<string, readonly string[]> = {
-  carbon: ['sun', 'moon'],
+  carbon: ['sun', 'moon', 'string-text'],
   'fa6-solid': [
     'share',
     'bars',

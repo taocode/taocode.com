@@ -33,7 +33,7 @@
       <div class="w-full px-4 text-gray-800 dark:text-gray-200">
         <h1>{post.title}</h1>
         {#if post.site_url}
-          <div>
+          <div class="mb-3">
             <a
               target="site"
               href={post.site_url}

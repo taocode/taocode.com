@@ -259,6 +259,10 @@ h6 {
   /* left: -33vw; */
   top: calc(-50vh + -20vw);
   left: calc(-100vw + -15vh);
+  /* Square's inscribed circle must clear the header at every angle.
+     Scale around the existing center so a flat side never crosses the clip. */
+  --spin-scale: 1.45;
+  transform: scale(var(--spin-scale));
 }
 @media (width >= theme(--breakpoint-sm)) {
   .applause-gradient::after {
@@ -288,18 +292,18 @@ h6 {
 
 @-webkit-keyframes rotating /* Safari and Chrome */ {
   from {
-    transform: rotate(0deg);
+    transform: rotate(0deg) scale(var(--spin-scale, 1));
   }
   to {
-    transform: rotate(360deg);
+    transform: rotate(360deg) scale(var(--spin-scale, 1));
   }
 }
 @keyframes rotating {
   from {
-    transform: rotate(0deg);
+    transform: rotate(0deg) scale(var(--spin-scale, 1));
   }
   to {
-    transform: rotate(360deg);
+    transform: rotate(360deg) scale(var(--spin-scale, 1));
   }
 }
 .rotating,

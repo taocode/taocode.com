@@ -2,7 +2,7 @@ import { format, isBefore, parseISO } from 'date-fns';
 
 export const formatDate = (
   isoString: string,
-  dateFormat = 'MMMM do, yyyy',
+  dateFormat = 'MMM d, yyyy',
 ): string => {
   return format(parseISO(isoString), dateFormat);
 };
